@@ -59,6 +59,11 @@ public class GridObject : MonoBehaviour
     [SerializeField] private GameObject _ElementTemplate;
     [SerializeField] private UnitsData _data;
     [SerializeField] private List<GridUnit> _unitsOnGrid = new List<GridUnit>();
+    [Tooltip("is units hidden by default on this grid?")]
+    [SerializeField] private bool _hiddenUnits;
+
+    public GridElement[,] Sheet => _objects;
+    public List<GridUnit> Units => _unitsOnGrid;
 
     public enum ElementState
     {
@@ -190,8 +195,20 @@ public class GridObject : MonoBehaviour
     {
         foreach (GridElement element in _objects)
         {
-            if(element.Engagement != 0)
                 element.SetElementEngagement(ElementState.normal);
+        }
+
+        foreach(GridUnit unit in _unitsOnGrid)
+        {
+            List<GridElement> unitElements = GetVacantElements(unit, 1);
+            foreach (var currentElement in unitElements)
+            {
+                if (currentElement.HoldedUnit != null && currentElement.HoldedUnit != unit)
+                {
+                    SetElementsState(unitElements, ElementState.locked);
+                    return;
+                }
+            }
         }
     }
 
@@ -235,10 +252,16 @@ public class GridObject : MonoBehaviour
 
     public void PlaceUnit(GridUnit unit)
     {
+        if (_unitsOnGrid.Contains(unit) == false)
+        {
+            _unitsOnGrid.Add(unit);
+        }
         List<GridElement> vacantElements = GetVacantElements(unit, 0);
         unit.SetElements(vacantElements);
-        if(_unitsOnGrid.Contains(unit) == false)
-            _unitsOnGrid.Add(unit);
+        unit.SetHidden(!_hiddenUnits);
+
+
+        UpdateGridEngagements();
     }
 
     public void RemoveUnit(GridUnit removableUnit)

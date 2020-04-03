@@ -5,12 +5,15 @@ using UnityEngine;
 public class GameLogic : MonoBehaviour
 {
     [SerializeField] private UnitsManager _unitsManagement;
-    [SerializeField] private GridObject _PlayerGrid;
-    [SerializeField] private GridObject _EnemyGrid;
+    [SerializeField] private GridObject _playerGrid;
+    [SerializeField] private GridObject _enemyGrid;
     [SerializeField] private CameraTurns _cameraStatement;
  
     public UnitsManager UnitsManager => _unitsManagement;
     public CameraTurns CameraStatement => _cameraStatement;
+
+    public GridObject PlayerGrid => _playerGrid;
+    public GridObject EnemyGrid => _enemyGrid;
 
     public GameStates.PlayerTurn _state_PlayerTurn;
     public GameStates.EnemyTurn _state_EnemyTurn;
@@ -43,7 +46,7 @@ public class GameLogic : MonoBehaviour
 
     public void Confirm_button()
     {
-        ChangeState(_state_PlayerTurn);
+        _state.Confirm();
     }
 }
 
@@ -59,6 +62,7 @@ public class GameState
     public virtual void Activate() { }
     public virtual void Deactivate() { }
     public virtual void Update() { }
+    public virtual void Confirm() { }
 }
 
 namespace GameStates
@@ -86,6 +90,19 @@ namespace GameStates
             {
                 _logic.UnitsManager.CatchUnit();
             }
+        }
+
+        public override void Confirm()
+        {
+            ValidatePlacement();
+        }
+
+        private void ValidatePlacement()
+        {
+            foreach(var placedElement in _logic.PlayerGrid.Units)
+            {
+            }
+            _logic.ChangeState(_logic._state_PlayerTurn);
         }
     }
 

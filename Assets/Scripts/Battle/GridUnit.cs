@@ -15,6 +15,8 @@ public class GridUnit : MonoBehaviour
     public Vector2Int Size => _size;
 
     private int _rotation;
+    private bool _hidden;
+
    [SerializeField] private List<GridElement> _engagedElements = new List<GridElement>();
 
     public enum RotationDirection
@@ -23,6 +25,12 @@ public class GridUnit : MonoBehaviour
         Right = 180,
         Back = 270,
         Left = 0
+    }
+
+    public void SetHidden(bool hide)
+    {
+        _hidden = hide;
+        _visual.SetActive(_hidden);
     }
 
     public void Rotate()
@@ -56,23 +64,6 @@ public class GridUnit : MonoBehaviour
             }
         }
         _engagedElements.Clear();
-    }
-
-    public Vector2Int GetDirectionVector()
-    {
-        switch (_rotation)
-        {
-            case (int)RotationDirection.Forward:
-                return new Vector2Int(1,-1);
-            case (int)RotationDirection.Right:
-                return new Vector2Int(-1, -1);
-            case (int)RotationDirection.Back:
-                return new Vector2Int(-1,1);
-            case (int)RotationDirection.Left:
-                return new Vector2Int(1,1);
-            default:
-                return Vector2Int.zero;
-        }
     }
 
     public RotationDirection GetDirection()

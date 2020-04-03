@@ -148,10 +148,11 @@ public class UnitsManager : MonoBehaviour
             if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
             {
                 _interactableGrid.PlaceUnit(_currentUnit);
+                _interactableGrid.UpdateGridEngagements();
             }
             else
             {
-
+                _interactableGrid.PlaceUnit(_currentUnit);
             }
         }
     }
