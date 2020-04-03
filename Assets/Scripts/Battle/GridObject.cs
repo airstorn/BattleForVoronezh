@@ -90,7 +90,7 @@ public class GridObject : MonoBehaviour
 
     public void PredictPlace(GridUnit unit, ElementState state)
     {
-        List<GridElement> vacantElements = GetVacantElements(unit, 0);
+        List<GridElement> vacantElements = GetVacantElements(unit, 1);
 
         UpdateGridEngagements();
 
@@ -200,9 +200,19 @@ public class GridObject : MonoBehaviour
         UpdateGridEngagements();
 
         Vector3Int unitPos = Vector3Int.RoundToInt(unit.transform.position);
+        List<GridElement> nearElements = GetVacantElements(unit, 1);
         List<GridElement> vacantElements = GetVacantElements(unit, 0);
 
         unit.transform.position = unitPos;
+
+        foreach (var outlineElement in nearElements)
+        {
+            if(outlineElement.HoldedUnit != null && outlineElement.HoldedUnit != unit)
+            {
+                SetElementsState(vacantElements, ElementState.locked);
+                return false;
+            }
+        }
 
         if (vacantElements.Count == (unit.Size.x * unit.Size.y))
         {
