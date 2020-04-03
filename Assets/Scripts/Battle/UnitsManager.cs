@@ -34,7 +34,7 @@ public class UnitsManager : MonoBehaviour
     [SerializeField] private UnitsData _units;
     [SerializeField] private Transform _selectPoint;
     [SerializeField] private Camera _raycastCamera;
-    [SerializeField] private Grid _interactableGrid;
+    [SerializeField] private GridObject _interactableGrid;
 
     public ScheduleObject[] _schedulePoints;
     private GridUnit _currentUnit;
@@ -59,9 +59,9 @@ public class UnitsManager : MonoBehaviour
             if (hit.collider.CompareTag("Unit"))
             {
                 _currentUnit = hit.collider.GetComponent<GridUnit>();
-
                 _currentUnit.OnDrag?.Invoke();
 
+                _interactableGrid.RemoveUnit(_currentUnit);
 
                 StopCoroutine(DragUnit());
                 StartCoroutine(DragUnit());
@@ -72,11 +72,10 @@ public class UnitsManager : MonoBehaviour
     private IEnumerator DragUnit()
     {
         bool drag = true;
+
         while (drag == true)
         {
-            _interactableGrid.UpdateGridEngagements();
-            _interactableGrid.PredictPlace(_currentUnit);
-
+            _interactableGrid.PredictPlace(_currentUnit, GridObject.ElementState.vacant);
 
             Vector3 pos = new Vector3(
                    _raycastCamera.ScreenToWorldPoint(Input.mousePosition).x,
@@ -93,7 +92,7 @@ public class UnitsManager : MonoBehaviour
 
                 if(_interactableGrid.TryPlaceUnit(_currentUnit) == true)
                 {
-                    
+                    _interactableGrid.PlaceUnit(_currentUnit);
                 }
                 else
                 {
@@ -142,7 +141,18 @@ public class UnitsManager : MonoBehaviour
 
     public void RotatePlacebleElement()
     {
-        _currentUnit.Rotate();
-        _currentUnit.transform.DORotate(new Vector3(0, _currentUnit.Rotation, 0), 0.3f);
+        if (_currentUnit != null)
+        {
+            _currentUnit.Rotate();
+
+            if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
+            {
+                _interactableGrid.PlaceUnit(_currentUnit);
+            }
+            else
+            {
+
+            }
+        }
     }
 }

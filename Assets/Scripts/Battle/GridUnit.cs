@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class GridUnit : MonoBehaviour
     public Vector2Int Size => _size;
 
     private int _rotation;
-    private HashSet<GridElement> _engagedElements = new HashSet<GridElement>();
+   [SerializeField] private List<GridElement> _engagedElements = new List<GridElement>();
 
     public enum RotationDirection
     {
@@ -27,31 +28,55 @@ public class GridUnit : MonoBehaviour
     public void Rotate()
     {
         _rotation += 90;
+
         if (_rotation >= 360)
             _rotation = 0;
+
+        transform.DORotate(new Vector3(0, Rotation, 0), 0.3f);
     }
 
-    public void SetEngagedElements(HashSet<GridElement> elements, Grid.ElementState state)
+    public void SetElements(List<GridElement> elements)
     {
-        _engagedElements = elements;
+        RemoveElements();
 
-        foreach (GridElement element in _engagedElements)
+        foreach (var element in elements)
         {
-            element.SetElementEngagement(state);
+            element.SetUnit(this);
+            _engagedElements.Add(element);
         }
     }
 
-    public void RemoveEngagedElements()
+    public void RemoveElements()
     {
         foreach (GridElement element in _engagedElements)
         {
-            element.SetElementEngagement(Grid.ElementState.normal);
-            element.SetUnit(null);
+            if (element.HoldedUnit == this)
+            {
+                element.SetUnit(null);
+            }
+        }
+        _engagedElements.Clear();
+    }
+
+    public Vector2Int GetDirectionVector()
+    {
+        switch (_rotation)
+        {
+            case (int)RotationDirection.Forward:
+                return new Vector2Int(1,-1);
+            case (int)RotationDirection.Right:
+                return new Vector2Int(-1, -1);
+            case (int)RotationDirection.Back:
+                return new Vector2Int(-1,1);
+            case (int)RotationDirection.Left:
+                return new Vector2Int(1,1);
+            default:
+                return Vector2Int.zero;
         }
     }
 
     public RotationDirection GetDirection()
     {
-        return (RotationDirection)Mathf.RoundToInt(_rotation);
+        return (RotationDirection)_rotation;
     }
 }

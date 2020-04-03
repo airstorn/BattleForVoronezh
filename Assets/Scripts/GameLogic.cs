@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameLogic : MonoBehaviour
 {
     [SerializeField] private UnitsManager _unitsManagement;
-    [SerializeField] private Grid _PlayerGrid;
-    [SerializeField] private Grid _EnemyGrid;
+    [SerializeField] private GridObject _PlayerGrid;
+    [SerializeField] private GridObject _EnemyGrid;
     [SerializeField] private CameraTurns _cameraStatement;
  
     public UnitsManager UnitsManager => _unitsManagement;
@@ -39,6 +39,11 @@ public class GameLogic : MonoBehaviour
         _state.Deactivate();
         _state = state;
         _state.Activate();
+    }
+
+    public void Confirm_button()
+    {
+        ChangeState(_state_PlayerTurn);
     }
 }
 
