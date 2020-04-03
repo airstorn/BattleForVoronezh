@@ -10,6 +10,7 @@ public class GridUnit : MonoBehaviour
     [SerializeField] protected Vector2Int _size;
 
     public Action OnDrag;
+    public bool SuitablePlaced = false;
 
     public int Rotation => _rotation;
     public Vector2Int Size => _size;

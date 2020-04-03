@@ -17,15 +17,15 @@ public class CameraTurns : MonoBehaviour
     
     public void ToPlayerCam()
     {
-        _playerCam.gameObject.SetActive(false);
-        _enemyCam.gameObject.SetActive(true);
+        _playerCam.gameObject.SetActive(true);
+        _enemyCam.gameObject.SetActive(false);
         _placerCam.gameObject.SetActive(false);
     }
 
     public void ToEnemyCam()
     {
-        _playerCam.gameObject.SetActive(true);
-        _enemyCam.gameObject.SetActive(false);
+        _playerCam.gameObject.SetActive(false);
+        _enemyCam.gameObject.SetActive(true);
         _placerCam.gameObject.SetActive(false);
     }
 }

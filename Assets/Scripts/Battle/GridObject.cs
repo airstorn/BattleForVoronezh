@@ -82,7 +82,7 @@ public class GridObject : MonoBehaviour
                     new Vector2Int(x, z),
                     new Vector3(
                         transform.position.x - 4.5f + x * _tileOffset,
-                        1, 
+                        transform.position.y, 
                         transform.position.z - 4.5f + z * _tileOffset)
                     );
 
@@ -95,7 +95,7 @@ public class GridObject : MonoBehaviour
 
     public void PredictPlace(GridUnit unit, ElementState state)
     {
-        List<GridElement> vacantElements = GetVacantElements(unit, 1);
+        List<GridElement> vacantElements = GetVacantElements(unit, 0);
 
         UpdateGridEngagements();
 
@@ -103,7 +103,7 @@ public class GridObject : MonoBehaviour
 
         foreach(var element in vacantElements)
         {
-            if(element.HoldedUnit != unit && element.HoldedUnit != null)
+            if(element.HoldedUnit != unit && element.HoldedUnit != null || vacantElements.Count != unit.Size.x * unit.Size.y)
             {
                 locked = true;
                 break;
@@ -210,6 +210,11 @@ public class GridObject : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool AllUnitsPlaced()
+    {
+        return _unitsOnGrid.Count == _data.Data.Length;
     }
 
     public bool TryPlaceUnit(GridUnit unit)

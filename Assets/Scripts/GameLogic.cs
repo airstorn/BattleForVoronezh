@@ -99,10 +99,21 @@ namespace GameStates
 
         private void ValidatePlacement()
         {
-            foreach(var placedElement in _logic.PlayerGrid.Units)
+
+            if (_logic.PlayerGrid.AllUnitsPlaced() == true)
             {
+                bool validation = true;
+                foreach (var placedElement in _logic.PlayerGrid.Units)
+                {
+                    if (placedElement.SuitablePlaced == false)
+                    {
+                        validation = false;
+                        return;
+                    }
+                }
+                if (validation == true)
+                    _logic.ChangeState(_logic._state_PlayerTurn);
             }
-            _logic.ChangeState(_logic._state_PlayerTurn);
         }
     }
 
@@ -113,6 +124,7 @@ namespace GameStates
         public override void Activate()
         {
             _logic.CameraStatement.ToEnemyCam();
+             
         }
     }
 

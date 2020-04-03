@@ -92,10 +92,12 @@ public class UnitsManager : MonoBehaviour
 
                 if(_interactableGrid.TryPlaceUnit(_currentUnit) == true)
                 {
+                    _currentUnit.SuitablePlaced = true;
                     _interactableGrid.PlaceUnit(_currentUnit);
                 }
                 else
                 {
+                    _currentUnit.SuitablePlaced = false;
                     AddUnitToSchedule(_currentUnit);
                 }
             }
@@ -147,11 +149,12 @@ public class UnitsManager : MonoBehaviour
 
             if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
             {
+                _currentUnit.SuitablePlaced = true;
                 _interactableGrid.PlaceUnit(_currentUnit);
-                _interactableGrid.UpdateGridEngagements();
             }
             else
             {
+                _currentUnit.SuitablePlaced = false;
                 _interactableGrid.PlaceUnit(_currentUnit);
             }
         }
