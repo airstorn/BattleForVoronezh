@@ -29,7 +29,7 @@ public class ScheduleObject
     }
 }
 
-public class UnitsManager : MonoBehaviour
+public class UnitsManager : MonoBehaviour, IInputHandler
 {
     [SerializeField] private UnitsData _units;
     [SerializeField] private Transform _selectPoint;
@@ -39,6 +39,12 @@ public class UnitsManager : MonoBehaviour
     public ScheduleObject[] _schedulePoints;
     private GridUnit _currentUnit;
     private Tween _moveToPointTween;
+
+
+    private void Start()
+    {
+        InitUnits();
+    }
 
     public void InitUnits()
     {
@@ -158,5 +164,10 @@ public class UnitsManager : MonoBehaviour
                 _interactableGrid.PlaceUnit(_currentUnit);
             }
         }
+    }
+
+    public void Interact()
+    {
+        CatchUnit();
     }
 }
