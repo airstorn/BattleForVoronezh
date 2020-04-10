@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _visual: {fileID: 989895261340472942}
   _size: {x: 2, y: 1}
+  SuitablePlaced: 0
   _engagedElements: []
 --- !u!65 &3424743646080061186
 BoxCollider:

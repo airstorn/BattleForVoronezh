@@ -25,8 +25,6 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
             {
                 _currentUnit = TryGetUnitFromHolder(hit.collider.GetComponent<GridUnit>());
 
-                _currentUnit.OnDrag?.Invoke();
-
                 _interactableGrid.RemoveUnit(_currentUnit);
 
                 StopCoroutine(DragUnit());
@@ -70,12 +68,10 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
 
                 if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
                 {
-                    _currentUnit.SuitablePlaced = true;
                     _interactableGrid.PlaceUnit(_currentUnit);
                 }
                 else
                 {
-                    _currentUnit.SuitablePlaced = false;
                     _unitsHolder.SetUnit(_currentUnit);
                 }
             }
@@ -95,16 +91,14 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
     {
         if (_currentUnit != null)
         {
-            _currentUnit.Rotate();
+            _currentUnit.Rotate(false);
 
             if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
             {
-                _currentUnit.SuitablePlaced = true;
                 _interactableGrid.PlaceUnit(_currentUnit);
             }
             else
             {
-                _currentUnit.SuitablePlaced = false;
                 _interactableGrid.PlaceUnit(_currentUnit);
             }
         }
@@ -133,9 +127,16 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
 
     public void PlaceRandomly()
     {
+        foreach (var unitOnGrid in _interactableGrid.Units)
+        {
+            _unitsHolder.SetUnit(unitOnGrid);
+        }
+
+        _interactableGrid.Clear();
+
         RandomUnitsPlacement randomUnitsPlacement = new RandomUnitsPlacement();
 
-        randomUnitsPlacement.ExecuteUnitsForPlacement(_unitsHolder.GetUnit(0), _interactableGrid);
+        randomUnitsPlacement.ExecuteUnitsForPlacement(_unitsHolder.GetAllUnits(), _interactableGrid);
     }
 
     public void TrackInput()

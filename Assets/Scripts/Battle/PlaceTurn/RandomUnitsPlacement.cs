@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Jobs;
 using Unity.Collections;
+using System.Linq;
+using DG.Tweening;
+using System;
 
 public struct PlaceComparerJob
 { 
@@ -11,44 +14,40 @@ public struct PlaceComparerJob
 
     public void Execute()
     {
-        if (Unit == null)
-            return;
-
-        for (int x = 0; x < SelectedGrid.Sheet.GetLength(0); x++)
+        for (int i = 0; i < UnityEngine.Random.Range(0, (int)4); i++)
+            Unit.Rotate(true);
+        do
         {
-            for (int y = 0; y < SelectedGrid.Sheet.GetLength(1); y++)
-            {
-                if(SelectedGrid.Sheet[x,y].HoldedUnit == null)
-                {
-                    Unit.PositionId = new Vector3Int(x, 0, y);
+            Vector2Int randomPos = new Vector2Int(UnityEngine.Random.Range(0, (int)SelectedGrid.Sheet.GetLength(0)), UnityEngine.Random.Range(0, (int)SelectedGrid.Sheet.GetLength(1)));
 
-                    if (SelectedGrid.TryPlaceUnit(Unit))
-                    {
-                        Unit.OnDrag?.Invoke();
-                        SelectedGrid.PlaceUnit(Unit);
-                        Debug.Log("Placed");
-                        return;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
+            Unit.PositionId = new Vector3Int(randomPos.x, 0, randomPos.y);
+            if (SelectedGrid.TryPlaceUnit(Unit) == true)
+            {
+                SelectedGrid.PlaceUnit(Unit);
             }
         }
+        while (Unit.SuitablePlaced == false);
+
     }
 }
 
 public class RandomUnitsPlacement : IUnitsPlacer
 {
-    public void ExecuteUnitsForPlacement(GridUnit units, GridObject grid)
+    public void ExecuteUnitsForPlacement(List<GridUnit> units, GridObject grid)
     {
-            var job = new PlaceComparerJob()
+        units = units.OrderByDescending(x => x.Size.x * x.Size.y).ToList();
+
+        for (int i = 0; i < units.Count; i++)
+        {
+            Debug.Log(units[i]);
+            var PlaceJob = new PlaceComparerJob()
             {
-                Unit = units,
-                SelectedGrid = grid
+                SelectedGrid = grid,
+                Unit = units[i]
             };
-        job.Execute();
+
+            PlaceJob.Execute();
+        }
     }
 
     public void Place(GridUnit unit)

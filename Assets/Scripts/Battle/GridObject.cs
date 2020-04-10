@@ -254,9 +254,18 @@ public class GridObject : MonoBehaviour
     {
         if(_unitsOnGrid.Contains(removableUnit))
         {
-            _unitsOnGrid.Remove(removableUnit);
             removableUnit.RemoveElements();
+            _unitsOnGrid.Remove(removableUnit);
         }
+    }
+
+    public void Clear()
+    {
+        for (int i = 0; i < _unitsOnGrid.Count; i++)
+        {
+            _unitsOnGrid[i].RemoveElements();
+        }
+        _unitsOnGrid.Clear();
     }
 
     public void SetElementsState(List<GridElement> elements, ElementState state)

@@ -9,6 +9,7 @@ public class ScheduleObject
 {
     public Vector3 Pos;
     [SerializeField] private GridUnit _holdedObject;
+    private Tween _moveTween;
 
     public GridUnit HoldedObject
     {
@@ -20,16 +21,16 @@ public class ScheduleObject
         {
             _holdedObject = value;
             if (value != null)
-                _holdedObject.transform.DOMove(Pos, 1);
+               _moveTween = _holdedObject.transform.DOMove(Pos, 1);
         }
     }
 
     public void RemoveUnit()
     {
-        _holdedObject.OnDrag -= RemoveUnit;
-        _holdedObject.DOKill();
+        _moveTween.Kill();
         _holdedObject = null;
     }
+
 }
 
 
@@ -50,7 +51,13 @@ public class UnitsSchedule : MonoBehaviour, IUnitsData
         for (int i = 0; i < _schedulePoints.Length; i++)
         {
             if (_schedulePoints[i].HoldedObject == choosedUnit)
-                return _schedulePoints[i].HoldedObject;
+            {
+                var choosedElement = _schedulePoints[i].HoldedObject;
+
+                _schedulePoints[i].RemoveUnit();
+                UpdateSchedule();
+                return choosedElement;
+            }
         }
 
         return null;
@@ -96,21 +103,24 @@ public class UnitsSchedule : MonoBehaviour, IUnitsData
             if (_schedulePoints[i].HoldedObject == null)
             {
                 _schedulePoints[i].HoldedObject = unit;
-                unit.OnDrag += _schedulePoints[i].RemoveUnit;
-                unit.OnDrag += UpdateSchedule;
                 break;
             }
         }
     }
 
-    public GridUnit GetUnit(int id)
+    public List<GridUnit> GetAllUnits()
     {
-        for (int i = 0; i < _schedulePoints.Length; i++)
+        List<GridUnit> units = new List<GridUnit>();
+
+        foreach (var item in _schedulePoints)
         {
-            if (i == id && _schedulePoints[i].HoldedObject != null)
-                return _schedulePoints[i].HoldedObject;
+            if(item.HoldedObject != null)
+            {
+                units.Add(item.HoldedObject);
+                item.RemoveUnit();
+            }
         }
 
-        return null;
+        return units;
     }
 }

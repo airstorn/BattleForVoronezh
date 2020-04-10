@@ -9,8 +9,18 @@ public class GridUnit : MonoBehaviour
     [SerializeField] protected GameObject _visual;
     [SerializeField] protected Vector2Int _size;
 
-    public Action OnDrag;
-    public bool SuitablePlaced = false;
+    public bool SuitablePlaced
+    {
+        get
+        {
+            if (_engagedElements.Count == _size.x * _size.y)
+            {
+                return true;
+            }
+
+            return false;
+        }
+    }
 
     public int Rotation => _rotation;
     public Vector2Int Size => _size;
@@ -35,14 +45,14 @@ public class GridUnit : MonoBehaviour
         _visual.SetActive(_hidden);
     }
 
-    public void Rotate()
+    public void Rotate(bool imidietly)
     {
         _rotation += 90;
 
         if (_rotation >= 360)
             _rotation = 0;
 
-        transform.DORotate(new Vector3(0, Rotation, 0), 0.3f);
+            transform.DORotate(new Vector3(0, Rotation, 0), imidietly ? 0 : 0.3f);
     }
 
     public void Rotate(RotationDirection direction)
@@ -85,6 +95,7 @@ public class GridUnit : MonoBehaviour
         Gizmos.color = new Color(0, 1, 0, 0.9f);
 
         Vector3 posOffset = new Vector3(_visual.transform.position.x, transform.position.y, _visual.transform.position.z);
+        Vector3 FantomOffset = new Vector3(PositionId.x + Size.x / 2, transform.position.y, PositionId.z + Size.y / 2);
 
         Gizmos.DrawCube(posOffset, GetDirection() == RotationDirection.Left || GetDirection() == RotationDirection.Right ?
             new Vector3(Size.x, 1, Size.y) :
@@ -93,6 +104,10 @@ public class GridUnit : MonoBehaviour
 
 
         Gizmos.color = new Color(1, 0, 0, 0.9f);
-        Gizmos.DrawWireCube(posOffset, new Vector3(Size.x + 2, 1, Size.y + 2));
+        Gizmos.DrawWireCube(posOffset, GetDirection() == RotationDirection.Left || GetDirection() == RotationDirection.Right ?
+           new Vector3(Size.x + 2, 1, Size.y + 2) :
+           new Vector3(Size.y + 2, 1, Size.x + 2)
+           );
+
     }
 }

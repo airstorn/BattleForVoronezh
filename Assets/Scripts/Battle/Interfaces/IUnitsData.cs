@@ -5,7 +5,7 @@ using UnityEngine;
 public interface IUnitsData
 {
     GridUnit GetUnit(GridUnit choosedUnit);
-    GridUnit GetUnit(int id);
+    List<GridUnit> GetAllUnits();
     void SetUnit(GridUnit data);
     void SetUnits(UnitsData data);
 }
