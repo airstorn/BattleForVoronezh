@@ -29,14 +29,16 @@ public class ScheduleObject
     }
 }
 
-public class UnitsManager : MonoBehaviour, IInputHandler
+public class UnitsPlacement : MonoBehaviour, IInputHandler
 {
     [SerializeField] private UnitsData _units;
     [SerializeField] private Transform _selectPoint;
     [SerializeField] private Camera _raycastCamera;
     [SerializeField] private GridObject _interactableGrid;
-
+    
     public ScheduleObject[] _schedulePoints;
+
+    private IUnitsPlacer _inputPlacer;
     private GridUnit _currentUnit;
     private Tween _moveToPointTween;
 

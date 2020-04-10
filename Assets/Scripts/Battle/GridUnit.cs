@@ -44,6 +44,12 @@ public class GridUnit : MonoBehaviour
         transform.DORotate(new Vector3(0, Rotation, 0), 0.3f);
     }
 
+    public void Rotate(RotationDirection direction)
+    {
+        _rotation = (int)direction;
+        transform.DORotate(new Vector3(0, Rotation, 0), 0.3f);
+    }
+
     public void SetElements(List<GridElement> elements)
     {
         RemoveElements();

@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GridUnits
+public interface IUnitsPlacer 
 {
-    public class Empty : GridUnit
-    {
-       
-    }
+    void Place(GridUnit unit);
 }

@@ -95,26 +95,27 @@ namespace GameStates
 
         public override void Confirm()
         {
-            ValidatePlacement();
+            if(ValidatePlacement() == true)
+            {
+                _logic.ChangeState(_logic._state_PlayerTurn);
+            }
         }
 
-        private void ValidatePlacement()
+        private bool ValidatePlacement()
         {
 
             if (_logic.PlayerGrid.AllUnitsPlaced() == true)
             {
-                bool validation = true;
                 foreach (var placedElement in _logic.PlayerGrid.Units)
                 {
                     if (placedElement.SuitablePlaced == false)
                     {
-                        validation = false;
-                        return;
+                        return false;
                     }
                 }
-                if (validation == true)
-                    _logic.ChangeState(_logic._state_PlayerTurn);
+                return true;
             }
+            return false;
         }
     }
 

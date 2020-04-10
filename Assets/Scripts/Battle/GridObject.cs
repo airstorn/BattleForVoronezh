@@ -113,7 +113,7 @@ public class GridObject : MonoBehaviour
         SetElementsState(vacantElements, locked == true ? ElementState.locked : ElementState.vacant);
     }
 
-    private List<GridElement> GetVacantElements(GridUnit unit, int offset)
+    private List<GridElement> GetVacantElements(GridUnit unit, int borderOffsetRange)
     {
         Vector3Int unitPos = Vector3Int.RoundToInt(unit.transform.position);
         List<GridElement> vacantElements = new List<GridElement>();
@@ -123,9 +123,9 @@ public class GridObject : MonoBehaviour
         switch (rotation)
         {
             case GridUnit.RotationDirection.Forward:
-                for (int x = -offset; x < unit.Size.y + offset; x++)
+                for (int x = -borderOffsetRange; x < unit.Size.y + borderOffsetRange; x++)
                 {
-                    for (int z = -offset; z < unit.Size.x + offset; z++)
+                    for (int z = -borderOffsetRange; z < unit.Size.x + borderOffsetRange; z++)
                     {
                         Vector3Int vacantVector = new Vector3Int(unitPos.x + x, 1, unitPos.z - z);
 
@@ -138,9 +138,9 @@ public class GridObject : MonoBehaviour
                 break;
 
             case GridUnit.RotationDirection.Right:
-                for (int x = -offset; x < unit.Size.x + offset; x++)
+                for (int x = -borderOffsetRange; x < unit.Size.x + borderOffsetRange; x++)
                 {
-                    for (int z = -offset; z < unit.Size.y + offset; z++)
+                    for (int z = -borderOffsetRange; z < unit.Size.y + borderOffsetRange; z++)
                     {
                         Vector3Int vacantVector = new Vector3Int(unitPos.x - x, 1, unitPos.z - z);
 
@@ -154,9 +154,9 @@ public class GridObject : MonoBehaviour
 
             case GridUnit.RotationDirection.Back:
 
-                for (int x = -offset; x < unit.Size.y + offset; x++)
+                for (int x = -borderOffsetRange; x < unit.Size.y + borderOffsetRange; x++)
                 {
-                    for (int z = -offset; z < unit.Size.x + offset; z++)
+                    for (int z = -borderOffsetRange; z < unit.Size.x + borderOffsetRange; z++)
                     {
                         Vector3Int vacantVector = new Vector3Int(unitPos.x - x, 1, unitPos.z + z);
 
@@ -169,9 +169,9 @@ public class GridObject : MonoBehaviour
 
                 break;
             case GridUnit.RotationDirection.Left:
-                for (int x = -offset; x < unit.Size.x + offset; x++)
+                for (int x = -borderOffsetRange; x < unit.Size.x + borderOffsetRange; x++)
                 {
-                    for (int z = -offset; z < unit.Size.y + offset; z++)
+                    for (int z = -borderOffsetRange; z < unit.Size.y + borderOffsetRange; z++)
                     {
                         Vector3Int vacantVector = new Vector3Int(unitPos.x + x, 1, unitPos.z + z);
 
