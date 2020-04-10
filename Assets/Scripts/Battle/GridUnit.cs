@@ -14,6 +14,7 @@ public class GridUnit : MonoBehaviour
 
     public int Rotation => _rotation;
     public Vector2Int Size => _size;
+    public Vector3Int PositionId { get; set; }
 
     private int _rotation;
     private bool _hidden;
@@ -61,6 +62,7 @@ public class GridUnit : MonoBehaviour
         }
     }
 
+
     public void RemoveElements()
     {
         foreach (GridElement element in _engagedElements)
@@ -76,5 +78,21 @@ public class GridUnit : MonoBehaviour
     public RotationDirection GetDirection()
     {
         return (RotationDirection)_rotation;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(0, 1, 0, 0.9f);
+
+        Vector3 posOffset = new Vector3(_visual.transform.position.x, transform.position.y, _visual.transform.position.z);
+
+        Gizmos.DrawCube(posOffset, GetDirection() == RotationDirection.Left || GetDirection() == RotationDirection.Right ?
+            new Vector3(Size.x, 1, Size.y) :
+            new Vector3(Size.y, 1, Size.x)
+            );
+
+
+        Gizmos.color = new Color(1, 0, 0, 0.9f);
+        Gizmos.DrawWireCube(posOffset, new Vector3(Size.x + 2, 1, Size.y + 2));
     }
 }

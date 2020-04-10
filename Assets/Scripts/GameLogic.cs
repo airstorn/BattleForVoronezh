@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
-    [SerializeField] private IInputHandler _playerInputHandler;
     [SerializeField] private GridObject _playerGrid;
     [SerializeField] private GridObject _enemyGrid;
     [SerializeField] private CameraTurns _cameraStatement;
  
-    public IInputHandler PlayerInputHandler => _playerInputHandler;
+    public IInputHandler PlayerInputHandler => _playerInputHandler.GetComponent<IInputHandler>();
     public CameraTurns CameraStatement => _cameraStatement;
 
     public GridObject PlayerGrid => _playerGrid;
@@ -19,6 +18,13 @@ public class GameLogic : MonoBehaviour
     public GameStates.EnemyTurn _state_EnemyTurn;
     public GameStates.PlaceUnits _state_PlaceUnits;
 
+    [Header("Placement Turn")]
+
+    [SerializeField] private GameObject _playerInputHandler;
+
+    [Header("Player Turn")]
+    [Header("Enemy Turn")]
+
     private GameState _state;
 
 
@@ -27,8 +33,6 @@ public class GameLogic : MonoBehaviour
         _state_EnemyTurn = new GameStates.EnemyTurn(this);
         _state_PlaceUnits = new GameStates.PlaceUnits(this);
         _state_PlayerTurn = new GameStates.PlayerTurn(this);
-
-        _playerInputHandler = GetComponent<IInputHandler>();
 
         _state = _state_PlaceUnits;
         _state.Activate();
@@ -89,7 +93,7 @@ namespace GameStates
         {
             if(Input.GetMouseButtonDown(0))
             {
-                _logic.PlayerInputHandler.Interact();
+                _logic.PlayerInputHandler.TrackInput();
             }
         }
 

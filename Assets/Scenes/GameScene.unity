@@ -204,7 +204,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1829151278}
+      - m_Target: {fileID: 1671539676}
         m_MethodName: RotatePlacebleElement
         m_Mode: 1
         m_Arguments:
@@ -2066,8 +2066,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: RotatePlacebleElement
+      - m_Target: {fileID: 1671539676}
+        m_MethodName: PlaceRandomly
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2449,7 +2449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614411950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 12}
+  m_LocalPosition: {x: 0.5, y: 0, z: 14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2522,6 +2522,67 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2052803078}
+--- !u!1 &1671539673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671539675}
+  - component: {fileID: 1671539674}
+  - component: {fileID: 1671539676}
+  m_Layer: 0
+  m_Name: PlacementTurn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1671539674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671539673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e572adf4806c0f547a97a109d180f45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectPoint: {fileID: 1614411951}
+  _units: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6, type: 2}
+  _schedulePoints: []
+--- !u!4 &1671539675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671539673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1222.9391, y: 492.6738, z: -301}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1671539676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671539673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c891582a4ec10945af89c5e97dee765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _raycastCamera: {fileID: 963194227}
+  _interactableGrid: {fileID: 595264823}
 --- !u!4 &1726408535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 454624, guid: b7c837c7a353568418f5f30dcd560a94,
@@ -2599,7 +2660,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1829151277}
   - component: {fileID: 1829151276}
-  - component: {fileID: 1829151278}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -2622,6 +2682,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 595264823}
   _enemyGrid: {fileID: 2075352747}
   _cameraStatement: {fileID: 963194230}
+  _playerInputHandler: {fileID: 1671539673}
 --- !u!4 &1829151277
 Transform:
   m_ObjectHideFlags: 0
@@ -2636,23 +2697,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1829151278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829151275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c891582a4ec10945af89c5e97dee765, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _units: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6, type: 2}
-  _selectPoint: {fileID: 1614411951}
-  _raycastCamera: {fileID: 963194227}
-  _interactableGrid: {fileID: 595264823}
-  _schedulePoints: []
 --- !u!1001 &1843413870
 PrefabInstance:
   m_ObjectHideFlags: 0

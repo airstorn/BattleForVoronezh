@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
 {
-    public void Interact()
+    public void TrackInput()
     {
-        throw new System.NotImplementedException();
     }
 }

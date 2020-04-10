@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GridUnit;
 
 [Serializable]
 public class GridElement
@@ -62,6 +62,9 @@ public class GridObject : MonoBehaviour
     [Tooltip("is units hidden by default on this grid?")]
     [SerializeField] private bool _hiddenUnits;
 
+    public Action<GridUnit> OnPlacementFailed;
+    public Action<GridUnit> OnPlacementSuccess;
+
     public GridElement[,] Sheet => _objects;
     public List<GridUnit> Units => _unitsOnGrid;
 
@@ -93,41 +96,18 @@ public class GridObject : MonoBehaviour
         }
     }
 
-    public void PredictPlace(GridUnit unit, ElementState state)
+    public List<GridElement> GetVacantElements(Vector3Int position, Vector2Int size, RotationDirection rotation, int borderOffsetRange)
     {
-        List<GridElement> vacantElements = GetVacantElements(unit, 0);
-
-        UpdateGridEngagements();
-
-        bool locked = false;
-
-        foreach(var element in vacantElements)
-        {
-            if(element.HoldedUnit != unit && element.HoldedUnit != null || vacantElements.Count != unit.Size.x * unit.Size.y)
-            {
-                locked = true;
-                break;
-            }
-        }
-        
-        SetElementsState(vacantElements, locked == true ? ElementState.locked : ElementState.vacant);
-    }
-
-    private List<GridElement> GetVacantElements(GridUnit unit, int borderOffsetRange)
-    {
-        Vector3Int unitPos = Vector3Int.RoundToInt(unit.transform.position);
         List<GridElement> vacantElements = new List<GridElement>();
-
-        var rotation = unit.GetDirection();
 
         switch (rotation)
         {
             case GridUnit.RotationDirection.Forward:
-                for (int x = -borderOffsetRange; x < unit.Size.y + borderOffsetRange; x++)
+                for (int x = -borderOffsetRange; x < size.y + borderOffsetRange; x++)
                 {
-                    for (int z = -borderOffsetRange; z < unit.Size.x + borderOffsetRange; z++)
+                    for (int z = -borderOffsetRange; z < size.x + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(unitPos.x + x, 1, unitPos.z - z);
+                        Vector3Int vacantVector = new Vector3Int(position.x + x, 1, position.z - z);
 
                         if (VectorInRange(vacantVector))
                         {
@@ -138,11 +118,11 @@ public class GridObject : MonoBehaviour
                 break;
 
             case GridUnit.RotationDirection.Right:
-                for (int x = -borderOffsetRange; x < unit.Size.x + borderOffsetRange; x++)
+                for (int x = -borderOffsetRange; x < size.x + borderOffsetRange; x++)
                 {
-                    for (int z = -borderOffsetRange; z < unit.Size.y + borderOffsetRange; z++)
+                    for (int z = -borderOffsetRange; z < size.y + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(unitPos.x - x, 1, unitPos.z - z);
+                        Vector3Int vacantVector = new Vector3Int(position.x - x, 1, position.z - z);
 
                         if (VectorInRange(vacantVector))
                         {
@@ -154,11 +134,11 @@ public class GridObject : MonoBehaviour
 
             case GridUnit.RotationDirection.Back:
 
-                for (int x = -borderOffsetRange; x < unit.Size.y + borderOffsetRange; x++)
+                for (int x = -borderOffsetRange; x < size.y + borderOffsetRange; x++)
                 {
-                    for (int z = -borderOffsetRange; z < unit.Size.x + borderOffsetRange; z++)
+                    for (int z = -borderOffsetRange; z < size.x + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(unitPos.x - x, 1, unitPos.z + z);
+                        Vector3Int vacantVector = new Vector3Int(position.x - x, 1, position.z + z);
 
                         if (VectorInRange(vacantVector))
                         {
@@ -169,11 +149,11 @@ public class GridObject : MonoBehaviour
 
                 break;
             case GridUnit.RotationDirection.Left:
-                for (int x = -borderOffsetRange; x < unit.Size.x + borderOffsetRange; x++)
+                for (int x = -borderOffsetRange; x < size.x + borderOffsetRange; x++)
                 {
-                    for (int z = -borderOffsetRange; z < unit.Size.y + borderOffsetRange; z++)
+                    for (int z = -borderOffsetRange; z < size.y + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(unitPos.x + x, 1, unitPos.z + z);
+                        Vector3Int vacantVector = new Vector3Int(position.x + x, 1, position.z + z);
 
                         if (VectorInRange(vacantVector))
                         {
@@ -200,7 +180,7 @@ public class GridObject : MonoBehaviour
 
         foreach(GridUnit unit in _unitsOnGrid)
         {
-            List<GridElement> unitElements = GetVacantElements(unit, 1);
+            List<GridElement> unitElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
             foreach (var currentElement in unitElements)
             {
                 if (currentElement.HoldedUnit != null && currentElement.HoldedUnit != unit)
@@ -222,8 +202,8 @@ public class GridObject : MonoBehaviour
         UpdateGridEngagements();
 
         Vector3Int unitPos = Vector3Int.RoundToInt(unit.transform.position);
-        List<GridElement> nearElements = GetVacantElements(unit, 1);
-        List<GridElement> vacantElements = GetVacantElements(unit, 0);
+        List<GridElement> nearElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
+        List<GridElement> vacantElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
 
         unit.transform.position = unitPos;
 
@@ -261,10 +241,11 @@ public class GridObject : MonoBehaviour
         {
             _unitsOnGrid.Add(unit);
         }
-        List<GridElement> vacantElements = GetVacantElements(unit, 0);
+        List<GridElement> vacantElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
         unit.SetElements(vacantElements);
         unit.SetHidden(!_hiddenUnits);
 
+        unit.transform.position = unit.PositionId;
 
         UpdateGridEngagements();
     }
@@ -278,7 +259,7 @@ public class GridObject : MonoBehaviour
         }
     }
 
-    private void SetElementsState(List<GridElement> elements, ElementState state)
+    public void SetElementsState(List<GridElement> elements, ElementState state)
     {
         foreach (var item in elements)
         {

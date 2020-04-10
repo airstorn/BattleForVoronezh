@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IInputHandler
 {
-    void Interact();
+    void TrackInput();
 }
