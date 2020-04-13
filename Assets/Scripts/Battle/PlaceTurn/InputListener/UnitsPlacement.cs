@@ -109,12 +109,13 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
         ConvertUnitPositionInId();
 
         List<GridElement> vacantElements = _interactableGrid.GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
+        List<GridElement> ElementOutline = _interactableGrid.GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
 
         _interactableGrid.UpdateGridEngagements();
 
         bool locked = false;
 
-        foreach (var element in vacantElements)
+        foreach (var element in ElementOutline)
         {
             if (element.HoldedUnit != unit && element.HoldedUnit != null || vacantElements.Count != unit.Size.x * unit.Size.y)
             {

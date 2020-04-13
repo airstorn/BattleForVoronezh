@@ -6,20 +6,20 @@ using static GridUnit;
 [Serializable]
 public class GridElement
 {
-    [SerializeField] private Vector2Int _id;
+    //[SerializeField] private Vector2Int _id;
     [SerializeField] private Vector3 _ElementPos;
     [SerializeField] private SpriteRenderer _cellRenderer;
     [SerializeField] private GridUnit _holdedUnit;
 
     public int Engagement = 0;
     public SpriteRenderer CellRenderer => _cellRenderer;
-    public Vector2Int Id => _id;
+    //public Vector2Int Id => _id;
     public Vector3 CellPos => _ElementPos;
     public GridUnit HoldedUnit => _holdedUnit;
 
     public GridElement(Vector2Int id, Vector3 worldPos)
     {
-        _id = id;
+        //_id = id;
         _ElementPos = worldPos;
     }
 
@@ -61,12 +61,15 @@ public class GridObject : MonoBehaviour
     [SerializeField] private List<GridUnit> _unitsOnGrid = new List<GridUnit>();
     [Tooltip("is units hidden by default on this grid?")]
     [SerializeField] private bool _hiddenUnits;
+    [SerializeField] private Vector3Int _gridOffset;
 
     public Action<GridUnit> OnPlacementFailed;
     public Action<GridUnit> OnPlacementSuccess;
 
+    public Vector3Int GridOffset => _gridOffset;
     public GridElement[,] Sheet => _objects;
     public List<GridUnit> Units => _unitsOnGrid;
+
 
     public enum ElementState
     {
@@ -94,11 +97,15 @@ public class GridObject : MonoBehaviour
                 _objects[x, z].SetElement(element.GetComponent<SpriteRenderer>());
             }
         }
+
+        _gridOffset = Vector3Int.RoundToInt(_objects[0, 0].CellPos);
     }
 
     public List<GridElement> GetVacantElements(Vector3Int position, Vector2Int size, RotationDirection rotation, int borderOffsetRange)
     {
         List<GridElement> vacantElements = new List<GridElement>();
+
+        Debug.Log(position);
 
         switch (rotation)
         {
@@ -107,8 +114,7 @@ public class GridObject : MonoBehaviour
                 {
                     for (int z = -borderOffsetRange; z < size.x + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(position.x + x, 1, position.z - z);
-
+                        Vector3Int vacantVector = new Vector3Int(position.x + x - _gridOffset.x, 1, position.z - z - _gridOffset.z);
                         if (VectorInRange(vacantVector))
                         {
                             vacantElements.Add(_objects[vacantVector.x, vacantVector.z]);
@@ -122,7 +128,7 @@ public class GridObject : MonoBehaviour
                 {
                     for (int z = -borderOffsetRange; z < size.y + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(position.x - x, 1, position.z - z);
+                        Vector3Int vacantVector = new Vector3Int(position.x - x - _gridOffset.x, 1, position.z - z - _gridOffset.z);
 
                         if (VectorInRange(vacantVector))
                         {
@@ -138,7 +144,7 @@ public class GridObject : MonoBehaviour
                 {
                     for (int z = -borderOffsetRange; z < size.x + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(position.x - x, 1, position.z + z);
+                        Vector3Int vacantVector = new Vector3Int(position.x - x - _gridOffset.x, 1, position.z + z - _gridOffset.z);
 
                         if (VectorInRange(vacantVector))
                         {
@@ -153,7 +159,7 @@ public class GridObject : MonoBehaviour
                 {
                     for (int z = -borderOffsetRange; z < size.y + borderOffsetRange; z++)
                     {
-                        Vector3Int vacantVector = new Vector3Int(position.x + x, 1, position.z + z);
+                        Vector3Int vacantVector = new Vector3Int(position.x + x - _gridOffset.x, 1 , position.z + z - _gridOffset.z);
 
                         if (VectorInRange(vacantVector))
                         {
@@ -245,7 +251,7 @@ public class GridObject : MonoBehaviour
         unit.SetElements(vacantElements);
         unit.SetHidden(!_hiddenUnits);
 
-        unit.transform.position = unit.PositionId;
+        unit.transform.position = vacantElements[0].CellPos;
 
         UpdateGridEngagements();
     }

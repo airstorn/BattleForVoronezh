@@ -1124,6 +1124,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6, type: 2}
   _unitsOnGrid: []
   _hiddenUnits: 0
+  _gridOffset: {x: 0, y: 0, z: 0}
 --- !u!23 &595264825
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3093,6 +3094,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6, type: 2}
   _unitsOnGrid: []
   _hiddenUnits: 1
+  _gridOffset: {x: 0, y: 0, z: 0}
 --- !u!23 &2075352749
 MeshRenderer:
   m_ObjectHideFlags: 0
