@@ -8,7 +8,17 @@ public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
     [SerializeField] private GridObject _interactionGrid;
     [SerializeField] private Transform _pointVisualiser;
     [SerializeField] private LayerMask _raycastIgnore;
+    [SerializeField] private GameLogic _gameLogic;
+    [SerializeField] private GameObject _enemyTurn;
+    
+    private GridElement _selectedElement;
+    private IShotable _shotBehaviour;
 
+    private void Start()
+    {
+        _shotBehaviour = GetComponent<IShotable>();
+    }
+    
     public void TrackInput()
     {
         var ray = _raycastCamera.ScreenPointToRay(Input.mousePosition);
@@ -24,6 +34,7 @@ public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
                     Vector3Int roundedPos = Vector3Int.RoundToInt(hit.point);
                     _pointVisualiser.position = roundedPos;
                     HighlightPoint(roundedPos);
+                    Shoot();
                 }
             }
         }
@@ -32,6 +43,25 @@ public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
     private void HighlightPoint(Vector3Int pos)
     {
         _interactionGrid.UpdateGridEngagements();
-        _interactionGrid.GetVacantElement(pos).SetElementEngagement(GridObject.ElementState.vacant);
+        var unit = _interactionGrid.GetVacantElement(pos);
+        unit.SetElementEngagement(GridObject.ElementState.vacant);
+
+        _selectedElement = unit;
+    }
+
+    public void Shoot()
+    {
+        StartCoroutine(ShotAnimation());
+    }
+
+    private IEnumerator ShotAnimation()
+    {
+        if (_selectedElement.HoldedUnit != null)
+        {
+            var enemyHealth = _selectedElement.HoldedUnit.GetComponent<UnitHealth>();
+            enemyHealth.ApplyDamage();
+        }
+        yield return _shotBehaviour.Release(_selectedElement.CellPos, _selectedElement.HoldedUnit != null);
+        _gameLogic.ChangeState(_enemyTurn.GetComponent<IGameState>());
     }
 }

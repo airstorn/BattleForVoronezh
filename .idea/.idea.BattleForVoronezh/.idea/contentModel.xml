@@ -30,9 +30,13 @@
         <e p="Scripts" t="Include">
           <e p="Battle" t="Include">
             <e p="CameraTurns.cs" t="Include" />
+            <e p="EnemyTurn" t="Include">
+              <e p="EnemyRandom.cs" t="Include" />
+            </e>
             <e p="GridObject.cs" t="Include" />
             <e p="GridUnit.cs" t="Include" />
             <e p="Interfaces" t="Include">
+              <e p="IGameState.cs" t="Include" />
               <e p="IInputManager.cs" t="Include" />
               <e p="IShotable.cs" t="Include" />
               <e p="IUnitsData.cs" t="Include" />
@@ -53,7 +57,43 @@
             <e p="UnitHealth.cs" t="Include" />
             <e p="UnitsData.cs" t="Include" />
           </e>
+          <e p="EnemyTurn.cs" t="Include" />
+          <e p="GameLevel" t="Include">
+            <e p="1" t="Include">
+              <e p="DefaultShot.cs" t="Include" />
+            </e>
+          </e>
           <e p="GameLogic.cs" t="Include" />
+          <e p="PlaceUnits.cs" t="Include" />
+          <e p="PlayerTurn.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
         </e>
       </e>
       <e p="BattleForVoronezh.sln" t="IncludeFlat" />

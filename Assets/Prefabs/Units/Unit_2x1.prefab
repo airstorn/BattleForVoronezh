@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7382420953287537768}
   - component: {fileID: 6947550788151812421}
   - component: {fileID: 3424743646080061186}
+  - component: {fileID: -4626070151480183933}
   m_Layer: 8
   m_Name: Unit_2x1
   m_TagString: Unit
@@ -68,6 +69,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0.5, y: 1, z: 0}
+--- !u!114 &-4626070151480183933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881100260740229764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55d08fabd05a34448150e3b341e8d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _base: {fileID: 6947550788151812421}
+  _health: 0
 --- !u!1 &4514611712711509925
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: 8b8d2a773a1cda640ae2af195dabe552, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.525
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: 8b8d2a773a1cda640ae2af195dabe552, type: 3}
       propertyPath: m_LocalPosition.z
@@ -361,7 +376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4681500829981850, guid: ddea709db0b3fbe4eb227c58cfa874d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.525
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4681500829981850, guid: ddea709db0b3fbe4eb227c58cfa874d2, type: 3}
       propertyPath: m_LocalPosition.z

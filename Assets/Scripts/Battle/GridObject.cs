@@ -259,7 +259,7 @@ public class GridObject : MonoBehaviour
         }
         List<GridElement> vacantElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
         unit.SetElements(vacantElements);
-        unit.SetHidden(!_hiddenUnits);
+        unit.SetHidden(_hiddenUnits);
 
         if(vacantElements.Count > 0)
             unit.transform.position = vacantElements[0].CellPos;

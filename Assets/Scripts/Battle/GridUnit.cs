@@ -22,6 +22,8 @@ public class UnitVisual
     public void SetHidden(bool hidden)
     {
         _hidden = hidden;
+        _healthy.SetActive(!_hidden);
+        Debug.Log(_healthy.name + !hidden);
     }
 }
 
@@ -29,7 +31,6 @@ public class GridUnit : MonoBehaviour
 {
     [SerializeField] private UnitVisual _visual;
     [SerializeField] private Vector2Int _size;
-    [SerializeField] private int _health;
     [SerializeField] private List<GridElement> _engagedElements = new List<GridElement>();
     [SerializeField] private Transform _gizmosPoint;
 
@@ -60,9 +61,10 @@ public class GridUnit : MonoBehaviour
         Left = 0
     }
 
-    private void Start()
+    private void Awake()
     {
         _visual.SetBroken(false);
+        SetHidden(false);
     }
 
     public void SetHidden(bool hide)
@@ -77,7 +79,7 @@ public class GridUnit : MonoBehaviour
         if (_rotation >= 360)
             _rotation = 0;
 
-            transform.DORotate(new Vector3(0, Rotation, 0), imidietly ? 0 : 0.3f);
+        transform.DORotate(new Vector3(0, Rotation, 0), imidietly ? 0 : 0.3f);
     }
 
     public void Rotate(RotationDirection direction)
