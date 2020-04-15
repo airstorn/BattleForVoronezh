@@ -4,11 +4,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public class UnitVisual
+{
+    [SerializeField] private GameObject _healthy;
+    [SerializeField] private GameObject _broken;
+    [SerializeField] private bool _hidden;
+
+    public void SetBroken(bool state)
+    {
+        _broken.SetActive(state);
+
+        if(_hidden == true)
+            _healthy.SetActive(!state);
+    }
+
+    public void SetHidden(bool hidden)
+    {
+        _hidden = hidden;
+    }
+}
+
 public class GridUnit : MonoBehaviour
 {
-    [SerializeField] protected GameObject _visual;
-    [SerializeField] protected Vector2Int _size;
+    [SerializeField] private UnitVisual _visual;
+    [SerializeField] private Vector2Int _size;
+    [SerializeField] private int _health;
+    [SerializeField] private List<GridElement> _engagedElements = new List<GridElement>();
+    [SerializeField] private Transform _gizmosPoint;
 
+    public int Rotation => _rotation;
+    public UnitVisual Visual => _visual;
+    public Vector2Int Size => _size;
+    public Vector3Int PositionId { get; set; }
+
+    private int _rotation;
     public bool SuitablePlaced
     {
         get
@@ -22,15 +52,6 @@ public class GridUnit : MonoBehaviour
         }
     }
 
-    public int Rotation => _rotation;
-    public Vector2Int Size => _size;
-    public Vector3Int PositionId { get; set; }
-
-    private int _rotation;
-    private bool _hidden;
-
-   [SerializeField] private List<GridElement> _engagedElements = new List<GridElement>();
-
     public enum RotationDirection
     {
         Forward = 90,
@@ -39,10 +60,14 @@ public class GridUnit : MonoBehaviour
         Left = 0
     }
 
+    private void Start()
+    {
+        _visual.SetBroken(false);
+    }
+
     public void SetHidden(bool hide)
     {
-        _hidden = hide;
-        _visual.SetActive(_hidden);
+        _visual.SetHidden(hide);
     }
 
     public void Rotate(bool imidietly)
@@ -94,7 +119,7 @@ public class GridUnit : MonoBehaviour
     {
         Gizmos.color = new Color(0, 1, 0, 0.9f);
 
-        Vector3 posOffset = new Vector3(_visual.transform.position.x, transform.position.y, _visual.transform.position.z);
+        Vector3 posOffset = new Vector3(_gizmosPoint.position.x, transform.position.y, _gizmosPoint.position.z);
         Vector3 FantomOffset = new Vector3(PositionId.x + Size.x / 2, transform.position.y, PositionId.z + Size.y / 2);
 
         Gizmos.DrawCube(posOffset, GetDirection() == RotationDirection.Left || GetDirection() == RotationDirection.Right ?

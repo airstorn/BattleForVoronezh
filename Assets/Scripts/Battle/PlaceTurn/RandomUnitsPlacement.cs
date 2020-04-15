@@ -16,18 +16,26 @@ public struct PlaceComparerJob
     {
         for (int i = 0; i < UnityEngine.Random.Range(0, (int)4); i++)
             Unit.Rotate(true);
+
+        int _attempts = 200;
+        int _currentAttempts = 0;
         do
         {
             Vector2Int randomPos = new Vector2Int(UnityEngine.Random.Range(0, (int)SelectedGrid.Sheet.GetLength(0)), UnityEngine.Random.Range(0, (int)SelectedGrid.Sheet.GetLength(1)));
+            Vector3 pos = SelectedGrid.Sheet[randomPos.x, randomPos.y].CellPos;
 
-            Unit.PositionId = new Vector3Int(randomPos.x, 0, randomPos.y);
+            Unit.PositionId = Vector3Int.RoundToInt(new Vector3(pos.x, 0, pos.z));
             if (SelectedGrid.TryPlaceUnit(Unit) == true)
             {
                 SelectedGrid.PlaceUnit(Unit);
+                return;
             }
-        }
-        while (Unit.SuitablePlaced == false);
 
+            _currentAttempts++;
+        }
+        while (Unit.SuitablePlaced == false && _currentAttempts < _attempts);
+
+        throw new NotImplementedException("Cant place unit on grid" + SelectedGrid.name);
     }
 }
 
@@ -39,7 +47,6 @@ public class RandomUnitsPlacement : IUnitsPlacer
 
         for (int i = 0; i < units.Count; i++)
         {
-            Debug.Log(units[i]);
             var PlaceJob = new PlaceComparerJob()
             {
                 SelectedGrid = grid,

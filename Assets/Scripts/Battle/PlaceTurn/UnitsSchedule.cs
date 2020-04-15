@@ -71,6 +71,7 @@ public class UnitsSchedule : MonoBehaviour, IUnitsData
         {
             var createdObject = Instantiate(_units.Data[i].gameObject, _schedulePoints[i].Pos, Quaternion.identity);
             SetUnit(createdObject.GetComponent<GridUnit>());
+            createdObject.GetComponent<GridUnit>().Visual.SetHidden(false);
         }
     }
 

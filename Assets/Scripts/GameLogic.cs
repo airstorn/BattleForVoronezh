@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,6 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private GridObject _enemyGrid;
     [SerializeField] private CameraTurns _cameraStatement;
  
-    public IInputHandler PlayerInputHandler => _playerInputHandler.GetComponent<IInputHandler>();
     public CameraTurns CameraStatement => _cameraStatement;
 
     public GridObject PlayerGrid => _playerGrid;
@@ -20,9 +20,13 @@ public class GameLogic : MonoBehaviour
 
     [Header("Placement Turn")]
 
-    [SerializeField] private GameObject _playerInputHandler;
+    [SerializeField] internal GameObject _PlacementInputHandler;
+    [SerializeField] internal GameObject _PlacementUI;
 
     [Header("Player Turn")]
+
+    [SerializeField] internal GameObject _PlayerTurnInputHandler;
+
     [Header("Enemy Turn")]
 
     private GameState _state;
@@ -30,9 +34,9 @@ public class GameLogic : MonoBehaviour
 
     private void Start()
     {
+        _state_PlaceUnits = new GameStates.PlaceUnits(this, _PlacementInputHandler.GetComponent<IInputHandler>());
+        _state_PlayerTurn = new GameStates.PlayerTurn(this, _PlayerTurnInputHandler.GetComponent<IInputHandler>());
         _state_EnemyTurn = new GameStates.EnemyTurn(this);
-        _state_PlaceUnits = new GameStates.PlaceUnits(this);
-        _state_PlayerTurn = new GameStates.PlayerTurn(this);
 
         _state = _state_PlaceUnits;
         _state.Activate();
@@ -48,6 +52,7 @@ public class GameLogic : MonoBehaviour
         _state.Deactivate();
         _state = state;
         _state.Activate();
+        Debug.Log(_state);
     }
 
     public void Confirm_button()
@@ -59,10 +64,12 @@ public class GameLogic : MonoBehaviour
 public class GameState
 {
     protected GameLogic _logic;
+    protected IInputHandler _playerInputHandler;
 
-    public GameState(GameLogic gameLogic)
+    public GameState(GameLogic gameLogic, IInputHandler playerInputHandler)
     {
         _logic = gameLogic;
+        _playerInputHandler = playerInputHandler;
     }
 
     public virtual void Activate() { }
@@ -75,10 +82,12 @@ namespace GameStates
 {
     public class PlaceUnits : GameState
     {
-        public PlaceUnits(GameLogic gameLogic) : base(gameLogic) { }
+        public PlaceUnits(GameLogic gameLogic, IInputHandler playerInputHandler) : base(gameLogic, playerInputHandler) { }
+
 
         public override void Activate()
         {
+            _logic._PlacementUI.SetActive(true);
             _logic.StartCoroutine(Animate());
         }
 
@@ -89,11 +98,16 @@ namespace GameStates
             //_logic.ChangeState(_logic._state_PlayerTurn);
         }
 
+        public override void Deactivate()
+        {
+            _logic._PlacementUI.SetActive(false);
+        }
+
         public override void Update()
         {
             if(Input.GetMouseButtonDown(0))
             {
-                _logic.PlayerInputHandler.TrackInput();
+                _playerInputHandler.TrackInput();
             }
         }
 
@@ -125,18 +139,24 @@ namespace GameStates
 
     public class PlayerTurn : GameState
     {
-        public PlayerTurn(GameLogic gameLogic) : base(gameLogic) { }
+        public PlayerTurn(GameLogic gameLogic, IInputHandler playerInputHandler) : base(gameLogic, playerInputHandler) { }
 
         public override void Activate()
         {
             _logic.CameraStatement.ToEnemyCam();
-             
         }
+
+        public override void Update()
+        {
+            _playerInputHandler.TrackInput();
+        }
+
+
     }
 
     public class EnemyTurn : GameState
     {
-        public EnemyTurn(GameLogic gameLogic) : base(gameLogic) { }
+        public EnemyTurn(GameLogic gameLogic) : base(gameLogic, null) { }
 
 
     }

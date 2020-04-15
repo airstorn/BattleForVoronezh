@@ -54,22 +54,21 @@ public class GridElement
 
 public class GridObject : MonoBehaviour
 {
-    [SerializeField] private GridElement[,] _objects = new GridElement[10, 10];
+    [SerializeField] private GridElement[,] _objects;
     [SerializeField] private float _tileOffset = 1;
     [SerializeField] private GameObject _ElementTemplate;
     [SerializeField] private UnitsData _data;
     [SerializeField] private List<GridUnit> _unitsOnGrid = new List<GridUnit>();
+
     [Tooltip("is units hidden by default on this grid?")]
     [SerializeField] private bool _hiddenUnits;
-    [SerializeField] private Vector3Int _gridOffset;
-
-    public Action<GridUnit> OnPlacementFailed;
-    public Action<GridUnit> OnPlacementSuccess;
+    [SerializeField] private Vector2Int _size;
 
     public Vector3Int GridOffset => _gridOffset;
     public GridElement[,] Sheet => _objects;
     public List<GridUnit> Units => _unitsOnGrid;
 
+    private Vector3Int _gridOffset;
 
     public enum ElementState
     {
@@ -80,6 +79,8 @@ public class GridObject : MonoBehaviour
 
     private void InitGrid()
     {
+        _objects = new GridElement[_size.x, _size.y];
+
         for (int x = 0; x < _objects.GetLength(0); x++)
         {
             for (int z = 0; z < _objects.GetLength(1); z++)
@@ -104,8 +105,6 @@ public class GridObject : MonoBehaviour
     public List<GridElement> GetVacantElements(Vector3Int position, Vector2Int size, RotationDirection rotation, int borderOffsetRange)
     {
         List<GridElement> vacantElements = new List<GridElement>();
-
-        Debug.Log(position);
 
         switch (rotation)
         {
@@ -172,7 +171,18 @@ public class GridObject : MonoBehaviour
         return vacantElements;
     }
 
-    private void Start()
+    public GridElement GetVacantElement(Vector3Int predictedPosition)
+    {
+        Vector3Int vacantVector = new Vector3Int(predictedPosition.x - _gridOffset.x, 1, predictedPosition.z - _gridOffset.z);
+        if (VectorInRange(vacantVector))
+        {
+            return _objects[vacantVector.x, vacantVector.z];
+        }
+
+        throw new NotImplementedException("Element not found!");
+    }
+
+    private void Awake()
     {
         InitGrid();
     }
@@ -251,7 +261,8 @@ public class GridObject : MonoBehaviour
         unit.SetElements(vacantElements);
         unit.SetHidden(!_hiddenUnits);
 
-        unit.transform.position = vacantElements[0].CellPos;
+        if(vacantElements.Count > 0)
+            unit.transform.position = vacantElements[0].CellPos;
 
         UpdateGridEngagements();
     }

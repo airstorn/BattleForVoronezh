@@ -7,6 +7,7 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
 {
     [SerializeField] private Camera _raycastCamera;
     [SerializeField] private GridObject _interactableGrid;
+    [SerializeField] private LayerMask _ignoreMask;
     [SerializeField] private IUnitsData _unitsHolder;
     
     private GridUnit _currentUnit;
@@ -19,7 +20,7 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
     public void CatchUnit()
     {
         RaycastHit hit;
-        if (Physics.Raycast(_raycastCamera.ScreenPointToRay(Input.mousePosition), out hit))
+        if (Physics.Raycast(_raycastCamera.ScreenPointToRay(Input.mousePosition), out hit, _ignoreMask))
         {
             if (hit.collider.GetComponent<GridUnit>() != null)
             {
@@ -100,6 +101,9 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
             else
             {
                 _interactableGrid.PlaceUnit(_currentUnit);
+                //ConvertUnitPositionInId();
+                var elements = _interactableGrid.GetVacantElements(_currentUnit.PositionId, _currentUnit.Size, _currentUnit.GetDirection(), 0);
+                _interactableGrid.SetElementsState(elements, GridObject.ElementState.locked);
             }
         }
     }
