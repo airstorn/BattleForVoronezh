@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbc2ec229e9544529fe18ad6d9165a9, type: 3}
   m_Name: Enemy4x4
   m_EditorClassIdentifier: 
-  Data: []
+  Data:
+  - {fileID: 6947550788151812421, guid: 9108a8087b170514ab7cb284a9be60ce, type: 3}
+  - {fileID: 5845550374039422879, guid: 264e1c8d267f0234190e2263273d013c, type: 3}
