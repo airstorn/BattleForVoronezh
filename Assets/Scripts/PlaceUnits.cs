@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 namespace GameStates
@@ -26,12 +27,14 @@ namespace GameStates
         {
             _logic.CameraStatement.ToPlacerCam();
             yield return null;
-            //_logic.ChangeState(_logic._state_PlayerTurn);
         }
 
         public void Deactivate()
         {
             _uiObject.SetActive(false);
+            
+           Destroy(_inputObject);
+            
             _logic.OnUpdate -= StateUpdate;
         }
 
@@ -53,19 +56,7 @@ namespace GameStates
 
         private bool ValidatePlacement()
         {
-
-            if (_logic.PlayerGrid.AllUnitsPlaced() == true)
-            {
-                foreach (var placedElement in _logic.PlayerGrid.Units)
-                {
-                    if (placedElement.SuitablePlaced == false)
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
-            return false;
+            return _logic.PlayerGrid.AllUnitsPlaced() == true && _logic.PlayerGrid.Units.All(placedElement => placedElement.SuitablePlaced != false);
         }
     }
 }

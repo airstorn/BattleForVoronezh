@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static GridUnit;
 
 [Serializable]
@@ -13,13 +14,13 @@ public class GridElement
 
     public int Engagement = 0;
     public SpriteRenderer CellRenderer => _cellRenderer;
-    //public Vector2Int Id => _id;
     public Vector3 CellPos => _ElementPos;
     public GridUnit HoldedUnit => _holdedUnit;
+    public GridSprites.SpriteState HitState => _state;
 
+    private GridSprites.SpriteState _state;
     public GridElement(Vector2Int id, Vector3 worldPos)
     {
-        //_id = id;
         _ElementPos = worldPos;
     }
 
@@ -50,6 +51,12 @@ public class GridElement
     {
         _cellRenderer = rend;
     }
+
+    public void SetSpriteType(GridSprites.SpriteState state)
+    {
+        _cellRenderer.sprite = GridSprites.Instance.GetSprite(state);
+        _state = state;
+    }
 }
 
 public class GridObject : MonoBehaviour
@@ -59,7 +66,6 @@ public class GridObject : MonoBehaviour
     [SerializeField] private GameObject _ElementTemplate;
     [SerializeField] private UnitsData _data;
     [SerializeField] private List<GridUnit> _unitsOnGrid = new List<GridUnit>();
-
     [Tooltip("is units hidden by default on this grid?")]
     [SerializeField] private bool _hiddenUnits;
     [SerializeField] private Vector2Int _size;
@@ -96,6 +102,7 @@ public class GridObject : MonoBehaviour
                 var element = Instantiate(_ElementTemplate, _objects[x, z].CellPos, Quaternion.Euler(90,0,0), transform);
 
                 _objects[x, z].SetElement(element.GetComponent<SpriteRenderer>());
+                _objects[x,z].SetSpriteType(GridSprites.SpriteState.normal);
             }
         }
 
@@ -167,6 +174,8 @@ public class GridObject : MonoBehaviour
                     }
                 }
                 break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(rotation), rotation, null);
         }
         return vacantElements;
     }
@@ -199,7 +208,7 @@ public class GridObject : MonoBehaviour
             List<GridElement> unitElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
             foreach (var currentElement in unitElements)
             {
-                if (currentElement.HoldedUnit != null && currentElement.HoldedUnit != unit)
+                if (currentElement.HoldedUnit && currentElement.HoldedUnit != unit)
                 {
                     SetElementsState(unitElements, ElementState.locked);
                     return;
@@ -225,7 +234,7 @@ public class GridObject : MonoBehaviour
 
         foreach (var outlineElement in nearElements)
         {
-            if(outlineElement.HoldedUnit != null && outlineElement.HoldedUnit != unit)
+            if(outlineElement.HoldedUnit && outlineElement.HoldedUnit != unit)
             {
                 SetElementsState(vacantElements, ElementState.locked);
                 return false;
@@ -236,7 +245,7 @@ public class GridObject : MonoBehaviour
         {
             foreach(var emptyElement in vacantElements)
             {
-                if(emptyElement.HoldedUnit != null && emptyElement.HoldedUnit != unit)
+                if(emptyElement.HoldedUnit && emptyElement.HoldedUnit != unit)
                 {
                     SetElementsState(vacantElements, ElementState.locked);
                     return false;
@@ -258,7 +267,8 @@ public class GridObject : MonoBehaviour
             _unitsOnGrid.Add(unit);
         }
         List<GridElement> vacantElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
-        unit.SetElements(vacantElements);
+        List<GridElement> borders = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
+        unit.SetElements(vacantElements, borders);
         unit.SetHidden(_hiddenUnits);
 
         if(vacantElements.Count > 0)

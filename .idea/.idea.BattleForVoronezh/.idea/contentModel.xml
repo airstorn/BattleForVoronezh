@@ -64,6 +64,7 @@
             </e>
           </e>
           <e p="GameLogic.cs" t="Include" />
+          <e p="GridSprites.cs" t="Include" />
           <e p="PlaceUnits.cs" t="Include" />
           <e p="PlayerTurn.cs" t="Include" />
         </e>

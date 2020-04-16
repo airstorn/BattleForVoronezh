@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using DG.Tweening;
 
@@ -38,10 +39,7 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
     {
         var unit = _unitsHolder.GetUnit(vacantUnit);
 
-        if (unit != null)
-            return unit;
-        else
-            return vacantUnit;
+        return unit != null ? unit : vacantUnit;
     }
 
     private IEnumerator DragUnit()
@@ -58,7 +56,7 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
                    _raycastCamera.ScreenToWorldPoint(Input.mousePosition).z
                    );
 
-            if (_currentUnit != null)
+            if (_currentUnit)
                 _currentUnit.transform.position = pos;
 
             if(Input.GetMouseButtonUp(0))
@@ -82,7 +80,7 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
 
     private void ConvertUnitPositionInId()
     {
-        if (_currentUnit == null)
+        if (!_currentUnit)
             return;
 
         _currentUnit.PositionId = Vector3Int.RoundToInt(_currentUnit.transform.position);
@@ -90,21 +88,18 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
 
     public void RotatePlacebleElement()
     {
-        if (_currentUnit != null)
-        {
-            _currentUnit.Rotate(false);
+        if (_currentUnit == null) return;
+        _currentUnit.Rotate(false);
 
-            if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
-            {
-                _interactableGrid.PlaceUnit(_currentUnit);
-            }
-            else
-            {
-                _interactableGrid.PlaceUnit(_currentUnit);
-                //ConvertUnitPositionInId();
-                var elements = _interactableGrid.GetVacantElements(_currentUnit.PositionId, _currentUnit.Size, _currentUnit.GetDirection(), 0);
-                _interactableGrid.SetElementsState(elements, GridObject.ElementState.locked);
-            }
+        if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
+        {
+            _interactableGrid.PlaceUnit(_currentUnit);
+        }
+        else
+        {
+            _interactableGrid.PlaceUnit(_currentUnit);
+            var elements = _interactableGrid.GetVacantElements(_currentUnit.PositionId, _currentUnit.Size, _currentUnit.GetDirection(), 0);
+            _interactableGrid.SetElementsState(elements, GridObject.ElementState.locked);
         }
     }
 
@@ -112,21 +107,13 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
     {
         ConvertUnitPositionInId();
 
-        List<GridElement> vacantElements = _interactableGrid.GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
-        List<GridElement> ElementOutline = _interactableGrid.GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
+        var vacantElements = _interactableGrid.GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
+        var elementOutline = _interactableGrid.GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
 
         _interactableGrid.UpdateGridEngagements();
 
-        bool locked = false;
+        var locked = elementOutline.Any(element => element.HoldedUnit != unit && element.HoldedUnit || vacantElements.Count != unit.Size.x * unit.Size.y);
 
-        foreach (var element in ElementOutline)
-        {
-            if (element.HoldedUnit != unit && element.HoldedUnit != null || vacantElements.Count != unit.Size.x * unit.Size.y)
-            {
-                locked = true;
-                break;
-            }
-        }
         _interactableGrid.SetElementsState(vacantElements, locked == true ? GridObject.ElementState.locked : GridObject.ElementState.vacant);
     }
 

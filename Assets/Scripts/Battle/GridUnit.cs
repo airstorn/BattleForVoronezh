@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [Serializable]
 public class UnitVisual
@@ -23,7 +24,6 @@ public class UnitVisual
     {
         _hidden = hidden;
         _healthy.SetActive(!_hidden);
-        Debug.Log(_healthy.name + !hidden);
     }
 }
 
@@ -32,8 +32,10 @@ public class GridUnit : MonoBehaviour
     [SerializeField] private UnitVisual _visual;
     [SerializeField] private Vector2Int _size;
     [SerializeField] private List<GridElement> _engagedElements = new List<GridElement>();
+    [SerializeField] private List<GridElement> _borderElements = new List<GridElement>();
     [SerializeField] private Transform _gizmosPoint;
 
+    public List<GridElement> Borders => _borderElements;
     public int Rotation => _rotation;
     public UnitVisual Visual => _visual;
     public Vector2Int Size => _size;
@@ -88,27 +90,27 @@ public class GridUnit : MonoBehaviour
         transform.DORotate(new Vector3(0, Rotation, 0), 0.3f);
     }
 
-    public void SetElements(List<GridElement> elements)
+    public void SetElements(IEnumerable<GridElement> selfElements, IEnumerable<GridElement> borderElements)
     {
         RemoveElements();
 
-        foreach (var element in elements)
+        foreach (var element in selfElements)
         {
             element.SetUnit(this);
             _engagedElements.Add(element);
         }
+
+        _borderElements = borderElements.Except(_engagedElements).ToList();
     }
 
 
     public void RemoveElements()
     {
-        foreach (GridElement element in _engagedElements)
+        foreach (var element in _engagedElements.Where(element => element.HoldedUnit == this))
         {
-            if (element.HoldedUnit == this)
-            {
-                element.SetUnit(null);
-            }
+            element.SetUnit(null);
         }
+        _borderElements.Clear();
         _engagedElements.Clear();
     }
 

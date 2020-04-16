@@ -39,7 +39,6 @@ public class GameLogic : MonoBehaviour
         _state.Deactivate();
         _state = state;
         _state.Activate();
-        Debug.Log(_state);
     }
 
     private void Update()

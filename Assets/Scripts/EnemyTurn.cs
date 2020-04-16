@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace GameStates
@@ -9,7 +10,14 @@ namespace GameStates
         [SerializeField] private GameLogic _logic;
         [SerializeField] private GameObject _nextState;
         [SerializeField] private EnemyRandom _mind;
+
+        private IGameState _state;
         
+        private void Start()
+        {
+            _state = _nextState.GetComponent<IGameState>();
+        }
+
         public void Activate()
         {
             _cameraStatement.ToPlayerCam();
@@ -26,7 +34,7 @@ namespace GameStates
 
         private void EndTurn()
         {
-            _logic.ChangeState(_nextState.GetComponent<IGameState>());
+            _logic.ChangeState(_state);
         }
 
         public void Deactivate()

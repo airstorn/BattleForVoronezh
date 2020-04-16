@@ -80,8 +80,11 @@ public class UnitsSchedule : MonoBehaviour, IUnitsData
         _schedulePoints = new ScheduleObject[_units.Data.Length];
         for (int i = 0; i < _schedulePoints.Length; i++)
         {
-            _schedulePoints[i] = new ScheduleObject();
-            _schedulePoints[i].Pos = new Vector3(_selectPoint.position.x + i * 5, _selectPoint.position.y, _selectPoint.position.z);
+            var position = _selectPoint.position;
+            _schedulePoints[i] = new ScheduleObject
+            {
+                Pos = new Vector3(position.x + i * 5, position.y, position.z)
+            };
         }
     }
 

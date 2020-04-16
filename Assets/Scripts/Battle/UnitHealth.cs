@@ -5,11 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(GridUnit))]
 public class UnitHealth : MonoBehaviour
 {
-    [SerializeField] private GridUnit _base;
+    private GridUnit _base;
     [SerializeField] private int _health;
+
+    public bool IsDead => _health <= 0;
     
     private void Start()
     {
+        _base = GetComponent<GridUnit>();
         CalcHealth();
     }
 
@@ -24,7 +27,13 @@ public class UnitHealth : MonoBehaviour
 
         if(_health <= 0)
         {
-            _base.Visual.SetBroken(true);
+            Death();
         }
+    }
+
+    private void Death()
+    {
+        _base.Visual.SetBroken(true);
+        _base.Borders.ForEach(element => element.SetSpriteType(GridSprites.SpriteState.missed));
     }
 }
