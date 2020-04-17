@@ -102,7 +102,7 @@ public class GridObject : MonoBehaviour
                 var element = Instantiate(_ElementTemplate, _objects[x, z].CellPos, Quaternion.Euler(90,0,0), transform);
 
                 _objects[x, z].SetElement(element.GetComponent<SpriteRenderer>());
-                _objects[x,z].SetSpriteType(GridSprites.SpriteState.normal);
+                _objects[x, z].SetSpriteType(GridSprites.SpriteState.normal);
             }
         }
 
