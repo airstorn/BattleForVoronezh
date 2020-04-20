@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using UnityEngine;
 namespace GameStates
 {
     public class PlayerTurn : MonoBehaviour, IGameState
     {
         [SerializeField] private GameLogic _logic;
-        [SerializeField] private CameraTurns _cameraMovement;
         [SerializeField] private GameObject _inputObject;
+        [SerializeField] private CinemachineVirtualCamera _offsetCamera;
 
         private IInputHandler _inputHandler;
 
@@ -17,7 +18,7 @@ namespace GameStates
         public void Activate()
         {
             _logic.OnUpdate += StateUpdate;
-            _cameraMovement.ToEnemyCam();
+            _logic.CameraStatement.ToCamera(_offsetCamera);
         }
 
 

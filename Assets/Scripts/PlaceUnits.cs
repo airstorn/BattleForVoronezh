@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Linq;
+using Cinemachine;
 using UnityEngine;
 
 namespace GameStates
@@ -10,6 +11,7 @@ namespace GameStates
         [SerializeField] private GameObject _inputObject;
         [SerializeField] private GameObject _uiObject;
         [SerializeField] private GameObject _playerTurnState;
+        [SerializeField] private CinemachineVirtualCamera _cameraOffset;
 
         private IInputHandler _inputHandler;
 
@@ -25,7 +27,7 @@ namespace GameStates
 
         private IEnumerator Animate()
         {
-            _logic.CameraStatement.ToPlacerCam();
+            _logic.CameraStatement.ToCamera(_cameraOffset);
             yield return null;
         }
 
@@ -48,6 +50,7 @@ namespace GameStates
 
         public void Confirm()
         {
+            Debug.Log( _logic.PlayerGrid.Units.All(placedElement => placedElement.SuitablePlaced != false));
             if(ValidatePlacement() == true)
             {
                 _logic.ChangeState(_playerTurnState.GetComponent<IGameState>());

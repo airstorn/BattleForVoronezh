@@ -345,9 +345,105 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6202133551314179350}
     m_Modifications:
+    - target: {fileID: 1031113599082000, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045822955548660, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059723461948332, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104296682127278, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148841833649284, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306754170226288, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425196206548288, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429729266200086, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1441002410385728, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498743337398556, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501161827879440, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601218258160722, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614177451116126, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740234430285918, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775063533676130, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775437077256420, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789068689717990, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827644351014820, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839264619017564, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918903853584726, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1948678264439458, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
       propertyPath: m_Name
       value: SM_Veh_German_Halftrack_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948678264439458, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960990163946634, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971124450712452, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978581721763990, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4924320973631184, guid: 4e567565439712845a4eb459766b4f0e, type: 3}
       propertyPath: m_LocalPosition.x

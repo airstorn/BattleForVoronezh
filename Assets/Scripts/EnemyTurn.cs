@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections;
+using Cinemachine;
 using UnityEngine;
 
 namespace GameStates
 {
     public class EnemyTurn : MonoBehaviour, IGameState
     {
-        [SerializeField] private CameraTurns _cameraStatement;
         [SerializeField] private GameLogic _logic;
         [SerializeField] private GameObject _nextState;
         [SerializeField] private EnemyRandom _mind;
+        [SerializeField] private CinemachineVirtualCamera _offsetCamera;
 
         private IGameState _state;
         
@@ -20,7 +21,7 @@ namespace GameStates
 
         public void Activate()
         {
-            _cameraStatement.ToPlayerCam();
+            _logic.CameraStatement.ToCamera(_offsetCamera);
             StartCoroutine(Animate());
         }
 

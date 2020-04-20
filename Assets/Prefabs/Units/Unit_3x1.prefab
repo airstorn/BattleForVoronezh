@@ -81,7 +81,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d55d08fabd05a34448150e3b341e8d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _base: {fileID: -6221927936765373192}
   _health: 0
 --- !u!1 &2445774941461222069
 GameObject:
@@ -306,9 +305,73 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8729555566961058168}
     m_Modifications:
+    - target: {fileID: 1034137527228356, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109827913601300, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188527795299342, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242601301457276, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356829240555904, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379035359699284, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438120921823542, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610562675750256, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622024826519544, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666580203058990, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724989495220356, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730661558197796, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825057162662470, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1868458692392184, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
       propertyPath: m_Name
       value: SM_Veh_Plane_German_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868458692392184, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879779056442166, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921738657547882, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4119975173709346, guid: d592535c9e5b1d043a53a25e3890f501, type: 3}
       propertyPath: m_LocalPosition.x

@@ -29,13 +29,17 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Battle" t="Include">
-            <e p="CameraTurns.cs" t="Include" />
+            <e p="CameraMovers" t="Include">
+              <e p="BlinkingCamera.cs" t="Include" />
+              <e p="CameraTurns.cs" t="Include" />
+            </e>
             <e p="EnemyTurn" t="Include">
               <e p="EnemyRandom.cs" t="Include" />
             </e>
             <e p="GridObject.cs" t="Include" />
             <e p="GridUnit.cs" t="Include" />
             <e p="Interfaces" t="Include">
+              <e p="ICamMover.cs" t="Include" />
               <e p="IGameState.cs" t="Include" />
               <e p="IInputManager.cs" t="Include" />
               <e p="IShotable.cs" t="Include" />

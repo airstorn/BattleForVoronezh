@@ -15,8 +15,6 @@ public class UnitVisual
     public void SetBroken(bool state)
     {
         _broken.SetActive(state);
-
-        if(_hidden == true)
             _healthy.SetActive(!state);
     }
 

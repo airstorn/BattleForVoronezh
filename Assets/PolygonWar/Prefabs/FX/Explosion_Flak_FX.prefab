@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4646730784509646}
   - component: {fileID: 198753536921840570}
   - component: {fileID: 199072873416725974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Explosion_Flak_FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}

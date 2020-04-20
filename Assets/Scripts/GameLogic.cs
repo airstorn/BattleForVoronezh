@@ -6,17 +6,17 @@ public class GameLogic : MonoBehaviour
 {
     [SerializeField] private GridObject _playerGrid;
     [SerializeField] private GridObject _enemyGrid;
-    [SerializeField] private CameraTurns _cameraStatement;
     
     [Header("Statements")]
     [SerializeField] private GameObject _placementTurnObject;
     [SerializeField] private GameObject _playerTurnObject;
     [SerializeField] private GameObject _enemyTurnObject;
-    public CameraTurns CameraStatement => _cameraStatement;
+    public ICamMover CameraStatement;
     public Action OnUpdate;
 
     public GridObject PlayerGrid => _playerGrid; 
     public GridObject EnemyGrid => _enemyGrid;
+    
 
     private IGameState _state_PlayerTurn;
     private IGameState _state_EnemyTurn;
@@ -32,6 +32,8 @@ public class GameLogic : MonoBehaviour
         
         _state = _state_PlaceUnits;
         _state.Activate();
+
+        CameraStatement = Camera.main.GetComponent<ICamMover>();
     }
 
     public void ChangeState(IGameState state)
