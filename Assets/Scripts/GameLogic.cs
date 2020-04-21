@@ -16,8 +16,10 @@ public class GameLogic : MonoBehaviour
 
     public GridObject PlayerGrid => _playerGrid; 
     public GridObject EnemyGrid => _enemyGrid;
-    
 
+    public Action OnPlayerWin;
+    public Action OnPlayerLoose;
+    
     private IGameState _state_PlayerTurn;
     private IGameState _state_EnemyTurn;
     private IGameState _state_PlaceUnits;
@@ -33,6 +35,9 @@ public class GameLogic : MonoBehaviour
         _state = _state_PlaceUnits;
         _state.Activate();
 
+        OnPlayerLoose += PlayerLoose;
+        OnPlayerWin += PlayerWin;
+        
         CameraStatement = Camera.main.GetComponent<ICamMover>();
     }
 
@@ -46,6 +51,16 @@ public class GameLogic : MonoBehaviour
     private void Update()
     {
         OnUpdate?.Invoke();
+    }
+
+    private void PlayerWin()
+    {
+        Debug.Log("Player win!");
+    }
+
+    private void PlayerLoose()
+    {
+        Debug.Log("Player loose!");
     }
 
     public void Confirm_button()

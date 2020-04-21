@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
 {
-    [SerializeField] private Camera _raycastCamera;
-    [SerializeField] private GridObject _interactionGrid;
-    [SerializeField] private LayerMask _raycastIgnore;
     [SerializeField] private GameLogic _gameLogic;
+    [SerializeField] private Camera _raycastCamera;
+    [SerializeField] private LayerMask _raycastIgnore;
+    [SerializeField] private GridObject _interactionGrid;
     [SerializeField] private GameObject _enemyTurn;
     
     private GridElement _selectedElement;
+
+    private ILevelTarget _playerTarget;
     private IShotable _shotBehaviour;
     private IGameState _nextState;
     private bool animate = false;
@@ -18,6 +20,7 @@ public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
     {
         _shotBehaviour = GetComponent<IShotable>();
         _nextState = _enemyTurn.GetComponent<IGameState>();
+        _playerTarget = GetComponent<ILevelTarget>();
     }
     
     public void TrackInput()
@@ -57,6 +60,12 @@ public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
         
         _shotBehaviour.Release(_selectedElement.CellPos, ref _selectedElement);
         yield return new WaitForSeconds(2);
+
+        if (_playerTarget.CheckTarget() == true)
+        {
+            _gameLogic.OnPlayerWin?.Invoke();
+            yield break;
+        }
         
         if(_selectedElement.HitState == GridSprites.SpriteState.missed)
             _gameLogic.ChangeState(_nextState);

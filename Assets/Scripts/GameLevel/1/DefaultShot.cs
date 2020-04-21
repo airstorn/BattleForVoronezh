@@ -9,7 +9,6 @@ public class DefaultShot : MonoBehaviour, IShotable
     
     public void Release(Vector3 spawnPosition, ref GridElement hitElement)
     {
-        
         if (hitElement.HoldedUnit)
         {
             var enemyHealth = hitElement.HoldedUnit.GetComponent<UnitHealth>();

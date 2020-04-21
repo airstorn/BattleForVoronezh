@@ -59,6 +59,7 @@ public class GridElement
     }
 }
 
+[RequireComponent(typeof(UnitHealth))]
 public class GridObject : MonoBehaviour
 {
     [SerializeField] private GridElement[,] _objects;
@@ -73,7 +74,6 @@ public class GridObject : MonoBehaviour
     public Vector3Int GridOffset => _gridOffset;
     public GridElement[,] Sheet => _objects;
     public List<GridUnit> Units => _unitsOnGrid;
-
     private Vector3Int _gridOffset;
 
     public enum ElementState

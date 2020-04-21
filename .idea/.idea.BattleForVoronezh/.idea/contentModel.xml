@@ -34,7 +34,7 @@
               <e p="CameraTurns.cs" t="Include" />
             </e>
             <e p="EnemyTurn" t="Include">
-              <e p="EnemyRandom.cs" t="Include" />
+              <e p="EnemyUnitsAim.cs" t="Include" />
             </e>
             <e p="GridObject.cs" t="Include" />
             <e p="GridUnit.cs" t="Include" />
@@ -42,6 +42,7 @@
               <e p="ICamMover.cs" t="Include" />
               <e p="IGameState.cs" t="Include" />
               <e p="IInputManager.cs" t="Include" />
+              <e p="ILevelTarget.cs" t="Include" />
               <e p="IShotable.cs" t="Include" />
               <e p="IUnitsData.cs" t="Include" />
               <e p="IUnitsPlacer.cs" t="Include" />
@@ -65,6 +66,8 @@
           <e p="GameLevel" t="Include">
             <e p="1" t="Include">
               <e p="DefaultShot.cs" t="Include" />
+              <e p="TargetClearField.cs" t="Include" />
+              <e p="TargetDestroyUnits.cs" t="Include" />
             </e>
           </e>
           <e p="GameLogic.cs" t="Include" />

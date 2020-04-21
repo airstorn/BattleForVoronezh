@@ -36,9 +36,11 @@ public class GridUnit : MonoBehaviour
     public List<GridElement> Borders => _borderElements;
     public int Rotation => _rotation;
     public UnitVisual Visual => _visual;
+    public UnitHealth Health => _health;
     public Vector2Int Size => _size;
     public Vector3Int PositionId { get; set; }
 
+    private UnitHealth _health;
     private int _rotation;
     public bool SuitablePlaced
     {
@@ -65,6 +67,8 @@ public class GridUnit : MonoBehaviour
     {
         _visual.SetBroken(false);
         SetHidden(false);
+
+        _health = GetComponent<UnitHealth>();
     }
 
     public void SetHidden(bool hide)
