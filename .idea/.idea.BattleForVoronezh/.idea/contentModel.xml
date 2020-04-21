@@ -74,6 +74,9 @@
           <e p="GridSprites.cs" t="Include" />
           <e p="PlaceUnits.cs" t="Include" />
           <e p="PlayerTurn.cs" t="Include" />
+          <e p="User" t="Include">
+            <e p="UserData.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
