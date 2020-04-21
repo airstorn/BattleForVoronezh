@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _logic: {fileID: 1829151276}
   _inputObject: {fileID: 1502249097}
-  _offsetCamera: {fileID: 0}
+  _offsetCamera: {fileID: 1616887711}
 --- !u!4 &312422179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447950, guid: 80893f77b874eba4ebf60f53719c046e,
@@ -3200,6 +3200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0f6722254a9974e95fe52bf61d90c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentCamera: {fileID: 538827393}
 --- !u!1001 &966439509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3760,8 +3761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _logic: {fileID: 1829151276}
   _nextState: {fileID: 300139805}
-  _mind: {fileID: 1097428331}
-  _offsetCamera: {fileID: 0}
+  _offsetCamera: {fileID: 480201309}
+  _interactionGrid: {fileID: 595264823}
 --- !u!114 &1097428330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3786,10 +3787,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097428327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd1333e9b64c80418c6bf563d508308, type: 3}
+  m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactionGrid: {fileID: 595264823}
+  _enemyGrid: {fileID: 595264823}
 --- !u!1001 &1109656348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5306,6 +5307,7 @@ GameObject:
   - component: {fileID: 1502249098}
   - component: {fileID: 1502249099}
   - component: {fileID: 1502249100}
+  - component: {fileID: 1502249101}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5339,12 +5341,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306c2c73c4f1e4f248fb7434824bd6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameLogic: {fileID: 1829151276}
   _raycastCamera: {fileID: 963194227}
-  _interactionGrid: {fileID: 2075352747}
   _raycastIgnore:
     serializedVersion: 2
     m_Bits: 51
-  _gameLogic: {fileID: 1829151276}
+  _interactionGrid: {fileID: 2075352747}
   _enemyTurn: {fileID: 1097428327}
 --- !u!114 &1502249100
 MonoBehaviour:
@@ -5361,6 +5363,19 @@ MonoBehaviour:
   _hitTemplate: {fileID: 163066, guid: 53777b8572d1e7242bc90044f62667ce, type: 3}
   _missTemplate: {fileID: 1404802046468498, guid: 2938def9583039b498280fae52bf6fd4,
     type: 3}
+--- !u!114 &1502249101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502249097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyGrid: {fileID: 2075352747}
 --- !u!4 &1514548279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4513819750380730, guid: 83783d40b06c4d24a93cf52a7b70fc14,

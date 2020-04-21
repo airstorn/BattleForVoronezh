@@ -50,7 +50,6 @@ namespace GameStates
 
         public void Confirm()
         {
-            Debug.Log( _logic.PlayerGrid.Units.All(placedElement => placedElement.SuitablePlaced != false));
             if(ValidatePlacement() == true)
             {
                 _logic.ChangeState(_playerTurnState.GetComponent<IGameState>());
