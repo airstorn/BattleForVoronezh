@@ -73,6 +73,11 @@
           <e p="Menu" t="Include">
             <e p="BattlePage.cs" t="Include" />
             <e p="IMenuPagable.cs" t="Include" />
+            <e p="LevelObject.cs" t="Include" />
+            <e p="LevelWIndow" t="Include">
+              <e p="ILevelWindowable.cs" t="Include" />
+              <e p="LevelWindow.cs" t="Include" />
+            </e>
             <e p="MainMenu.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
             <e p="SettingsPage.cs" t="Include" />
