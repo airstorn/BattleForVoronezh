@@ -31,8 +31,13 @@ namespace GameStates.Menu
 
         public void OpenLevel(int levelId)
         {
-            _menu.OpenPage(_windowObject);
-            _levelWindowable.ShowLevelData(_levelsBehaviour[levelId]);
+            int offset = levelId - 1;
+            if (_levelsBehaviour.Length > offset)
+            {
+                _menu.OpenPage(_windowObject);
+                _levelWindowable.ShowLevelData(_levelsBehaviour[offset]);
+            }
+            
         }
     }
 }
