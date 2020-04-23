@@ -6,9 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelWindow : MonoBehaviour, ILevelWindowable, IMenuPagable
+public class LevelWindow : PageBasement, ILevelWindowable, IMenuPagable
 {
-    [SerializeField] private GameObject _object;
     [SerializeField] private Text _Name;
     [SerializeField] private TMP_Text _description;
     [SerializeField] private Image _preview;
@@ -48,15 +47,5 @@ public class LevelWindow : MonoBehaviour, ILevelWindowable, IMenuPagable
     private void ShowPlayButton()
     {
         _playButton.gameObject.SetActive(true);
-    }
-
-    public void Show()
-    {
-        _object.SetActive(true);
-    }
-
-    public void Hide()
-    {
-        _object.SetActive(false);
     }
 }

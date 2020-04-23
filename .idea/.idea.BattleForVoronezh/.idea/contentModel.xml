@@ -59,6 +59,10 @@
             <e p="PlayerTurn" t="Include">
               <e p="PlayerTurnInputHandler.cs" t="Include" />
             </e>
+            <e p="UI" t="Include">
+              <e p="PausePage.cs" t="Include" />
+              <e p="PlacementPage.cs" t="Include" />
+            </e>
             <e p="UnitHealth.cs" t="Include" />
             <e p="UnitsData.cs" t="Include" />
           </e>
@@ -80,8 +84,9 @@
               <e p="ILevelWindowable.cs" t="Include" />
               <e p="LevelWindow.cs" t="Include" />
             </e>
-            <e p="MainMenu.cs" t="Include" />
+            <e p="Menu.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
+            <e p="PageBasement.cs" t="Include" />
             <e p="SettingsPage.cs" t="Include" />
             <e p="ShopPage.cs" t="Include" />
           </e>

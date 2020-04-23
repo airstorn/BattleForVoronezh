@@ -4,24 +4,7 @@ using UnityEngine;
 
 namespace GameStates.Menu
 {
-    public class SettingsPage : MonoBehaviour, IMenuPagable
+    public class SettingsPage : PageBasement, IMenuPagable
     {
-        [SerializeField] private GameObject _object;
-
-
-        void Start()
-        {
-
-        }
-
-        public void Show()
-        {
-            _object.SetActive(true);
-        }
-
-        public void Hide()
-        {
-            _object.SetActive(false);
-        }
     }
 }
