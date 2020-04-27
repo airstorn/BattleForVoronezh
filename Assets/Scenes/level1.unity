@@ -3012,7 +3012,7 @@ MonoBehaviour:
   _inputObject: {fileID: 1671539673}
   _uiObject: {fileID: 1590720853}
   _playerTurnState: {fileID: 300139805}
-  _cameraOffset: {fileID: 0}
+  _cameraOffset: {fileID: 538827393}
 --- !u!1001 &1033191097
 PrefabInstance:
   m_ObjectHideFlags: 0
