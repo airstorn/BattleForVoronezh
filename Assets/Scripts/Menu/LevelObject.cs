@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace GameStates.Menu
+namespace GameStates
 {
     [CreateAssetMenu(fileName = "New level", menuName = "Levels/New Level", order = 0)]
     public class LevelObject : ScriptableObject

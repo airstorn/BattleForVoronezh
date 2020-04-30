@@ -4,42 +4,68 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Menu : MonoBehaviour
+namespace GameStates
 {
-
-   [SerializeField] private GameObject _defaultPage;
-   [SerializeField] private GameObject[] _menuObjects;
-   private IMenuPagable[] _pages;
-
-   private void Start()
+   public class Menu : MonoBehaviour
    {
-      _pages = _menuObjects.Select(obj => obj.GetComponent<IMenuPagable>()).ToArray();
-      SwitchPage(_defaultPage);
-   }
 
-   public void SwitchPage(GameObject page)
-   {
-      var pageElement = GetPage(page);
-      foreach (var tempPage in _pages)
+      [SerializeField] private GameObject _defaultPage;
+      [SerializeField] private GameObject[] _menuObjects;
+      private IMenuPagable[] _pages;
+
+
+      public static Menu Instance;
+
+      private void Awake()
       {
-         if (tempPage == pageElement)
+         Instance = this;
+      }
+
+      private void Start()
+      {
+         _pages = _menuObjects.Select(obj => obj.GetComponent<IMenuPagable>()).ToArray();
+         SwitchPage(_defaultPage, this);
+      }
+
+      public void SwitchPage<T>(GameObject page, T args)
+      {
+         var pageElement = GetPage(page);
+         foreach (var tempPage in _pages)
          {
-            tempPage.Show();
+            if (tempPage == pageElement)
+            {
+               tempPage.Show(args);
+            }
+            else
+            {
+               tempPage.Hide();
+            }
          }
-         else
+      } 
+      public void SwitchPage(GameObject page)
+      {
+         var pageElement = GetPage(page);
+         foreach (var tempPage in _pages)
          {
-            tempPage.Hide();
+            if (tempPage == pageElement)
+            {
+               tempPage.Show(this);
+            }
+            else
+            {
+               tempPage.Hide();
+            }
          }
       }
-   }
 
-   public void OpenPageOverlayed(GameObject page)
-   {
-      GetPage(page).Show();
-   }
+      public void OpenPageOverlayed<T>(GameObject page, T args)
+      {
+         GetPage(page).Show(args);
+      }
 
-   private IMenuPagable GetPage(GameObject page)
-   {
-      return page.GetComponent<IMenuPagable>();
+      private IMenuPagable GetPage(GameObject page)
+      {
+         return page.GetComponent<IMenuPagable>();
+      }
    }
 }

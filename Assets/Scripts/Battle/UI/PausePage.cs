@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using GameStates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PausePage : PageBasement, IMenuPagable
 {
+   [SerializeField] private Menu _main;
    public void ExitToMenuButton()
    {
       SceneManager.LoadScene(0);
    }
 
-   public override void Show()
+   public void OpenPause()
    {
-      base.Show();
+      _main.OpenPageOverlayed(gameObject, this);
+   }
+
+   public override void Show<T>(T args)
+   {
+      base.Show(args);
       Time.timeScale = 0;
    }
 

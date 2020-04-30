@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IMenuPagable
 {
-    void Show();
+    void Show<T>(T arg);
     void Hide();
 }

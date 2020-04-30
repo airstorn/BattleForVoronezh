@@ -1,4 +1,4 @@
-using GameStates.Menu;
+using GameStates;
 
 public interface ILevelWindowable
 {

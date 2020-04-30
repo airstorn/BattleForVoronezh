@@ -31,7 +31,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 766743274754115314}
   - {fileID: 766743275270226636}
   - {fileID: 766743275124634914}
   - {fileID: 766743275709022316}
@@ -402,12 +401,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766743274754115325}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 766743274134801048}
-  m_RootOrder: 0
+  m_Father: {fileID: 766743275270226636}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -676,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &766743275124634914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -692,7 +691,7 @@ RectTransform:
   - {fileID: 766743275659591674}
   - {fileID: 766743275992716141}
   m_Father: {fileID: 766743274134801048}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -748,6 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pageObject: {fileID: 766743275124634925}
+  _main: {fileID: 766743274134801049}
 --- !u!1 &766743275270226639
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,8 +779,9 @@ RectTransform:
   - {fileID: 766743274703997416}
   - {fileID: 766743274307875833}
   - {fileID: 766743275488257613}
+  - {fileID: 766743274754115314}
   m_Father: {fileID: 766743274134801048}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -800,6 +801,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pageObject: {fileID: 766743275270226639}
+  _confirm: {fileID: 766743274703997417}
+  _rotate: {fileID: 766743274307875838}
+  _randomize: {fileID: 766743275488257602}
+  _menuButton: {fileID: 766743274754115315}
+  _pause: {fileID: 766743275124634915}
 --- !u!1 &766743275488257612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1168,7 @@ Transform:
   m_LocalScale: {x: 0.69748586, y: 0.69748586, z: 0.69748586}
   m_Children: []
   m_Father: {fileID: 766743274134801048}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &766743275937042196
 GameObject:

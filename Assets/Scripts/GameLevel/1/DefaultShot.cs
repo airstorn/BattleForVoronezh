@@ -5,7 +5,12 @@ using UnityEngine;
 public class DefaultShot : MonoBehaviour, IShotable
 {
     [SerializeField] private GameObject _hitTemplate;
-    [SerializeField] private GameObject _missTemplate;
+
+    [SerializeField]
+    private GameObject _missTemplate
+    {
+        get { return _hitTemplate; }
+    }
     
     public void Release(Vector3 spawnPosition, ref GridElement hitElement)
     {

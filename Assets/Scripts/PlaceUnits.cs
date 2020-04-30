@@ -9,9 +9,10 @@ namespace GameStates
     {
         [SerializeField] private GameLogic _logic;
         [SerializeField] private GameObject _inputObject;
-        [SerializeField] private GameObject _uiObject;
+        [SerializeField] private PageBasement _uiObject;
         [SerializeField] private GameObject _playerTurnState;
         [SerializeField] private CinemachineVirtualCamera _cameraOffset;
+        [SerializeField] private UnitsPlacement _playerPlacement;
 
         private IInputHandler _inputHandler;
 
@@ -21,7 +22,7 @@ namespace GameStates
         }
         public void Activate()
         {
-            _uiObject.SetActive(true);
+            _uiObject.Show(this);
             _logic.OnUpdate += StateUpdate;
         }
 
@@ -33,7 +34,7 @@ namespace GameStates
 
         public void Deactivate()
         {
-            _uiObject.SetActive(false);
+            _uiObject.Hide();
             
            Destroy(_inputObject);
             
@@ -54,6 +55,16 @@ namespace GameStates
             {
                 _logic.ChangeState(_playerTurnState.GetComponent<IGameState>());
             }
+        }
+
+        public void RotateElement()
+        {
+            _playerPlacement.RotatePlacebleElement();
+        }
+
+        public void PlaceRandomly()
+        {
+            _playerPlacement.PlaceRandomly();
         }
 
         private bool ValidatePlacement()

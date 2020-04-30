@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameStates.Menu
+namespace GameStates
 {
     public class SettingsPage : PageBasement, IMenuPagable
     {
+       
     }
 }
