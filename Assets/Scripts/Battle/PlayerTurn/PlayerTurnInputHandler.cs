@@ -59,7 +59,7 @@ public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
         animate = true;
         
         _shotBehaviour.Release(_selectedElement.CellPos, ref _selectedElement);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.8f);
 
         if (_playerTarget.CheckTarget() == true)
         {

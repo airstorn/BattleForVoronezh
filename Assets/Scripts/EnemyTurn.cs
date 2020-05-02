@@ -65,7 +65,7 @@ namespace GameStates
                 yield return new WaitForSeconds(1);
                 shoot = Shoot();
             }
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
         
         private Vector2Int RandomizedPoint()
