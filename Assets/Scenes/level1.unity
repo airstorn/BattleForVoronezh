@@ -6700,21 +6700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 766743274307875838, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1671539676}
     - target: {fileID: 766743274703997417, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1028688929}
-    - target: {fileID: 766743275124634925, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 766743275488257602, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
