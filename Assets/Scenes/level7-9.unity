@@ -306,6 +306,7 @@ MonoBehaviour:
   _placementTurnObject: {fileID: 840476698}
   _playerTurnObject: {fileID: 1856651814}
   _enemyTurnObject: {fileID: 1844084911}
+  _endWindow: {fileID: 1691726725}
 --- !u!4 &76396987
 Transform:
   m_ObjectHideFlags: 0
@@ -2852,6 +2853,12 @@ PrefabInstance:
       propertyPath: _hiddenUnits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
+        type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
 --- !u!1001 &717635876
@@ -3127,7 +3134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selectPoint: {fileID: 964785640}
-  _units: {fileID: 11400000, guid: 5f2907ae154880b43a4e9ab1a1b30cb7, type: 2}
+  _units: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6, type: 2}
   _schedulePoints: []
 --- !u!4 &818957161
 Transform:
@@ -3829,7 +3836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c479fb8cd198584aac12fa27ae13c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultUnits: {fileID: 11400000, guid: 5f2907ae154880b43a4e9ab1a1b30cb7, type: 2}
+  _defaultUnits: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6, type: 2}
   _enemyGrid: {fileID: 1478502189}
 --- !u!114 &1059214219
 MonoBehaviour:
@@ -4045,6 +4052,12 @@ PrefabInstance:
       propertyPath: _size.y
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
+        type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 452112e6874dd4af79430af9d86837d6,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
 --- !u!1001 &1120259404
@@ -6415,6 +6428,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e26dd1bdabae204c8eb621d3d224d7a, type: 3}
+--- !u!1 &1691726725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5570049910134483847, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1691726724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1716927310 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 766743275270226637, guid: 0e26dd1bdabae204c8eb621d3d224d7a,

@@ -8828,6 +8828,12 @@ PrefabInstance:
       objectReference: {fileID: 729054240}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e26dd1bdabae204c8eb621d3d224d7a, type: 3}
+--- !u!1 &1003102023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5570049910134483847, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003102022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1028154162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12120,6 +12126,7 @@ MonoBehaviour:
   _placementTurnObject: {fileID: 729054239}
   _playerTurnObject: {fileID: 1316546852}
   _enemyTurnObject: {fileID: 654262099}
+  _endWindow: {fileID: 1003102023}
 --- !u!4 &1390889694
 Transform:
   m_ObjectHideFlags: 0

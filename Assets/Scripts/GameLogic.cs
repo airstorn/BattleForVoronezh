@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using GameStates;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour
@@ -13,6 +14,9 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private GameObject _enemyTurnObject;
     public ICamMover CameraStatement;
     public Action OnUpdate;
+
+    [Header("UI")] 
+    [SerializeField] private GameObject _endWindow;
 
     public GridObject PlayerGrid => _playerGrid; 
     public GridObject EnemyGrid => _enemyGrid;
@@ -31,7 +35,7 @@ public class GameLogic : MonoBehaviour
         _state_PlaceUnits = _placementTurnObject.GetComponent<IGameState>();
         _state_PlayerTurn = _playerTurnObject.GetComponent<IGameState>();
         _state_EnemyTurn = _enemyTurnObject.GetComponent<IGameState>();
-        
+
         _state = _state_PlaceUnits;
         _state.Activate();
 
@@ -56,11 +60,13 @@ public class GameLogic : MonoBehaviour
     private void PlayerWin()
     {
         Debug.Log("Player win!");
+        Menu.Instance.SwitchPage(_endWindow, true);
     }
 
     private void PlayerLoose()
     {
         Debug.Log("Player loose!");
+        Menu.Instance.SwitchPage(_endWindow, false);
     }
 
     public void Confirm_button()

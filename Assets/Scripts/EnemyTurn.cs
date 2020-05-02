@@ -36,28 +36,35 @@ namespace GameStates
         private IEnumerator Animate()
         {
             yield return new WaitForSeconds(1);
+            
             yield return ShootAtRandomPoint();
 
             if (_enemyTarget.CheckTarget() == true)
             {
+                yield return new WaitForSeconds(1);
                 _logic.OnPlayerLoose?.Invoke();
-                yield break;
             }
-            
-            yield return new WaitForSeconds(1);
-            EndTurn();
+            else
+            {
+                yield return new WaitForSeconds(1);
+                EndTurn();
+            }
         }
         
         public IEnumerator ShootAtRandomPoint()
         {
-            Shoot();
-   
-            while(_selectedElement.HitState == GridSprites.SpriteState.damaged)
+            bool shoot = true;
+
+            while (shoot == true)
             {
-                yield return new WaitForSeconds(1f);
-                Shoot();
+                if (_enemyTarget.CheckTarget() == true)
+                {
+                    yield break;
+                }
+                
+                yield return new WaitForSeconds(1);
+                shoot = Shoot();
             }
-     
             yield return new WaitForSeconds(2);
         }
         
@@ -66,7 +73,7 @@ namespace GameStates
             return new Vector2Int(Random.Range(0, _interactionGrid.Sheet.GetLength(0)),Random.Range(0, _interactionGrid.Sheet.GetLength(1) ));
         }
         
-        private void Shoot()
+        private bool Shoot()
         {
             Vector2Int randomPointId = RandomizedPoint();
             _selectedElement = _interactionGrid.Sheet[randomPointId.x, randomPointId.y];
@@ -78,6 +85,7 @@ namespace GameStates
             }
       
             _shot.Release(_interactionGrid.Sheet[randomPointId.x, randomPointId.y].CellPos, ref _selectedElement);
+            return _selectedElement.HitState == GridSprites.SpriteState.damaged;
         }
 
         private void EndTurn()

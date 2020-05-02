@@ -87,6 +87,7 @@
             <e p="Menu.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
             <e p="PageBasement.cs" t="Include" />
+            <e p="PageEndWindow.cs" t="Include" />
             <e p="SettingsPage.cs" t="Include" />
             <e p="ShopPage.cs" t="Include" />
           </e>
