@@ -78,15 +78,20 @@
           <e p="GridSprites.cs" t="Include" />
           <e p="Menu" t="Include">
             <e p="BattlePage.cs" t="Include" />
-            <e p="IMenuPagable.cs" t="Include" />
-            <e p="LevelObject.cs" t="Include" />
-            <e p="LevelWIndow" t="Include">
+            <e p="Core" t="Include">
               <e p="ILevelWindowable.cs" t="Include" />
+              <e p="IMenuPagable.cs" t="Include" />
               <e p="LevelWindow.cs" t="Include" />
+              <e p="PageBasement.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="ILanguageSelectable.cs" t="Include" />
+                <e p="LanguageSelector.cs" t="Include" />
+              </e>
             </e>
+            <e p="LanguageButton.cs" t="Include" />
+            <e p="LevelObject.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
-            <e p="PageBasement.cs" t="Include" />
             <e p="PageEndWindow.cs" t="Include" />
             <e p="SettingsPage.cs" t="Include" />
             <e p="ShopPage.cs" t="Include" />

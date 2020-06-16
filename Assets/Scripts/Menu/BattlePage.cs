@@ -23,7 +23,7 @@ namespace GameStates
             int offset = levelId - 1;
             if (_levelsBehaviour.Length > offset)
             {
-                _menu.SwitchPage(_windowObject, this);
+                _menu.OpenPageOverlayed(_windowObject, this);
                 _levelWindowable.ShowLevelData(_levelsBehaviour[offset]);
             }
             

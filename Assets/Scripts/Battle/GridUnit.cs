@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UIElements;
 
 [Serializable]
 public class UnitVisual
@@ -25,6 +26,7 @@ public class UnitVisual
     }
 }
 
+[RequireComponent(typeof(BoxCollider), typeof(UnitHealth))]
 public class GridUnit : MonoBehaviour
 {
     [SerializeField] private UnitVisual _visual;
@@ -41,6 +43,8 @@ public class GridUnit : MonoBehaviour
     public Vector3Int PositionId { get; set; }
 
     private UnitHealth _health;
+
+    private BoxCollider _collider;
     private int _rotation;
     public bool SuitablePlaced
     {
@@ -69,12 +73,15 @@ public class GridUnit : MonoBehaviour
         SetHidden(false);
 
         _health = GetComponent<UnitHealth>();
+        _collider = GetComponent<BoxCollider>();
     }
 
     public void SetHidden(bool hide)
     {
         _visual.SetHidden(hide);
     }
+
+   
 
     public void Rotate(bool imidietly)
     {
@@ -120,7 +127,14 @@ public class GridUnit : MonoBehaviour
     {
         return (RotationDirection)_rotation;
     }
-
+    
+    private void OnValidate()
+    {
+        if (_collider == null)
+            _collider = GetComponent<BoxCollider>();
+        _collider.size = new Vector3(_size.x, 1, _size.y);
+    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(0, 1, 0, 0.9f);
