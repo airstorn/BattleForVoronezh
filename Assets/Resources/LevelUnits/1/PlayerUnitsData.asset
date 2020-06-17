@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbc2ec229e9544529fe18ad6d9165a9, type: 3}
   m_Name: PlayerUnitsData
   m_EditorClassIdentifier: 
-  Data: []
+  Data:
+  - {fileID: 7773600068874336141, guid: bf6b97039a2fae84db1d59efb15774a7, type: 3}

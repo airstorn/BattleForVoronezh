@@ -14,10 +14,14 @@ public class BlinkingCamera : MonoBehaviour, ICamMover
     [SerializeField] private float _elapsedTime = 1;
     [SerializeField] private CinemachineVirtualCamera _currentCamera;
 
+    private CinemachineBrain _brain;
+
     private void Start()
     {
-        GetComponent<CinemachineBrain>().m_CustomBlends = _transitionSettings;
+        if(_transitionSettings != null)
+            GetComponent<CinemachineBrain>().m_CustomBlends = _transitionSettings;
         _blink.gameObject.SetActive(false);
+        _brain = FindObjectOfType<CinemachineBrain>();
         DisableAllCams();
         _currentCamera.gameObject.SetActive(true);
     }
@@ -35,7 +39,7 @@ public class BlinkingCamera : MonoBehaviour, ICamMover
     public void ToCamera(CinemachineVirtualCamera virtualCamera)
     {
         if (_transitionSettings.m_CustomBlends.Any(trans =>
-            trans.m_Blend.m_Style == CinemachineBlendDefinition.Style.Cut && trans.m_To == virtualCamera.name &&  trans.m_From == _currentCamera.name))
+            trans.m_Blend.m_Style == CinemachineBlendDefinition.Style.Cut && trans.m_To == virtualCamera.name &&  trans.m_From == _currentCamera.name) || _brain.m_DefaultBlend.m_Style == CinemachineBlendDefinition.Style.Cut)
         {
             StartCoroutine(Blink(virtualCamera));
         }

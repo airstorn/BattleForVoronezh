@@ -71,6 +71,7 @@ public class GridObject : MonoBehaviour
     [SerializeField] private bool _hiddenUnits;
     [SerializeField] private Vector2Int _size;
 
+    public UnitsData UnitsData => _data;
     public Vector3Int GridOffset => _gridOffset;
     public GridElement[,] Sheet => _objects;
     public List<GridUnit> Units => _unitsOnGrid;

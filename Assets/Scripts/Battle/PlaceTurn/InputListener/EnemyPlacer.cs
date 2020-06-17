@@ -5,18 +5,14 @@ using UnityEngine;
 public class EnemyPlacer : MonoBehaviour, IUnitsPlacer
 {
     [SerializeField] private IUnitsData _storedUnits;
-    [SerializeField] private UnitsData _defaultUnits;
     [SerializeField] private GridObject _enemyGrid;
 
     private void Start()
     {
         _storedUnits = GetComponent<IUnitsData>();
 
-        if(_defaultUnits != null)
-        {
-            _storedUnits.SetUnits(_defaultUnits);
-            Place(null);
-        }
+        _storedUnits.SetUnits(_enemyGrid.UnitsData);
+        Place(null);
     }
 
     public void Place(GridUnit unit)

@@ -9,6 +9,7 @@ public class PausePage : PageBasement, IMenuPagable
    [SerializeField] private Menu _main;
    public void ExitToMenuButton()
    {
+      Time.timeScale = 1;
       SceneManager.LoadScene(0);
    }
 

@@ -37,13 +37,14 @@ public class ScheduleObject
 public class UnitsSchedule : MonoBehaviour, IUnitsData
 {
     [SerializeField] private Transform _selectPoint;
-    [SerializeField] private UnitsData _units;
+    [SerializeField] private GridObject _targetGrid;
 
     [SerializeField] private ScheduleObject[] _schedulePoints;
 
+    private int _unitsCount;
     private void Start()
     {
-        SetUnits(_units);
+        SetUnits(_targetGrid.UnitsData);
     }
 
     public GridUnit GetUnit(GridUnit choosedUnit)
@@ -65,11 +66,13 @@ public class UnitsSchedule : MonoBehaviour, IUnitsData
 
     public void SetUnits(UnitsData data)
     {
+        _unitsCount = data.Data.Length;
+        
         PoolSchedulePoints();
 
-        for (int i = 0; i < _units.Data.Length; i++)
+        for (int i = 0; i < data.Data.Length; i++)
         {
-            var createdObject = Instantiate(_units.Data[i].gameObject, _schedulePoints[i].Pos, Quaternion.identity);
+            var createdObject = Instantiate(data.Data[i].gameObject, _schedulePoints[i].Pos, Quaternion.identity);
             SetUnit(createdObject.GetComponent<GridUnit>());
             createdObject.GetComponent<GridUnit>().Visual.SetHidden(false);
         }
@@ -77,7 +80,7 @@ public class UnitsSchedule : MonoBehaviour, IUnitsData
 
     private void PoolSchedulePoints()
     {
-        _schedulePoints = new ScheduleObject[_units.Data.Length];
+        _schedulePoints = new ScheduleObject[_unitsCount];
         for (int i = 0; i < _schedulePoints.Length; i++)
         {
             var position = _selectPoint.position;

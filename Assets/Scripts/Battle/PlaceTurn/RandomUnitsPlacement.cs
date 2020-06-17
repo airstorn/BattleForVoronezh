@@ -17,7 +17,7 @@ public struct PlaceComparerJob
         for (int i = 0; i < UnityEngine.Random.Range(0, (int)4); i++)
             Unit.Rotate(true);
 
-        int _attempts = 200;
+        int _attempts = 500;
         int _currentAttempts = 0;
         do
         {
@@ -34,7 +34,29 @@ public struct PlaceComparerJob
             _currentAttempts++;
         }
         while (Unit.SuitablePlaced == false && _currentAttempts < _attempts);
+        
 
+        for (int x = 0; x < SelectedGrid.Sheet.GetLength(0); x++)
+        {
+            for (int y = 0; y < SelectedGrid.Sheet.GetLength(1); y++)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    Unit.Rotate(true);
+                    
+                    Vector2Int vacantPos = new Vector2Int(x,y);
+                    Vector3 pos = SelectedGrid.Sheet[vacantPos.x, vacantPos.y].CellPos;
+                    Unit.PositionId = Vector3Int.RoundToInt(new Vector3(pos.x, 0, pos.z));
+                    
+                    if (SelectedGrid.TryPlaceUnit(Unit) == true)
+                    {
+                        SelectedGrid.PlaceUnit(Unit);
+                        return;
+                    }
+                }
+            }
+        } 
+        
         throw new NotImplementedException("Cant place unit on grid" + SelectedGrid.name);
     }
 }
