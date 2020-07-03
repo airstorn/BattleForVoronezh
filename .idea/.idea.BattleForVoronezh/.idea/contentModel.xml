@@ -88,6 +88,7 @@
                 <e p="LanguageSelector.cs" t="Include" />
               </e>
             </e>
+            <e p="GamePage.cs" t="Include" />
             <e p="LanguageButton.cs" t="Include" />
             <e p="LevelObject.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
