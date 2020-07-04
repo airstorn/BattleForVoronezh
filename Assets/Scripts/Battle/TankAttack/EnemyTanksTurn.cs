@@ -15,10 +15,12 @@ namespace GameStates
         [SerializeField] private MultipleTargetsTracker _shots;
         
         private IGameState _state;
+        private ILevelTarget _target;
 
         private void Start()
         {
             _state = _nextState.GetComponent<IGameState>();
+            _target = GetComponent<ILevelTarget>();
         }
 
         public void Activate()
@@ -83,6 +85,10 @@ namespace GameStates
 
         private void EndTurn()
         {
+            if (_target.CheckTarget() == true)
+            {
+                _logic.OnPlayerLoose?.Invoke();
+            }
             _logic.ChangeState(_state);
         }
 

@@ -62,6 +62,7 @@
             </e>
             <e p="TankAttack" t="Include">
               <e p="EnemyTanksTurn.cs" t="Include" />
+              <e p="GetToCorner.cs" t="Include" />
               <e p="MultipleTargetsTracker.cs" t="Include" />
             </e>
             <e p="UI" t="Include">

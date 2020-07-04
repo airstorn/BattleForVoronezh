@@ -84,7 +84,7 @@ namespace GameStates
                 _selectedElement = _interactionGrid.Sheet[randomPointId.x, randomPointId.y];
             }
       
-            _shot.Release(_interactionGrid.Sheet[randomPointId.x, randomPointId.y].CellPos, ref _selectedElement);
+            _shot.Release(ref _selectedElement);
             return _selectedElement.HitState == GridSprites.SpriteState.damaged;
         }
 

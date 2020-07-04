@@ -13,7 +13,7 @@ public class DefaultShot : MonoBehaviour, IShotable
         get { return _hitTemplate; }
     }
     
-    public void Release(Vector3 spawnPosition, ref GridElement hitElement)
+    public void Release(ref GridElement hitElement)
     {
         if (hitElement.HoldedUnit)
         {
@@ -25,14 +25,14 @@ public class DefaultShot : MonoBehaviour, IShotable
                 hitElement.SetSpriteType(GridSprites.SpriteState.damaged);
             }
 
-            var spawendObject = Instantiate(_hitTemplate, spawnPosition, Quaternion.Euler(-90, 0, 0));
+            var spawendObject = Instantiate(_hitTemplate, hitElement.CellPos, Quaternion.Euler(-90, 0, 0));
             spawendObject.GetComponent<ParticleSystem>().Play();
         }
         else
         {
             hitElement.SetSpriteType(GridSprites.SpriteState.missed);
             
-            var spawendObject = Instantiate(_missTemplate, spawnPosition, Quaternion.Euler(-90, 0, 0));
+            var spawendObject = Instantiate(_missTemplate, hitElement.CellPos, Quaternion.Euler(-90, 0, 0));
             spawendObject.GetComponent<ParticleSystem>().Play();
         }
     }

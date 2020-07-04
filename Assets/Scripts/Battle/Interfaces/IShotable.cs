@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IShotable
 {
-    void Release(Vector3 spawnPosition, ref GridElement success);
+    void Release(ref GridElement success);
 }

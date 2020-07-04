@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
@@ -8,6 +9,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
     public struct ShotData
     {
         public Vector3Int ShotPoint;
+        public GameObject ShotObject;
         public GridElement Element;
     }
 
@@ -16,6 +18,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
     [SerializeField] private GridObject _targetGrid;
     [SerializeField] private GameObject _enemyTurn;
     [SerializeField] private LayerMask _raycastIgnore;
+    [SerializeField] private GameObject _targetTemplate;
     private int _shotsCount = 0;
     private Queue<ShotData> _shotsQueue = new Queue<ShotData>();
 
@@ -72,8 +75,11 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
             Element = element
         };
 
-        if (_shotsQueue.Contains(data) == false)
+        if (_shotsQueue.Any(shotData => shotData.ShotPoint == data.ShotPoint) == false)
         {
+            var template = Instantiate(_targetTemplate);
+            template.transform.position = _targetGrid.GetVacantElement(data.ShotPoint).CellPos;
+            data.ShotObject = template;
             _shotsQueue.Enqueue(data);
         }
     }
@@ -90,8 +96,9 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
         while (_shotsQueue.Count != 0)
         {
             var shot = _shotsQueue.Dequeue();
+            Destroy(shot.ShotObject);
+            _shotBehaviour.Release(ref shot.Element);
             
-            _shotBehaviour.Release(shot.ShotPoint, ref shot.Element);
             yield return new WaitForSeconds(0.8f);
 
             if (_playerTarget.CheckTarget() == true)
