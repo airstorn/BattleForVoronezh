@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,9 +22,9 @@ public class UnitHealth : MonoBehaviour
         _health = _base.Size.x * _base.Size.y;
     }
 
-    public void ApplyDamage()
+    public void ApplyDamage(int damage)
     {
-        _health--;
+        _health -= damage;
 
         if(_health <= 0)
         {

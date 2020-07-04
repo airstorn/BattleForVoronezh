@@ -51,6 +51,7 @@
               <e p="InputListener" t="Include">
                 <e p="EnemyPlacer.cs" t="Include" />
                 <e p="EnemyUnits.cs" t="Include" />
+                <e p="TankAttackPlacer.cs" t="Include" />
                 <e p="UnitsPlacement.cs" t="Include" />
               </e>
               <e p="RandomUnitsPlacement.cs" t="Include" />
@@ -58,6 +59,10 @@
             </e>
             <e p="PlayerTurn" t="Include">
               <e p="PlayerTurnInputHandler.cs" t="Include" />
+            </e>
+            <e p="TankAttack" t="Include">
+              <e p="EnemyTanksTurn.cs" t="Include" />
+              <e p="MultipleTargetsTracker.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="PausePage.cs" t="Include" />

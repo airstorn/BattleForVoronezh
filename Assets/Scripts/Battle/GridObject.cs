@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using static GridUnit;
@@ -189,7 +190,8 @@ public class GridObject : MonoBehaviour
             return _objects[vacantVector.x, vacantVector.z];
         }
 
-        throw new NotImplementedException("Element not found!");
+        // throw new NotImplementedException("Element not found!");
+        return null;
     }
 
     private void Awake()
@@ -223,7 +225,7 @@ public class GridObject : MonoBehaviour
         return _unitsOnGrid.Count == _data.Data.Length;
     }
 
-    public bool TryPlaceUnit(GridUnit unit)
+    public bool IsUnitPlacable(GridUnit unit)
     {
         UpdateGridEngagements();
 
@@ -231,13 +233,13 @@ public class GridObject : MonoBehaviour
         List<GridElement> nearElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
         List<GridElement> vacantElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
 
-        unit.transform.position = unitPos;
+        // unit.transform.position = unitPos;
 
         foreach (var outlineElement in nearElements)
         {
             if(outlineElement.HoldedUnit && outlineElement.HoldedUnit != unit)
             {
-                SetElementsState(vacantElements, ElementState.locked);
+                // SetElementsState(vacantElements, ElementState.locked);
                 return false;
             }
         }
@@ -248,7 +250,7 @@ public class GridObject : MonoBehaviour
             {
                 if(emptyElement.HoldedUnit && emptyElement.HoldedUnit != unit)
                 {
-                    SetElementsState(vacantElements, ElementState.locked);
+                    // SetElementsState(vacantElements, ElementState.locked);
                     return false;
                 }
             }
@@ -256,12 +258,12 @@ public class GridObject : MonoBehaviour
         }
         else
         {
-            SetElementsState(vacantElements, ElementState.locked);
+            // SetElementsState(vacantElements, ElementState.locked);
             return false;
         }
     }
 
-    public void PlaceUnit(GridUnit unit)
+    public void PlaceUnit(GridUnit unit, bool animated)
     {
         if (_unitsOnGrid.Contains(unit) == false)
         {
@@ -272,8 +274,17 @@ public class GridObject : MonoBehaviour
         unit.SetElements(vacantElements, borders);
         unit.SetHidden(_hiddenUnits);
 
-        if(vacantElements.Count > 0)
-            unit.transform.position = vacantElements[0].CellPos;
+        if (vacantElements.Count > 0)
+        {
+            if (animated)
+            {
+                unit.transform.DOMove( vacantElements[0].CellPos, 1f);
+            }
+            else
+            {
+                unit.transform.position = vacantElements[0].CellPos;
+            }
+        }
 
         UpdateGridEngagements();
     }

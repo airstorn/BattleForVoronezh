@@ -13,6 +13,7 @@ public class EnemyPlacer : MonoBehaviour, IUnitsPlacer
 
         _storedUnits.SetUnits(_enemyGrid.UnitsData);
         Place(null);
+        _enemyGrid.UpdateGridEngagements();
     }
 
     public void Place(GridUnit unit)

@@ -65,9 +65,9 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
 
                 ConvertUnitPositionInId();
 
-                if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
+                if (_interactableGrid.IsUnitPlacable(_currentUnit) == true)
                 {
-                    _interactableGrid.PlaceUnit(_currentUnit);
+                    _interactableGrid.PlaceUnit(_currentUnit, true);
                 }
                 else
                 {
@@ -91,13 +91,13 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
         if (_currentUnit == null) return;
         _currentUnit.Rotate(false);
 
-        if (_interactableGrid.TryPlaceUnit(_currentUnit) == true)
+        if (_interactableGrid.IsUnitPlacable(_currentUnit) == true)
         {
-            _interactableGrid.PlaceUnit(_currentUnit);
+            _interactableGrid.PlaceUnit(_currentUnit, false);
         }
         else
         {
-            _interactableGrid.PlaceUnit(_currentUnit);
+            _interactableGrid.PlaceUnit(_currentUnit, false);
             var elements = _interactableGrid.GetVacantElements(_currentUnit.PositionId, _currentUnit.Size, _currentUnit.GetDirection(), 0);
             _interactableGrid.SetElementsState(elements, GridObject.ElementState.locked);
         }

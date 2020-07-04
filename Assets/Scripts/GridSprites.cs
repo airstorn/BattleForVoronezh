@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New GridSprites", menuName = "New GridSprites")]
 public class GridSprites : MonoBehaviour
 {
     [SerializeField] private Sprite _normal;

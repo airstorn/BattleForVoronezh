@@ -5,6 +5,7 @@ using UnityEngine;
 public class DefaultShot : MonoBehaviour, IShotable
 {
     [SerializeField] private GameObject _hitTemplate;
+    [SerializeField] private int _damage = 1;
 
     [SerializeField]
     private GameObject _missTemplate
@@ -20,7 +21,7 @@ public class DefaultShot : MonoBehaviour, IShotable
 
             if (enemyHealth)
             {
-                enemyHealth.ApplyDamage();
+                enemyHealth.ApplyDamage(_damage);
                 hitElement.SetSpriteType(GridSprites.SpriteState.damaged);
             }
 

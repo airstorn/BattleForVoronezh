@@ -25,9 +25,9 @@ public struct PlaceComparerJob
             Vector3 pos = SelectedGrid.Sheet[randomPos.x, randomPos.y].CellPos;
 
             Unit.PositionId = Vector3Int.RoundToInt(new Vector3(pos.x, 0, pos.z));
-            if (SelectedGrid.TryPlaceUnit(Unit) == true)
+            if (SelectedGrid.IsUnitPlacable(Unit) == true)
             {
-                SelectedGrid.PlaceUnit(Unit);
+                SelectedGrid.PlaceUnit(Unit, false);
                 return;
             }
 
@@ -48,9 +48,9 @@ public struct PlaceComparerJob
                     Vector3 pos = SelectedGrid.Sheet[vacantPos.x, vacantPos.y].CellPos;
                     Unit.PositionId = Vector3Int.RoundToInt(new Vector3(pos.x, 0, pos.z));
                     
-                    if (SelectedGrid.TryPlaceUnit(Unit) == true)
+                    if (SelectedGrid.IsUnitPlacable(Unit) == true)
                     {
-                        SelectedGrid.PlaceUnit(Unit);
+                        SelectedGrid.PlaceUnit(Unit, false);
                         return;
                     }
                 }
@@ -61,7 +61,7 @@ public struct PlaceComparerJob
     }
 }
 
-public class RandomUnitsPlacement : IUnitsPlacer
+public class RandomUnitsPlacement 
 {
     public void ExecuteUnitsForPlacement(List<GridUnit> units, GridObject grid)
     {
@@ -77,9 +77,5 @@ public class RandomUnitsPlacement : IUnitsPlacer
 
             PlaceJob.Execute();
         }
-    }
-
-    public void Place(GridUnit unit)
-    {
     }
 }
