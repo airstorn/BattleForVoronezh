@@ -11,8 +11,9 @@ namespace GameStates
         [SerializeField] private GameLogic _logic;
         [SerializeField] private GameObject _nextState;
         [SerializeField] private GridObject _interactionGrid;
-        [SerializeField] private Vector3Int[] _moveDirection;
         [SerializeField] private MultipleTargetsTracker _shots;
+
+        [SerializeField] private Vector3Int[] _moveDirection = new []{new Vector3Int(1,0, -1), new Vector3Int(1,0,0), new Vector3Int(1,0, 1), };
         
         private IGameState _state;
         private ILevelTarget _target;
@@ -31,12 +32,12 @@ namespace GameStates
         private IEnumerator Animate()
         {
             
-            for (int i = 0; i < _interactionGrid.Units.Count; i++)
+            for (int i = _interactionGrid.Units.Count - 1; i >= 0; i--)
             {
                 if (_interactionGrid.Units[i].Health.IsDead == false)
                 {
                     MoveUnit(_interactionGrid.Units[i]);
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(0.5f);
                 }
             }
             yield return _shots.ShotAnimation();
@@ -68,7 +69,6 @@ namespace GameStates
                     }
                 }
                 direction = GetDirection(i);
-                Debug.Log(i);
             }
 
             if (moved == false)

@@ -53,7 +53,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
                     Vector3Int roundedPos = Vector3Int.RoundToInt(hit.point);
                     GridElement selectedElement = HighlightPoint(roundedPos);
 
-                    if (selectedElement.HitState == GridSprites.SpriteState.normal)
+                    if (selectedElement.HitState == GridSprites.SpriteState.normal || selectedElement.HitState == GridSprites.SpriteState.missed)
                     {
                         CreateShot(roundedPos, selectedElement);
                         if (_shotsCount == _shotsQueue.Count)

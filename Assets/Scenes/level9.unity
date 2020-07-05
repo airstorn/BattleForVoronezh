@@ -260,18 +260,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 48662220}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &53470539 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6136745122448170551, guid: 10aa18502560315429ed92d7ec8d9ba7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099583455}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &76396985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,9 +1726,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467638967}
-  - component: {fileID: 467638966}
   - component: {fileID: 467638965}
   - component: {fileID: 467638964}
+  - component: {fileID: 467638966}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1774,6 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitTemplate: {fileID: 163066, guid: 53777b8572d1e7242bc90044f62667ce, type: 3}
+  _damage: 1
 --- !u!114 &467638966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1783,16 +1772,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 467638963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306c2c73c4f1e4f248fb7434824bd6a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 79089f582caa1634490f57f04f25ab65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _gameLogic: {fileID: 76396986}
-  _raycastCamera: {fileID: 1004488939}
+  _targetGrid: {fileID: 1478502189}
+  _enemyTurn: {fileID: 1844084911}
   _raycastIgnore:
     serializedVersion: 2
     m_Bits: 51
-  _interactionGrid: {fileID: 1478502189}
-  _enemyTurn: {fileID: 1844084911}
+  _targetTemplate: {fileID: 5032703759681236971, guid: 60dda56e2fef172498ee3f2684111a6d,
+    type: 3}
 --- !u!4 &467638967
 Transform:
   m_ObjectHideFlags: 0
@@ -2851,7 +2841,7 @@ PrefabInstance:
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _hiddenUnits
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -3833,10 +3823,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1059214216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c479fb8cd198584aac12fa27ae13c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e2e15dbfb39e75408dbb530c97dd7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyGrid: {fileID: 1478502189}
+  _interactableGrid: {fileID: 1478502189}
 --- !u!114 &1059214219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6667,8 +6657,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1844084915}
-  - component: {fileID: 1844084914}
   - component: {fileID: 1844084913}
+  - component: {fileID: 1844084916}
   - component: {fileID: 1844084912}
   m_Layer: 0
   m_Name: EnemyTurn
@@ -6686,10 +6676,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844084911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
+  m_Script: {fileID: 11500000, guid: c0c379b12dc6ca44aabb0a016d3d3e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyGrid: {fileID: 1013628036}
+  _logic: {fileID: 76396986}
+  _nextState: {fileID: 1856651814}
+  _interactionGrid: {fileID: 1478502189}
+  _moveDirection:
+  - {x: 1, y: 0, z: -1}
+  - {x: 1, y: 0, z: 0}
+  - {x: 1, y: 0, z: 1}
+  _shots: {fileID: 467638966}
 --- !u!114 &1844084913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6703,22 +6700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitTemplate: {fileID: 163066, guid: 53777b8572d1e7242bc90044f62667ce, type: 3}
---- !u!114 &1844084914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844084911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14affb05cf0cde142b4457c50194c29d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _logic: {fileID: 76396986}
-  _nextState: {fileID: 1856651814}
-  _offsetCamera: {fileID: 53470539}
-  _interactionGrid: {fileID: 1013628036}
+  _damage: 1
 --- !u!4 &1844084915
 Transform:
   m_ObjectHideFlags: 0
@@ -6733,6 +6715,19 @@ Transform:
   m_Father: {fileID: 76396987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1844084916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844084911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b2163d531f2964eb95d782e2caf8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _grid: {fileID: 1478502189}
 --- !u!1 &1856651814
 GameObject:
   m_ObjectHideFlags: 0

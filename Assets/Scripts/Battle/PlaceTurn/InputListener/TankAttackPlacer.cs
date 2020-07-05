@@ -21,20 +21,30 @@ public class TankAttackPlacer : MonoBehaviour, IUnitsPlacer
 
         _interactableGrid.UpdateGridEngagements();
     }
-    
+
     public void Place(GridUnit unit)
     {
         int step = _interactableGrid.Sheet.GetLength(1) / _storedUnits.GetAllUnits().Count;
-        for (int i = step / 2; i < _interactableGrid.Sheet.GetLength(1); i += step)
+        
+        for (int y = _interactableGrid.Sheet.GetLength(0) - 1; y > 0; y--)
         {
-            Vector2Int vacantPos = new Vector2Int(0,i);
-            Vector3 pos = _interactableGrid.Sheet[vacantPos.x, vacantPos.y].CellPos;
-            unit.PositionId = Vector3Int.RoundToInt(new Vector3(pos.x, 0, pos.z));
-            
-            if (_interactableGrid.IsUnitPlacable(unit))
+            for (int i = step / 2; i < _interactableGrid.Sheet.GetLength(1); i += step)
             {
-                _interactableGrid.PlaceUnit(unit, false);
-                break;
+
+                var posCache = unit.PositionId;
+                Vector2Int vacantPos = new Vector2Int(y, i);
+                Vector3 pos = _interactableGrid.Sheet[vacantPos.x, vacantPos.y].CellPos;
+                unit.PositionId = Vector3Int.RoundToInt(new Vector3(pos.x, 0, pos.z));
+
+                if (_interactableGrid.IsUnitPlacable(unit))
+                {
+                    _interactableGrid.PlaceUnit(unit, false);
+                    break;
+                }
+                else
+                {
+                    unit.PositionId = posCache;
+                }
             }
         }
     }

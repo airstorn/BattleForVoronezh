@@ -1438,7 +1438,7 @@ PrefabInstance:
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _hiddenUnits
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -4483,9 +4483,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 612580797}
-  - component: {fileID: 612580796}
   - component: {fileID: 612580795}
   - component: {fileID: 612580794}
+  - component: {fileID: 612580796}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4520,6 +4520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitTemplate: {fileID: 1549373087677006, guid: 2b79ec10654f26344816627d7515c1df,
     type: 3}
+  _damage: 1
 --- !u!114 &612580796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4529,16 +4530,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 612580793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306c2c73c4f1e4f248fb7434824bd6a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 79089f582caa1634490f57f04f25ab65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _gameLogic: {fileID: 1753166765}
-  _raycastCamera: {fileID: 677020930}
+  _targetGrid: {fileID: 175524103}
+  _enemyTurn: {fileID: 846769549}
   _raycastIgnore:
     serializedVersion: 2
     m_Bits: 51
-  _interactionGrid: {fileID: 175524103}
-  _enemyTurn: {fileID: 846769549}
+  _targetTemplate: {fileID: 5032703759681236971, guid: 60dda56e2fef172498ee3f2684111a6d,
+    type: 3}
 --- !u!4 &612580797
 Transform:
   m_ObjectHideFlags: 0
@@ -6037,8 +6039,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 846769553}
-  - component: {fileID: 846769552}
   - component: {fileID: 846769551}
+  - component: {fileID: 846769552}
   - component: {fileID: 846769550}
   m_Layer: 0
   m_Name: EnemyTurn
@@ -6056,10 +6058,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 846769549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
+  m_Script: {fileID: 11500000, guid: 67b2163d531f2964eb95d782e2caf8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyGrid: {fileID: 1450187783}
+  _grid: {fileID: 175524103}
 --- !u!114 &846769551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6074,6 +6076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitTemplate: {fileID: 1549373087677006, guid: 2b79ec10654f26344816627d7515c1df,
     type: 3}
+  _damage: 1
 --- !u!114 &846769552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6083,13 +6086,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 846769549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14affb05cf0cde142b4457c50194c29d, type: 3}
+  m_Script: {fileID: 11500000, guid: c0c379b12dc6ca44aabb0a016d3d3e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _logic: {fileID: 1753166765}
   _nextState: {fileID: 945790465}
-  _offsetCamera: {fileID: 1450187784}
-  _interactionGrid: {fileID: 1450187783}
+  _interactionGrid: {fileID: 175524103}
+  _moveDirection:
+  - {x: 1, y: 0, z: -1}
+  - {x: 1, y: 0, z: 0}
+  - {x: 1, y: 0, z: 1}
+  _shots: {fileID: 612580796}
 --- !u!4 &846769553
 Transform:
   m_ObjectHideFlags: 0
@@ -9576,18 +9583,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 602e873d24da64a90b19172178b55219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1450187784 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6136745122448170551, guid: 10aa18502560315429ed92d7ec8d9ba7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450187782}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1450187785 stripped
@@ -14765,10 +14760,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2106321271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c479fb8cd198584aac12fa27ae13c70, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e2e15dbfb39e75408dbb530c97dd7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyGrid: {fileID: 175524103}
+  _interactableGrid: {fileID: 175524103}
 --- !u!114 &2106321274
 MonoBehaviour:
   m_ObjectHideFlags: 0
