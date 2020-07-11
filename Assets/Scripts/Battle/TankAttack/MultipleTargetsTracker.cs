@@ -39,7 +39,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
 
     public void TrackInput()
     {
-        _shotsCount = _targetGrid.Units.Count;
+        _shotsCount = _targetGrid.Units.Count(unit => unit.Health.IsDead == false);
         
         var ray = _raycastCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;

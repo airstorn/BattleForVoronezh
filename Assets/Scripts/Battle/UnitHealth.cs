@@ -10,16 +10,17 @@ public class UnitHealth : MonoBehaviour
     [SerializeField] private int _health;
 
     public bool IsDead => _health <= 0;
+    public int Total => CalcHealth();
     
     private void Start()
     {
         _base = GetComponent<GridUnit>();
-        CalcHealth();
+        _health = CalcHealth();
     }
 
-    private void CalcHealth()
+    private int CalcHealth()
     {
-        _health = _base.Size.x * _base.Size.y;
+        return _base.Size.x * _base.Size.y;
     }
 
     public void ApplyDamage(int damage)

@@ -1596,11 +1596,11 @@ MonoBehaviour:
   _logic: {fileID: 470212367}
   _nextState: {fileID: 824941926}
   _interactionGrid: {fileID: 1032588076}
+  _shots: {fileID: 60627946}
   _moveDirection:
   - {x: 1, y: 0, z: -1}
   - {x: 1, y: 0, z: 0}
   - {x: 1, y: 0, z: 1}
-  _shots: {fileID: 60627946}
 --- !u!4 &552481322
 Transform:
   m_ObjectHideFlags: 0
@@ -4411,7 +4411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _normal: {fileID: 21300000, guid: 186e18f45da1d4c4eb76cd982c5675e7, type: 3}
   _damaged: {fileID: 21300000, guid: a9f362f71d01c2b4db34f70113d814c0, type: 3}
-  _missed: {fileID: 21300000, guid: 6d249721dc2f2ae46b2834787ea4f20f, type: 3}
+  _missed: {fileID: 21300000, guid: 186e18f45da1d4c4eb76cd982c5675e7, type: 3}
 --- !u!4 &1698205158
 Transform:
   m_ObjectHideFlags: 0
