@@ -1674,12 +1674,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427478a62fc59a34590eeeb6ba2971f0, type: 3}
---- !u!224 &189419712 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2797953684400280864, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1003102022}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &191574421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4905,20 +4899,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 555909138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f6be0b98cf25645a6b296d43b19d7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 306c2c73c4f1e4f248fb7434824bd6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _gameLogic: {fileID: 1390889693}
   _raycastCamera: {fileID: 359576568}
   _raycastIgnore:
     serializedVersion: 2
-    m_Bits: 51
+    m_Bits: 3
   _interactionGrid: {fileID: 500538026}
   _enemyTurn: {fileID: 654262099}
-  _template: {fileID: 1617810734581173152, guid: c7692f76165078e499fdc088b5952bff,
-    type: 3}
-  _parent: {fileID: 189419712}
-  _additionalShots: 20
 --- !u!4 &555909141
 Transform:
   m_ObjectHideFlags: 0

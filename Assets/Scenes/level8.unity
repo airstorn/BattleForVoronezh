@@ -555,12 +555,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 130314229}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &132159721 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2797953684400280864, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1691726724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &153550579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1746,7 +1740,7 @@ GameObject:
   - component: {fileID: 467638967}
   - component: {fileID: 467638965}
   - component: {fileID: 467638964}
-  - component: {fileID: 467638968}
+  - component: {fileID: 467638966}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1781,6 +1775,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitTemplate: {fileID: 163066, guid: 53777b8572d1e7242bc90044f62667ce, type: 3}
   _damage: 1
+--- !u!114 &467638966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467638963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306c2c73c4f1e4f248fb7434824bd6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameLogic: {fileID: 76396986}
+  _raycastCamera: {fileID: 1004488939}
+  _raycastIgnore:
+    serializedVersion: 2
+    m_Bits: 51
+  _interactionGrid: {fileID: 1478502189}
+  _enemyTurn: {fileID: 1844084911}
 --- !u!4 &467638967
 Transform:
   m_ObjectHideFlags: 0
@@ -1795,29 +1808,6 @@ Transform:
   m_Father: {fileID: 1856651816}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &467638968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467638963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f6be0b98cf25645a6b296d43b19d7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameLogic: {fileID: 76396986}
-  _raycastCamera: {fileID: 1004488939}
-  _raycastIgnore:
-    serializedVersion: 2
-    m_Bits: 51
-  _interactionGrid: {fileID: 1478502189}
-  _enemyTurn: {fileID: 1844084911}
-  _template: {fileID: 1617810734581173152, guid: c7692f76165078e499fdc088b5952bff,
-    type: 3}
-  _parent: {fileID: 132159721}
-  _additionalShots: 5
 --- !u!1001 &517170164
 PrefabInstance:
   m_ObjectHideFlags: 0
