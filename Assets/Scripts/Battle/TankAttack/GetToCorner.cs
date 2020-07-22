@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Battle.Interfaces;
 using UnityEngine;
 
 namespace levelTarget
 {
-    public class GetToCorner : MonoBehaviour, ILevelTarget
+    public class GetToCorner : MonoBehaviour, ILevelTarget<GridObject>
     {
-        [SerializeField] private GridObject _grid;
+        private GridObject _grid;
         
         public bool CheckTarget()
         {
@@ -18,6 +19,16 @@ namespace levelTarget
             }
 
             return false;
+        }
+
+        public void SetTarget(GridObject target)
+        {
+            _grid = target;
+        }
+
+        public GridObject GetTarget()
+        {
+            return _grid;
         }
     }
 }

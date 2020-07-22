@@ -3,8 +3,17 @@ using System.Collections.Generic;
 using GameStates;
 using UnityEngine;
 
-public class GameLogic : MonoBehaviour
+public enum LevelType
 {
+    ArtPreparation,
+    Artillery,
+    Tank
+}
+
+public class LevelData : MonoBehaviour
+{
+    [SerializeField] private LevelType _levelType;
+    
     [SerializeField] private GridObject _playerGrid;
     [SerializeField] private GridObject _enemyGrid;
     
@@ -29,6 +38,13 @@ public class GameLogic : MonoBehaviour
     private IGameState _state_PlaceUnits;
 
     private IGameState _state;
+
+    public static LevelData Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -67,10 +83,5 @@ public class GameLogic : MonoBehaviour
     {
         Debug.Log("Player loose!");
         Menu.Instance.SwitchPage(_endWindow, false);
-    }
-
-    public void Confirm_button()
-    {
-        // _state.Confirm();
     }
 }

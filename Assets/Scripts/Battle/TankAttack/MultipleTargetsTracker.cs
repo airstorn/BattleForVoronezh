@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Battle.Interfaces;
 using UnityEngine;
 
 public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
@@ -13,9 +14,6 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
         public GridElement Element;
     }
 
-    [SerializeField] private GameLogic _gameLogic;
-    
-    [SerializeField] private GridObject _targetGrid;
     [SerializeField] private GameObject _enemyTurn;
     [SerializeField] private LayerMask _raycastIgnore;
     [SerializeField] private GameObject _targetTemplate;
@@ -23,7 +21,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
     private Queue<ShotData> _shotsQueue = new Queue<ShotData>();
 
     private Camera _raycastCamera;
-    private ILevelTarget _playerTarget;
+    private GridObject _targetGrid;
     private IShotable _shotBehaviour;
     private IGameState _nextState;
     private bool animate = false;
@@ -32,7 +30,8 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
     {
         _shotBehaviour = GetComponent<IShotable>();
         _nextState = _enemyTurn.GetComponent<IGameState>();
-        _playerTarget = GetComponent<ILevelTarget>();
+        
+        _targetGrid = LevelData.Instance.EnemyGrid;
         _raycastCamera = Camera.main;
     }
 
@@ -59,7 +58,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
                         if (_shotsCount == _shotsQueue.Count)
                         {
                             // StartCoroutine(ShotAnimation());
-                            _gameLogic.ChangeState(_nextState);
+                            LevelData.Instance.ChangeState(_nextState);
                         }
                     }
                 }
@@ -103,7 +102,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInputHandler
 
             if (_playerTarget.CheckTarget() == true)
             {
-                _gameLogic.OnPlayerWin?.Invoke();
+                LevelData.Instance.OnPlayerWin?.Invoke();
                 yield break;
             }
         }

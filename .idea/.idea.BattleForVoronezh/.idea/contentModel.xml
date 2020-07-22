@@ -28,6 +28,30 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Abilities" t="Include">
+            <e p="Behaviours" t="Include">
+              <e p="Scouting.cs" t="Include" />
+            </e>
+            <e p="Core" t="Include">
+              <e p="AbilitiesDirector.cs" t="Include" />
+              <e p="Ability.cs" t="Include" />
+              <e p="AbilityLevel.cs" t="Include" />
+              <e p="AbilityObject.cs" t="Include" />
+              <e p="IAbilityCallback.cs" t="Include" />
+              <e p="IAbilityPresetHandler.cs" t="Include" />
+              <e p="IGradable.cs" t="Include" />
+              <e p="InitData.cs" t="Include" />
+            </e>
+            <e p="Presets" t="Include">
+              <e p="ArtilleryPreparation.cs" t="Include" />
+              <e p="ArtilleryPreset.cs" t="Include" />
+              <e p="PresetBasement.cs" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="AbilityButton.cs" t="Include" />
+              <e p="AbilityPresenter.cs" t="Include" />
+            </e>
+          </e>
           <e p="Battle" t="Include">
             <e p="CameraMovers" t="Include">
               <e p="BlinkingCamera.cs" t="Include" />
@@ -81,8 +105,8 @@
               <e p="TargetDestroyUnits.cs" t="Include" />
             </e>
           </e>
-          <e p="GameLogic.cs" t="Include" />
           <e p="GridSprites.cs" t="Include" />
+          <e p="LevelData.cs" t="Include" />
           <e p="Menu" t="Include">
             <e p="BattlePage.cs" t="Include" />
             <e p="Core" t="Include">
@@ -102,6 +126,9 @@
             <e p="MenuPage.cs" t="Include" />
             <e p="PageEndWindow.cs" t="Include" />
             <e p="SettingsPage.cs" t="Include" />
+            <e p="Shop" t="Include">
+              <e p="ShopItem.cs" t="Include" />
+            </e>
             <e p="ShopPage.cs" t="Include" />
           </e>
           <e p="PlaceUnits.cs" t="Include" />

@@ -1,18 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-public enum AbilityLevel
+namespace Abilities.Core
 {
-    level1 = 1,
-    level2 = 2,
-    level3 = 3
-}
+    public abstract class Ability : MonoBehaviour
+    {
+        [SerializeField] protected AbilityLevel _level = AbilityLevel.level1;
+        [SerializeField] protected int _count;
+        [SerializeField] protected AbilityObject _abilityData;
+        public AbilityLevel Level => _level;
 
-public abstract class Ability : MonoBehaviour
-{
-    [SerializeField] private AbilityLevel _level = AbilityLevel.level1;
-    [SerializeField] private int _count;
+        public abstract void Interact();
 
-    public abstract void Init();
+        public virtual VisualData GetData()
+        {
+            VisualData visual = new VisualData()
+            {
+                Level = _level,
+                Count = _count,
+                Name = _abilityData.Name,
+                Reference = this
+            };
+
+            return visual;
+        }
+    }
 }

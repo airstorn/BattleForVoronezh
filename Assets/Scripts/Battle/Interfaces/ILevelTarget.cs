@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public  interface ILevelTarget
+﻿namespace Battle.Interfaces
 {
-    bool CheckTarget();
+    public  interface ILevelTarget<T>
+    {
+        bool CheckTarget();
+        void SetTarget(T target);
+        T GetTarget();
+    }
 }

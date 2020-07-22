@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Abilities.Core;
 using UnityEngine;
 
 public class UserData : MonoBehaviour
 {
       [SerializeField] private string _username;
-      [SerializeField] private int _coins;
-      [SerializeField] private List<GridUnit> _units;
+      public AbilitiesDirector AbilitiesDirector => _abilities;
+      private AbilitiesDirector _abilities;
 
       public static UserData Instance;
 
@@ -20,6 +21,8 @@ public class UserData : MonoBehaviour
             else
             {
                   Instance = this;
+                  _abilities = GetComponentInChildren<AbilitiesDirector>();
+
                   DontDestroyOnLoad(gameObject);
             }
       }

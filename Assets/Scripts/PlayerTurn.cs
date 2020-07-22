@@ -1,24 +1,28 @@
-﻿using Cinemachine;
+﻿using Abilities.Core;
+using Cinemachine;
 using UnityEngine;
 namespace GameStates
 {
     public class PlayerTurn : MonoBehaviour, IGameState
     {
-        [SerializeField] private GameLogic _logic;
         [SerializeField] private GameObject _inputObject;
         [SerializeField] private CinemachineVirtualCamera _offsetCamera;
 
         private IInputHandler _inputHandler;
+        private IAbilityPresetHandler _abilitiesHandler;
 
 
         private void Start()
         {
             _inputHandler = _inputObject.GetComponent<IInputHandler>();
+            _abilitiesHandler = GetComponent<IAbilityPresetHandler>();
+
+            _abilitiesHandler.Load(UserData.Instance.AbilitiesDirector);
         }
         public void Activate()
         {
-            _logic.OnUpdate += StateUpdate;
-            _logic.CameraStatement.ToCamera(_offsetCamera);
+            LevelData.Instance.OnUpdate += StateUpdate;
+            LevelData.Instance.CameraStatement.ToCamera(_offsetCamera);
         }
 
 
@@ -29,7 +33,7 @@ namespace GameStates
 
         public void Deactivate()
         {
-            _logic.OnUpdate -= StateUpdate;
+            LevelData.Instance.OnUpdate -= StateUpdate;
         }
     }
 }

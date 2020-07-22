@@ -1,26 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Battle.Interfaces;
 using UnityEngine;
 
 public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
 {
-    [SerializeField] private GameLogic _gameLogic;
-    [SerializeField] private Camera _raycastCamera;
     [SerializeField] private LayerMask _raycastIgnore;
     [SerializeField] private GridObject _interactionGrid;
     [SerializeField] private GameObject _enemyTurn;
     
     private GridElement _selectedElement;
+    private Camera _raycastCamera;
 
-    private ILevelTarget _playerTarget;
+    private ILevelTarget<GridObject> _playerTarget;
     private IShotable _shotBehaviour;
     private IGameState _nextState;
     private bool animate = false;
+    
     private void Start()
     {
         _shotBehaviour = GetComponent<IShotable>();
         _nextState = _enemyTurn.GetComponent<IGameState>();
-        _playerTarget = GetComponent<ILevelTarget>();
+        _raycastCamera = Camera.main;
+        _playerTarget = GetComponent<ILevelTarget<GridObject>>();
+        
+        _playerTarget.SetTarget(LevelData.Instance.EnemyGrid);
     }
     
     public void TrackInput()
@@ -63,12 +67,12 @@ public class PlayerTurnInputHandler : MonoBehaviour, IInputHandler
 
         if (_playerTarget.CheckTarget() == true)
         {
-            _gameLogic.OnPlayerWin?.Invoke();
+            LevelData.Instance.OnPlayerWin?.Invoke();
             yield break;
         }
         
         if(_selectedElement.HitState == GridSprites.SpriteState.missed)
-            _gameLogic.ChangeState(_nextState);
+            LevelData.Instance.ChangeState(_nextState);
 
         animate = false;
     }

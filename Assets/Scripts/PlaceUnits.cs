@@ -7,7 +7,6 @@ namespace GameStates
 {
     public class PlaceUnits : MonoBehaviour, IGameState
     {
-        [SerializeField] private GameLogic _logic;
         [SerializeField] private GameObject _inputObject;
         [SerializeField] private PageBasement _uiObject;
         [SerializeField] private GameObject _playerTurnState;
@@ -23,12 +22,12 @@ namespace GameStates
         public void Activate()
         {
             _uiObject.Show(this);
-            _logic.OnUpdate += StateUpdate;
+            LevelData.Instance.OnUpdate += StateUpdate;
         }
 
         private IEnumerator Animate()
         {
-            _logic.CameraStatement.ToCamera(_cameraOffset);
+            LevelData.Instance.CameraStatement.ToCamera(_cameraOffset);
             yield return null;
         }
 
@@ -38,7 +37,7 @@ namespace GameStates
             
            Destroy(_inputObject);
             
-            _logic.OnUpdate -= StateUpdate;
+           LevelData.Instance.OnUpdate -= StateUpdate;
         }
 
         public void StateUpdate()
@@ -53,7 +52,7 @@ namespace GameStates
         {
             if(ValidatePlacement() == true)
             {
-                _logic.ChangeState(_playerTurnState.GetComponent<IGameState>());
+                LevelData.Instance.ChangeState(_playerTurnState.GetComponent<IGameState>());
             }
         }
 
@@ -69,7 +68,7 @@ namespace GameStates
 
         private bool ValidatePlacement()
         {
-            return _logic.PlayerGrid.AllUnitsPlaced() == true && _logic.PlayerGrid.Units.All(placedElement => placedElement.SuitablePlaced != false);
+            return LevelData.Instance.PlayerGrid.AllUnitsPlaced() == true && LevelData.Instance.PlayerGrid.Units.All(placedElement => placedElement.SuitablePlaced != false);
         }
     }
 }

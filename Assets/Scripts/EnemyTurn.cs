@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections;
+using Battle.Interfaces;
 using Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace GameStates
 {
-    [RequireComponent(typeof(ILevelTarget))]
+    [RequireComponent(typeof(ILevelTarget<GridObject>))]
     public class EnemyTurn : MonoBehaviour, IGameState
     {
-        [SerializeField] private GameLogic _logic;
+        [SerializeField] private LevelData _logic;
         [SerializeField] private GameObject _nextState;
         [SerializeField] private CinemachineVirtualCamera _offsetCamera;
         [SerializeField] private GridObject _interactionGrid;
@@ -17,14 +18,16 @@ namespace GameStates
         private GridElement _selectedElement;
 
         private IShotable _shot;
-        private ILevelTarget _enemyTarget; 
+        private ILevelTarget<GridObject> _enemyTarget; 
         private IGameState _state;
         
         private void Start()
         {
             _state = _nextState.GetComponent<IGameState>();
-            _enemyTarget = GetComponent<ILevelTarget>();
+            _enemyTarget = GetComponent<ILevelTarget<GridObject>>();
             _shot = GetComponent<IShotable>();
+            
+            _enemyTarget.SetTarget(LevelData.Instance.PlayerGrid);
         }
 
         public void Activate()

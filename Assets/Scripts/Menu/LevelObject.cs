@@ -12,9 +12,17 @@ namespace GameStates
         [SerializeField] private string _description;
         [SerializeField] private Sprite _preview;
         [SerializeField] private int _levelLoadIndex;
+        [SerializeField] private LevelType Type;
         public string LevelName => _name;
         public string Description => _description;
         public int LevelLoadIndex => _levelLoadIndex;
         public Sprite Preview => _preview;
+        
+        public enum LevelType
+        {
+            TankBattle,
+            ArtilleryPreparation,
+            ArtileryDuel
+        }
     }
 }

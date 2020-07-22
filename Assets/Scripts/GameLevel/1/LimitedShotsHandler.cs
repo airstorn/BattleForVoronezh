@@ -2,15 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Battle.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = System.Object;
 
 public class LimitedShotsHandler : MonoBehaviour, IInputHandler
 {
-    [SerializeField] private GameLogic _gameLogic;
-    [SerializeField] private Camera _raycastCamera;
     [SerializeField] private LayerMask _raycastIgnore;
-    [SerializeField] private GridObject _interactionGrid;
     [SerializeField] private GameObject _enemyTurn;
 
     [SerializeField] private GameObject _template;
@@ -20,8 +19,9 @@ public class LimitedShotsHandler : MonoBehaviour, IInputHandler
     private Text _shotsText;
     private int _shotsCount;
     private GridElement _selectedElement;
+    private Camera _raycastCamera;
 
-    private ILevelTarget _playerTarget;
+    private ILevelTarget<GridObject> _target;
     private IShotable _shotBehaviour;
     private IGameState _nextState;
     private bool animate = false;
@@ -29,15 +29,17 @@ public class LimitedShotsHandler : MonoBehaviour, IInputHandler
     {
         _shotBehaviour = GetComponent<IShotable>();
         _nextState = _enemyTurn.GetComponent<IGameState>();
-        _playerTarget = GetComponent<ILevelTarget>();
+        _target = GetComponent<ILevelTarget<GridObject>>();
+        _raycastCamera = Camera.main;
 
         _shotsText = Instantiate(_template, _parent).GetComponent<Text>();
 
         yield return new WaitForEndOfFrame();
+
+        var target = _target.GetTarget();
         
-        _shotsCount = _interactionGrid.Units.Sum(unit => unit.Health.Total) * (_interactionGrid.Sheet.GetLength(0) + _interactionGrid.Sheet.GetLength(1)) / 2;
+        _shotsCount = target.Units.Sum(unit => unit.Health.Total) * (target.Sheet.GetLength(0) + target.Sheet.GetLength(1)) / 2;
         _shotsCount += _additionalShots;
-        Debug.Log(_interactionGrid.Units.Count);
         UpdateShotsCount();
     }
     
@@ -75,7 +77,7 @@ public class LimitedShotsHandler : MonoBehaviour, IInputHandler
 
     private GridElement HighlightPoint(Vector3Int pos)
     {
-        return _interactionGrid.GetVacantElement(pos);
+        return _target.GetTarget().GetVacantElement(pos);
     }
 
     public void Shoot()
@@ -91,20 +93,20 @@ public class LimitedShotsHandler : MonoBehaviour, IInputHandler
         RemoveShot();
         yield return new WaitForSeconds(0.8f);
 
-        if (_playerTarget.CheckTarget() == true)
+        if (_target.CheckTarget() == true)
         {
-            _gameLogic.OnPlayerWin?.Invoke();
+            LevelData.Instance.OnPlayerWin?.Invoke();
             yield break;
         }
         
         if (_shotsCount <= 0)
         {
-            _gameLogic.OnPlayerLoose?.Invoke();
+            LevelData.Instance.OnPlayerLoose?.Invoke();
             yield break;
         }
         
         if(_selectedElement.HitState == GridSprites.SpriteState.missed)
-            _gameLogic.ChangeState(_nextState);
+            LevelData.Instance.ChangeState(_nextState);
 
         animate = false;
     }

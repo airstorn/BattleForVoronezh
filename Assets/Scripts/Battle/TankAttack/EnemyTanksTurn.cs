@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Battle.Interfaces;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,20 +9,20 @@ namespace GameStates
 {
     public class EnemyTanksTurn : MonoBehaviour, IGameState
     {
-        [SerializeField] private GameLogic _logic;
         [SerializeField] private GameObject _nextState;
-        [SerializeField] private GridObject _interactionGrid;
         [SerializeField] private MultipleTargetsTracker _shots;
 
         [SerializeField] private Vector3Int[] _moveDirection = new []{new Vector3Int(1,0, -1), new Vector3Int(1,0,0), new Vector3Int(1,0, 1), };
         
         private IGameState _state;
-        private ILevelTarget _target;
+        private ILevelTarget<GridObject> _target;
 
         private void Start()
         {
             _state = _nextState.GetComponent<IGameState>();
-            _target = GetComponent<ILevelTarget>();
+            _target = GetComponent<ILevelTarget<GridObject>>();
+            
+            _target.SetTarget(LevelData.Instance.EnemyGrid);
         }
 
         public void Activate()
@@ -31,16 +32,19 @@ namespace GameStates
 
         private IEnumerator Animate()
         {
+            var target = _target.GetTarget();
             
-            for (int i = _interactionGrid.Units.Count - 1; i >= 0; i--)
+            for (int i = target.Units.Count - 1; i >= 0; i--)
             {
-                if (_interactionGrid.Units[i].Health.IsDead == false)
+                if (target.Units[i].Health.IsDead == false)
                 {
-                    MoveUnit(_interactionGrid.Units[i]);
+                    MoveUnit(target.Units[i]);
                     yield return new WaitForSeconds(0.5f);
                 }
             }
             yield return _shots.ShotAnimation();
+            
+            
             
             EndTurn();
         }
@@ -49,11 +53,12 @@ namespace GameStates
         {
             Vector3Int direction = GetDirection(Random.Range(0, _moveDirection.Length));
             var fromPos =  unit.PositionId;
+            var target = _target.GetTarget();
             bool moved = false;
 
             for (int i = 0; i < _moveDirection.Length; i++)
             {
-                var element = _interactionGrid.GetVacantElement(fromPos + direction);
+                var element = target.GetVacantElement(fromPos + direction);
 
                 if (element != null)
                 {
@@ -61,9 +66,9 @@ namespace GameStates
 
                     unit.PositionId = Vector3Int.RoundToInt(new Vector3(pos.x, 0, pos.z));
 
-                    if (_interactionGrid.IsUnitPlacable(unit))
+                    if (target.IsUnitPlacable(unit))
                     {
-                        _interactionGrid.PlaceUnit(unit, true);
+                        target.PlaceUnit(unit, true);
                         moved = true;
                         break;
                     }
@@ -74,7 +79,7 @@ namespace GameStates
             if (moved == false)
             {
                 unit.PositionId = fromPos;
-                _interactionGrid.PlaceUnit(unit, false);
+                target.PlaceUnit(unit, false);
             }
         }
 
@@ -87,9 +92,9 @@ namespace GameStates
         {
             if (_target.CheckTarget() == true)
             {
-                _logic.OnPlayerLoose?.Invoke();
+                LevelData.Instance.OnPlayerLoose?.Invoke();
             }
-            _logic.ChangeState(_state);
+            LevelData.Instance.ChangeState(_state);
         }
 
         public void Deactivate()
