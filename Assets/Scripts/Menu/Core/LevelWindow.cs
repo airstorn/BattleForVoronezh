@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Core;
 using GameStates;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelWindow : PageBasement, ILevelWindowable, IMenuPagable
+public class LevelWindow : PageBasement, ILevelWindowable, IMenuPageable
 {
     [SerializeField] private Text _Name;
     [SerializeField] private TMP_Text _description;
@@ -62,5 +63,10 @@ public class LevelWindow : PageBasement, ILevelWindowable, IMenuPagable
     private void ShowPlayButton()
     {
         _playButton.gameObject.SetActive(true);
+    }
+
+    public void SendArgs<T>(T args) where T : struct
+    {
+        throw new NotImplementedException();
     }
 }

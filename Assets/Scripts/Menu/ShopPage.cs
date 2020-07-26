@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Abilities.Behaviours;
 using Abilities.Core;
+using Core;
 using UnityEngine;
+using User;
 using Object = UnityEngine.Object;
 
 namespace GameStates
 {
-   public class ShopPage : PageBasement, IMenuPagable
+   public class ShopPage : PageBasement, IMenuPageable
    {
       [SerializeField] private GameObject _itemTemplate;
       [SerializeField] private IEnumerable<Type> _abilities;
@@ -37,6 +39,11 @@ namespace GameStates
          var obj = Instantiate(_itemTemplate, _itemsParent);
 
          obj.GetComponent<ShopItem>().SetItem(converted.Name, "" + converted.Level);
+      }
+
+      public void SendArgs<T>(T args) where T : struct
+      {
+         throw new NotImplementedException();
       }
    }
 }

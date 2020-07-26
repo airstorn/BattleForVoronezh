@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Core;
+using UI;
 using UnityEngine;
 
 namespace GameStates
@@ -9,63 +11,67 @@ namespace GameStates
    public class Menu : MonoBehaviour
    {
 
-      [SerializeField] private GameObject _defaultPage;
-      [SerializeField] private GameObject[] _menuObjects;
-      private IMenuPagable[] _pages;
-
+      private IMenuPageable[] _pages;
+      private IMenuPageable _currentPage;
 
       public static Menu Instance;
 
       private void Awake()
       {
          Instance = this;
+         Fill();
+
+         DisableAll();
       }
 
-      private void Start()
+      private void DisableAll()
       {
-         _pages = _menuObjects.Select(obj => obj.GetComponent<IMenuPagable>()).ToArray();
-         SwitchPage(_defaultPage, this);
-      }
-
-      public void SwitchPage<T>(GameObject page, T args)
-      {
-         var pageElement = GetPage(page);
-         foreach (var tempPage in _pages)
+         foreach (var page in _pages)
          {
-            if (tempPage == pageElement)
-            {
-               tempPage.Show(args);
-            }
-            else
-            {
-               tempPage.Hide();
-            }
+            page.Hide();
          }
+      }
+
+      private void Fill()
+      {
+         var objects = FindObjectsOfType<PageBasement>().OfType<IMenuPageable>();
+         _pages = objects.ToArray();
+      }
+
+      public IMenuPageable SwitchPage<T>() where T : IMenuPageable
+      {
+         var pageElement = GetPage<T>();
+         
+         _currentPage?.Hide();
+         _currentPage = pageElement;
+         _currentPage.Show();
+
+         return _currentPage;
       } 
-      public void SwitchPage(GameObject page)
+      // public void SwitchPage<T>() where T : 
+      // {
+      //    var pageElement = GetPage(page);
+      //    foreach (var tempPage in _pages)
+      //    {
+      //       if (tempPage == pageElement)
+      //       {
+      //          tempPage.Show(this);
+      //       }
+      //       else
+      //       {
+      //          tempPage.Hide();
+      //       }
+      //    }
+      // }
+
+      public void OpenPageOverlayed<T>() where T : IMenuPageable
       {
-         var pageElement = GetPage(page);
-         foreach (var tempPage in _pages)
-         {
-            if (tempPage == pageElement)
-            {
-               tempPage.Show(this);
-            }
-            else
-            {
-               tempPage.Hide();
-            }
-         }
+         GetPage<T>().Show();
       }
 
-      public void OpenPageOverlayed<T>(GameObject page, T args)
+      private IMenuPageable GetPage<T>() where T : IMenuPageable
       {
-         GetPage(page).Show(args);
-      }
-
-      private IMenuPagable GetPage(GameObject page)
-      {
-         return page.GetComponent<IMenuPagable>();
+         return _pages.OfType<T>().First();
       }
    }
 }

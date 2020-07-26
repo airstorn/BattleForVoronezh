@@ -1,10 +1,11 @@
 using System;
+using Core;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace GameStates
 {
-    public class BattlePage : PageBasement, IMenuPagable
+    public class BattlePage : PageBasement, IMenuPageable
     {
         [SerializeField] private LevelObject[] _levelsBehaviour;
         [SerializeField] private GameObject _windowObject;
@@ -23,10 +24,15 @@ namespace GameStates
             int offset = levelId - 1;
             if (_levelsBehaviour.Length > offset)
             {
-                _menu.OpenPageOverlayed(_windowObject, this);
+                _menu.OpenPageOverlayed<LevelWindow>();
                 _levelWindowable.ShowLevelData(_levelsBehaviour[offset]);
             }
             
+        }
+
+        public void SendArgs<T>(T args) where T : struct
+        {
+            throw new NotImplementedException();
         }
     }
 }

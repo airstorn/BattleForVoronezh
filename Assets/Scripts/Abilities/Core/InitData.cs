@@ -1,5 +1,6 @@
 ﻿using System;
 using Abilities.UI;
+using Core;
 using UnityEngine;
 
 namespace Abilities.Core
@@ -17,9 +18,8 @@ namespace Abilities.Core
       public Action AbilityActionHandler;
    }
 
-   public struct UseData : IAbilityData
+   public struct ExtraMovesData : IAbilityData
    {
-      
    }
    
    public struct VisualData : IAbilityData

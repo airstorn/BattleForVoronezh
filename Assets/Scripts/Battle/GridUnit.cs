@@ -13,6 +13,8 @@ public class UnitVisual
     [SerializeField] private GameObject _broken;
     [SerializeField] private bool _hidden;
 
+    public bool IsHidden => _hidden;
+    
     public void SetBroken(bool state)
     {
         _broken.SetActive(state);
@@ -70,15 +72,10 @@ public class GridUnit : MonoBehaviour
     private void Awake()
     {
         _visual.SetBroken(false);
-        SetHidden(false);
+        _visual.SetHidden(false);
 
         _health = GetComponent<UnitHealth>();
         _collider = GetComponent<BoxCollider>();
-    }
-
-    public void SetHidden(bool hide)
-    {
-        _visual.SetHidden(hide);
     }
 
    

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Abilities.Behaviours;
 using Abilities.Core;
 using Abilities.UI;
+using Core;
 using GameStates;
 using UnityEngine;
 using Object = System.Object;
@@ -26,7 +27,6 @@ namespace Abilities.Presets
                 var ability = director.GetAbility(_objects[i]);
 
                 var receiver = ability as IDataReceiver<InitData>;
-                Debug.Log(_objects[i]);
                 receiver?.Interact(data, Callback);
             }
         }

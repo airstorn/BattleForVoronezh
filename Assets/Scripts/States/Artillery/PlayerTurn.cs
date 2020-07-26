@@ -1,0 +1,63 @@
+﻿using System;
+using Abilities.Core;
+using Battle.Interfaces;
+using Cinemachine;
+using Core;
+using GameStates;
+using Interfaces;
+using UnityEngine;
+using User;
+
+namespace States.Artillery
+{
+    public class PlayerTurn : MonoBehaviour,  IPlayerState
+    {
+        [SerializeField] private GameObject _inputObject;
+        [SerializeField] private CinemachineVirtualCamera _offsetCamera;
+
+        public IInputHandler InputHandler => _inputHandler;
+        
+        private IInputHandler _inputHandler;
+        private IAbilityPresetHandler _abilitiesHandler;
+
+
+        private void Start()
+        {
+            _abilitiesHandler = GetComponent<IAbilityPresetHandler>();
+
+            _abilitiesHandler.Load(UserData.Instance.AbilitiesDirector);
+        }
+
+
+        public void Activate()
+        {
+            LevelData.Instance.OnUpdate += StateUpdate;
+            LevelData.Instance.CameraStatement.ToCamera(_offsetCamera);
+
+            Menu.Instance.SwitchPage<PlayerStatePage>();
+
+            SetInput(_inputObject.GetComponent<IInputHandler>());
+        }
+
+        public void SetInput(IInputHandler handler)
+        {
+            _inputHandler = handler;
+        }
+
+        public void ResetInput()
+        {
+            SetInput(_inputObject.GetComponent<IInputHandler>());
+        }
+
+        private void StateUpdate()
+        {
+            _inputHandler.TrackInput();
+        }
+
+        public void Deactivate()
+        {
+            Debug.Log("deactivate");
+            LevelData.Instance.OnUpdate -= StateUpdate;
+        }
+    }
+}

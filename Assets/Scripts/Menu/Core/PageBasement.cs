@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class PageBasement : MonoBehaviour
 {
     [SerializeField] protected GameObject _pageObject;
-    public virtual void Show<T>(T args)
+    public virtual void Show()
     {
         _pageObject.SetActive(true);   
     }

@@ -9,12 +9,11 @@ namespace Abilities.Presets
     {
         private void Awake()
         {
-            _objects = new[] {typeof(Scouting)};
+            _objects = new[] {typeof(Scouting), typeof(FireSupply), typeof(ExtraMoves)};
         }
 
         protected override void Callback(IAbilityData obj)
         {
-            Debug.Log("inited");
         }
     }
 }

@@ -272,7 +272,7 @@ public class GridObject : MonoBehaviour
         List<GridElement> vacantElements = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 0);
         List<GridElement> borders = GetVacantElements(unit.PositionId, unit.Size, unit.GetDirection(), 1);
         unit.SetElements(vacantElements, borders);
-        unit.SetHidden(_hiddenUnits);
+        unit.Visual.SetHidden(_hiddenUnits);
 
         if (vacantElements.Count > 0)
         {

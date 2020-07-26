@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using DG.Tweening;
+using Interfaces;
 
 public class UnitsPlacement : MonoBehaviour, IInputHandler
 {
+    public event OnInputStopped OnInputStoppedHandler;
+
     [SerializeField] private Camera _raycastCamera;
     [SerializeField] private GridObject _interactableGrid;
     [SerializeField] private LayerMask _ignoreMask;
@@ -135,4 +138,5 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
     {
         CatchUnit();
     }
+
 }

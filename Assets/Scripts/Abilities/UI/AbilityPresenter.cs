@@ -1,4 +1,5 @@
-﻿using Abilities.Core;
+﻿using System.Collections.Generic;
+using Abilities.Core;
 using UnityEngine;
 
 namespace Abilities.UI
@@ -6,13 +7,21 @@ namespace Abilities.UI
     public class AbilityPresenter : MonoBehaviour
     {
         [SerializeField] private Transform _parent;
-        [SerializeField] private GameObject _template;
+
+        private List<AbilityButton> _data = new List<AbilityButton>();
         
-        public void CreateAbilityButton(VisualData data)
+        public void SetVisible(bool visible)
         {
-            Debug.Log("created");
-            var obj = Instantiate(_template, _parent);
+            _parent.gameObject.SetActive(visible);
+        }
+
+        public void CreateAbilityButton(GameObject buttonTemplate, VisualData data)
+        {
+            var obj = Instantiate(buttonTemplate);
             obj.GetComponent<AbilityButton>().SetData(data);
+            obj.transform.SetParent(_parent);
+            obj.GetComponent<RectTransform>().localScale = Vector3.one;
+
         }
     }
 }

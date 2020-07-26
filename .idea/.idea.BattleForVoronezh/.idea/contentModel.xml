@@ -30,6 +30,8 @@
         <e p="Scripts" t="Include">
           <e p="Abilities" t="Include">
             <e p="Behaviours" t="Include">
+              <e p="ExtraMoves.cs" t="Include" />
+              <e p="FireSupply.cs" t="Include" />
               <e p="Scouting.cs" t="Include" />
             </e>
             <e p="Core" t="Include">
@@ -43,34 +45,20 @@
               <e p="InitData.cs" t="Include" />
             </e>
             <e p="Presets" t="Include">
+              <e p="Artillery.cs" t="Include" />
               <e p="ArtilleryPreparation.cs" t="Include" />
-              <e p="ArtilleryPreset.cs" t="Include" />
               <e p="PresetBasement.cs" t="Include" />
+              <e p="TankAttack.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
               <e p="AbilityButton.cs" t="Include" />
               <e p="AbilityPresenter.cs" t="Include" />
+              <e p="ExtraMovesUI.cs" t="Include" />
             </e>
           </e>
           <e p="Battle" t="Include">
-            <e p="CameraMovers" t="Include">
-              <e p="BlinkingCamera.cs" t="Include" />
-              <e p="CameraTurns.cs" t="Include" />
-            </e>
-            <e p="EnemyTurn" t="Include">
-              <e p="EnemyUnitsAim.cs" t="Include" />
-            </e>
             <e p="GridObject.cs" t="Include" />
             <e p="GridUnit.cs" t="Include" />
-            <e p="Interfaces" t="Include">
-              <e p="ICamMover.cs" t="Include" />
-              <e p="IGameState.cs" t="Include" />
-              <e p="IInputManager.cs" t="Include" />
-              <e p="ILevelTarget.cs" t="Include" />
-              <e p="IShotable.cs" t="Include" />
-              <e p="IUnitsData.cs" t="Include" />
-              <e p="IUnitsPlacer.cs" t="Include" />
-            </e>
             <e p="PlaceTurn" t="Include">
               <e p="InputListener" t="Include">
                 <e p="EnemyPlacer.cs" t="Include" />
@@ -81,37 +69,53 @@
               <e p="RandomUnitsPlacement.cs" t="Include" />
               <e p="UnitsSchedule.cs" t="Include" />
             </e>
-            <e p="PlayerTurn" t="Include">
-              <e p="PlayerTurnInputHandler.cs" t="Include" />
-            </e>
-            <e p="TankAttack" t="Include">
-              <e p="EnemyTanksTurn.cs" t="Include" />
-              <e p="GetToCorner.cs" t="Include" />
-              <e p="MultipleTargetsTracker.cs" t="Include" />
-            </e>
-            <e p="UI" t="Include">
-              <e p="PausePage.cs" t="Include" />
-              <e p="PlacementPage.cs" t="Include" />
-            </e>
             <e p="UnitHealth.cs" t="Include" />
             <e p="UnitsData.cs" t="Include" />
           </e>
-          <e p="EnemyTurn.cs" t="Include" />
+          <e p="CameraMovers" t="Include">
+            <e p="BlinkingCamera.cs" t="Include" />
+            <e p="CameraTurns.cs" t="Include" />
+          </e>
+          <e p="Core" t="Include">
+            <e p="IInitiatable.cs" t="Include" />
+            <e p="ILevelInitiator.cs" t="Include" />
+            <e p="IResourcable.cs" t="Include" />
+            <e p="IResourceListener.cs" t="Include" />
+            <e p="LevelData.cs" t="Include" />
+            <e p="LevelInitiation" t="Include">
+              <e p="ArtilleryInitiator.cs" t="Include" />
+              <e p="TankAttackInitiator.cs" t="Include" />
+            </e>
+          </e>
           <e p="GameLevel" t="Include">
             <e p="1" t="Include">
               <e p="DefaultShot.cs" t="Include" />
-              <e p="LimitedShotsHandler.cs" t="Include" />
-              <e p="TargetClearField.cs" t="Include" />
-              <e p="TargetDestroyUnits.cs" t="Include" />
             </e>
           </e>
           <e p="GridSprites.cs" t="Include" />
-          <e p="LevelData.cs" t="Include" />
+          <e p="InputHandlers" t="Include">
+            <e p="LimitedShotsHandler.cs" t="Include" />
+            <e p="MultipleTargetsTracker.cs" t="Include" />
+            <e p="PlayerTurnInputHandler.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="ICamMover.cs" t="Include" />
+            <e p="IGameState.cs" t="Include" />
+            <e p="IInputManager.cs" t="Include" />
+            <e p="ILevelTarget.cs" t="Include" />
+            <e p="IShotable.cs" t="Include" />
+            <e p="IUnitsData.cs" t="Include" />
+            <e p="IUnitsPlacer.cs" t="Include" />
+          </e>
+          <e p="LevelTargets" t="Include">
+            <e p="GetToCorner.cs" t="Include" />
+            <e p="TargetClearField.cs" t="Include" />
+          </e>
           <e p="Menu" t="Include">
             <e p="BattlePage.cs" t="Include" />
             <e p="Core" t="Include">
               <e p="ILevelWindowable.cs" t="Include" />
-              <e p="IMenuPagable.cs" t="Include" />
+              <e p="IMenuPageable.cs" t="Include" />
               <e p="LevelWindow.cs" t="Include" />
               <e p="PageBasement.cs" t="Include" />
               <e p="Settings" t="Include">
@@ -119,21 +123,37 @@
                 <e p="LanguageSelector.cs" t="Include" />
               </e>
             </e>
-            <e p="GamePage.cs" t="Include" />
+            <e p="EnemyStatePage.cs" t="Include" />
             <e p="LanguageButton.cs" t="Include" />
             <e p="LevelObject.cs" t="Include" />
             <e p="Menu.cs" t="Include" />
             <e p="MenuPage.cs" t="Include" />
             <e p="PageEndWindow.cs" t="Include" />
+            <e p="PlayerStatePage.cs" t="Include" />
             <e p="SettingsPage.cs" t="Include" />
             <e p="Shop" t="Include">
               <e p="ShopItem.cs" t="Include" />
             </e>
             <e p="ShopPage.cs" t="Include" />
           </e>
-          <e p="PlaceUnits.cs" t="Include" />
-          <e p="PlayerTurn.cs" t="Include" />
+          <e p="States" t="Include">
+            <e p="Artillery" t="Include">
+              <e p="EnemyTurn.cs" t="Include" />
+              <e p="PlayerTurn.cs" t="Include" />
+            </e>
+            <e p="PlaceUnits.cs" t="Include" />
+            <e p="TankAttack" t="Include">
+              <e p="EnemyTanksTurn.cs" t="Include" />
+              <e p="PlayerTankTurn.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UI" t="Include">
+            <e p="PausePage.cs" t="Include" />
+            <e p="PlacementPage.cs" t="Include" />
+          </e>
           <e p="User" t="Include">
+            <e p="Money.cs" t="Include" />
+            <e p="MoneyDataHandler.cs" t="Include" />
             <e p="UserData.cs" t="Include" />
           </e>
         </e>
