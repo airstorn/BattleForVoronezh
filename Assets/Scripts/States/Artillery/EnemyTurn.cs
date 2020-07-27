@@ -12,21 +12,19 @@ namespace GameStates
     [RequireComponent(typeof(ILevelTarget<GridObject>))]
     public class EnemyTurn : MonoBehaviour, IEnemyState
     {
-        [SerializeField] private LevelData _logic;
-        [SerializeField] private GameObject _nextState;
         [SerializeField] private CinemachineVirtualCamera _offsetCamera;
-        [SerializeField] private GridObject _interactionGrid;
 
         private GridElement _selectedElement;
 
+        private GridObject _interactionGrid;
         private IShotable _shot;
         private ILevelTarget<GridObject> _enemyTarget; 
         private IGameState _state;
         
         private void Start()
         {
-            _state = _nextState.GetComponent<IGameState>();
             _enemyTarget = GetComponent<ILevelTarget<GridObject>>();
+            _interactionGrid = LevelData.Instance.PlayerGrid;
             _shot = GetComponent<IShotable>();
             
             _enemyTarget.SetTarget(LevelData.Instance.PlayerGrid);
@@ -34,7 +32,7 @@ namespace GameStates
 
         public void Activate()
         {
-            _logic.CameraStatement.ToCamera(_offsetCamera);
+            LevelData.Instance.CameraStatement.ToCamera(_offsetCamera);
             Menu.Instance.SwitchPage<EnemyStatePage>();
             StartCoroutine(Animate());
         }
@@ -47,8 +45,7 @@ namespace GameStates
 
             if (_enemyTarget.CheckTarget() == true)
             {
-                yield return new WaitForSeconds(1);
-                _logic.OnPlayerLoose?.Invoke();
+                yield break;
             }
             else
             {
@@ -63,13 +60,15 @@ namespace GameStates
 
             while (shoot == true)
             {
+                yield return new WaitForSeconds(1);
+                shoot = Shoot();
+                
                 if (_enemyTarget.CheckTarget() == true)
                 {
                     yield break;
                 }
                 
-                yield return new WaitForSeconds(1);
-                shoot = Shoot();
+                
             }
             yield return new WaitForSeconds(1);
         }
@@ -96,7 +95,7 @@ namespace GameStates
 
         private void EndTurn()
         {
-            _logic.ChangeState(_state);
+            LevelData.Instance.ChangeState<IPlayerState>();
         }
 
         public void Deactivate()

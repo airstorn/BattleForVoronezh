@@ -954,7 +954,6 @@ GameObject:
   - component: {fileID: 300139806}
   - component: {fileID: 300139807}
   - component: {fileID: 300139809}
-  - component: {fileID: 300139808}
   m_Layer: 0
   m_Name: PlayerTurn
   m_TagString: Untagged
@@ -991,18 +990,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputObject: {fileID: 1502249097}
   _offsetCamera: {fileID: 1041389556}
---- !u!114 &300139808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300139805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c4ae72119442a2ba1a494886a4e363, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &300139809
 MonoBehaviour:
   m_ObjectHideFlags: 0

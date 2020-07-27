@@ -16,7 +16,15 @@ namespace LevelTargets
 
             if (state == true)
             {
-                LevelData.Instance.OnPlayerWin?.Invoke();
+                if (_targetGrid == LevelData.Instance.EnemyGrid)
+                {
+                    LevelData.Instance.OnPlayerWin?.Invoke();
+
+                }
+                else
+                {
+                    LevelData.Instance.OnPlayerLoose?.Invoke();
+                }
             }
 
             return state;

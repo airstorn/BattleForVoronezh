@@ -6,6 +6,7 @@ using Cinemachine;
 using Core;
 using GameStates;
 using Interfaces;
+using LevelTargets;
 using UnityEngine;
 using User;
 
@@ -24,18 +25,31 @@ namespace States.TankAttack
 
         private void Start()
         {
-            _target = GetComponent<ILevelTarget<GridObject>>().SetTarget(LevelData.Instance.EnemyGrid);
-            _abilityHandler = GetComponent<IAbilityPresetHandler>();
-            _abilityHandler.Load(UserData.Instance.AbilitiesDirector);
+     
             
             _defaultHandler = _tracker.GetComponent<IInputHandler>();
+            
+            ResetInput();
+            
+            if (_inputHandler is MultipleTargetsTracker)
+            {
+                if (GetComponent<Abilities.Presets.TankAttack>() == null)
+                    gameObject.AddComponent<Abilities.Presets.TankAttack>();
+                
+                _target = gameObject.AddComponent<TargetClearField>().SetTarget(LevelData.Instance.EnemyGrid);
+            }
+            
+            _target = GetComponent<ILevelTarget<GridObject>>().SetTarget(LevelData.Instance.EnemyGrid);
+            
+            _abilityHandler = GetComponent<IAbilityPresetHandler>();
+            _abilityHandler.Load(UserData.Instance.AbilitiesDirector);
+
         }
 
         public void Activate()
         {
             if (_target.CheckTarget() == true)
             {
-                LevelData.Instance.OnPlayerWin?.Invoke();
                 return;
             }
 
@@ -78,10 +92,21 @@ namespace States.TankAttack
             _inputHandler = handler;
         }
 
-        public void SetInput(IInputHandler handler, bool track)
+        public void SetInput(IInputHandler handler, bool trackInput)
         {
-            throw new NotImplementedException();
+            if(_inputHandler != null)
+                _inputHandler.OnInputStoppedHandler -= InputCancel;
+            _inputHandler = handler;
+            
+            if(trackInput)
+                _inputHandler.OnInputStoppedHandler += InputCancel;
         }
+        
+        private void InputCancel()
+        {
+            LevelData.Instance.ChangeState<IEnemyState>();
+        }
+
 
         public bool CheckTarget()
         {

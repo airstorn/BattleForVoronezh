@@ -54,7 +54,8 @@ namespace User
 
             private void OnDestroy()
             {
-                  _money.OnValueChanged -= SaveMoney;
+                  if(_money != null)
+                        _money.OnValueChanged -= SaveMoney;
             }
       }
 }

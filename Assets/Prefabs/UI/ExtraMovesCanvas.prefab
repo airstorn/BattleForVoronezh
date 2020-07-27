@@ -428,7 +428,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 249037091132990102}
+      - m_Target: {fileID: 404807188594527523}
         m_MethodName: BuyMoveButton
         m_Mode: 1
         m_Arguments:
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 6977151356292016243}
   - component: {fileID: 6977151356292016242}
   - component: {fileID: 6977151356292016241}
-  - component: {fileID: 249037091132990102}
+  - component: {fileID: 404807188594527523}
   m_Layer: 5
   m_Name: ExtraMovesCanvas
   m_TagString: Untagged
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &249037091132990102
+--- !u!114 &404807188594527523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

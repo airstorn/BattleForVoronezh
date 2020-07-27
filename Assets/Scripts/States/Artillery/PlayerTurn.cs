@@ -1,5 +1,6 @@
 ﻿using System;
 using Abilities.Core;
+using Abilities.Presets;
 using Battle.Interfaces;
 using Cinemachine;
 using Core;
@@ -27,16 +28,26 @@ namespace States.Artillery
 
         private void Start()
         {
-            _abilitiesHandler = GetComponent<IAbilityPresetHandler>();
             
             ResetInput();
-            
-            if(_inputHandler is SimpleInputShooting)
+
+            if (_inputHandler is SimpleInputShooting)
+            {
+                if(GetComponent<Abilities.Presets.Artillery>() == null)
+                    gameObject.AddComponent<Abilities.Presets.Artillery>();
                 _target = gameObject.AddComponent<TargetClearField>().SetTarget(LevelData.Instance.EnemyGrid);
-            
-            if(_inputHandler is LimitedShotsHandler)
+            }
+
+            if (_inputHandler is LimitedShotsHandler)
+            {
+                if(GetComponent<ArtilleryPreparation>() == null)
+                    gameObject.AddComponent<ArtilleryPreparation>();
                 _target = gameObject.AddComponent<ArtPreparationTarget>().SetTarget(LevelData.Instance.EnemyGrid);
-            
+            }
+
+           
+            _abilitiesHandler = GetComponent<IAbilityPresetHandler>();
+
             _abilitiesHandler.Load(UserData.Instance.AbilitiesDirector);
         }
 

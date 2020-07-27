@@ -10,17 +10,14 @@ namespace States.TankAttack
 {
     public class EnemyTanksTurn : MonoBehaviour, IEnemyState
     {
-        [SerializeField] private GameObject _nextState;
         [SerializeField] private MultipleTargetsTracker _shots;
 
         [SerializeField] private Vector3Int[] _moveDirection = new []{new Vector3Int(1,0, -1), new Vector3Int(1,0,0), new Vector3Int(1,0, 1), };
         
-        private IGameState _state;
         private ILevelTarget<GridObject> _target;
 
         private void Start()
         {
-            _state = _nextState.GetComponent<IGameState>();
             _target = GetComponent<ILevelTarget<GridObject>>().SetTarget(LevelData.Instance.EnemyGrid);
         }
 
@@ -92,7 +89,10 @@ namespace States.TankAttack
             {
                 LevelData.Instance.OnPlayerLoose?.Invoke();
             }
-            LevelData.Instance.ChangeState(_state);
+            else
+            {
+                LevelData.Instance.ChangeState<IPlayerState>();
+            }
         }
 
         public void Deactivate()
