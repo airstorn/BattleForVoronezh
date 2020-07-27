@@ -1,4 +1,4 @@
-﻿namespace Battle.Interfaces
+﻿namespace Interfaces
 {
     public  interface ILevelTarget<T>
     {

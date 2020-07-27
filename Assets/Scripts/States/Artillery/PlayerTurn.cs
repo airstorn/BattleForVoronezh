@@ -4,7 +4,10 @@ using Battle.Interfaces;
 using Cinemachine;
 using Core;
 using GameStates;
+using InputHandlers;
 using Interfaces;
+using levelTarget;
+using LevelTargets;
 using UnityEngine;
 using User;
 
@@ -16,6 +19,7 @@ namespace States.Artillery
         [SerializeField] private CinemachineVirtualCamera _offsetCamera;
 
         public IInputHandler InputHandler => _inputHandler;
+        private ILevelTarget<GridObject> _target;
         
         private IInputHandler _inputHandler;
         private IAbilityPresetHandler _abilitiesHandler;
@@ -24,7 +28,15 @@ namespace States.Artillery
         private void Start()
         {
             _abilitiesHandler = GetComponent<IAbilityPresetHandler>();
-
+            
+            ResetInput();
+            
+            if(_inputHandler is SimpleInputShooting)
+                _target = gameObject.AddComponent<TargetClearField>().SetTarget(LevelData.Instance.EnemyGrid);
+            
+            if(_inputHandler is LimitedShotsHandler)
+                _target = gameObject.AddComponent<ArtPreparationTarget>().SetTarget(LevelData.Instance.EnemyGrid);
+            
             _abilitiesHandler.Load(UserData.Instance.AbilitiesDirector);
         }
 
@@ -36,17 +48,33 @@ namespace States.Artillery
 
             Menu.Instance.SwitchPage<PlayerStatePage>();
 
-            SetInput(_inputObject.GetComponent<IInputHandler>());
+            SetInput(_inputObject.GetComponent<IInputHandler>(), true);
         }
 
-        public void SetInput(IInputHandler handler)
+        public void SetInput(IInputHandler handler, bool trackInput)
         {
+            if(_inputHandler != null)
+                _inputHandler.OnInputStoppedHandler -= InputCancel;
             _inputHandler = handler;
+            
+            if(trackInput)
+                _inputHandler.OnInputStoppedHandler += InputCancel;
         }
 
+        private void InputCancel()
+        {
+            LevelData.Instance.ChangeState<IEnemyState>();
+        }
+
+        public bool CheckTarget()
+        {
+            return _target.CheckTarget();
+        }
+
+       
         public void ResetInput()
         {
-            SetInput(_inputObject.GetComponent<IInputHandler>());
+            SetInput(_inputObject.GetComponent<IInputHandler>(), true);
         }
 
         private void StateUpdate()

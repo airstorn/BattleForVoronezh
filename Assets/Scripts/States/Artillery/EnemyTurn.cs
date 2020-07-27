@@ -3,6 +3,7 @@ using System.Collections;
 using Battle.Interfaces;
 using Cinemachine;
 using Core;
+using Interfaces;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

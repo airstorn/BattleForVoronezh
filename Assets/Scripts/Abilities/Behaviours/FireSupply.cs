@@ -24,7 +24,7 @@ namespace Abilities.Behaviours
 
             public void DoAction(AbilityLevel level)
             {
-                State.SetInput(Handler);
+                State.SetInput(Handler, false);
                 Presenter.SetVisible(false);
                 var grid = Logic.EnemyGrid;
 

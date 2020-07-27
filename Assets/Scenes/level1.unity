@@ -953,8 +953,8 @@ GameObject:
   m_Component:
   - component: {fileID: 300139806}
   - component: {fileID: 300139807}
-  - component: {fileID: 300139808}
   - component: {fileID: 300139809}
+  - component: {fileID: 300139808}
   m_Layer: 0
   m_Name: PlayerTurn
   m_TagString: Untagged
@@ -4648,7 +4648,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1502249098}
   - component: {fileID: 1502249100}
-  - component: {fileID: 1502249101}
   - component: {fileID: 1502249102}
   m_Layer: 0
   m_Name: Player
@@ -4685,18 +4684,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hitTemplate: {fileID: 163066, guid: 53777b8572d1e7242bc90044f62667ce, type: 3}
   _damage: 1
---- !u!114 &1502249101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502249097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1502249102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4712,7 +4699,6 @@ MonoBehaviour:
   _raycastIgnore:
     serializedVersion: 2
     m_Bits: 51
-  _enemyTurn: {fileID: 1097428327}
   _template: {fileID: 1617810734581173152, guid: c7692f76165078e499fdc088b5952bff,
     type: 3}
   _parent: {fileID: 621029069}

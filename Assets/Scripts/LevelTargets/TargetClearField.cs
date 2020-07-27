@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Battle.Interfaces;
+using Core;
+using Interfaces;
 using UnityEngine;
 
-namespace levelTarget
+namespace LevelTargets
 {
     public class TargetClearField : MonoBehaviour, ILevelTarget<GridObject>
     {
@@ -12,7 +12,14 @@ namespace levelTarget
     
         public bool CheckTarget()
         {
-            return _targetGrid.Units.All(killedUnit => killedUnit.Health.IsDead);
+            var state = _targetGrid.Units.All(killedUnit => killedUnit.Health.IsDead);
+
+            if (state == true)
+            {
+                LevelData.Instance.OnPlayerWin?.Invoke();
+            }
+
+            return state;
         }
 
         public ILevelTarget<GridObject> SetTarget(GridObject target)

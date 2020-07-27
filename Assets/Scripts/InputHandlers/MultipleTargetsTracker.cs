@@ -30,7 +30,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInitiatable<IPlayerState>,
     private GridObject _targetGrid;
     private IShotable _shotBehaviour;
     private IPlayerState _playerState;
-    private bool animate = false;
+    private bool _animate = false;
 
     private void Start()
     {
@@ -49,7 +49,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInitiatable<IPlayerState>,
         var ray = _raycastCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         
-        if (Input.GetMouseButtonDown(0) && animate == false && _eventSystem.IsPointerOverGameObject() == false)
+        if (Input.GetMouseButtonDown(0) && _animate == false && _eventSystem.IsPointerOverGameObject() == false)
         {
             if (Physics.Raycast(ray, out hit, 1000, _raycastIgnore))
             {
@@ -99,7 +99,7 @@ public class MultipleTargetsTracker : MonoBehaviour, IInitiatable<IPlayerState>,
     
     public IEnumerator ShotAnimation(Action callback)
     {
-        animate = true;
+        _animate = true;
         yield return new WaitForSeconds(0.2f);
 
         while (_shotsQueue.Count != 0)
@@ -110,13 +110,12 @@ public class MultipleTargetsTracker : MonoBehaviour, IInitiatable<IPlayerState>,
             
             yield return new WaitForSeconds(0.8f);
 
-            // if (_playerTarget.CheckTarget() == true)
-            // {
-            //     LevelData.Instance.OnPlayerWin?.Invoke();
-            //     yield break;
-            // }
+            if (LevelData.Instance.PlayerState.CheckTarget() == true)
+                yield break;
+            
+            
         }
-        animate = false;
+        _animate = false;
         
         callback?.Invoke();
     }

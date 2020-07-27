@@ -14,7 +14,8 @@ namespace Battle.Interfaces
 
     public interface IPlayerState : IGameState
     {
-        void SetInput(IInputHandler handler);
+        void SetInput(IInputHandler handler, bool track);
+        bool CheckTarget();
         void ResetInput();
     }
 

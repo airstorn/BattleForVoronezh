@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Battle.Interfaces;
+using Interfaces;
 using UnityEngine;
 
 namespace levelTarget
@@ -14,7 +15,7 @@ namespace levelTarget
             for (int y = 0; y < _grid.Sheet.GetLength(1); y++)
             {
                 var obj = _grid.Sheet[_grid.Sheet.GetLength(0) - 1, y];
-                if (obj.HoldedUnit != null && obj.HoldedUnit.Health.IsDead == false)
+                if (obj.HoldedUnit  && obj.HoldedUnit.Health.IsDead == false)
                     return true;
             }
 

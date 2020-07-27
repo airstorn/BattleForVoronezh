@@ -968,9 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c379b12dc6ca44aabb0a016d3d3e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _logic: {fileID: 1614031771}
   _nextState: {fileID: 1984700420}
-  _interactionGrid: {fileID: 551889505}
   _shots: {fileID: 527406174}
   _moveDirection:
   - {x: 1, y: 0, z: -1}
@@ -1002,7 +1000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b2163d531f2964eb95d782e2caf8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grid: {fileID: 551889505}
 --- !u!4 &235521501
 Transform:
   m_ObjectHideFlags: 0
@@ -2474,7 +2471,6 @@ GameObject:
   m_Component:
   - component: {fileID: 527406173}
   - component: {fileID: 527406171}
-  - component: {fileID: 527406170}
   - component: {fileID: 527406174}
   m_Layer: 0
   m_Name: Player
@@ -2483,19 +2479,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &527406170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527406169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyGrid: {fileID: 551889505}
 --- !u!114 &527406171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2536,9 +2519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79089f582caa1634490f57f04f25ab65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameLogic: {fileID: 1614031771}
-  _targetGrid: {fileID: 551889505}
-  _enemyTurn: {fileID: 235521497}
   _raycastIgnore:
     serializedVersion: 2
     m_Bits: 51
@@ -4238,18 +4218,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 740182533}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &771670451 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 766743275270226637, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 220078877}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbe478ea0a179a458fec1422f3ccd63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &775290252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7090,11 +7058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec6a7657d4c31843b5d10c65b018b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelType: 0
   _playerGrid: {fileID: 1678439066}
   _enemyGrid: {fileID: 551889505}
-  _placementTurnObject: {fileID: 1802537736}
-  _playerTurnObject: {fileID: 1984700420}
-  _enemyTurnObject: {fileID: 235521497}
   _endWindow: {fileID: 220078878}
 --- !u!4 &1614031772
 Transform:
@@ -7472,9 +7438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57933aa70bd05db4683d59299b638936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _logic: {fileID: 1614031771}
   _inputObject: {fileID: 646151527}
-  _uiObject: {fileID: 771670451}
   _playerTurnState: {fileID: 1984700420}
   _cameraOffset: {fileID: 173728297}
   _playerPlacement: {fileID: 646151528}
@@ -8619,6 +8583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1984700422}
   - component: {fileID: 1984700421}
+  - component: {fileID: 1984700423}
   m_Layer: 0
   m_Name: PlayerTurn
   m_TagString: Untagged
@@ -8638,7 +8603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192f83ace4bd5f44580798dd1f042341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _logic: {fileID: 1614031771}
   _inputObject: {fileID: 527406169}
   _offsetCamera: {fileID: 688627420}
 --- !u!4 &1984700422
@@ -8656,6 +8620,18 @@ Transform:
   m_Father: {fileID: 1614031772}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1984700423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984700420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2004061983
 PrefabInstance:
   m_ObjectHideFlags: 0

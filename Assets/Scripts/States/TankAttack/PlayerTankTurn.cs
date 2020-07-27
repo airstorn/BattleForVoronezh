@@ -78,6 +78,16 @@ namespace States.TankAttack
             _inputHandler = handler;
         }
 
+        public void SetInput(IInputHandler handler, bool track)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CheckTarget()
+        {
+            return false;
+        }
+
         public void ResetInput()
         {
             SetInput(_defaultHandler);

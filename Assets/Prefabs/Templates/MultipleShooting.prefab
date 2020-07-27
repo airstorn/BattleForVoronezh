@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1223144955453488918}
   - component: {fileID: 1223144955453488912}
   m_Layer: 0
-  m_Name: ShootingType
+  m_Name: MultipleShooting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitTemplate: {fileID: 163066, guid: 53777b8572d1e7242bc90044f62667ce, type: 3}
-  _damage: 100
+  _damage: 1
 --- !u!114 &1223144955453488918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,7 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2662f1862936a459d181424868790f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyGrid: {fileID: 0}
 --- !u!114 &1223144955453488912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,8 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79089f582caa1634490f57f04f25ab65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameLogic: {fileID: 0}
-  _enemyTurn: {fileID: 0}
   _raycastIgnore:
     serializedVersion: 2
     m_Bits: 51
