@@ -14,6 +14,9 @@ namespace Abilities.Core
 
         public Action OnAbilityUsed;
 
+        [SerializeField] protected string _levelPath;
+        [SerializeField] protected string _countPath;
+
         public abstract void Interact();
         public abstract void Cancel();
 
@@ -30,11 +33,39 @@ namespace Abilities.Core
             return visual;
         }
 
+        private void Start()
+        { 
+            _levelPath = "level_" + this.GetType();
+            _countPath = "count_" + this.GetType();
+            
+            OnValueChanged += SaveHandler;
+            
+            Load();  
+        }
+
+        private void SaveHandler(int obj)
+        {
+            Save();
+        }
+
+        protected void Save()
+        {
+            PlayerPrefs.SetInt(_countPath, _count);
+            PlayerPrefs.SetInt(_levelPath, (int)_level);
+        }
+
+        private void Load()
+        {
+            _count = PlayerPrefs.GetInt(_countPath, 0);
+            _level = (AbilityLevel)PlayerPrefs.GetInt(_levelPath, (int) AbilityLevel.level1);
+        }
+
 
         public event Action<int> OnValueChanged;
         public void Add(int obj)
         {
             _count += obj;
+            OnValueChanged?.Invoke(_count);
         }
 
         public int Get()
@@ -45,6 +76,7 @@ namespace Abilities.Core
         public void Remove(int obj)
         {
             _count -= obj;
+            OnValueChanged?.Invoke(_count);
         }
     }
 }

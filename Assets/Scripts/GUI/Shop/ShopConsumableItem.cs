@@ -36,7 +36,6 @@ namespace GUI.Shop
             
             _button.onClick.RemoveAllListeners();
 
-            Debug.Log(_containedData.Visual.Reference);
             _button.onClick.AddListener(BuyItem);
         }
 

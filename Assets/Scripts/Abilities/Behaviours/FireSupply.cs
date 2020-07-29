@@ -55,6 +55,7 @@ namespace Abilities.Behaviours
             {
                 _behaviour.DoAction(_level);
                 _count--;
+                Save();
             }
         }
 
@@ -96,6 +97,7 @@ namespace Abilities.Behaviours
             {
                 _level =  (AbilityLevel) Mathf.Clamp((int)_level+ 1, (int)AbilityLevel.level1, (int)AbilityLevel.level3);
                 UserData.Instance.Money.Remove(_gradePrice);
+                Save();
             }
         }
 
