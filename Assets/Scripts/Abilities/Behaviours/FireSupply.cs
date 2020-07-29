@@ -7,12 +7,15 @@ using Core;
 using GameStates;
 using Interfaces;
 using UnityEngine;
+using User;
 
 namespace Abilities.Behaviours
 {
-    public class FireSupply : Ability, IDataReceiver<VisualData>, IDataReceiver<InitData>, IGradable
+    public class FireSupply : Ability, IDataReceiver<VisualData>, IDataReceiver<InitData>, IDataReceiver<ShopData>, IGradable
     {
         [SerializeField] private GameObject _template;
+        [SerializeField] private int _gradePrice;
+        [SerializeField] private int _buyPrice;
         private Behaviour _behaviour;
         
         private class Behaviour
@@ -86,7 +89,28 @@ namespace Abilities.Behaviours
 
         public void Upgrade()
         {
-            throw new NotImplementedException();
+            if(_level == AbilityLevel.level3)
+                return;
+
+            if (UserData.Instance.Money.Get() >= _gradePrice)
+            {
+                _level =  (AbilityLevel) Mathf.Clamp((int)_level+ 1, (int)AbilityLevel.level1, (int)AbilityLevel.level3);
+                UserData.Instance.Money.Remove(_gradePrice);
+            }
+        }
+
+        public int GetGradePrice()
+        {
+            return _gradePrice;
+        }
+
+        public void Interact(ShopData data, Action<IAbilityData> callback = null)
+        {
+            data.Visual = GetData();
+            data.GradePrice = _gradePrice;
+            data.BuyPrice = _buyPrice;
+
+            callback?.Invoke(data);
         }
     }
 }

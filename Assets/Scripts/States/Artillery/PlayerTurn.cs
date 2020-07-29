@@ -95,7 +95,6 @@ namespace States.Artillery
 
         public void Deactivate()
         {
-            Debug.Log("deactivate");
             LevelData.Instance.OnUpdate -= StateUpdate;
         }
     }

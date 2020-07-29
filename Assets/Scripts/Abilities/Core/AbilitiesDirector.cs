@@ -16,7 +16,7 @@ namespace Abilities.Core
 
     public class AbilitiesDirector : MonoBehaviour
     {
-        [SerializeField] private List<Ability> _data = new List<Ability>();
+        private List<Ability> _data = new List<Ability>();
 
         private void Awake()
         {

@@ -35,6 +35,14 @@ namespace User
                   }
             }
 
+            private void Update()
+            {
+                  if (Input.GetKeyDown(KeyCode.M))
+                  {
+                        Money.Add(500);
+                  }
+            }
+
             private void Setup()
             {
                   _abilities = GetComponentInChildren<AbilitiesDirector>();

@@ -18,6 +18,13 @@ namespace Abilities.Core
       public Action AbilityActionHandler;
    }
 
+   public struct ShopData : IAbilityData
+   {
+      public VisualData Visual;
+      public int GradePrice;
+      public int BuyPrice;
+   }
+
    public struct ExtraMovesData : IAbilityData
    {
    }

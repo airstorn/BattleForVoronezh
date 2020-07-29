@@ -104,7 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa8d98a7d15c0545b4fd2b9828b3405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: []
 --- !u!114 &4316526863231191553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +123,8 @@ MonoBehaviour:
     type: 3}
   _scoutingTemplate: {fileID: 1223144955453488914, guid: dcff89e6bc31f9143aff874ed2aa3238,
     type: 3}
+  _gradePrice: 600
+  _buyPrice: 100
 --- !u!114 &280450588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,13 +137,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52eafe260b9b95b409926596e4a343b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _level: 2
+  _level: 1
   _count: 2
   _abilityData: {fileID: 11400000, guid: d62dbba6bb1ad13429029bc3a5de9ca8, type: 2}
   _buttonTemplate: {fileID: 8933207944807419881, guid: dcfa0c6b555e0ba4d894e5a273f858e4,
     type: 3}
   _template: {fileID: 1223144955453488914, guid: dcff89e6bc31f9143aff874ed2aa3238,
     type: 3}
+  _gradePrice: 600
+  _buyPrice: 100
 --- !u!114 &280450591
 MonoBehaviour:
   m_ObjectHideFlags: 0

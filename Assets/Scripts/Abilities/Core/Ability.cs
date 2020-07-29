@@ -1,9 +1,10 @@
 ﻿using System;
+using Core;
 using UnityEngine;
 
 namespace Abilities.Core
 {
-    public abstract class Ability : MonoBehaviour
+    public abstract class Ability : MonoBehaviour, IResourcable<int>
     {
         [SerializeField] protected AbilityLevel _level = AbilityLevel.level1;
         [SerializeField] protected int _count;
@@ -29,20 +30,21 @@ namespace Abilities.Core
             return visual;
         }
 
-        protected virtual string GetLevelString(AbilityLevel lvl)
+
+        public event Action<int> OnValueChanged;
+        public void Add(int obj)
         {
-            switch (lvl)
-            {
-                case AbilityLevel.level1:
-                    return "ур. 1";
-                case AbilityLevel.level2:
-                    return "ур. 2";
-                case AbilityLevel.level3:
-                    return "ур. 3";
-                
-                default:
-                    return "Undifiened";
-            }
+            _count += obj;
+        }
+
+        public int Get()
+        {
+            return _count;
+        }
+
+        public void Remove(int obj)
+        {
+            _count -= obj;
         }
     }
 }

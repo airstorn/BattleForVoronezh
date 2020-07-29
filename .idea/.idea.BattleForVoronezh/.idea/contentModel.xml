@@ -91,28 +91,10 @@
             </e>
           </e>
           <e p="GridSprites.cs" t="Include" />
-          <e p="InputHandlers" t="Include">
-            <e p="LimitedShotsHandler.cs" t="Include" />
-            <e p="MultipleTargetsTracker.cs" t="Include" />
-            <e p="SimpleInputShooting.cs" t="Include" />
-          </e>
-          <e p="Interfaces" t="Include">
-            <e p="ICamMover.cs" t="Include" />
-            <e p="IGameState.cs" t="Include" />
-            <e p="IInputManager.cs" t="Include" />
-            <e p="ILevelTarget.cs" t="Include" />
-            <e p="IShotable.cs" t="Include" />
-            <e p="IUnitsData.cs" t="Include" />
-            <e p="IUnitsPlacer.cs" t="Include" />
-          </e>
-          <e p="LevelTargets" t="Include">
-            <e p="ArtPreparationTarget.cs" t="Include" />
-            <e p="GetToCorner.cs" t="Include" />
-            <e p="TargetClearField.cs" t="Include" />
-          </e>
-          <e p="Menu" t="Include">
+          <e p="GUI" t="Include">
             <e p="BattlePage.cs" t="Include" />
             <e p="Core" t="Include">
+              <e p="IItemBehaviour.cs" t="Include" />
               <e p="ILevelWindowable.cs" t="Include" />
               <e p="IMenuPageable.cs" t="Include" />
               <e p="LevelWindow.cs" t="Include" />
@@ -131,9 +113,29 @@
             <e p="PlayerStatePage.cs" t="Include" />
             <e p="SettingsPage.cs" t="Include" />
             <e p="Shop" t="Include">
-              <e p="ShopItem.cs" t="Include" />
+              <e p="ShopConsumableItem.cs" t="Include" />
+              <e p="ShopGradableItem.cs" t="Include" />
             </e>
             <e p="ShopPage.cs" t="Include" />
+          </e>
+          <e p="InputHandlers" t="Include">
+            <e p="LimitedShotsHandler.cs" t="Include" />
+            <e p="MultipleTargetsTracker.cs" t="Include" />
+            <e p="SimpleInputShooting.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="ICamMover.cs" t="Include" />
+            <e p="IGameState.cs" t="Include" />
+            <e p="IInputManager.cs" t="Include" />
+            <e p="ILevelTarget.cs" t="Include" />
+            <e p="IShotable.cs" t="Include" />
+            <e p="IUnitsData.cs" t="Include" />
+            <e p="IUnitsPlacer.cs" t="Include" />
+          </e>
+          <e p="LevelTargets" t="Include">
+            <e p="ArtPreparationTarget.cs" t="Include" />
+            <e p="GetToCorner.cs" t="Include" />
+            <e p="TargetClearField.cs" t="Include" />
           </e>
           <e p="States" t="Include">
             <e p="Artillery" t="Include">
