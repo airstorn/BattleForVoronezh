@@ -9,7 +9,7 @@ namespace Abilities.Presets
     {
         private void Awake()
         {
-            _objects = new[] {typeof(ExtraMoves)};
+            _objects = new[] {typeof(AdditionalShot)};
         }
 
         protected override void Callback(IAbilityData obj)

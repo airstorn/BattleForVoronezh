@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 4316526863231191553}
   - component: {fileID: 280450588}
   - component: {fileID: 280450591}
+  - component: {fileID: 1440101342}
   m_Layer: 0
   m_Name: AbilityDirector
   m_TagString: Untagged
@@ -166,3 +167,20 @@ MonoBehaviour:
   _template: {fileID: 6977151356292016240, guid: 6bb2fdfde1173e347a5558f7ee316999,
     type: 3}
   _movePrice: 50
+--- !u!114 &1440101342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316526863231191556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8d07c772191e14e84920b6fce61c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 1
+  _count: 0
+  _abilityData: {fileID: 11400000, guid: 2a6df6fa015acbe41b8642d346eb0ec5, type: 2}
+  _buttonTemplate: {fileID: 8933207944807419881, guid: 7fbb975d61e4fdb4588fe87ac6ba06ca,
+    type: 3}

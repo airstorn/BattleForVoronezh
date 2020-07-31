@@ -62,7 +62,8 @@ namespace States.TankAttack
             
             if (_inputHandler is MultipleTargetsTracker tracker)
             {
-                var count = LevelData.Instance.EnemyGrid.Units.Count(unit => unit.Health.IsDead == false);
+                // var count = LevelData.Instance.EnemyGrid.Units.Count(unit => unit.Health.IsDead == false);
+                var count = 2;
                 tracker.SetShotsCount(count);
                 tracker.OnInputStoppedHandler += TanksTurn;
             }

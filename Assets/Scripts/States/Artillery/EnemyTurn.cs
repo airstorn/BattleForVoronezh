@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using Battle.Interfaces;
 using Cinemachine;
 using Core;
@@ -40,39 +41,25 @@ namespace GameStates
         private IEnumerator Animate()
         {
             yield return new WaitForSeconds(1);
-            
-            yield return ShootAtRandomPoint();
 
-            if (_enemyTarget.CheckTarget() == true)
-            {
-                yield break;
-            }
-            else
-            {
-                yield return new WaitForSeconds(1);
-                EndTurn();
-            }
-        }
-        
-        public IEnumerator ShootAtRandomPoint()
-        {
             bool shoot = true;
 
             while (shoot == true)
             {
-                yield return new WaitForSeconds(1);
                 shoot = Shoot();
-                
+                yield return new WaitForSeconds(1);
+
+
                 if (_enemyTarget.CheckTarget() == true)
                 {
                     yield break;
                 }
-                
-                
             }
+
             yield return new WaitForSeconds(1);
+            EndTurn();
         }
-        
+
         private Vector2Int RandomizedPoint()
         {
             return new Vector2Int(Random.Range(0, _interactionGrid.Sheet.GetLength(0)),Random.Range(0, _interactionGrid.Sheet.GetLength(1) ));
@@ -80,6 +67,7 @@ namespace GameStates
         
         private bool Shoot()
         {
+          
             Vector2Int randomPointId = RandomizedPoint();
             _selectedElement = _interactionGrid.Sheet[randomPointId.x, randomPointId.y];
       
@@ -91,6 +79,13 @@ namespace GameStates
       
             _shot.Release(ref _selectedElement);
             return _selectedElement.HitState == GridSprites.SpriteState.damaged;
+        }
+
+        private Vector2Int ShootAtUnits()
+        {
+            var pos = LevelData.Instance.PlayerGrid.Units.First((unit => unit.Health.IsDead == false)).PositionId;
+            pos = pos - LevelData.Instance.PlayerGrid.GridOffset;
+            return  new Vector2Int(pos.x, pos.z);
         }
 
         private void EndTurn()

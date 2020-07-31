@@ -21,6 +21,8 @@ public class MultipleTargetsTracker : MonoBehaviour, IInitiatable<IPlayerState>,
 
     [SerializeField] private LayerMask _raycastIgnore;
     [SerializeField] private GameObject _targetTemplate;
+
+    public int ShotsCount => _shotsCount;
     
     private int _shotsCount = 0;
     private Queue<ShotData> _shotsQueue = new Queue<ShotData>();

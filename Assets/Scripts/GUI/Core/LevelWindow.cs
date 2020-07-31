@@ -55,6 +55,11 @@ public class LevelWindow : PageBasement, ILevelWindowable, IMenuPageable
         }
     }
 
+    public void CloseButton()
+    {
+        _pageObject.SetActive(false);
+    }
+
     private void LoadLevel(int levelId)
     {
         SceneManager.LoadScene(levelId);

@@ -14,8 +14,8 @@ namespace Abilities.Core
 
         public Action OnAbilityUsed;
 
-        [SerializeField] protected string _levelPath;
-        [SerializeField] protected string _countPath;
+        protected string _levelPath;
+        protected string _countPath;
 
         public abstract void Interact();
         public abstract void Cancel();

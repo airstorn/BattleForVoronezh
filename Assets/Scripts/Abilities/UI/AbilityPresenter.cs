@@ -15,13 +15,14 @@ namespace Abilities.UI
             _parent.gameObject.SetActive(visible);
         }
 
-        public void CreateAbilityButton(GameObject buttonTemplate, VisualData data)
+        public GameObject CreateAbilityButton(GameObject buttonTemplate, VisualData data)
         {
             var obj = Instantiate(buttonTemplate);
             obj.GetComponent<AbilityButton>().SetData(data);
             obj.transform.SetParent(_parent);
             obj.GetComponent<RectTransform>().localScale = Vector3.one;
 
+            return obj;
         }
     }
 }
