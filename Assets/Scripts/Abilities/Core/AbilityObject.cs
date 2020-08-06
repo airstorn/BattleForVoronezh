@@ -6,6 +6,7 @@ namespace Abilities.Core
     public class AbilityObject : ScriptableObject
     {
         public string Name;
-        
+        public Sprite Icon;
+
     }
 }

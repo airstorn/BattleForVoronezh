@@ -36,7 +36,9 @@ namespace GameStates
          Ability[] abilities = new []
          {
             _director.GetAbility(typeof(Scouting)), 
-            _director.GetAbility(typeof(FireSupply)) 
+            _director.GetAbility(typeof(FireSupply)),
+            _director.GetAbility(typeof(ExtraMoves))
+            
          };
 
          for (int i = 0; i < abilities.Length; i++)

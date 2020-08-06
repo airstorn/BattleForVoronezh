@@ -16,6 +16,7 @@ namespace Abilities.Behaviours
         [SerializeField] private int _gradePrice;
         [SerializeField] private int _buyPrice;
         private Behaviour _behaviour;
+        private GameObject _button;
         
         private class Behaviour
         {
@@ -65,7 +66,10 @@ namespace Abilities.Behaviours
 
         public void Interact(InitData data, Action<IAbilityData> callback = null)
         {
-            data.Presenter.CreateAbilityButton(_buttonTemplate, GetData());
+            if(_count == 0)
+                return;
+            
+            _button = data.Presenter.CreateAbilityButton(_buttonTemplate, GetData());
 
             var handler = Instantiate(_scoutingTemplate);
             
@@ -82,6 +86,7 @@ namespace Abilities.Behaviours
             if (_count > 0)
             {
                 _behaviour.DoAction(_level);
+                _button.SetActive(false);
                 _count--;
                 Save();
             }

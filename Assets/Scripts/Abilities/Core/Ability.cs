@@ -26,7 +26,7 @@ namespace Abilities.Core
             {
                 Level = _level,
                 Count = _count,
-                Name = _abilityData.Name,
+                Data = _abilityData,
                 Reference = this
             };
 

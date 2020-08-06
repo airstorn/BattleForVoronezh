@@ -23,7 +23,7 @@ namespace Abilities.UI
         public void SetData(VisualData data)
         {
             if(_nameText)
-                _nameText.text = data.Name;
+                _nameText.text = data.Data.Name;
             if(_countText)
                 _countText.text = "" + data.Count;
 

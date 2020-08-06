@@ -120,7 +120,7 @@ MonoBehaviour:
   _level: 1
   _count: 2
   _abilityData: {fileID: 11400000, guid: 1a8e6c53e74f0514da0ba0389737fd26, type: 2}
-  _buttonTemplate: {fileID: 8933207944807419881, guid: dcfa0c6b555e0ba4d894e5a273f858e4,
+  _buttonTemplate: {fileID: 8933207944807419881, guid: 7fbb975d61e4fdb4588fe87ac6ba06ca,
     type: 3}
   _scoutingTemplate: {fileID: 1223144955453488914, guid: dcff89e6bc31f9143aff874ed2aa3238,
     type: 3}
@@ -141,7 +141,7 @@ MonoBehaviour:
   _level: 1
   _count: 2
   _abilityData: {fileID: 11400000, guid: d62dbba6bb1ad13429029bc3a5de9ca8, type: 2}
-  _buttonTemplate: {fileID: 8933207944807419881, guid: dcfa0c6b555e0ba4d894e5a273f858e4,
+  _buttonTemplate: {fileID: 8933207944807419881, guid: 7fbb975d61e4fdb4588fe87ac6ba06ca,
     type: 3}
   _template: {fileID: 1223144955453488914, guid: dcff89e6bc31f9143aff874ed2aa3238,
     type: 3}
@@ -167,6 +167,8 @@ MonoBehaviour:
   _template: {fileID: 6977151356292016240, guid: 6bb2fdfde1173e347a5558f7ee316999,
     type: 3}
   _movePrice: 50
+  _gradePrice: 500
+  _buyPrice: 80
 --- !u!114 &1440101342
 MonoBehaviour:
   m_ObjectHideFlags: 0

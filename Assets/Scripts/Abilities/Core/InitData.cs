@@ -31,7 +31,7 @@ namespace Abilities.Core
    
    public struct VisualData : IAbilityData
    {
-      public string Name;
+      public AbilityObject Data;
       public int Count;
       public AbilityLevel Level;
       public Ability Reference;

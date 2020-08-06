@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Scouting
   m_EditorClassIdentifier: 
   Name: "\u0420\u0430\u0437\u0432\u0435\u0434\u043A\u0430"
+  Icon: {fileID: 21300000, guid: 028004c015cfd5e4186bda68fc47ae28, type: 3}

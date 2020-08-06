@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 28abb5c5445d3f147a3a4fe13ea3ce03, type: 3}
+    totalSpriteSurfaceArea: 1933382
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: d5594f0cebc85aeaae967c7e5002c98a
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: bebeac408b0c5c647912c35e91c214ca, type: 3}
+  - {fileID: 21300000, guid: 2b0ddaf05f5924d04a4785fc60500903, type: 3}
+  - {fileID: 21300000, guid: c9532d11ddf51cc45862024ec58cc7c5, type: 3}
+  - {fileID: 21300000, guid: 6c2af9320a244cc4caa49c972ad393d5, type: 3}
+  - {fileID: 21300000, guid: 3566e872cfd0ceb4a96595e585fa9be2, type: 3}
+  - {fileID: 21300000, guid: be8c6c72d3c204f8d88cc03819067ea8, type: 3}
+  - {fileID: 21300000, guid: d77720923cc03ee4f9423dbfdfe3e71c, type: 3}
+  - {fileID: 21300000, guid: dee02aa2625d93347a8b5b8bebc70dc7, type: 3}
+  - {fileID: 21300000, guid: 9f565d3309fc1d74baa2c8ecb040890d, type: 3}
+  - {fileID: 21300000, guid: b20cdbb33f9410c4289734908754e87b, type: 3}
+  - {fileID: 21300000, guid: 8175c4d4f1cec8d429e7240502ea6296, type: 3}
+  - {fileID: 21300000, guid: 4c56fa560dfaa564dbfaeb19327385d8, type: 3}
+  - {fileID: 21300000, guid: b79e6f66ee8483b488e1dfdeac3a06e9, type: 3}
+  - {fileID: 21300000, guid: 769f5cd6be1e0a843808e872caab778f, type: 3}
+  - {fileID: 21300000, guid: 224a78a7df9aee44fba6cbc610440e53, type: 3}
+  - {fileID: 21300000, guid: c647dc1827da646f990f0d3482dfa654, type: 3}
+  - {fileID: 21300000, guid: e947dc2873130734f9c92d9087957ab3, type: 3}
+  - {fileID: 21300000, guid: a24d247877d144145ae0c4a3d565854c, type: 3}
+  - {fileID: 21300000, guid: 9f2caa795e12f094eb9382d3214afd76, type: 3}
+  - {fileID: 21300000, guid: f06fb5e982ec2b84491bdc1fc5d074e8, type: 3}
+  - {fileID: 21300000, guid: 7a13981aee6d5644b993aafee6cd0555, type: 3}
+  - {fileID: 21300000, guid: 1242ed8bed9d75f4885f7674b9e3eb3c, type: 3}
+  - {fileID: 21300000, guid: 0882eabb41ee6ad43a11527dbce8ac45, type: 3}
+  - {fileID: 21300000, guid: cc28919c1d0fb7a4c821d671dd960472, type: 3}
+  - {fileID: 21300000, guid: b1261dcc1a94f624dbbdf5c7fb865caf, type: 3}
+  - {fileID: 21300000, guid: b8cb465d15d6c9a49af2376c36a65990, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Ru
+  - back
+  - Bttn_Background_Type_1
+  - BttnBackground_2
+  - CheckBoxOn
+  - coin
+  - money
+  - 8
+  - BttnToBattle
+  - ShopIcon
+  - Slider
+  - ShopItemBackground
+  - Rectangle 2 copy 3
+  - BttnBackground
+  - BttnBack
+  - Button_background_2
+  - ShopArrow
+  - 9
+  - money
+  - cherv
+  - Bttn_Rotate
+  - Bttn_Random
+  - CheckBoxBackground
+  - BttnPause
+  - Preview
+  - Eng
+  m_Tag: UI
+  m_IsVariant: 0

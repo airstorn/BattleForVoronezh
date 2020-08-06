@@ -29,7 +29,7 @@ namespace GUI.Shop
                 _resourcable = _containedData.Visual.Reference as IResourcable<int>;
             
             _count.text = _containedData.Visual.Count + "";
-            _name.text = _containedData.Visual.Name;
+            _name.text = _containedData.Visual.Data.Name;
             _priceText.text = "<sprite=0> " + _containedData.BuyPrice;
 
             _button = GetComponent<Button>();

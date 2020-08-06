@@ -11,6 +11,7 @@ namespace GUI.Shop
         [SerializeField] private Text _name;
         [SerializeField] private Text _level;
         [SerializeField] private TMP_Text _priceText;
+        [SerializeField] private Image _image;
         private Button _button;
         private IDataReceiver<ShopData> _reference;
 
@@ -22,7 +23,8 @@ namespace GUI.Shop
                 _reference = data.Visual.Reference as IDataReceiver<ShopData>;
             
             _level.text = GetLevelString(data.Visual.Level);
-            _name.text = data.Visual.Name;
+            _image.sprite = data.Visual.Data.Icon;
+            _name.text = data.Visual.Data.Name;
             _priceText.text = "<sprite=0> " + data.GradePrice;
 
             var gradable = data.Visual.Reference as IGradable;

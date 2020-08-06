@@ -2162,7 +2162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c479fb8cd198584aac12fa27ae13c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyGrid: {fileID: 1764487239}
 --- !u!4 &760187590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471728, guid: ad95478076bd71c489aa9251d57f88f7,
@@ -3261,10 +3260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14affb05cf0cde142b4457c50194c29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _logic: {fileID: 1829151276}
-  _nextState: {fileID: 300139805}
   _offsetCamera: {fileID: 480201309}
-  _interactionGrid: {fileID: 595264823}
 --- !u!114 &1097428330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6712,6 +6708,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870721478308564449, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -103.899414
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870721478308564449, guid: 0e26dd1bdabae204c8eb621d3d224d7a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -106.200195
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e26dd1bdabae204c8eb621d3d224d7a, type: 3}
