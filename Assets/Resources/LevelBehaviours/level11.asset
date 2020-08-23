@@ -33,5 +33,6 @@ MonoBehaviour:
     \u043C\u043E\u0442\u043E\u0446\u0438\u043A\u043B\u0430\r\n\r\n3 \u0433\u0440\u0443\u0437\u043E\u0432\u0438\u043A\u0430\r\n\r\n3
     \u0442\u0430\u043D\u043A\u0430 \u0422-3\r\n\r\n2 \u0442\u0430\u043D\u043A\u0430
     \u0422-4"
-  _preview: {fileID: 21300000, guid: 70beb9a17e9994c4f9afd386e267dee2, type: 3}
+  _preview: {fileID: 21300000, guid: 97fd9c0fd018c4b67a8776806d1075ba, type: 3}
   _levelLoadIndex: 11
+  Type: 0

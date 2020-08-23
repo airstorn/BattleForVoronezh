@@ -31,41 +31,41 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 5a974754b2fb07146b64687112ff8c3c, type: 3}
-    totalSpriteSurfaceArea: 2730267
+    totalSpriteSurfaceArea: 6828121
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: fa283eaf82e1c51b14511c82110ebb90
+      Hash: 5f08dd029f4f5887995f5783964d403e
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 62beb15079bb04748bf09b250d437639, type: 3}
   - {fileID: 21300000, guid: 6d55f860d57b2e14380f1630544a72af, type: 3}
   - {fileID: 21300000, guid: 6b4616f0a2460be4ca0f61a7027512f5, type: 3}
-  - {fileID: 21300000, guid: 70beb9a17e9994c4f9afd386e267dee2, type: 3}
-  - {fileID: 21300000, guid: f34c387429ebad045af4a1b294fb0840, type: 3}
   - {fileID: 21300000, guid: 8d2e20a429c2f5241a0173b15f7a9732, type: 3}
   - {fileID: 21300000, guid: 74806716466ed42438806db77ab52feb, type: 3}
   - {fileID: 21300000, guid: cc0409a6791d25f4c95269ea157af952, type: 3}
+  - {fileID: 21300000, guid: ed03a097286e04382b9efb6385316a36, type: 3}
   - {fileID: 21300000, guid: 4cd883f7feccefe4482448820a0f03a7, type: 3}
+  - {fileID: 21300000, guid: 8c7d52683bb2e4805a6ea593f2e78ecd, type: 3}
   - {fileID: 21300000, guid: f0e0df99c4172e04ebf4797c5e0c53ab, type: 3}
   - {fileID: 21300000, guid: 19ab1a2ae93b69d47a5320812e74bc8d, type: 3}
   - {fileID: 21300000, guid: f887214a514bd854ca61ca09346389e4, type: 3}
   - {fileID: 21300000, guid: 9ca5ecaab787afe499fe2afe24ab20ba, type: 3}
-  - {fileID: 21300000, guid: e62e8f2ee8db30a418d44b6c689ae3c5, type: 3}
+  - {fileID: 21300000, guid: 042ef57c26172477892da0ad22e1563c, type: 3}
+  - {fileID: 21300000, guid: 97fd9c0fd018c4b67a8776806d1075ba, type: 3}
   m_PackedSpriteNamesToIndex:
-  - 10
   - 3
   - 7
-  - 11
-  - 2
   - 9
   - 13
   - 1
+  - 10
   - 8
+  - 4
   - 5
   - 12
   - 6
   - 14
-  - 4
+  - 2
+  - 11
   m_Tag: GameLevels
   m_IsVariant: 0
