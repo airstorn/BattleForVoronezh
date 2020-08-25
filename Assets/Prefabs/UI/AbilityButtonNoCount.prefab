@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 7423188627125644748}
   - component: {fileID: 6442351044206897855}
   - component: {fileID: 46361085440957884}
+  - component: {fileID: 1776066480854355751}
   m_Layer: 5
   m_Name: AbilityButtonNoCount
   m_TagString: Untagged
@@ -210,3 +211,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nameText: {fileID: 6513237182978914969}
   _countText: {fileID: 0}
+--- !u!114 &1776066480854355751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933207944807419881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b00e84bc88491e97da87dd7e3f6d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0

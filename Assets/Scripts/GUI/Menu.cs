@@ -10,7 +10,6 @@ namespace GameStates
 {
    public class Menu : MonoBehaviour
    {
-
       private IMenuPageable[] _pages;
       private IMenuPageable _currentPage;
 

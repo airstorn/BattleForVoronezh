@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Battle.Interfaces;
 using Core;
+using GameStates;
+using GUI.Core;
 using Interfaces;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -84,6 +86,8 @@ public class MultipleTargetsTracker : MonoBehaviour, IInitiatable<IPlayerState>,
             ShotPoint = point,
             Element = element
         };
+        
+        SoundsPlayer.Instance.PlaySound(SoundType.TargetSelection);
 
         if (_shotsQueue.Any(shotData => shotData.ShotPoint == data.ShotPoint) == false)
         {

@@ -4,6 +4,7 @@ using System.Linq;
 using Battle.Interfaces;
 using Core.LevelInitiation;
 using GameStates;
+using GUI.Core;
 using UnityEngine;
 using User;
 using Random = UnityEngine.Random;
@@ -90,7 +91,6 @@ namespace Core
 
         private void PlayerWin()
         {
-            Debug.Log("Player win!");
             var page =  Menu.Instance.SwitchPage<PageEndWindow>();
             
             var data = new PageEndWindow.LevelEndData()
@@ -99,14 +99,17 @@ namespace Core
                 Win = true
             };
             
+            SoundsPlayer.Instance.PlaySound(SoundType.Win);
+            
             UserData.Instance.Money.Add(data.Money);
             page.SendArgs(data);
         }
 
         private void PlayerLoose()
         {
-            Debug.Log("Player loose!");
             var page = Menu.Instance.SwitchPage<PageEndWindow>();
+            SoundsPlayer.Instance.PlaySound(SoundType.Lose);
+
             page.SendArgs(new PageEndWindow.LevelEndData(){ Money = 0, Win = false});
         }
     }

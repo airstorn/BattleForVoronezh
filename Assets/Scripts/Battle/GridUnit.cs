@@ -33,8 +33,7 @@ public class GridUnit : MonoBehaviour
 {
     [SerializeField] private UnitVisual _visual;
     [SerializeField] private Vector2Int _size;
-    [SerializeField] private List<GridElement> _engagedElements = new List<GridElement>();
-    [SerializeField] private List<GridElement> _borderElements = new List<GridElement>();
+   
     [SerializeField] private Transform _gizmosPoint;
 
     public List<GridElement> Borders => _borderElements;
@@ -45,21 +44,11 @@ public class GridUnit : MonoBehaviour
     public Vector3Int PositionId { get; set; }
 
     private UnitHealth _health;
-
+    private List<GridElement> _engagedElements = new List<GridElement>();
+    private List<GridElement> _borderElements = new List<GridElement>();
     private BoxCollider _collider;
     private int _rotation;
-    public bool SuitablePlaced
-    {
-        get
-        {
-            if (_engagedElements.Count == _size.x * _size.y)
-            {
-                return true;
-            }
-
-            return false;
-        }
-    }
+    public bool SuitablePlaced => _engagedElements.Count == _size.x * _size.y;
 
     public enum RotationDirection
     {

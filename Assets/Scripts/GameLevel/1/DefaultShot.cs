@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using GameStates;
+using GUI.Core;
 using UnityEngine;
 
 public class DefaultShot : MonoBehaviour, IShotable
@@ -23,6 +25,7 @@ public class DefaultShot : MonoBehaviour, IShotable
             {
                 enemyHealth.ApplyDamage(_damage);
                 hitElement.SetSpriteType(GridSprites.SpriteState.damaged);
+                SoundsPlayer.Instance.PlaySound(SoundType.Hit);
             }
 
             var spawendObject = Instantiate(_hitTemplate, hitElement.CellPos, Quaternion.Euler(-90, 0, 0));
@@ -31,6 +34,7 @@ public class DefaultShot : MonoBehaviour, IShotable
         else
         {
             hitElement.SetSpriteType(GridSprites.SpriteState.missed);
+            SoundsPlayer.Instance.PlaySound(SoundType.HitMissed);
             
             var spawendObject = Instantiate(_missTemplate, hitElement.CellPos, Quaternion.Euler(-90, 0, 0));
             spawendObject.GetComponent<ParticleSystem>().Play();
