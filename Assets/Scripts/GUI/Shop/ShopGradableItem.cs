@@ -24,7 +24,7 @@ namespace GUI.Shop
             
             _level.text = GetLevelString(data.Visual.Level);
             _image.sprite = data.Visual.Data.Icon;
-            _name.text = data.Visual.Data.Name;
+            _name.text = Lean.Localization.LeanLocalization.GetTranslationText(data.Visual.Data.Name);
             _priceText.text = "<sprite=0> " + data.GradePrice;
 
             var gradable = data.Visual.Reference as IGradable;

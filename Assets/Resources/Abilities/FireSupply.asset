@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5a10bfacbed1a41a61366e165e72cd, type: 3}
   m_Name: FireSupply
   m_EditorClassIdentifier: 
-  Name: "\u041F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430 \u043E\u0433\u043D\u0435\u043C"
+  Name: Ability_FireSupply
   Icon: {fileID: 21300000, guid: 3a5d64028b2df3f439e2790b58138036, type: 3}

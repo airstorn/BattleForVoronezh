@@ -84,7 +84,7 @@ namespace InputHandlers
 
         private void UpdateShotsCount()
         {
-            _shotsText.text = "Боеприпасы: " + _shotsCount;
+            _shotsText.text = Lean.Localization.LeanLocalization.GetTranslationText("Ammo") + " " + _shotsCount;
         }
 
         private GridElement HighlightPoint(Vector3Int pos)

@@ -18,8 +18,8 @@ public class LevelWindow : PageBasement, ILevelWindowable, IMenuPageable
     {
         _playButton.gameObject.SetActive(false);
         _description.pageToDisplay = 1;
-        _description.text = level.Description;
-        _Name.text = level.LevelName;
+        _description.text = Lean.Localization.LeanLocalization.GetTranslationText(level.Description);
+        _Name.text = Lean.Localization.LeanLocalization.GetTranslationText(level.LevelName);
         _preview.sprite = level.Preview;
         _playButton.onClick.RemoveAllListeners();
         _playButton.onClick.AddListener(() => LoadLevel(level.LevelLoadIndex));

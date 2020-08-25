@@ -29,7 +29,9 @@ namespace GUI.Shop
                 _resourcable = _containedData.Visual.Reference as IResourcable<int>;
             
             _count.text = _containedData.Visual.Count + "";
-            _name.text = _containedData.Visual.Data.Name;
+            _name.text = Lean.Localization.LeanLocalization.GetTranslationText(_containedData.Visual.Data.Name);
+            Debug.Log(Lean.Localization.LeanLocalization.GetTranslationText(_containedData.Visual.Data.Name));
+            Debug.Log(_containedData.Visual.Data.Name);
             _priceText.text = "<sprite=0> " + _containedData.BuyPrice;
 
             _button = GetComponent<Button>();

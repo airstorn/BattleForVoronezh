@@ -122,6 +122,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1634670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1634671}
+  - component: {fileID: 1634672}
+  m_Layer: 0
+  m_Name: Levels_2_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1634671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1634672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0423\u043B\u0438\u0447\u043D\u044B\u0439 \u0431\u043E\u0439"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Street fighting
+    Object: {fileID: 0}
 --- !u!1001 &5029386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,6 +652,108 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 72446961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &79093844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 79093845}
+  - component: {fileID: 79093846}
+  m_Layer: 0
+  m_Name: Shop_LevelUpgrade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &79093845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79093844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &79093846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79093844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0423\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u0438"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Upgrade abilities
+    Object: {fileID: 0}
+--- !u!1 &83500635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 83500636}
+  - component: {fileID: 83500637}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &83500636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83500635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &83500637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83500635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041C\u0443\u0437\u044B\u043A\u0430"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Music
+    Object: {fileID: 0}
 --- !u!1001 &87080222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -824,6 +977,149 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98950313}
   m_CullTransparentMesh: 0
+--- !u!1 &113150046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113150047}
+  - component: {fileID: 113150048}
+  m_Layer: 0
+  m_Name: Levels_8_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &113150047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113150046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113150048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113150046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 8\r\n\r\n1.\u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430.
+      \u041B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442 \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2.\u0422\u0438\u043F
+      \u043A\u0430\u0440\u0442\u044B \u0433\u043E\u0440\u043E\u0434 \u0412\u043E\u0440\u043E\u043D\u0435\u0436
+      \u0440\u0430\u0439\u043E\u043D \u0429\u0443\u043A\u0438\u043D\u043E 14 \u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F
+      1942.\r\n\r\n3.\u041F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0442\u0435
+      \u043E\u0433\u043D\u0435\u043C \u043D\u0430\u0441\u0442\u0443\u043F\u0430\u044E\u0449\u0438\u0439
+      \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u044C\u0442\u0435
+      \u043C\u0438\u043D\u043E\u043C\u0435\u0442\u044B, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+      \u043E\u0431\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0430\u044E\u0442 \u043D\u0430\u0448\u0438\u0445
+      \u0431\u043E\u0439\u0446\u043E\u0432 \u0441 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u0438
+      \u0443\u043D\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0441\u043A\u043E\u0433\u043E
+      \u0433\u043E\u0440\u043E\u0434\u043A\u0430.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n4 \u043C\u0438\u043D\u043E\u043C\u0435\u0442\u0430\r\n\r\n4.\u0412
+      \u0442\u0435\u0447\u0435\u043D\u0438\u0435 \u043D\u043E\u0447\u0438 \u043D\u0430
+      16 \u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F \u043D\u0430\u0448\u0438
+      \u0432\u043E\u0439\u0441\u043A\u0430 \u0432\u0435\u043B\u0438 \u0431\u043E\u0438
+      \u0441 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C \u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435
+      \u0438 \u044E\u0433\u043E-\u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435
+      \u0421\u0442\u0430\u043B\u0438\u043D\u0433\u0440\u0430\u0434\u0430 \u0438 \u0432
+      \u0440\u0430\u0439\u043E\u043D\u0435 \u041C\u043E\u0437\u0434\u043E\u043A.
+      \u041D\u0430 \u0434\u0440\u0443\u0433\u0438\u0445 \u0444\u0440\u043E\u043D\u0442\u0430\u0445
+      \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439
+      \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E.\u042E\u0433\u043E\u0441\u043B\u0430\u0432\u0441\u043A\u0438\u0435
+      \u043F\u0430\u0442\u0440\u0438\u043E\u0442\u044B \u0434\u043E\u0431\u0438\u043B\u0438\u0441\u044C
+      \u043D\u043E\u0432\u044B\u0445 \u0443\u0441\u043F\u0435\u0445\u043E\u0432 \u0432
+      \u0431\u043E\u0440\u044C\u0431\u0435 \u043F\u0440\u043E\u0442\u0438\u0432 \u043D\u0435\u043C\u0435\u0446\u043A\u043E-\u0438\u0442\u0430\u043B\u044C\u044F\u043D\u0441\u043A\u0438\u0445
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0447\u0438\u043A\u043E\u0432. \u0418\u0442\u0430\u043B\u044C\u044F\u043D\u0446\u044B
+      \u043D\u0430\u043F\u0440\u0430\u0432\u0438\u043B\u0438 \u043A\u0440\u0443\u043F\u043D\u044B\u0439
+      \u043E\u0442\u0440\u044F\u0434 \u0432 \u043F\u043E\u043C\u043E\u0449\u044C
+      \u0441\u0432\u043E\u0435\u043C\u0443 \u0433\u0430\u0440\u043D\u0438\u0437\u043E\u043D\u0443,
+      \u043E\u0441\u0430\u0436\u0434\u0451\u043D\u043D\u043E\u043C\u0443 \u0432 \u0433\u043E\u0440\u043E\u0434\u0435
+      \u0423\u0434\u0431\u0438\u043D\u0435. \u041F\u0430\u0440\u0442\u0438\u0437\u0430\u043D\u044B
+      \u0432\u043D\u0435\u0437\u0430\u043F\u043D\u043E \u043D\u0430\u043F\u0430\u043B\u0438
+      \u043D\u0430 \u044D\u0442\u043E\u0442 \u043E\u0442\u0440\u044F\u0434 \u0438
+      \u0438\u0441\u0442\u0440\u0435\u0431\u0438\u043B\u0438 \u043E\u043A\u043E\u043B\u043E
+      400 \u0438\u0442\u0430\u043B\u044C\u044F\u043D\u0441\u043A\u0438\u0445 \u0441\u043E\u043B\u0434\u0430\u0442
+      \u0438 \u043E\u0444\u0438\u0446\u0435\u0440\u043E\u0432. \u0412 \u0431\u043E\u044E
+      \u0437\u0430 \u0433\u043E\u0440\u043E\u0434 \u041D. \u043F\u0430\u0440\u0442\u0438\u0437\u0430\u043D\u044B
+      \u0438\u0441\u0442\u0440\u0435\u0431\u0438\u043B\u0438 140 \u0438\u0442\u0430\u043B\u044C\u044F\u043D\u0441\u043A\u0438\u0445
+      \u043E\u043A\u043A\u0443\u043F\u0430\u043D\u0442\u043E\u0432 \u0438 \u0437\u0430\u0445\u0432\u0430\u0442\u0438\u043B\u0438
+      106 \u0432\u0438\u043D\u0442\u043E\u0432\u043E\u043A, 8 \u043F\u0443\u043B\u0435\u043C\u0451\u0442\u043E\u0432,
+      \u043C\u043D\u043E\u0433\u043E \u0431\u043E\u0435\u043F\u0440\u0438\u043F\u0430\u0441\u043E\u0432
+      \u0438 \u043F\u0440\u043E\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0438\u044F.
+      \u0412 \u043D\u0430\u0447\u0430\u043B\u0435 \u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F
+      \u043F\u0430\u0442\u0440\u0438\u043E\u0442\u044B \u043F\u0443\u0441\u0442\u0438\u043B\u0438
+      \u043F\u043E\u0434 \u043E\u0442\u043A\u043E\u0441 \u0431\u0440\u043E\u043D\u0435\u043F\u043E\u0435\u0437\u0434
+      \u043D\u0435\u043F\u0440\u0438\u044F\u0442\u0435\u043B\u044F\r\n\u0422\u0438\u043F
+      \u043C\u0438\u0441\u0441\u0438\u0438: \u0410\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0439\u0441\u043A\u0430\u044F
+      \u0434\u0443\u044D\u043B\u044C\r\n\u042E\u043D\u0438\u0442\u044B \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430
+      \u0441\u0442\u0440\u0435\u043B\u044F\u044E\u0442 \u0432 \u043E\u0442\u0432\u0435\u0442"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 8
+
+
+      1. artillery Preparation. Lieutenant Petrov
+
+
+      2.The
+      type of card the city of Voronezh district, the station on 14 September 1942.
+
+
+      3.
+      Support the advancing battalion with fire destroy the mortars that are firing
+      at our soldiers from the University campus.
+
+
+      Forces
+
+
+      4 guns
+
+
+      Enemy
+      Germans
+
+
+      4 mortars
+
+
+      4. during the night of September 16, our
+      troops fought with the enemy to the West and southwest of Stalingrad and in
+      the area of Mozdok. There were no significant changes on other fronts.The Yugoslav
+      patriots achieved new successes in the fight against the German-Italian invaders.
+      The Italians sent a large force to help their garrison, which was besieged
+      in the city of Udbine. The partisans suddenly attacked this group and killed
+      about 400 Italian soldiers and officers. In the battle for the city of N. the
+      partisans destroyed 140 Italian invaders and captured 106 rifles, 8 machine
+      guns, a lot of ammunition and food. In early September the patriots derailed
+      the enemy''s armored train
+
+      Mission type: Artillery duel
+
+      Enemy
+      units fire back'
+    Object: {fileID: 0}
 --- !u!1 &126332250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1538,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 0
+--- !u!1 &173299439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173299440}
+  - component: {fileID: 173299441}
+  m_Layer: 0
+  m_Name: Menu_Lose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &173299440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173299439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &173299441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173299439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u0440\u043E\u0438\u0433\u0440\u044B\u0448"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Lose
+    Object: {fileID: 0}
 --- !u!1001 &173718809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1320,6 +1667,7 @@ GameObject:
   - component: {fileID: 192657925}
   - component: {fileID: 192657927}
   - component: {fileID: 192657926}
+  - component: {fileID: 192657928}
   m_Layer: 5
   m_Name: TextLang
   m_TagString: Untagged
@@ -1368,7 +1716,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 78fed69cae38b5c4f9f8cfb2ed188b84, type: 3}
     m_FontSize: 38
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 56
     m_Alignment: 4
@@ -1377,7 +1725,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u042F\u0437\u044B\u043A"
+  m_Text: Language
 --- !u!222 &192657927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1386,6 +1734,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192657924}
   m_CullTransparentMesh: 0
+--- !u!114 &192657928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192657924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Language
+  FallbackText: "\u042F\u0437\u044B\u043A"
 --- !u!1 &202045462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1803,7 @@ MonoBehaviour:
     Type: 5
     Group: {fileID: 5106873053211133093, guid: f05f8de7a6547f34298f106cade2f596, type: 2}
     Source: {fileID: 0}
-  _audioGroup: {fileID: 5106873053211133093, guid: f05f8de7a6547f34298f106cade2f596,
+  _soundsGroup: {fileID: 5106873053211133093, guid: f05f8de7a6547f34298f106cade2f596,
     type: 2}
   _musicGroup: {fileID: 5736801824130397464, guid: f05f8de7a6547f34298f106cade2f596,
     type: 2}
@@ -1455,7 +1817,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1341.0249, y: 832.7089, z: -253.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1275425931}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1567,6 +1930,7 @@ GameObject:
   - component: {fileID: 203566134}
   - component: {fileID: 203566136}
   - component: {fileID: 203566135}
+  - component: {fileID: 203566137}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1624,7 +1988,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0435\u043D\u044E"
+  m_Text: Menu
 --- !u!222 &203566136
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1633,6 +1997,195 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203566133}
   m_CullTransparentMesh: 0
+--- !u!114 &203566137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203566133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Menu
+  FallbackText: "\u041C\u0435\u043D\u044E"
+--- !u!1 &203867540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203867541}
+  - component: {fileID: 203867542}
+  m_Layer: 0
+  m_Name: Levels_13_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &203867541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203867540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203867542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203867540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0412\u0440\u0430\u0433 \u0432 \u043A\u043E\u043B\u044C\u0446\u0435"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Enemy in the ring
+    Object: {fileID: 0}
+--- !u!1 &225520964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225520965}
+  - component: {fileID: 225520966}
+  m_Layer: 0
+  m_Name: Levels_12_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225520965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225520964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225520966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225520964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 12 \u0411\u0438\u0442\u0432\u0430
+      \u0441 \u043F\u043E\u043B\u0438\u0446\u0430\u044F\u043C\u0438\r\n\r\n    1.
+      \u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430
+      \u0441\u0442\u0430\u0440\u0448\u0438\u0439 \u041B\u0435\u0439\u0442\u0435\u043D\u0442\u0430\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n    2. \u041A\u0430\u0440\u0442\u0430-
+      \u0440\u0443\u0441\u0441\u043A\u0430\u044F \u0434\u0435\u0440\u0435\u0432\u043D\u044F.
+      \u0422\u0430\u043D\u043A\u043E\u0432\u0430\u044F \u0430\u0442\u0430\u043A\u0430.
+      27 \u044F\u043D\u0432\u0430\u0440\u044F\r\n\r\n3.\u041F\u043E\u043B\u0438\u0446\u0430\u0438-\u043F\u0440\u0438\u0441\u043B\u0443\u0436\u043D\u0438\u043A\u0438
+      \u0444\u0430\u0448\u0438\u0441\u0442\u043E\u0432, \u043F\u043E\u0437\u043E\u0440
+      \u0442\u0440\u0443\u0434\u043E\u0432\u043E\u0433\u043E \u0441\u043E\u0432\u0435\u0442\u0441\u043A\u043E\u0433\u043E
+      \u043D\u0430\u0440\u043E\u0434\u0430. \u0413\u0435\u0440\u043E\u0438 \u043F\u0430\u0440\u0442\u0438\u0437\u0430\u043D\u044B
+      \u043F\u043E\u043B\u0433\u043E\u0434\u0430 \u0441\u0440\u0430\u0436\u0430\u043B\u0438\u0441\u044C
+      \u0432 \u0442\u044B\u043B\u0443 \u0432\u0440\u0430\u0433\u0430\u043C \u0438
+      \u0442\u0435\u043F\u0435\u0440\u044C \u0433\u043E\u0442\u043E\u0432\u044B \u043D\u0430\u043D\u0435\u0441\u0442\u0438
+      \u0440\u0435\u0448\u0430\u044E\u0449\u0438\u0439 \u0443\u0434\u0430\u0440 \u043F\u043E
+      \u043F\u0440\u0438\u0441\u043B\u0443\u0436\u043D\u0438\u043A\u0430\u043C \u0444\u0430\u0448\u0438\u0441\u0442\u043E\u0432.
+      \u041F\u043E\u043C\u043E\u0433\u0438\u0442\u0435 \u043D\u0430\u0448\u0438\u043C
+      \u043F\u0430\u0440\u0442\u0438\u0437\u0430\u043D\u0430\u043C \u0438 \u043F\u043E\u043A\u0430\u0440\u0430\u0442\u044C
+      \u043F\u0440\u0435\u0434\u0430\u0442\u0435\u043B\u0435\u0439. \u0423\u043D\u0438\u0447\u0442\u043E\u0436\u044C\u0442\u0435
+      \u0432\u0440\u0430\u0436\u0435\u0441\u043A\u0438\u0435 \u043F\u0443\u043B\u0435\u043C\u0435\u0442\u044B.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u043F\u043E\u043B\u0438\u0446\u0430\u0438\r\n\r\n6 \u043F\u0443\u043B\u0435\u043C\u0435\u0442\u043E\u0432\r\n\r\n4.\u0412
+      \u0442\u0435\u0447\u0435\u043D\u0438\u0435 \u043D\u043E\u0447\u0438 \u043D\u0430
+      27 \u044F\u043D\u0432\u0430\u0440\u044F \u0432\u043E\u0439\u0441\u043A\u0430
+      \u042E\u0433\u043E-\u0417\u0430\u043F\u0430\u0434\u043D\u043E\u0433\u043E,
+      \u042E\u0436\u043D\u043E\u0433\u043E, \u0421\u0435\u0432\u0435\u0440\u043E-\u041A\u0430\u0432\u043A\u0430\u0437\u0441\u043A\u043E\u0433\u043E,\u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0441\u043A\u043E\u0433\u043E,
+      \u0412\u043E\u043B\u0445\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0438 \u041B\u0435\u043D\u0438\u043D\u0433\u0440\u0430\u0434\u0441\u043A\u043E\u0433\u043E
+      \u0444\u0440\u043E\u043D\u0442\u043E\u0432 \u0432\u0435\u043B\u0438 \u043D\u0430\u0441\u0442\u0443\u043F\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435
+      \u0431\u043E\u0438 \u043D\u0430\u043F\u0440\u0435\u0436\u043D\u0438\u0445 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F\u0445.
+      \u0412\u043E\u0439\u0441\u043A\u0430 \u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0441\u043A\u043E\u0433\u043E
+      \u0444\u0440\u043E\u043D\u0442\u0430 \u043E\u0432\u043B\u0430\u0434\u0435\u043B\u0438
+      \u0440\u0430\u0439\u043E\u043D\u043D\u044B\u043C \u0446\u0435\u043D\u0442\u0440\u043E\u043C
+      \u0438 \u043A\u0440\u0443\u043F\u043D\u043E\u0439 \u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0434\u043E\u0440\u043E\u0436\u043D\u043E\u0439
+      \u0441\u0442\u0430\u043D\u0446\u0438\u0435\u0439 \u0413\u043E\u0440\u0448\u0435\u0447\u043D\u043E\u0435,
+      \u043A\u0440\u0443\u043F\u043D\u044B\u043C\u0438 \u043D\u0430\u0441\u0435\u043B\u0451\u043D\u043D\u044B\u043C\u0438
+      \u043F\u0443\u043D\u043A\u0442\u0430\u043C\u0438 \u2014\u0411\u0435\u0440\u0451\u0437\u043E\u0432\u043E-\u041A\u043E\u043B\u043E\u0434\u0435\u0437\u044C,
+      \u0421\u0442\u0430\u0440\u043E-\u041C\u0435\u043B\u043E\u0432\u043E\u0435,
+      \u041D\u043E\u0432\u043E-\u041C\u0435\u043B\u043E\u0432\u043E\u0435, \u0413\u043E\u0440\u043E\u0434\u0438\u0449\u0435
+      1-\u0435 \u0438 2-\u0435.\r"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 12 Battle with policemen
+
+
+      1. Artillery preparation senior
+      Lieutenant Petrov
+
+
+      2. Map-Russian village. Tank attack. January 27
+
+
+      3.
+      Policemen are servants of the fascists, a disgrace to the working Soviet people.
+      Heroes of the partisans fought six months behind enemy lines and are now ready
+      to deliver a decisive blow to the servants of the fascists. Help our partisans
+      and punish the traitors. Destroy the enemy machine guns.
+
+
+      Forces
+
+
+      4
+      guns
+
+
+      Polizei''s opponent
+
+
+      6 machine guns
+
+
+      4. during the
+      night of January 27, the troops of the South-Western, southern,North-Caucasian,
+      Voronezh, Volkhov and Leningrad fronts were engaged in offensive battles in
+      other directions. The troops of the Voronezh front captured the district center
+      and a large railway station Gorshechnoe, large localities-Berezovo-Kolodez,
+      Staro-Melovoe, Novo-Melovoe, Gorodishche 1st and 2nd.'
+    Object: {fileID: 0}
 --- !u!1 &229041286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,6 +2880,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &279073872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 279073873}
+  - component: {fileID: 279073874}
+  m_Layer: 0
+  m_Name: Levels_6_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &279073873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279073872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &279073874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279073872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0422\u044F\u0436\u0435\u043B\u043E\u0435 \u0443\u0442\u0440\u043E"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Hard morning
+    Object: {fileID: 0}
 --- !u!1001 &279989384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2417,6 +3021,7 @@ GameObject:
   - component: {fileID: 282918966}
   - component: {fileID: 282918968}
   - component: {fileID: 282918967}
+  - component: {fileID: 282918969}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2474,7 +3079,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041A\u0430\u043C\u043F\u0430\u043D\u0438\u044F"
+  m_Text: Campaign
 --- !u!222 &282918968
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2483,6 +3088,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282918965}
   m_CullTransparentMesh: 0
+--- !u!114 &282918969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282918965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: campaign
+  FallbackText: "\u041A\u0430\u043C\u043F\u0430\u043D\u0438\u044F"
 --- !u!1001 &289386294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2550,6 +3169,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 289386294}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &291786439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 291786440}
+  - component: {fileID: 291786441}
+  m_Layer: 0
+  m_Name: LevelWindow_Next
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &291786440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291786439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291786441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291786439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0414\u0430\u043B\u044C\u0448\u0435"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Next
+    Object: {fileID: 0}
 --- !u!1 &299142992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +3442,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 301388234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &302203143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302203144}
+  - component: {fileID: 302203145}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &302203144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302203143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302203145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302203143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0432\u0443\u043A\u0438"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Sounds
+    Object: {fileID: 0}
 --- !u!1 &309111505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,6 +3504,7 @@ GameObject:
   - component: {fileID: 309111506}
   - component: {fileID: 309111508}
   - component: {fileID: 309111507}
+  - component: {fileID: 309111509}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2840,7 +3562,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0435\u043D\u044E"
+  m_Text: Menu
 --- !u!222 &309111508
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2849,6 +3571,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309111505}
   m_CullTransparentMesh: 0
+--- !u!114 &309111509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309111505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Menu
+  FallbackText: "\u041C\u0435\u043D\u044E"
 --- !u!1001 &371362229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3027,12 +3763,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1190505212}
-  m_Father: {fileID: 607272491}
+  m_Father: {fileID: 524234116}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -282.90002, y: -108.6001}
+  m_AnchoredPosition: {x: -282.9004, y: -108.6001}
   m_SizeDelta: {x: 510.4, y: 141.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396828029
@@ -3261,6 +3997,7 @@ GameObject:
   - component: {fileID: 404870713}
   - component: {fileID: 404870715}
   - component: {fileID: 404870714}
+  - component: {fileID: 404870716}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3318,7 +4055,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+  m_Text: Settings
 --- !u!222 &404870715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3327,6 +4064,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404870712}
   m_CullTransparentMesh: 0
+--- !u!114 &404870716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404870712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: settings
+  FallbackText: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
 --- !u!1001 &405115225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3692,6 +4443,7 @@ GameObject:
   - component: {fileID: 425707048}
   - component: {fileID: 425707050}
   - component: {fileID: 425707049}
+  - component: {fileID: 425707051}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3749,7 +4501,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0414\u0430\u043B\u044C\u0448\u0435"
+  m_Text: Next
 --- !u!222 &425707050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3758,6 +4510,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425707047}
   m_CullTransparentMesh: 0
+--- !u!114 &425707051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425707047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: LevelWindow_Next
+  FallbackText: "\u0414\u0430\u043B\u044C\u0448\u0435"
 --- !u!1 &428901405
 GameObject:
   m_ObjectHideFlags: 0
@@ -4543,6 +5309,114 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 473374914}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &473431485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473431486}
+  - component: {fileID: 473431487}
+  m_Layer: 0
+  m_Name: Levels_11_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473431486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473431485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &473431487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473431485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 11\r\n\r\n1.\u0413\u043E\u0440\u043E\u0434
+      \u0412\u043E\u0440\u043E\u043D\u0435\u0436. \u0422\u0430\u043D\u043A\u043E\u0432\u0430\u044F
+      \u0430\u0442\u0430\u043A\u0430. \u0421\u0442\u0430\u0440\u0448\u0438\u0439
+      \u041B\u0435\u0439\u0442\u0435\u043D\u0442\u0430\u0442 \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2.
+      \u0412\u043E\u0440\u043E\u043D\u0435\u0436 \u0426\u0435\u043D\u0442\u0440\u0430\u043B\u044C\u043D\u044B\u0439
+      \u043F\u0440\u043E\u0441\u043F\u0435\u043A\u0442. \u0422\u0438\u043F \u043A\u0430\u0440\u0442\u044B
+      \u0433\u043E\u0440\u043E\u0434 \u0432\u043E\u0440\u043E\u043D\u0435\u0436 \u0437\u0438\u043C\u0430.
+      25 \u044F\u043D\u0432\u0430\u0440\u044F 1943.\r\n\r\n3.\u041D\u0435\u043C\u0435\u0446\u043A\u043E-\u0444\u0430\u0448\u0438\u0441\u0442\u0441\u043A\u0438\u0435
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0447\u0438\u043A\u0438 \u0441 \u043F\u043E\u0437\u043E\u0440\u043E\u043C
+      \u043E\u0442\u0441\u0442\u0443\u043F\u0430\u044E\u0442 \u0438\u0437 \u043D\u0435\u043F\u043E\u043A\u043E\u0440\u0438\u0432\u0448\u0435\u0433\u043E\u0441\u044F
+      \u0438\u043C \u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0430. \u041F\u043E\u0434\u0431\u0435\u0439\u0442\u0435
+      \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E \u0431\u043E\u043B\u044C\u0448\u0435
+      \u0432\u0440\u0430\u0436\u0435\u0441\u043A\u043E\u0439 \u0442\u0435\u0445\u043D\u0438\u043A\u0438
+      \u043E\u0442\u0441\u0442\u0443\u043F\u0430\u044E\u0449\u0435\u0439 \u0438\u0437
+      \u0433\u043E\u0440\u043E\u0434\u0430.  \r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n2 \u0442\u0430\u043D\u043A\u0430 \u0422-2\r\n\r\n4
+      \u043C\u043E\u0442\u043E\u0446\u0438\u043A\u043B\u0430\r\n\r\n3 \u0433\u0440\u0443\u0437\u043E\u0432\u0438\u043A\u0430\r\n\r\n3
+      \u0442\u0430\u043D\u043A\u0430 \u0422-3\r\n\r\n2 \u0442\u0430\u043D\u043A\u0430
+      \u0422-4"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 11
+
+
+      1. Voronezh City. Tank attack. Senior Lieutenant Petrov
+
+
+      2.
+      Voronezh Central Avenue. Map type Voronezh winter city. January 25, 1943.
+
+
+      3.
+      the German-fascist invaders are retreating from Voronezh in disgrace. Shoot
+      down as many enemy vehicles retreating from the city as possible.
+
+
+      Forces
+
+
+      4
+      guns
+
+
+      Enemy Germans
+
+
+      2 t-2 tanks
+
+
+      4 motorcycles
+
+
+      3
+      trucks
+
+
+      3 t-3 tanks
+
+
+      2 t-4 tanks'
+    Object: {fileID: 0}
 --- !u!1001 &474221287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4830,8 +5704,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pageObject: {fileID: 1343159363}
-  _audio: {fileID: 0}
-  _music: {fileID: 0}
+  _audio: {fileID: 1372319485}
+  _music: {fileID: 996655583}
 --- !u!4 &508303809
 Transform:
   m_ObjectHideFlags: 0
@@ -4846,6 +5720,132 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &511717448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511717449}
+  - component: {fileID: 511717450}
+  m_Layer: 0
+  m_Name: Levels_3_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511717449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511717448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511717450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511717448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041E\u0442\u0445\u043E\u0434"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Departure
+    Object: {fileID: 0}
+--- !u!1 &524234115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524234116}
+  - component: {fileID: 524234118}
+  - component: {fileID: 524234117}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &524234116
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524234115}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1808681175}
+  - {fileID: 396828028}
+  m_Father: {fileID: 607272491}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &524234117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524234115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3a6320abe469a2840b6e8730f32c1d78, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &524234118
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524234115}
+  m_CullTransparentMesh: 0
 --- !u!1 &528201823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5222,6 +6222,58 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 571494077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &574814213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574814214}
+  - component: {fileID: 574814215}
+  m_Layer: 0
+  m_Name: Ability_ExtraMoves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &574814214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574814213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &574814215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574814213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435
+      \u0445\u043E\u0434\u044B"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Extra moves
+    Object: {fileID: 0}
 --- !u!1001 &576259409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5289,6 +6341,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 576259409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &598596766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598596767}
+  - component: {fileID: 598596768}
+  m_Layer: 0
+  m_Name: Ability_FireSupply
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &598596767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598596766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598596768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598596766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430 \u043E\u0433\u043D\u0435\u043C"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Fire supply
+    Object: {fileID: 0}
 --- !u!1001 &599213292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5384,8 +6487,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1808681175}
-  - {fileID: 396828028}
+  - {fileID: 524234116}
   m_Father: {fileID: 1282938652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5402,6 +6504,178 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607272490}
   m_CullTransparentMesh: 0
+--- !u!1 &611114950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611114951}
+  - component: {fileID: 611114952}
+  m_Layer: 0
+  m_Name: Levels_7_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &611114951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611114950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611114952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611114950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 7\r\n\r\n1.\u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430.
+      \u041B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442 \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2.\u0422\u0438\u043F
+      \u043A\u0430\u0440\u0442\u044B \u0433\u043E\u0440\u043E\u0434 \u0412\u043E\u0440\u043E\u043D\u0435\u0436
+      \u0440\u0430\u0439\u043E\u043D \u0429\u0443\u043A\u0438\u043D\u043E 14 \u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F
+      1942.\r\n\r\n3.\u0412\u0430\u0448\u0430 \u0437\u0430\u0434\u0430\u0447\u0430
+      \u043D\u0430 \u0441\u0435\u0433\u043E\u0434\u043D\u044F \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+      \u043E\u0431\u0441\u0442\u0440\u0435\u043B\u044F\u0442\u044C \u043F\u043E\u0437\u0438\u0446\u0438\u0438
+      \u0432\u0440\u0430\u0433\u0430, \u0447\u0442\u043E\u0431\u044B \u043F\u043E\u043C\u043E\u0447\u044C
+      \u043D\u0430\u0448\u0435\u043C\u0443 \u0440\u0430\u0437\u0432\u0435\u0434\u0432\u0437\u0432\u043E\u0434\u0443
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0438\u0442\u044C \u0432\u0440\u0430\u0436\u0435\u0441\u043A\u043E\u0433\u043E
+      \u043E\u0444\u0438\u0446\u0435\u0440\u0430. \u041F\u043E\u043C\u043E\u0433\u0438\u0442\u0435
+      \u043E\u0433\u043D\u0435\u043C \u0441\u0432\u043E\u0438\u0445 \u043E\u0440\u0443\u0434\u0438\u0439
+      \u043D\u0430\u0448\u0438\u043C \u0433\u0435\u0440\u043E\u044F\u043C \u0440\u0430\u0437\u0432\u0435\u0434\u0447\u0438\u043A\u0430\u043C.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n2 \u0434\u043E\u0442\u0430\r\n\r\n7 \u043F\u0435\u0445\u043E\u0442\u043D\u044B\u0445
+      \u043E\u0442\u0434\u0435\u043B\u0435\u043D\u0438\u0439\r\n\r\n4.\u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      \u043D\u043E\u0447\u0438 \u043D\u0430 14 \u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F
+      \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430 \u0432\u0435\u043B\u0438
+      \u0431\u043E\u0438 \u0441 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C
+      \u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435 \u0438\u044E\u0433\u043E-\u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435
+      \u0421\u0442\u0430\u043B\u0438\u043D\u0433\u0440\u0430\u0434\u0430, \u0432
+      \u0440\u0430\u0439\u043E\u043D\u0435 \u041C\u043E\u0437\u0434\u043E\u043A,
+      \u0430 \u0442\u0430\u043A\u0436\u0435 \u043D\u0430 \u0412\u043E\u043B\u0445\u043E\u0432\u0441\u043A\u043E\u043C
+      \u0443\u0447\u0430\u0441\u0442\u043A\u0435 \u0444\u0440\u043E\u043D\u0442\u0430
+      \u0432 \u0440\u0430\u0439\u043E\u043D\u0435 \u0421\u0438\u043D\u044F\u0432\u0438\u043D\u043E.
+      \u041D\u0430 \u0434\u0440\u0443\u0433\u0438\u0445 \u0444\u0440\u043E\u043D\u0442\u0430\u0445
+      \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439
+      \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E.\r\n\u0422\u0438\u043F
+      \u043C\u0438\u0441\u0441\u0438\u0438: \u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430.\r\n\r\n\u042E\u043D\u0438\u0442\u044B
+      \u043D\u0435 \u043E\u0442\u0432\u0435\u0447\u0430\u044E\u0442 \u043E\u0433\u043D\u0435\u043C."
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 7
+
+
+      1. artillery Preparation. Lieutenant Petrov
+
+
+      2.The
+      type of card the city of Voronezh district, the station on 14 September 1942.
+
+
+      3.
+      Your task for today is to fire at enemy positions to help our recon platoon
+      capture an enemy officer. Help our hero scouts with the fire of your guns.
+
+
+      Forces
+
+
+      4
+      guns
+
+
+      Enemy Germans
+
+
+      2 pillboxes
+
+
+      7 infantry divisions
+
+
+      4.
+      during the night of September 14, our troops fought with the enemy to the West
+      and southwest of Stalingrad, in the Mozdok area, as well as on the Volkhov
+      sector of the front in the Sinyavino area. There were no significant changes
+      on other fronts.
+
+      Mission type: artillery Preparation.
+
+
+      Units
+      do not return fire.'
+    Object: {fileID: 0}
+--- !u!1 &621986480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 621986481}
+  - component: {fileID: 621986482}
+  m_Layer: 0
+  m_Name: Levels_11_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &621986481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621986480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &621986482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621986480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041E\u0441\u0432\u043E\u0431\u043E\u0436\u0434\u0435\u043D\u0438\u0435"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Liberation
+    Object: {fileID: 0}
 --- !u!1 &624667024
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,6 +6887,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 635217203}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &653731448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653731449}
+  - component: {fileID: 653731450}
+  m_Layer: 0
+  m_Name: Ability_Scouting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &653731449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653731448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653731450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653731448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0420\u0430\u0437\u0432\u0435\u0434\u043A\u0430"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Scouting
+    Object: {fileID: 0}
 --- !u!1 &663725285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5624,6 +6949,7 @@ GameObject:
   - component: {fileID: 663725286}
   - component: {fileID: 663725288}
   - component: {fileID: 663725287}
+  - component: {fileID: 663725289}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5681,7 +7007,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0437\u0430\u0434"
+  m_Text: Back
 --- !u!222 &663725288
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5690,6 +7016,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663725285}
   m_CullTransparentMesh: 0
+--- !u!114 &663725289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663725285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: LevelWindow_Back
+  FallbackText: "\u041D\u0430\u0437\u0430\u0434"
 --- !u!1 &669837328
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,6 +7041,7 @@ GameObject:
   - component: {fileID: 669837329}
   - component: {fileID: 669837331}
   - component: {fileID: 669837330}
+  - component: {fileID: 669837332}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -5758,7 +7099,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0417\u0432\u0443\u043A\u0438"
+  m_Text: Sounds
 --- !u!222 &669837331
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5767,6 +7108,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669837328}
   m_CullTransparentMesh: 0
+--- !u!114 &669837332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669837328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Sounds
+  FallbackText: "\u0417\u0432\u0443\u043A\u0438"
 --- !u!1001 &719996088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5834,6 +7189,108 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 719996088}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &742635675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742635676}
+  - component: {fileID: 742635677}
+  m_Layer: 0
+  m_Name: Menu_ExitToMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &742635676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742635675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742635677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742635675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0432\u044B\u0439\u0442\u0438 \u0432 \u043C\u0435\u043D\u044E"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Exit to menu
+    Object: {fileID: 0}
+--- !u!1 &749828561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 749828562}
+  - component: {fileID: 749828563}
+  m_Layer: 0
+  m_Name: Levels_9_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &749828562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749828561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749828563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749828561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041E\u0441\u0435\u043D\u043D\u044F\u044F \u0433\u0440\u043E\u0437\u0430"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Autumn storm
+    Object: {fileID: 0}
 --- !u!1001 &750274419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5901,6 +7358,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 750274419}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &764102609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764102610}
+  - component: {fileID: 764102611}
+  m_Layer: 0
+  m_Name: Levels_14_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &764102610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764102609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764102611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764102609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439 \u0443\u0434\u0430\u0440"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Final blow
+    Object: {fileID: 0}
 --- !u!1 &768528366
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,6 +7632,7 @@ GameObject:
   - component: {fileID: 789807243}
   - component: {fileID: 789807242}
   - component: {fileID: 789807241}
+  - component: {fileID: 789807244}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -6201,7 +7710,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u043E\u043A\u0443\u043F\u043A\u0430"
+  m_Text: buy abilities
 --- !u!222 &789807243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6210,6 +7719,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789807239}
   m_CullTransparentMesh: 0
+--- !u!114 &789807244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789807239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Shop_Buy
+  FallbackText: "\u041F\u043E\u043A\u0443\u043F\u043A\u0430"
+--- !u!1 &809794354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809794355}
+  - component: {fileID: 809794356}
+  m_Layer: 0
+  m_Name: Levels_5_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809794355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809794354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &809794356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809794354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u043B\u0430\u0446\u0434\u0430\u0440\u043C"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Bridgehead
+    Object: {fileID: 0}
 --- !u!1 &819245368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6394,6 +7968,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &833152849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833152850}
+  - component: {fileID: 833152851}
+  m_Layer: 0
+  m_Name: Levels_8_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833152850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833152849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833152851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833152849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041D\u0430\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u0435"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Offensive
+    Object: {fileID: 0}
 --- !u!1 &833913216
 GameObject:
   m_ObjectHideFlags: 0
@@ -7837,7 +9462,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1034759574}
   m_HandleRect: {fileID: 1034759573}
   m_Direction: 2
-  m_Value: -0.00000012835444
+  m_Value: 0
   m_Size: 0.6815001
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8339,6 +9964,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 981070259}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &990979513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990979514}
+  - component: {fileID: 990979515}
+  m_Layer: 0
+  m_Name: Levels_1_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990979514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990979513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990979515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990979513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u0440\u043E\u0440\u044B\u0432 \u0432\u0440\u0430\u0433\u0430"
+    Object: {fileID: 0}
+  - Language: English
+    Text: The breakthrough of the enemy
+    Object: {fileID: 0}
 --- !u!1 &996655581
 GameObject:
   m_ObjectHideFlags: 0
@@ -8517,6 +10193,7 @@ GameObject:
   - component: {fileID: 1001863080}
   - component: {fileID: 1001863082}
   - component: {fileID: 1001863081}
+  - component: {fileID: 1001863083}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8574,7 +10251,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0435\u043D\u044E"
+  m_Text: Menu
 --- !u!222 &1001863082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8583,6 +10260,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001863079}
   m_CullTransparentMesh: 0
+--- !u!114 &1001863083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001863079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Menu
+  FallbackText: "\u041C\u0435\u043D\u044E"
 --- !u!1001 &1024100499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8650,6 +10341,176 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1024100499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1029190456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029190457}
+  - component: {fileID: 1029190458}
+  m_Layer: 0
+  m_Name: Levels_9_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029190457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029190456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029190458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029190456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 9\r\n\r\n1.\u0422\u0430\u043D\u043A\u043E\u0432\u0430\u044F
+      \u0430\u0442\u0430\u043A\u0430 \u041B\u0435\u0439\u0442\u0435\u043D\u0430\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2. \u0422\u0438\u043F \u043A\u0430\u0440\u0442\u044B
+      \u0433\u043E\u0440\u043E\u0434 \u0412\u043E\u0440\u043E\u043D\u0435\u0436 \u0440\u0430\u0439\u043E\u043D
+      \u0429\u0443\u043A\u0438\u043D\u043E 19 \u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F
+      1942.\r\n\r\n3.\u041D\u0435\u043C\u0435\u0446\u043A\u043E-\u0444\u0430\u0448\u0438\u0441\u0442\u043A\u0438\u0435
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0447\u0438\u043A\u0438 \u0431\u0440\u043E\u0441\u0430\u044E\u0442
+      \u0432\u0441\u0435 \u043D\u043E\u0432\u044B\u0435 \u0441\u0438\u043B\u044B
+      \u043D\u0430 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u043C\u044B\u0439
+      \u043D\u0430\u0448\u0435\u0439 \u0434\u0438\u0432\u0438\u0437\u0438\u0435\u0439
+      \u043F\u043B\u0430\u0446\u0434\u0430\u0440\u043C, \u043D\u0430\u0448\u0430
+      \u043F\u0440\u043E\u0442\u0438\u0432\u0430\u0442\u0430\u043D\u043A\u043E\u0432\u0430\u044F
+      \u0431\u0430\u0442\u0430\u0440\u0435\u044F \u043F\u043E\u0442\u0435\u0440\u044F\u043B\u0430
+      4 \u043E\u0440\u0443\u0434\u0438\u044F \u0438\u0437 6. \u0412\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+      \u0432\u044B\u0434\u0435\u043B\u0438\u0442\u044C \u0434\u0432\u0430 \u043E\u0440\u0443\u0434\u0438\u044F
+      \u0438\u0437 \u0432\u0430\u0448\u0435\u0439 \u0431\u0430\u0442\u0430\u0440\u0435\u0438
+      \u0438 \u043F\u043E\u043C\u043E\u0447\u044C \u043E\u0442\u0431\u0438\u0442\u044C
+      \u0430\u0442\u0430\u043A\u0443 \u043D\u0435\u043C\u0435\u0446\u043A\u043E-\u0444\u0430\u0448\u0438\u0442\u0441\u043A\u0438\u0445
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0447\u0438\u043A\u043E\u0432. \u041F\u043E\u0434
+      \u0432\u0430\u0448\u0435 \u043A\u043E\u043C\u0430\u043D\u0434\u043E\u0432\u0430\u043D\u0438\u0435
+      \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0438\u0442 \u043E\u0441\u0442\u0430\u0432\u0448\u0438\u0439\u0441\u044F
+      \u0430\u0440\u0442\u0432\u0437\u0432\u043E\u0434 \u0431\u0430\u0442\u0430\u0440\u0435\u0438
+      45 \u043C\u043C \u043E\u0440\u0443\u0434\u0438\u0439.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F (2 76 \u043C\u043C. + 2 45 \u043C\u043C.)\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n3 \u0442\u0430\u043D\u043A \u0422-3\r\n\r\n3
+      \u0442\u0430\u043D\u043A\u0430 \u0422-4\r\n\r\n4.\u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      \u043D\u043E\u0447\u0438 \u043D\u0430 19 \u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F
+      \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430 \u0432\u0435\u043B\u0438
+      \u0431\u043E\u0438 \u0441 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C
+      \u0432 \u0440\u0430\u0439\u043E\u043D\u0435 \u0421\u0442\u0430\u043B\u0438\u043D\u0433\u0440\u0430\u0434\u0430
+      \u0438 \u0432 \u0440\u0430\u0439\u043E\u043D\u0435 \u041C\u043E\u0437\u0434\u043E\u043A.
+      \u041D\u0430 \u0434\u0440\u0443\u0433\u0438\u0445 \u0444\u0440\u043E\u043D\u0442\u0430\u0445
+      \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439
+      \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E.\r\n\r\n\u041D\u0430
+      \u0441\u0435\u0432\u0435\u0440\u043E-\u0437\u0430\u043F\u0430\u0434\u043D\u043E\u0439
+      \u043E\u043A\u0440\u0430\u0438\u043D\u0435 \u0421\u0442\u0430\u043B\u0438\u043D\u0433\u0440\u0430\u0434\u0430
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0438\u0441\u044C \u043E\u0436\u0435\u0441\u0442\u043E\u0447\u0451\u043D\u043D\u044B\u0435
+      \u0431\u043E\u0438. \u041D-\u0441\u043A\u0430\u044F \u0447\u0430\u0441\u0442\u044C
+      \u043E\u0442\u0431\u0438\u043B\u0430 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u0430\u0442\u0430\u043A \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430
+      \u0438 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u043B\u0430 4 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u0445
+      \u0442\u0430\u043D\u043A\u0430, 3 \u043F\u0440\u043E\u0442\u0438\u0432\u043E\u0442\u0430\u043D\u043A\u043E\u0432\u044B\u0445
+      \u043E\u0440\u0443\u0434\u0438\u044F \u0438 \u0438\u0441\u0442\u0440\u0435\u0431\u0438\u043B\u0430
+      \u0441\u0432\u044B\u0448\u0435 200 \u0433\u0438\u0442\u043B\u0435\u0440\u043E\u0432\u0446\u0435\u0432.
+      \u041D\u0435\u043C\u0446\u044B \u043D\u0435\u043E\u0434\u043D\u043E\u043A\u0440\u0430\u0442\u043D\u043E
+      \u043F\u044B\u0442\u0430\u043B\u0438\u0441\u044C \u0437\u0430\u0445\u0432\u0430\u0442\u0438\u0442\u044C
+      \u043D\u0430\u0448\u0438 \u043F\u043E\u0437\u0438\u0446\u0438\u0438, \u043F\u0440\u0438\u043A\u0440\u044B\u0432\u0430\u044E\u0449\u0438\u0435
+      \u043F\u043E\u0434\u0441\u0442\u0443\u043F\u044B \u043A \u043E\u0434\u043D\u043E\u043C\u0443
+      \u0432\u0430\u0436\u043D\u043E\u043C\u0443 \u043E\u0431\u044A\u0435\u043A\u0442\u0443.
+      \u0417\u0430\u0449\u0438\u0442\u043D\u0438\u043A\u0438 \u0421\u0442\u0430\u043B\u0438\u043D\u0433\u0440\u0430\u0434\u0430
+      \u0433\u0440\u0430\u043D\u0430\u0442\u0430\u043C\u0438 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u043B\u0438
+      6 \u0442\u0430\u043D\u043A\u043E\u0432, \u0430 \u0437\u0430\u0442\u0435\u043C
+      \u0432 \u0440\u0443\u043A\u043E\u043F\u0430\u0448\u043D\u043E\u0439 \u0441\u0445\u0432\u0430\u0442\u043A\u0435
+      \u0438\u0441\u0442\u0440\u0435\u0431\u0438\u043B\u0438 170 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u0445
+      \u0441\u043E\u043B\u0434\u0430\u0442 \u0438 \u043E\u0444\u0438\u0446\u0435\u0440\u043E\u0432.
+      \u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A \u0431\u044B\u043B \u0432\u044B\u043D\u0443\u0436\u0434\u0435\u043D
+      \u043E\u0442\u0441\u0442\u0443\u043F\u0438\u0442\u044C.\r\n\r\n\u0422\u043E\u0432\u0430\u0440\u0438\u0449
+      \u041F\u0435\u0442\u0440\u043E\u0432 \u0440\u043E\u0434\u0438\u043D\u0430 \u043E\u0446\u0435\u043D\u0438\u043B\u0430
+      \u0432\u0430\u0448 \u0433\u0435\u0440\u043E\u0438\u0437\u043C \u043F\u0440\u0438
+      \u0437\u0430\u0449\u0438\u0442\u0435 \u043F\u043B\u0430\u0446\u0434\u0430\u0440\u043C\u0430
+      \u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432\u044B \u043D\u0430\u0433\u0440\u0430\u0436\u0434\u0435\u043D\u044B
+      \u043E\u0440\u0434\u0435\u043D\u043E\u043C \u043A\u0440\u0430\u0441\u043D\u043E\u0439
+      \u0437\u0432\u0435\u0437\u0434\u044B. \u0412 \u0442\u0440\u0443\u0434\u043D\u044B\u0439
+      \u043C\u043E\u043C\u0435\u043D\u0442 \u0434\u043B\u044F \u043D\u0430\u0448\u0435\u0439
+      \u0440\u043E\u0434\u0438\u043D\u044B \u043F\u0440\u0438\u043C\u0438\u0442\u0435
+      \u043D\u0430\u0433\u0440\u0430\u0434\u0443, \u043D\u0430\u0434\u0435\u044E\u0441\u044C
+      \u0431\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u043D\u043E\u0441\u0442\u044C
+      \u0440\u043E\u0434\u0438\u043D\u044B \u0432\u043E\u043E\u0434\u0443\u0448\u0435\u0432\u0438\u0442
+      \u0432\u0430\u0441 \u043D\u0430 \u043D\u043E\u0432\u044B\u0435 \u043F\u043E\u0434\u0432\u0438\u0433\u0438."
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 9
+
+
+      1. Tank attack Lieutenant Petrov
+
+
+      2. map Type Voronezh
+      city Shchukino district September 19, 1942.
+
+
+      3. the German-fascist invaders
+      are throwing all new forces on the bridgehead held by our division, our anti-tank
+      battery has lost 4 guns out of 6. You need to select two guns from your battery
+      and help repel the attack of the German-fascist invaders. Under your command
+      passes the remaining artvzvod battery of 45 mm guns.
+
+
+      Forces
+
+
+      4
+      guns (2 76 mm. + 2 45 mm.)
+
+
+      Enemy Germans
+
+
+      3 t-3 tank
+
+
+      3
+      t-4 tanks
+
+
+      4. during the night of September 19, our troops fought with
+      the enemy in the area of Stalingrad and in the area of Mozdok. There were no
+      significant changes on other fronts.
+
+
+      Heavy fighting continued on the
+      northwestern outskirts of Stalingrad. The n-skaya unit repulsed several enemy
+      attacks and destroyed 4 German tanks, 3 anti-tank guns and destroyed over 200
+      Hitlerites. The Germans repeatedly tried to capture our positions covering
+      the approaches to one important object. The defenders of Stalingrad destroyed
+      6 tanks with grenades, and then destroyed 170 German soldiers and officers
+      in a melee. The enemy was forced to retreat.
+
+
+      Comrade Petrov the Motherland
+      appreciated your heroism in defending the bridgehead today you were awarded
+      the order of the red star. At a difficult time for our country, accept the
+      award, I hope the gratitude of the Motherland will inspire you to new feats.'
+    Object: {fileID: 0}
 --- !u!1 &1031436583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9155,6 +11016,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &1061631772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061631773}
+  - component: {fileID: 1061631774}
+  m_Layer: 0
+  m_Name: LevelWindow_ToBattle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1061631773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061631772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1061631774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061631772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0412 \u0431\u043E\u0439!"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Battle!
+    Object: {fileID: 0}
 --- !u!1001 &1074795523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9593,6 +11505,137 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100692995}
   m_CullTransparentMesh: 0
+--- !u!1 &1104126290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104126291}
+  - component: {fileID: 1104126292}
+  m_Layer: 0
+  m_Name: Levels_6_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1104126291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104126290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1104126292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104126290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 6\r\n\r\n1. \u0422\u0430\u043D\u043A\u043E\u0432\u0430\u044F
+      \u0430\u0442\u0430\u043A\u0430. \u041B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2.\u0422\u0438\u043F \u043A\u0430\u0440\u0442\u044B
+      \u0433\u043E\u0440\u043E\u0434 \u0412\u043E\u0440\u043E\u043D\u0435\u0436 \u0440\u0430\u0439\u043E\u043D
+      \u0429\u0443\u043A\u0438\u043D\u043E 8 \u0430\u0432\u0433\u0443\u0441\u0442\u0430
+      1942.\r\n\r\n3.\u041D\u0435\u043C\u0435\u0446\u043A\u043E-\u0444\u0430\u0448\u0438\u0441\u0442\u043A\u0438\u0435
+      \u0442\u0430\u043D\u043A\u0438 \u0430\u0442\u0430\u043A\u043E\u0432\u0430\u043B\u0438
+      \u0432\u0442\u043E\u0440\u043E\u0439 \u0441\u0442\u0440\u0435\u043B\u043A\u043E\u0432\u044B\u0439
+      \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D \u043D\u0430\u0448\u0435\u0433\u043E
+      \u043F\u043E\u043B\u043A\u0430. \u041F\u043E\u043C\u043E\u0433\u0438\u0442\u0435
+      \u043D\u0430\u0448\u0438\u043C \u0433\u0435\u0440\u043E\u0438\u0447\u0435\u0441\u043A\u0438\u043C
+      \u043F\u0435\u0445\u043E\u0442\u0438\u043D\u0446\u0430\u043C \u043E\u0442\u0431\u0438\u0442\u044C
+      \u0430\u0442\u0430\u043A\u0443 \u0444\u0430\u0448\u0438\u0441\u0442\u0441\u043A\u043E\u0439
+      \u0431\u0440\u043E\u043D\u0435\u0442\u0435\u0445\u043D\u0438\u043A\u0438.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n2 \u0442\u0430\u043D\u043A\u0430 \u0422-2\r\n\r\n2
+      \u0442\u0430\u043D\u043A\u0430 \u0422-3\r\n\r\n1 \u0442\u0430\u043D\u043A \u0422-4\r\n\r\n4.\u0412
+      \u0442\u0435\u0447\u0435\u043D\u0438\u0435 \u043D\u043E\u0447\u0438 \u043D\u0430
+      8 \u0430\u0432\u0433\u0443\u0441\u0442\u0430 \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430
+      \u0432\u0435\u043B\u0438 \u0431\u043E\u0438 \u0441 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C
+      \u0432 \u0440\u0430\u0439\u043E\u043D\u0430\u0445 \u041A\u043B\u0435\u0442\u0441\u043A\u0430\u044F,
+      \u0441\u0435\u0432\u0435\u0440\u043D\u0435\u0435 \u041A\u043E\u0442\u0435\u043B\u044C\u043D\u0438\u043A\u043E\u0432\u043E,
+      \u0410\u0440\u043C\u0430\u0432\u0438\u0440 \u0438 \u044E\u0436\u043D\u0435\u0435
+      \u041A\u0443\u0449\u0435\u0432\u0441\u043A\u0430\u044F.\r\n\r\n\u042E\u0436\u043D\u0435\u0435
+      \u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0430 \u043D\u0430\u0448\u0438 \u0447\u0430\u0441\u0442\u0438,
+      \u043F\u0435\u0440\u0435\u043F\u0440\u0430\u0432\u0438\u0432\u0448\u0438\u0435\u0441\u044F
+      \u0447\u0435\u0440\u0435\u0437 \u0414\u043E\u043D, \u0437\u0430\u043D\u044F\u043B\u0438
+      \u0435\u0449\u0451 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043D\u0430\u0441\u0435\u043B\u0451\u043D\u043D\u044B\u0445
+      \u043F\u0443\u043D\u043A\u0442\u043E\u0432. \u0412 \u043E\u0434\u043D\u043E\u043C
+      \u0438\u0437 \u043D\u0430\u0441\u0435\u043B\u0451\u043D\u043D\u044B\u0445 \u043F\u0443\u043D\u043A\u0442\u043E\u0432
+      \u0431\u044B\u043B\u0430 \u043E\u043A\u0440\u0443\u0436\u0435\u043D\u0430 \u0438
+      \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u0430 \u0432\u0435\u043D\u0433\u0435\u0440\u0441\u043A\u0430\u044F
+      \u043F\u0435\u0445\u043E\u0442\u043D\u0430\u044F \u0447\u0430\u0441\u0442\u044C.
+      \u0417\u0430\u0445\u0432\u0430\u0447\u0435\u043D\u044B \u0442\u0440\u043E\u0444\u0435\u0438
+      \u0438 \u043F\u043B\u0435\u043D\u043D\u044B\u0435. \u041D\u0430 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u043C
+      \u0443\u0447\u0430\u0441\u0442\u043A\u0435 \u043D\u0430\u0448\u0438 \u0431\u043E\u0439\u0446\u044B
+      \u0438\u0441\u0442\u0440\u0435\u0431\u0438\u043B\u0438 \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D
+      \u0433\u0438\u0442\u043B\u0435\u0440\u043E\u0432\u0446\u0435\u0432."
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 6
+
+
+      1. Tank attack. Lieutenant Petrov
+
+
+      2. map Type Voronezh
+      city Shchukino district August 8, 1942.
+
+
+      3. German-fascist tanks attacked
+      the second rifle battalion of our regiment. Help our heroic infantry to repel
+      the attack of the fascist armored vehicles.
+
+
+      Forces
+
+
+      4 guns
+
+
+      Enemy
+      Germans
+
+
+      2 t-2 tanks
+
+
+      2 t-3 tanks
+
+
+      1 t-4 tank
+
+
+      4.
+      during the night of August 8, our troops fought with the enemy in the areas
+      of Kletskaya, North of Kotelnikovo, Armavir and South of Kushchevskaya.
+
+
+      South
+      of Voronezh, our units that crossed the don occupied several other settlements.
+      In one of the settlements, a Hungarian infantry unit was surrounded and destroyed.
+      Captured trophies and prisoners. In the next section, our soldiers destroyed
+      a battalion of Hitlerites.'
+    Object: {fileID: 0}
 --- !u!1001 &1106462690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9660,6 +11703,165 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1106462690}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124106408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124106409}
+  - component: {fileID: 1124106410}
+  m_Layer: 0
+  m_Name: Levels_4_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124106409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124106408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1124106410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124106408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "1. \u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430.
+      \u043B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442 \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2.
+      \u0422\u0438\u043F \u043A\u0430\u0440\u0442\u0430 \u0433\u043E\u0440\u043E\u0434
+      \u0412\u043E\u0440\u043E\u043D\u0435\u0436 \u0440\u0430\u0439\u043E\u043D \u0449\u0443\u043A\u0438\u043D\u043E.6
+      \u0430\u0432\u0433\u0443\u0441\u0442\u0430 1942 \u0433\u043E\u0434\u0430\r\n\r\n3.\u0422\u043E\u0432\u0430\u0440\u0438\u0449
+      \u041F\u0435\u0442\u0440\u043E\u0432 \u0432\u044B \u0443\u0436\u0435 \u0441\u043B\u044B\u0448\u0430\u043B\u0438
+      \u043F\u0440\u0438\u043A\u0430\u0437 \u0432\u0435\u0440\u0445\u043E\u0432\u043D\u043E\u0433\u043E
+      \u0433\u043B\u0430\u0432\u043D\u043E\u043A\u043E\u043C\u0430\u043D\u0434\u0443\u044E\u0449\u0435\u0433\u043E
+      \u043E \u0442\u043E\u043C , \u0447\u0442\u043E \u043C\u044B \u043D\u0435 \u0438\u043C\u0435\u0435\u043C
+      \u043F\u0440\u0430\u0432\u0430 \u043E\u0442\u0441\u0442\u0443\u043F\u0430\u0442\u044C
+      \u0434\u0430\u043B\u044C\u0448\u0435. \u0421\u0435\u0433\u043E\u0434\u043D\u044F
+      \u043C\u044B \u0441\u043E\u0437\u0434\u0430\u0434\u0438\u043C \u043F\u043B\u0430\u0446\u0434\u0430\u0440\u043C
+      \u043D\u0430 \u043F\u0440\u0430\u0432\u043E\u043C \u0431\u0435\u0440\u0435\u0433\u0443
+      \u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0430 ,\u0438 \u0441\u0434\u0435\u043B\u0430\u0435\u043C
+      \u043F\u0435\u0440\u0432\u044B\u0439 \u0448\u0430\u043D \u043D\u0430 \u043F\u0443\u0442\u0438
+      \u043E\u0441\u0432\u043E\u0431\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u043F\u0440\u0430\u0432\u043E\u0431\u0435\u0440\u0435\u0436\u043D\u0433\u0439
+      \u0447\u0430\u0441\u0442\u0438 \u0433\u043E\u0440\u043E\u0434\u0430 \u043E\u0442
+      \u043D\u0435\u043C\u0435\u0446\u043A\u043E \u0444\u0430\u0448\u0438\u0441\u0442\u043A\u0438\u0445
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0447\u0438\u043A\u043E\u0432. \u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+      \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0430\u0442\u044C \u043E\u0433\u043D\u0435\u043C
+      \u043D\u0430\u0441\u0442\u0443\u043F\u0430\u044E\u0449\u0438\u0439 \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n2 \u0434\u043E\u0442\u0430\r\n\r\n3 \u0441\u0442\u0430\u043D\u043A\u043E\u0432\u044B\u0445
+      \u043F\u0443\u043B\u0435\u043C\u0435\u0442\u0430\r\n\r\n2 \u0431\u043B\u0438\u043D\u0434\u0430\u0436\u0430\r\n\r\n4.
+      \u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 \u043D\u043E\u0447\u0438
+      \u043D\u0430 6 \u0430\u0432\u0433\u0443\u0441\u0442\u0430 \u043D\u0430\u0448\u0438
+      \u0432\u043E\u0439\u0441\u043A\u0430 \u0432\u0435\u043B\u0438 \u0431\u043E\u0438
+      \u0441 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C \u0432
+      \u0440\u0430\u0439\u043E\u043D\u0430\u0445 \u041A\u043B\u0435\u0442\u0441\u043A\u0430\u044F,
+      \u041A\u043E\u0442\u0435\u043B\u044C\u043D\u0438\u043A\u043E\u0432\u043E, \u044E\u0436\u043D\u0435\u0435
+      \u0411\u0435\u043B\u0430\u044F \u0413\u043B\u0438\u043D\u0430 \u0438 \u044E\u0436\u043D\u0435\u0435
+      \u041A\u0443\u0449\u0435\u0432\u0441\u043A\u0430\u044F.\r\n\r\n\u041D\u0430
+      \u0434\u0440\u0443\u0433\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445
+      \u0444\u0440\u043E\u043D\u0442\u0430 \u043D\u0438\u043A\u0430\u043A\u0438\u0445
+      \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439 \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E.\r\n\r\n\u0412
+      \u0440\u0430\u0439\u043E\u043D\u0435 \u041A\u043B\u0435\u0442\u0441\u043A\u043E\u0439
+      \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430 \u043E\u0442\u0431\u0438\u043B\u0438
+      \u0440\u044F\u0434 \u0430\u0442\u0430\u043A \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430
+      \u0438 \u043F\u0440\u043E\u0447\u043D\u043E \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u043B\u0438
+      \u0437\u0430\u043D\u044F\u0442\u044B\u0435 \u0440\u0443\u0431\u0435\u0436\u0438.
+      \u0412 \u0431\u043E\u044E \u0437\u0430 \u043D\u0430\u0441\u0435\u043B\u0451\u043D\u043D\u044B\u0439
+      \u043F\u0443\u043D\u043A\u0442 \u041D-\u0441\u043A\u0430\u044F \u0447\u0430\u0441\u0442\u044C
+      \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u043B\u0430 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u0439
+      \u0442\u0430\u043D\u043A, 3 \u043E\u0440\u0443\u0434\u0438\u044F \u0438 \u0434\u043E
+      300 \u0433\u0438\u0442\u043B\u0435\u0440\u043E\u0432\u0446\u0435\u0432. \u041D\u0430\u0448\u0438
+      \u0442\u0430\u043D\u043A\u0438\u0441\u0442\u044B \u043D\u0430 \u043E\u0434\u043D\u043E\u043C
+      \u0438\u0437 \u0443\u0447\u0430\u0441\u0442\u043A\u043E\u0432 \u0441\u043E\u0432\u0435\u0440\u0448\u0438\u043B\u0438
+      \u0440\u0435\u0439\u0434 \u043F\u043E \u0442\u044B\u043B\u0430\u043C \u0432\u0440\u0430\u0433\u0430
+      \u0438 \u0440\u0430\u0437\u0433\u0440\u043E\u043C\u0438\u043B\u0438 \u0430\u0432\u0442\u043E\u043A\u043E\u043B\u043E\u043D\u043D\u0443
+      \u0441 \u0432\u043E\u0439\u0441\u043A\u0430\u043C\u0438 \u0438 \u0431\u043E\u0435\u043F\u0440\u0438\u043F\u0430\u0441\u0430\u043C\u0438
+      \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430. \u0423\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u043E
+      38 \u0430\u0432\u0442\u043E\u043C\u0430\u0448\u0438\u043D \u0438 \u043D\u0435
+      \u043C\u0435\u043D\u0435\u0435 250 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u0445
+      \u0441\u043E\u043B\u0434\u0430\u0442 \u0438 \u043E\u0444\u0438\u0446\u0435\u0440\u043E\u0432.\r\n\u0422\u0438\u043F
+      \u043C\u0438\u0441\u0441\u0438\u0438: \u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430.\r\n\r\n\u042E\u043D\u0438\u0442\u044B
+      \u043D\u0435 \u043E\u0442\u0432\u0435\u0447\u0430\u044E\u0442 \u043E\u0433\u043D\u0435\u043C."
+    Object: {fileID: 0}
+  - Language: English
+    Text: '1. Barrage. Lieutenant Petrov
+
+
+      2. map Type Voronezh city Shchukino
+      district.August 6, 1942
+
+
+      3. Comrade Petrov you have already heard the
+      order of the Supreme commander that we have no right to retreat further. Today
+      we will create a bridgehead on the right Bank of Voronezh ,and make the first
+      Shan on the way to liberate the right-Bank part of the city from the German
+      fascist invaders. It is necessary to support the advancing battalion with fire.
+
+
+      Forces
+
+
+      4
+      guns
+
+
+      Enemy Germans
+
+
+      2 pillboxes
+
+
+      3 machine guns
+
+
+      2
+      dugouts
+
+
+      4. during the night of August 6, our troops fought with the
+      enemy in the areas of Kletskaya, Kotelnikovo, South of Belaya Glina and South
+      of Kushchevskaya.
+
+
+      There were no changes in other sections of the front.
+
+
+      In
+      the area of Kletskaya, our troops repulsed a number of enemy attacks and firmly
+      held the occupied lines. In the battle for the settlement of N-skaya part destroyed
+      a German tank, 3 guns and up to 300 Hitlerites. Our tankers on one of the sections
+      raided the enemy''s rear and destroyed a convoy of enemy troops and ammunition.
+      38 vehicles and at least 250 German soldiers and officers were destroyed.
+
+      Mission
+      type: artillery Preparation.
+
+
+      Units do not return fire.'
+    Object: {fileID: 0}
 --- !u!1001 &1141474699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10328,6 +12530,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190505211}
   m_CullTransparentMesh: 0
+--- !u!1 &1194331763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1194331764}
+  - component: {fileID: 1194331765}
+  m_Layer: 0
+  m_Name: Levels_7_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1194331764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194331763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1194331765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194331763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u0440\u0438\u043A\u0440\u044B\u0442\u0438\u0435 \u0440\u0430\u0437\u0432\u0435\u0434\u043A\u0438"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Intelligence cover
+    Object: {fileID: 0}
 --- !u!1001 &1213567525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10898,6 +13151,177 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262020962}
   m_CullTransparentMesh: 0
+--- !u!1 &1272173021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272173022}
+  - component: {fileID: 1272173023}
+  m_Layer: 0
+  m_Name: campaign
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1272173022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272173021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1272173023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272173021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041A\u0430\u043C\u043F\u0430\u043D\u0438\u044F"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Campaign
+    Object: {fileID: 0}
+--- !u!1 &1275425929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275425931}
+  - component: {fileID: 1275425930}
+  m_Layer: 0
+  m_Name: LeanLocalization
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1275425930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275425929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultLanguage: 
+  DetectLanguage: 1
+  SaveLanguage: 1
+  languages:
+  - name: English
+    cultures:
+    - en
+    - en-GB
+    - en-US
+    - en-AU
+    - en-CA
+    - en-NZ
+    - en-IE
+    - en-ZA
+    - en-JM
+    - en-en029
+    - en-BZ
+    - en-BZ
+    - en-TT
+    - en-ZW
+    - en-PH
+  - name: Russian
+    cultures:
+    - ru
+    - ru-RU
+  prefabs:
+  - Root: {fileID: 102900000, guid: 5210830fed581a44387794143a1d423f, type: 3}
+    sources: []
+--- !u!4 &1275425931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275425929}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1341.0249, y: -832.7089, z: 253.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1272173022}
+  - {fileID: 1447963391}
+  - {fileID: 1557624468}
+  - {fileID: 1285953202}
+  - {fileID: 83500636}
+  - {fileID: 302203144}
+  - {fileID: 1903429304}
+  - {fileID: 79093845}
+  - {fileID: 1565892365}
+  - {fileID: 1330314225}
+  - {fileID: 574814214}
+  - {fileID: 653731449}
+  - {fileID: 1061631773}
+  - {fileID: 2100888807}
+  - {fileID: 291786440}
+  - {fileID: 990979514}
+  - {fileID: 1636666099}
+  - {fileID: 1634671}
+  - {fileID: 1333896150}
+  - {fileID: 511717449}
+  - {fileID: 2115794146}
+  - {fileID: 1468048952}
+  - {fileID: 1124106409}
+  - {fileID: 809794355}
+  - {fileID: 1364810904}
+  - {fileID: 279073873}
+  - {fileID: 1104126291}
+  - {fileID: 1194331764}
+  - {fileID: 611114951}
+  - {fileID: 833152850}
+  - {fileID: 113150047}
+  - {fileID: 749828562}
+  - {fileID: 1029190457}
+  - {fileID: 1355538533}
+  - {fileID: 1507559808}
+  - {fileID: 621986481}
+  - {fileID: 473431486}
+  - {fileID: 1769745029}
+  - {fileID: 225520965}
+  - {fileID: 203867541}
+  - {fileID: 1761791902}
+  - {fileID: 764102610}
+  - {fileID: 1647544899}
+  - {fileID: 1892533550}
+  - {fileID: 742635676}
+  - {fileID: 1443517564}
+  - {fileID: 173299440}
+  - {fileID: 598596767}
+  - {fileID: 1821829564}
+  m_Father: {fileID: 202045464}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1282938648
 GameObject:
   m_ObjectHideFlags: 0
@@ -11014,6 +13438,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2199010e2b628458fbf9e09aabf5c911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1285953201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285953202}
+  - component: {fileID: 1285953203}
+  m_Layer: 0
+  m_Name: Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1285953202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285953201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1285953203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285953201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041C\u0435\u043D\u044E"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Menu
+    Object: {fileID: 0}
 --- !u!1001 &1291482633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11159,6 +13634,7 @@ GameObject:
   - component: {fileID: 1304997137}
   - component: {fileID: 1304997139}
   - component: {fileID: 1304997138}
+  - component: {fileID: 1304997140}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -11216,7 +13692,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0410\u0440\u0441\u0435\u043D\u0430\u043B"
+  m_Text: Arsenal
 --- !u!222 &1304997139
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11225,6 +13701,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304997136}
   m_CullTransparentMesh: 0
+--- !u!114 &1304997140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304997136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: arsenal
+  FallbackText: "\u0410\u0440\u0441\u0435\u043D\u0430\u043B"
 --- !u!1001 &1305823860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11499,6 +13989,58 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1320675699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1330314224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1330314225}
+  - component: {fileID: 1330314226}
+  m_Layer: 0
+  m_Name: Ability_AdditionalShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1330314225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330314224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1330314226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330314224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+      \u0432\u044B\u0441\u0442\u0440\u0435\u043B"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Additional shot
+    Object: {fileID: 0}
 --- !u!1001 &1333198270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11578,6 +14120,98 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1333198270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1333896149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333896150}
+  - component: {fileID: 1333896151}
+  m_Layer: 0
+  m_Name: Levels_2_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1333896150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333896149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333896151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333896149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 2 1. \u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u0435
+      \u0431\u043E\u0435\u0432 \u0437\u0430 \u0433\u043E\u0440\u043E\u0434. \u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430.
+      \u041C\u043B\u0430\u0434\u0448\u0438\u0439 \u043B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432. 2.\u0422\u0438\u043F \u043A\u0430\u0440\u0442\u044B
+      \u0440\u0443\u0441\u0441\u043A\u0430\u044F \u0434\u0435\u0440\u0435\u0432\u043D\u044F,
+      \u043B\u0435\u0442\u043E 6 \u0438\u044E\u043B\u044F 1942 \u0433\u043E\u0434\u0430
+      \u0443\u0442\u0440\u043E. 3.\u0421\u0432\u043E\u0434\u043D\u044B\u0439 \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D
+      \u0432 \u0445\u043E\u0434\u0435 \u0441\u0442\u0440\u0435\u043C\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439
+      \u0430\u0442\u0430\u043A\u0438 \u043E\u0441\u0432\u043E\u0431\u043E\u0434\u0438\u043B
+      \u043E\u0442 \u0444\u0430\u0448\u0438\u0441\u0442\u043E\u0432 \u0431\u043E\u043B\u044C\u0448\u0443\u044E
+      \u0447\u0430\u0441\u0442\u044C \u0433\u043E\u0440\u043E\u0434\u0430. \u0422\u0435\u043F\u0435\u0440\u044C
+      \u043D\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0438\u0442\u044C \u043F\u0440\u043E\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439
+      \u0440\u044B\u043D\u043E\u043A, \u0433\u0434\u0435 \u043F\u043E \u0434\u0430\u043D\u043D\u044B\u043C
+      \u043C\u0435\u0441\u0442\u043D\u044B\u0445 \u0436\u0438\u0442\u0435\u043B\u0435\u0439
+      \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F \u0441\u043A\u043B\u0430\u0434\u044B
+      \u0441 \u043F\u0440\u043E\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0438\u044F\u043C\u0438.
+      \u0421\u0438\u043B\u044B 2 \u043E\u0440\u0443\u0434\u0438\u044F \u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u0420\u0443\u043C\u044B\u043D\u044B 2 \u043F\u0443\u043B\u0435\u043C\u0435\u0442\u0430
+      1 \u0434\u043E\u0442 1 \u043F\u043E\u0434\u0431\u0438\u0442\u044B\u0439 \u0442\u0430\u043D\u043A
+      T-1 (\u043E\u043D \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F,
+      \u043D\u043E \u043C\u043E\u0436\u0435\u0442 \u043E\u0431\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0430\u0442\u044C
+      \u043F\u0435\u0445\u043E\u0442\u0443). 4. \u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      6 \u0438\u044E\u043B\u044F \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430
+      \u0432\u0435\u043B\u0438 \u0436\u0435\u0441\u0442\u043E\u043A\u0438\u0435 \u0431\u043E\u0438
+      \u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435 \u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0430
+      \u0438 \u044E\u0433\u043E-\u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435
+      \u0421\u0442\u0430\u0440\u044B\u0439 \u041E\u0441\u043A\u043E\u043B. \u041D\u0430\u0448\u0438
+      \u0432\u043E\u0439\u0441\u043A\u0430 \u043E\u0441\u0442\u0430\u0432\u0438\u043B\u0438
+      \u0440\u044F\u0434 \u043D\u0430\u0441\u0435\u043B\u0435\u043D\u043D\u044B\u0445
+      \u043F\u0443\u043D\u043A\u0442\u043E\u0432. \u041D\u0430 \u0434\u0440\u0443\u0433\u0438\u0445
+      \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445 \u0444\u0440\u043E\u043D\u0442\u0430
+      \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439
+      \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E."
+    Object: {fileID: 0}
+  - Language: English
+    Text: Task 2 1. The continuation of the battle for the city. Artillery preparation.
+      Second Lieutenant Petrov. 2. map Type Russian village, summer July 6, 1942
+      morning. 3. the Combined battalion during a rapid attack liberated most of
+      the city from the Nazis. Now we need to capture the food market, where according
+      to local residents there are warehouses with food. Forces 2 guns Enemy Romanians
+      2 machine guns 1 pillbox 1 damaged T1 tank (it can not move, but can fire at
+      the infantry). 4. During the July 6, our troops fought fierce battles West
+      of Voronezh and South-West of Stary Oskol. Our troops left a number of settlements.
+      There were no significant changes in other sections of the front.
+    Object: {fileID: 0}
 --- !u!1 &1343101655
 GameObject:
   m_ObjectHideFlags: 0
@@ -11644,7 +14278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1343159364
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11864,6 +14498,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1354174081}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1355538532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355538533}
+  - component: {fileID: 1355538534}
+  m_Layer: 0
+  m_Name: Levels_10_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1355538533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355538532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1355538534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355538532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0412\u0440\u0435\u043C\u044F \u043D\u0430\u0434\u0435\u0436\u0434\u044B"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Time of hope
+    Object: {fileID: 0}
 --- !u!1001 &1364717891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11951,6 +14636,131 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1364717891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1364810903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364810904}
+  - component: {fileID: 1364810905}
+  m_Layer: 0
+  m_Name: Levels_5_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1364810904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364810903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1364810905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364810903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 5\r\n\r\n1. \u0410\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0439\u0441\u043A\u0430\u044F
+      \u0434\u0443\u044D\u043B\u044C.\u041B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442\r\n\r\n2.
+      \u0422\u0438\u043F \u043A\u0430\u0440\u0442\u0430 \u0433\u043E\u0440\u043E\u0434
+      \u0412\u043E\u0440\u043E\u043D\u0435\u0436 \u0440\u0430\u0439\u043E\u043D \u0429\u0443\u043A\u0438\u043D\u043E.7
+      \u0430\u0432\u0433\u0443\u0441\u0442\u0430 1942 \u0433\u043E\u0434\u0430.\r\n\r\n3.\u0422\u043E\u0432\u0430\u0440\u0438\u0449
+      \u041F\u0435\u0442\u0440\u043E\u0432 \u0432\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+      \u043F\u043E\u0434\u0430\u0432\u0438\u0442\u044C \u043E\u0433\u043D\u0435\u043C
+      \u0447\u0435\u0442\u044B\u0440\u0435 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u0445
+      \u043F\u0440\u043E\u0442\u0438\u0432\u043E\u0442\u0430\u043D\u043A\u043E\u0432\u044B\u0445
+      \u043E\u0440\u0443\u0434\u0438\u044F,\u0447\u0442\u043E\u0431\u044B \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0442\u044C
+      \u043F\u0440\u043E\u0440\u044B\u0432 \u043D\u0430 \u043F\u043B\u0430\u0446\u0434\u0430\u0440\u043C
+      \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D\u0430 \u043D\u0430\u0448\u0438\u0445
+      \u0442\u0430\u043D\u043A\u043E\u0432.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n4 \u043F\u0440\u043E\u0442\u0438\u0432\u043E\u0442\u0430\u043D\u043A\u043E\u0432\u044B\u0445
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n4.\u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      7 \u0430\u0432\u0433\u0443\u0441\u0442\u0430 \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430
+      \u0432\u0435\u043B\u0438 \u043E\u0436\u0435\u0441\u0442\u043E\u0447\u0451\u043D\u043D\u044B\u0435
+      \u0431\u043E\u0438 \u0432 \u0440\u0430\u0439\u043E\u043D\u0430\u0445 \u041A\u043B\u0435\u0442\u0441\u043A\u0430\u044F,
+      \u0441\u0435\u0432\u0435\u0440\u043D\u0435\u0435 \u041A\u043E\u0442\u0435\u043B\u044C\u043D\u0438\u043A\u043E\u0432\u043E,
+      \u0410\u0440\u043C\u0430\u0432\u0438\u0440 \u0438 \u044E\u0436\u043D\u0435\u0435
+      \u041A\u0443\u0449\u0435\u0432\u0441\u043A\u0430\u044F.\r\n\r\n\u041D\u0430
+      \u0434\u0440\u0443\u0433\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445
+      \u0444\u0440\u043E\u043D\u0442\u0430 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445
+      \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439 \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E.\r\n\r\n\u041D\u0430\u0448
+      \u043A\u043E\u0440\u0430\u0431\u043B\u044C \u0432 \u0411\u0430\u043B\u0442\u0438\u0439\u0441\u043A\u043E\u043C
+      \u043C\u043E\u0440\u0435 \u043F\u043E\u0442\u043E\u043F\u0438\u043B \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442
+      \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430 \u0432\u043E\u0434\u043E\u0438\u0437\u043C\u0435\u0449\u0435\u043D\u0438\u0435\u043C
+      \u0432 10.000 \u0442\u043E\u043D\u043D.\r\n\u0422\u0438\u043F \u043C\u0438\u0441\u0441\u0438\u0438:
+      \u0410\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0439\u0441\u043A\u0430\u044F
+      \u0434\u0443\u044D\u043B\u044C\r\n\u042E\u043D\u0438\u0442\u044B \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430
+      \u0441\u0442\u0440\u0435\u043B\u044F\u044E\u0442 \u0432 \u043E\u0442\u0432\u0435\u0442"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 5
+
+
+      1. Artillery duel.Lieutenant
+
+
+      2. Type the map of
+      the city of Voronezh district Shchukino.August 7, 1942.
+
+
+      3. Comrade
+      Petrov you need to suppress four German anti-tank guns with fire in order to
+      ensure a breakthrough to the bridgehead of a battalion of our tanks.
+
+
+      Forces
+
+
+      4
+      guns
+
+
+      Enemy Germans
+
+
+      4 anti-tank guns
+
+
+      4. during August
+      7, our troops fought fierce battles in the areas of Kletskaya, North of Kotelnikovo,
+      Armavir, and South of Kushchevskaya.
+
+
+      There were no significant changes
+      in other sections of the front.
+
+
+      Our ship in the Baltic sea sank an
+      enemy transport of 10,000 tons.
+
+      Mission type: Artillery duel
+
+      Enemy
+      units fire back'
+    Object: {fileID: 0}
 --- !u!1 &1372319483
 GameObject:
   m_ObjectHideFlags: 0
@@ -12590,6 +15400,108 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1415108859}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1443517563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1443517564}
+  - component: {fileID: 1443517565}
+  m_Layer: 0
+  m_Name: Menu_Win
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1443517564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443517563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1443517565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443517563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u043E\u0431\u0435\u0434\u0430!"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Win!
+    Object: {fileID: 0}
+--- !u!1 &1447963390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447963391}
+  - component: {fileID: 1447963392}
+  m_Layer: 0
+  m_Name: arsenal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447963391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447963390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447963392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447963390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0410\u0440\u0441\u0435\u043D\u0430\u043B"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Arsenal
+    Object: {fileID: 0}
 --- !u!1001 &1462471426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12657,6 +15569,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1462471426}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1468048951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468048952}
+  - component: {fileID: 1468048953}
+  m_Layer: 0
+  m_Name: Levels_4_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468048952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468048951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468048953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468048951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041D\u0438 \u0448\u0430\u0433\u0443 \u043D\u0430\u0437\u0430\u0434"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Not a step back
+    Object: {fileID: 0}
 --- !u!1 &1479146880
 GameObject:
   m_ObjectHideFlags: 0
@@ -12914,6 +15877,166 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1507559807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507559808}
+  - component: {fileID: 1507559809}
+  m_Layer: 0
+  m_Name: Levels_10_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1507559808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507559807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507559809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507559807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 10\r\n\r\n1 \u0410\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0439\u0441\u043A\u0430\u044F
+      \u0434\u0443\u044D\u043B\u044C. \u0421\u0442\u0430\u0440\u0448\u0438\u0439
+      \u041B\u0435\u0439\u0442\u0435\u043D\u0442\u0430\u0442 \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2.
+      \u0412\u043E\u0440\u043E\u043D\u0435\u0436 \u0429\u0443\u043A\u0438\u043D\u0441\u043A\u0438\u0439
+      \u0440\u0430\u0439\u043E\u043D. \u0422\u0438\u043F \u043A\u0430\u0440\u0442\u044B
+      \u0433\u043E\u0440\u043E\u0434 \u0432\u043E\u0440\u043E\u043D\u0435\u0436 \u0437\u0438\u043C\u0430.
+      24 \u043D\u043E\u044F\u0431\u0440\u044F 1942.\r\n\r\n3.\u041D\u0430\u0448\u0438
+      \u0432\u043E\u0439\u0441\u043A\u0430 \u043D\u0430 \u0441\u0442\u0430\u043B\u0438\u043D\u0433\u0440\u0430\u0434\u0441\u043A\u043E\u043C
+      \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u044E\u0442
+      \u0443\u0441\u043F\u0435\u0448\u043D\u043E \u043F\u0440\u043E\u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F
+      \u0432\u043F\u0435\u0440\u0435\u0434,\u0430 \u0432 \u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0435
+      \u043D\u0435\u043C\u0446\u044B \u043F\u044B\u0442\u0430\u044E\u0442\u0441\u044F
+      \u0438\u0437\u043E\u0431\u0440\u0430\u0437\u0438\u0442\u044C \u043D\u0430\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u0435.
+      \u0422\u043E\u0432\u0430\u0440\u0438\u0449 \u041F\u0435\u0442\u0440\u043E\u0432
+      \u0440\u043E\u0434\u0438\u043D\u0430 \u043E\u0446\u0435\u043D\u0438\u043B\u0430
+      \u0432\u0430\u0448 \u0433\u0435\u0440\u043E\u0438\u0437\u043C \u043F\u0440\u0438
+      \u0437\u0430\u0449\u0438\u0442\u0435 \u043F\u043B\u0430\u0446\u0434\u0430\u0440\u043C\u0430:
+      \u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432\u044B \u043D\u0430\u0433\u0440\u0430\u0436\u0434\u0435\u043D\u044B
+      \u043E\u0440\u0434\u0435\u043D\u043E\u043C \u043A\u0440\u0430\u0441\u043D\u043E\u0439
+      \u0437\u0432\u0435\u0437\u0434\u044B. \u0412 \u0442\u0440\u0443\u0434\u043D\u044B\u0439
+      \u043C\u043E\u043C\u0435\u043D\u0442 \u0434\u043B\u044F \u043D\u0430\u0448\u0435\u0439
+      \u0440\u043E\u0434\u0438\u043D\u044B \u043F\u0440\u0438\u043C\u0438\u0442\u0435
+      \u043D\u0430\u0433\u0440\u0430\u0434\u0443, \u043D\u0430\u0434\u0435\u044E\u0441\u044C
+      \u0431\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u043D\u043E\u0441\u0442\u044C
+      \u0440\u043E\u0434\u0438\u043D\u044B \u0432\u043E\u0434\u0443\u0448\u0435\u0432\u0438\u0442
+      \u0432\u0430\u0441 \u043D\u0430 \u043D\u043E\u0432\u044B\u0435 \u043F\u043E\u0434\u0432\u0438\u0433\u0438.
+      \u0412\u044B \u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432 \u043A\u0430\u043A \u043A\u0430\u043D\u0434\u0438\u0434\u0430\u0442
+      \u0432 \u0447\u043B\u0435\u043D\u044B \u041A\u043E\u043C\u0443\u043D\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0439
+      \u043F\u0430\u0440\u0442\u0438\u0438 \u0438 \u0431\u043E\u0435\u0432\u043E\u0439
+      \u043E\u0444\u0438\u0446\u0435\u0440 \u0434\u043E\u043B\u0436\u043D\u044B \u043F\u043E\u043D\u0438\u043C\u0430\u0442\u044C
+      \u043D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043E\u0441\u043B\u0430\u0431\u043B\u0435\u043D\u044B
+      \u0441\u0435\u0439\u0447\u0430\u0441 \u043D\u0435\u043C\u0446\u044B. \u0418\u0445
+      \u043F\u043E\u043F\u044B\u0442\u043A\u0438 \u043D\u0430\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u044F
+      \u043D\u0435 \u043C\u043E\u0433\u0443\u0442 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C
+      \u0443\u0433\u0440\u043E\u0437\u044B. \u0420\u0430\u0441\u0441\u0435\u0439\u0442\u0435
+      \u0430\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0439\u0441\u043A\u0443\u044E
+      \u0431\u0430\u0442\u0430\u0440\u0435\u044E, \u043A\u043E\u0442\u043E\u0440\u0430\u044F
+      \u043F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u043E\u0431\u0441\u0442\u0440\u0435\u043B\u0438\u0432\u0430\u0442\u044C
+      \u043D\u0430\u0448\u0438 \u043F\u043E\u0437\u0438\u0446\u0438\u0438.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u041D\u0435\u043C\u0446\u044B\r\n\r\n4 \u0434\u0438\u0432\u0438\u0437\u0438\u043E\u043D\u043D\u044B\u0445
+      \u043E\u0440\u0443\u0434\u0438\u044F.\r\n\r\n4.\u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      24 \u043D\u043E\u044F\u0431\u0440\u044F \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0438 \u0432\u0435\u0441\u0442\u0438
+      \u0443\u0441\u043F\u0435\u0448\u043D\u043E\u0435 \u043D\u0430\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u0435
+      \u0441 \u0441\u0435\u0432\u0435\u0440\u043E-\u0437\u0430\u043F\u0430\u0434\u0430
+      \u0438 \u0441 \u044E\u0433\u0430 \u043E\u0442 \u0433\u043E\u0440\u043E\u0434\u0430
+      \u0421\u0442\u0430\u043B\u0438\u043D\u0433\u0440\u0430\u0434\u0430 \u043D\u0430
+      \u043F\u0440\u0435\u0436\u043D\u0438\u0445 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F\u0445.\u0422\u043E\u0432\u0430\u0440\u0438\u0449
+      \u041F\u0435\u0442\u0440\u043E\u0432 \u0440\u043E\u0434\u0438\u043D\u0430 \u043E\u0446\u0435\u043D\u0438\u043B\u0430
+      \u0432\u0430\u0448 \u0433\u0435\u0440\u043E\u0438\u0437\u043C \u043F\u0440\u0438
+      \u0437\u0430\u0449\u0438\u0442\u0435 \u043F\u043B\u0430\u0446\u0434\u0430\u0440\u043C\u0430
+      \u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432\u044B \u043D\u0430\u0433\u0440\u0430\u0436\u0434\u0435\u043D\u044B
+      \u043E\u0440\u0434\u0435\u043D\u043E\u043C \u043A\u0440\u0430\u0441\u043D\u043E\u0439
+      \u0437\u0432\u0435\u0437\u0434\u044B. \u0412 \u0442\u0440\u0443\u0434\u043D\u044B\u0439
+      \u043C\u043E\u043C\u0435\u043D\u0442 \u0434\u043B\u044F \u043D\u0430\u0448\u0435\u0439
+      \u0440\u043E\u0434\u0438\u043D\u044B \u043F\u0440\u0438\u043C\u0438\u0442\u0435
+      \u043D\u0430\u0433\u0440\u0430\u0434\u0443, \u043D\u0430\u0434\u0435\u044E\u0441\u044C
+      \u0431\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u043D\u043E\u0441\u0442\u044C
+      \u0440\u043E\u0434\u0438\u043D\u044B \u0432\u043E\u043E\u0434\u0443\u0448\u0435\u0432\u0438\u0442
+      \u0432\u0430\u0441 \u043D\u0430 \u043D\u043E\u0432\u044B\u0435 \u043F\u043E\u0434\u0432\u0438\u0433\u0438.
+      \r\n\u0422\u0438\u043F \u043C\u0438\u0441\u0441\u0438\u0438: \u0410\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0439\u0441\u043A\u0430\u044F
+      \u0434\u0443\u044D\u043B\u044C\r\n\u042E\u043D\u0438\u0442\u044B \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430
+      \u0441\u0442\u0440\u0435\u043B\u044F\u044E\u0442 \u0432 \u043E\u0442\u0432\u0435\u0442"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 10
+
+
+      1 Artillery duel. Senior Leitentat Petrov
+
+
+      2. Voronezh
+      Shchukinsky district. Map type Voronezh winter city. November 24, 1942.
+
+
+      3.
+      Our troops in the Stalingrad direction continue to advance successfully, and
+      in Voronezh the Germans are trying to portray an offensive. Comrade Petrov
+      the Motherland appreciated your heroism in defending the bridgehead: today
+      you are awarded the order of the red star. At a difficult time for our country,
+      accept the award, I hope the gratitude of the Motherland will inspire you to
+      new feats. You Senior Lieutenant Petrov as a candidate member of the Communist
+      party and a combat officer should understand how weakened the Germans are now.
+      Their attempts to attack cannot pose a threat. Disperse the artillery battery
+      that is trying to bombard our positions.
+
+
+      Forces
+
+
+      4 guns
+
+
+      Enemy
+      Germans
+
+
+      4 divisional guns.
+
+
+      4. during November 24, our troops
+      continued to conduct a successful offensive from the North-West and from the
+      South of the city of Stalingrad in the same directions.Comrade Petrov the Motherland
+      appreciated your heroism in defending the bridgehead today you were awarded
+      the order of the red star. At a difficult time for our country, accept the
+      award, I hope the gratitude of the Motherland will inspire you to new feats.
+
+      Mission
+      type: Artillery duel
+
+      Enemy units fire back'
+    Object: {fileID: 0}
 --- !u!1001 &1522379447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13406,6 +16529,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1554083077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1557624467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557624468}
+  - component: {fileID: 1557624469}
+  m_Layer: 0
+  m_Name: settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557624468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557624467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557624469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557624467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Settings
+    Object: {fileID: 0}
 --- !u!1001 &1557962208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13475,6 +16649,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a84952d56b1c284eb64944b8dbf9181, type: 3}
+--- !u!1 &1565892364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565892365}
+  - component: {fileID: 1565892366}
+  m_Layer: 0
+  m_Name: Shop_Buy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565892365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565892364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565892366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565892364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041F\u043E\u043A\u0443\u043F\u043A\u0430"
+    Object: {fileID: 0}
+  - Language: English
+    Text: buy abilities
+    Object: {fileID: 0}
 --- !u!1001 &1567546665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13609,6 +16834,202 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1606091347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1636666098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1636666099}
+  - component: {fileID: 1636666100}
+  m_Layer: 0
+  m_Name: Levels_1_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1636666099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636666098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1636666100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636666098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "1. \u0411\u043E\u0438 \u0437\u0430 \u0441\u0435\u043B\u043E \u041A\u0440\u0430\u0441\u043D\u043E\u0432\u043A\u0430.
+      \u0428\u0442\u0443\u0440\u043C\n\u0437\u0434\u0430\u043D\u0438\u044F \u0433\u043E\u0440\u043E\u0434\u0441\u043A\u043E\u0439\n\u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438.\u0410\u0440\u0442\u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430.\n\u041C\u043B\u0430\u0434\u0448\u0438\u0439
+      \u043B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442 \u041F\u0435\u0442\u0440\u043E\u0432\n2.
+      5 \u0438\u044E\u043B\u044F 1942 \u0433\u043E\u0434\u0430 \u0432\u0435\u0447\u0435\u0440.
+      \u0422\u0438\u043F \u043A\u0430\u0440\u0442\u044B\n\u0440\u0443\u0441\u0441\u043A\u0430\u044F
+      \u0434\u0435\u0440\u0435\u0432\u043D\u044F, \u043B\u0435\u0442\u043E.\n3.\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435:
+      \u041F\u043E\u0434\u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u044F
+      \u043E\u0442\u0441\u0442\u0443\u043F\u0430\u044E\u0442\n\u043F\u043E\u0434
+      \u0443\u0433\u0440\u043E\u0437\u043E\u0439 \u043E\u043A\u0440\u0443\u0436\u0435\u043D\u0438\u044F.
+      \u0414\u043B\u044F \u043F\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F\n\u0437\u0430\u043F\u0430\u0441\u043E\u0432
+      \u043F\u0440\u043E\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0438\u044F
+      \u0438\n\u043C\u0435\u0434\u0438\u043A\u0430\u043C\u0435\u043D\u0442\u043E\u0432,\u043A\u043E\u043C\u0430\u043D\u0434\u043E\u0432\u0430\u043D\u0438\u0435
+      \u0434\u0438\u0432\u0438\u0437\u0438\u0438\n\u0432\u044B\u0434\u0435\u043B\u0438\u043B\u043E
+      \u0441\u0432\u043E\u0434\u043D\u044B\u0439 \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D,
+      \u043A\u043E\u0442\u043E\u0440\u044B\u0439\n\u0434\u043E\u043B\u0436\u0435\u043D
+      \u0448\u0442\u0443\u0440\u043C\u043E\u043C \u0432\u0437\u044F\u0442\u044C \u0441\u0435\u043B\u043E
+      \u041A\u0440\u0430\u0441\u043D\u043E\u0432\u043A\u0430.\n\u0412\u043E\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0432\u0448\u0438\u0441\u044C
+      \u0432\u043D\u0435\u0437\u0430\u043F\u043D\u043E\u0441\u0442\u044C\u044E\n\u0441\u0432\u043E\u0434\u043D\u044B\u0439
+      \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D \u043F\u0440\u043E\u0440\u0432\u0430\u043B\u0441\u044F
+      \u043A \u0446\u0435\u043D\u0442\u0440\u0443\n\u041A\u0440\u0430\u0441\u043D\u043E\u0432\u043A\u0438
+      , \u0433\u0434\u0435 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
+      \u0440\u0430\u0439\u043E\u043D\u043D\u0430\u044F\n\u0431\u043E\u043B\u044C\u043D\u0438\u0446\u0430,
+      \u043D\u043E \u0431\u043E\u0439\u0446\u044B \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043B\u0438\u0441\u044C
+      \u043F\u043E\u0434\n\u043E\u0433\u043D\u0435\u043C \u0434\u0432\u0443\u0445
+      \u043F\u0443\u043B\u0435\u043C\u0435\u0442\u043E\u0432. \u0422\u043E\u0432\u0430\u0440\u0438\u0449
+      \u041F\u0435\u0442\u0440\u043E\u0432\n\u0432\u043E\u0437\u044C\u043C\u0438\u0442\u0435
+      \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435 \u043E\u0441\u0442\u0430\u0432\u0448\u0435\u0435\u0441\u044F
+      \u0432\n\u043F\u043E\u043B\u043A\u0443 \u043E\u0440\u0443\u0434\u0438\u0435
+      \u0438 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0442\u0435 \u041F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0442\u0435\n\u0438\u0445
+      \u043E\u0433\u043D\u0435\u043C.\n\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+      \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u044C 2 \u0441\u0442\u0440\u0435\u043B\u043A\u043E\u0432\u044B\u0445\n\u043F\u0443\u043B\u0435\u043C\u0435\u0442\u0430
+      (\u0420\u0443\u043C\u044B\u043D\u044B)\n\u0421\u0438\u043B\u044B\n1 \u043E\u0440\u0443\u0434\u0438\u0435\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\n2
+      \u043F\u0443\u043B\u0435\u043C\u0435\u0442\u0430\n4. \u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      5 \u0438\u044E\u043B\u044F \u043D\u0430 \u041A\u0443\u0440\u0441\u043A\u043E\u043C\n\u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438
+      \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430 \u0432\u0435\u043B\u0438
+      \u0431\u043E\u0438 \u0441\n\u0442\u0430\u043D\u043A\u0430\u043C\u0438 \u0438
+      \u043F\u0435\u0445\u043E\u0442\u043E\u0439 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430.\n\u041D\u0430
+      \u0411\u0435\u043B\u0433\u043E\u0440\u043E\u0434\u0441\u043A\u043E\u043C \u0438
+      \u0412\u043E\u043B\u0447\u0430\u043D\u0441\u043A\u043E\u043C\n\u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F\u0445
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0438\u0441\u044C \u0443\u043F\u043E\u0440\u043D\u044B\u0435\n\u0431\u043E\u0438
+      \u0441 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C.\n\u041D\u0430
+      \u0434\u0440\u0443\u0433\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445
+      \u0444\u0440\u043E\u043D\u0442\u0430\n\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445
+      \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439 \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E.\n\u0417\u0430
+      \u0438\u0441\u0442\u0435\u043A\u0448\u0443\u044E \u043D\u0435\u0434\u0435\u043B\u044E
+      \u0441 28 \u0438\u044E\u043D\u044F \u043F\u043E 4\n\u0438\u044E\u043B\u044F
+      \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0432
+      \u0432\u043E\u0437\u0434\u0443\u0448\u043D\u044B\u0445 \u0431\u043E\u044F\u0445,\n\u043D\u0430
+      \u0430\u044D\u0440\u043E\u0434\u0440\u043E\u043C\u0430\u0445 \u0438 \u043E\u0433\u043D\u0435\u043C
+      \u0437\u0435\u043D\u0438\u0442\u043D\u043E\u0439\n\u0430\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0438
+      \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u043E 380 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u0445\n\u0441\u0430\u043C\u043E\u043B\u0435\u0442\u043E\u0432.
+      \u041D\u0430\u0448\u0438 \u043F\u043E\u0442\u0435\u0440\u0438 \u0437\u0430
+      \u044D\u0442\u043E \u0436\u0435 \u0432\u0440\u0435\u043C\u044F 187 \u0441\u0430\u043C\u043E\u043B\u0435\u0442\u043E\u0432."
+    Object: {fileID: 0}
+  - Language: English
+    Text: '1. Fighting for the village of Krasnovka. Storm
+
+      the building of
+      the city
+
+      administration.Artillery preparation.
+
+      Second Lieutenant
+      Petrov
+
+      2. July 5, 1942 evening. Map type
+
+      Russian village, summer.
+
+      3.
+      Description: Units are retreating
+
+      under threat of encirclement. To top
+      up
+
+      food stocks and
+
+      medical supplies, division command
+
+      allocated
+      a composite battalion that
+
+      must storm the village of Krasnovka.
+
+      Taking
+      advantage of the suddenness
+
+      the composite battalion broke through to
+      the center
+
+      Of krasnivka , where the district
+
+      hospital, but the
+      soldiers stopped under
+
+      fire of two machine guns. Comrade Petrov
+
+      take
+      the only one left in the
+
+      to the gun shelf and support Support
+
+      their
+      fire.
+
+      It is necessary to destroy 2 shooters
+
+      machine gun (Romanians)
+
+      Forces
+
+      1
+      gun
+
+      Enemy
+
+      2 machine guns
+
+      4. during July 5 in Kursk
+
+      the
+      direction our troops were fighting with
+
+      enemy tanks and infantry.
+
+      In
+      Belgorod and Volchansk
+
+      the efforts continued to be persistent
+
+      fights
+      with the enemy.
+
+      On other sections of the front
+
+      there were no
+      significant changes.
+
+      For the past week from June 28 to 4
+
+      July
+      inclusive in air battles,
+
+      on airfields and anti-aircraft fire
+
+      artillery
+      destroyed 380 German
+
+      planes. Our losses during this time are 187 aircraft.'
+    Object: {fileID: 0}
 --- !u!1 &1638229392
 GameObject:
   m_ObjectHideFlags: 0
@@ -13827,6 +17248,141 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 0
+--- !u!1 &1647544898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647544899}
+  - component: {fileID: 1647544900}
+  m_Layer: 0
+  m_Name: Levels_14_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1647544899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647544898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647544900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647544898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 14\r\n\r\n1.13 \u0444\u0435\u0432\u0440\u0430\u043B\u044F
+      \u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u043B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432  \r\n\r\n2.\u041A\u0430\u0440\u0442\u0430-
+      \u041F\u043E\u043B\u0435 \u0437\u0438\u043C\u0430. \u0422\u0430\u043D\u043A\u043E\u0432\u0430\u044F
+      \u0430\u0442\u0430\u043A\u0430. 13 \u0444\u0435\u0432\u0440\u0430\u043B\u044F.\r\n\r\n\u0422\u043E\u0432\u0430\u0440\u0438\u0449
+      \u041F\u0435\u0442\u0440\u043E\u0432. \u041D\u0430\u043C \u043F\u0440\u0435\u0434\u0441\u0442\u043E\u0438\u0442
+      \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439 \u0431\u043E\u0439 \u0441
+      \u043E\u0441\u0442\u0430\u0442\u043A\u0430\u043C\u0438 \u043F\u0440\u043E\u0440\u044B\u0432\u0430\u044E\u0449\u0438\u0441\u044F
+      \u043D\u0435\u043C\u0446\u0435\u0432, \u0441\u043E\u0431\u0435\u0440\u0438\u0442\u0435
+      \u0432\u043E\u043B\u044E \u0432 \u043A\u0443\u043B\u0430\u043A \u0438 \u043E\u0442\u0431\u0435\u0439\u0442\u0435
+      \u0430\u0442\u0430\u043A\u0443 \u043E\u0441\u0442\u0430\u0442\u043A\u043E\u0432
+      \u0442\u0430\u043D\u043A\u043E\u0432\u043E\u0433\u043E \u0431\u0430\u0442\u0430\u043B\u044C\u043E\u043D\u0430.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u043D\u0435\u043C\u0446\u044B, \u0432\u0435\u043D\u0433\u0440\u044B.\r\n\r\n3
+      \u0442\u0430\u043D\u043A\u0430 \u0422-4 (\u043D\u0435\u043C\u0446\u044B)\r\n\r\n2
+      \u043B\u0435\u0433\u043A\u0438\u0445 \u0442\u0430\u043D\u043A\u0430 \u041C
+      38 \u0422\u043E\u043B\u0434\u0438 (\u0432\u0435\u043D\u0433\u0440\u044B)\r\n\r\n1
+      \u0422\u0430\u043D\u043A \u0422-1 (\u043D\u0435\u043C\u0446\u044B)\r\n\r\n1
+      \u0422\u0430\u043D\u043A-\u0422-2 (\u0432\u0435\u043D\u0433\u0440\u044B)\r\n\r\n2
+      \u0422\u0430\u043D\u043A 35(t) (\u043D\u0435\u043C\u0446\u044B)\r\n\r\n4.\u0412
+      \u0442\u0435\u0447\u0435\u043D\u0438\u0435 \u043D\u043E\u0447\u0438 \u043D\u0430
+      13 \u0444\u0435\u0432\u0440\u0430\u043B\u044F \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430
+      \u0432\u0435\u043B\u0438 \u043D\u0430\u0441\u0442\u0443\u043F\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435
+      \u0431\u043E\u0438 \u043D\u0430 \u043F\u0440\u0435\u0436\u043D\u0438\u0445
+      \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F\u0445.\r\n\r\n\u0411\u043B\u0435\u0441\u0442\u044F\u0449\u0435
+      \u0442\u043E\u0432\u0430\u0440\u0438\u0449 \u041F\u0435\u0442\u0440\u043E\u0432
+      \u0437\u0430 \u0437\u0430\u0441\u043B\u0443\u0433\u0438 \u043F\u0435\u0440\u0435\u0434
+      \u0440\u043E\u0434\u0438\u043D\u043E\u0439 \u0432\u0430\u043C \u0432\u0440\u0443\u0447\u0430\u0435\u0442\u0441\u044F
+      \u043E\u0440\u0434\u0435\u043D \u041E\u0442\u0435\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0439
+      \u0412\u043E\u0439\u043D\u044B \u0412\u0442\u043E\u0440\u043E\u0439 \u0421\u0442\u0435\u043F\u0435\u043D\u0438.
+      \u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0439\u0442\u0435 \u0438 \u0434\u0430\u043B\u044C\u0448\u0435
+      \u0431\u043E\u0440\u043E\u0442\u044C\u0441\u044F \u0441 \u0444\u0430\u0448\u0438\u0442\u0441\u043A\u0438\u043C\u0438
+      \u043E\u043A\u0443\u043F\u0430\u043D\u0442\u0430\u043C\u0438 \u0432\u043F\u043B\u043E\u0442\u044C
+      \u0434\u043E \u043F\u043E\u043B\u043D\u043E\u0433\u043E \u0438\u0445 \u0438\u0437\u0433\u043D\u0430\u043D\u0438\u044F
+      \u0441 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u0438 \u043D\u0430\u0448\u0435\u0439
+      \u0440\u043E\u0434\u0438\u043D\u044B."
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 14
+
+
+      1.13 February Senior Lieutenant Petrov
+
+
+      2. Map-winter
+      Field. Tank attack. February 13.
+
+
+      Comrade Petrov. We will have the last
+      battle with the remnants of the Germans breaking through, gather your will
+      and repel the attack of the remnants of the tank battalion.
+
+
+      Forces
+
+
+      4
+      guns
+
+
+      The enemy is the Germans and Hungarians.
+
+
+      3 t-4 tanks (German)
+
+
+      2
+      light tanks M 38 Toli (Hungarians)
+
+
+      1 t-1 tank (German)
+
+
+      1 Tank-T-2
+      (Hungarians)
+
+
+      2 Tank 35 (t) (German)
+
+
+      4. during the night of
+      February 13, our troops fought offensive battles in the same directions.
+
+
+      Brilliantly
+      comrade Petrov for services to the Motherland you are awarded the order of
+      the Patriotic War of the Second Degree. Continue to fight the fascist invaders
+      until they are completely expelled from the t'
+    Object: {fileID: 0}
 --- !u!1001 &1651237196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14572,6 +18128,7 @@ GameObject:
   - component: {fileID: 1756869753}
   - component: {fileID: 1756869755}
   - component: {fileID: 1756869754}
+  - component: {fileID: 1756869756}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -14629,7 +18186,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412 \u0431\u043E\u0439!"
+  m_Text: Battle!
 --- !u!222 &1756869755
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14638,6 +18195,196 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756869752}
   m_CullTransparentMesh: 0
+--- !u!114 &1756869756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756869752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: LevelWindow_ToBattle
+  FallbackText: "\u0412 \u0431\u043E\u0439!"
+--- !u!1 &1761791901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761791902}
+  - component: {fileID: 1761791903}
+  m_Layer: 0
+  m_Name: Levels_13_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761791902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761791901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1761791903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761791901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 13\r\n\r\n1. 11 \u0444\u0435\u0432\u0440\u0430\u043B\u044F
+      1943  \u0421\u0442\u0430\u0440\u0448\u0438\u0439 \u041B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432\r\n\r\n2. \u041A\u0430\u0440\u0442\u0430-
+      \u041F\u043E\u043B\u0435 \u0437\u0438\u043C\u0430. \u0422\u0430\u043D\u043A\u043E\u0432\u0430\u044F
+      \u0430\u0442\u0430\u043A\u0430.\r\n\r\n3.\u041E\u0441\u0442\u0430\u0442\u043A\u0438
+      2-\u043E\u0439 \u0432\u0435\u043D\u0433\u0435\u0440\u0441\u043A\u043E\u0439
+      \u0430\u0440\u043C\u0438\u0438 \u043F\u044B\u0442\u0430\u044E\u0442\u0441\u044F
+      \u043F\u0440\u043E\u0440\u0432\u0430\u0442\u044C\u0441\u044F \u0438\u0437 \u043E\u043A\u0440\u0443\u0436\u0435\u043D\u0438\u044F,
+      \u043D\u0435 \u0434\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u0435 \u043F\u0440\u043E\u0440\u044B\u0432\u0430
+      \u043C\u0430\u0434\u044C\u044F\u0440\u0441\u043A\u0438\u0445 \u0440\u0435\u0432\u0430\u043D\u0448\u0438\u0441\u0442\u043E\u0432
+      \u0438\u0437 \u043A\u043E\u043B\u044C\u0446\u0430, \u0441\u043E\u0437\u0434\u0430\u043D\u043D\u043E\u0433\u043E
+      \u0434\u043E\u0431\u043B\u0435\u0441\u0442\u043D\u043E\u0439 \u041A\u0440\u0430\u0441\u043D\u043E\u0439
+      \u0430\u0440\u043C\u0438\u0435\u0439. \u0423\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u0435
+      \u0432\u0435\u043D\u0433\u0435\u0440\u0441\u043A\u0443\u044E \u0431\u0430\u0442\u0430\u0440\u0435\u044E,
+      \u043B\u0438\u0448\u0438\u0442\u0435 \u043F\u0440\u043E\u0440\u044B\u0432\u0430\u044E\u0449\u0443\u044E\u0441\u044F
+      \u043F\u0435\u0445\u043E\u0442\u0443 \u0430\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u0439\u0441\u043A\u043E\u0439
+      \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438.\r\n\r\n\u0421\u0438\u043B\u044B\r\n\r\n4
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u0412\u0435\u043D\u0433\u0440\u044B  \r\n\r\n4 \u0434\u0438\u0432\u0438\u0437\u0438\u043E\u043D\u043D\u044B\u0445
+      \u043E\u0440\u0443\u0434\u0438\u044F\r\n\r\n4.\u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      \u043D\u043E\u0447\u0438 \u043D\u0430 11 \u0444\u0435\u0432\u0440\u0430\u043B\u044F
+      \u043D\u0430\u0448\u0438 \u0432\u043E\u0439\u0441\u043A\u0430 \u0432\u0435\u043B\u0438
+      \u043D\u0430\u0441\u0442\u0443\u043F\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0435
+      \u0431\u043E\u0438 \u043D\u0430 \u043F\u0440\u0435\u0436\u043D\u0438\u0445
+      \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F\u0445.\r\n\r\n\u041F\u0430\u0440\u0442\u0438\u0437\u0430\u043D\u0441\u043A\u0438\u0439
+      \u043E\u0442\u0440\u044F\u0434, \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439
+      \u0432 \u043E\u0434\u043D\u043E\u043C \u0438\u0437 \u0440\u0430\u0439\u043E\u043D\u043E\u0432
+      \u0423\u043A\u0440\u0430\u0438\u043D\u044B, \u0441\u043E\u0432\u0435\u0440\u0448\u0438\u043B
+      \u043D\u043E\u0447\u043D\u043E\u0439 \u043D\u0430\u043B\u0451\u0442 \u043D\u0430
+      \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u0439 \u0433\u0430\u0440\u043D\u0438\u0437\u043E\u043D,
+      \u0440\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0435\u043D\u043D\u044B\u0439
+      \u0432 \u0440\u0430\u0439\u043E\u043D\u043D\u043E\u043C \u0446\u0435\u043D\u0442\u0440\u0435.
+      \u0421\u043E\u0432\u0435\u0442\u0441\u043A\u0438\u0435 \u043F\u0430\u0442\u0440\u0438\u043E\u0442\u044B
+      \u0438\u0441\u0442\u0440\u0435\u0431\u0438\u043B\u0438 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u0434\u0435\u0441\u044F\u0442\u043A\u043E\u0432 \u0433\u0438\u0442\u043B\u0435\u0440\u043E\u0432\u0446\u0435\u0432
+      \u0438 \u0441\u043E\u0436\u0433\u043B\u0438 \u0434\u0432\u0430 \u0441\u043A\u043B\u0430\u0434\u0430
+      \u043D\u0435\u043C\u0435\u0446\u043A\u043E-\u0444\u0430\u0448\u0438\u0441\u0442\u0441\u043A\u0438\u0445
+      \u043E\u043A\u043A\u0443\u043F\u0430\u043D\u0442\u043E\u0432.\r"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 13
+
+
+      1. February 11, 1943 Senior Lieutenant Petrov
+
+
+      2.
+      Map-winter Field. Tank attack.
+
+
+      3. the Remnants of the 2nd Hungarian
+      army are trying to break out of the encirclement, do not allow the Magyar revanchists
+      to break out of the ring created by the valiant red army. Destroy the Hungarian
+      battery, deprive the breaking through infantry of artillery support.
+
+
+      Forces
+
+
+      4
+      guns
+
+
+      Enemy Hungarians
+
+
+      4 divisional guns
+
+
+      4. during the
+      night of February 11, our troops conducted offensive battles in the same directions.
+
+
+      A
+      partisan detachment operating in one of the regions of Ukraine made a night
+      RAID on the German garrison located in the district center. Soviet patriots
+      exterminated several dozen Hitlerites and burned two warehouses of the German-fascist
+      occupiers.'
+    Object: {fileID: 0}
+--- !u!1 &1769745028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1769745029}
+  - component: {fileID: 1769745030}
+  m_Layer: 0
+  m_Name: Levels_12_Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1769745029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769745028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769745030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769745028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0411\u0438\u0442\u0432\u0430 \u0441 \u043F\u043E\u043B\u0438\u0446\u0430\u044F\u043C\u0438"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Battle with the police
+    Object: {fileID: 0}
 --- !u!1001 &1781842317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14823,7 +18570,7 @@ RectTransform:
   - {fileID: 1747412874}
   - {fileID: 840129676}
   - {fileID: 229041287}
-  m_Father: {fileID: 607272491}
+  m_Father: {fileID: 524234116}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -15159,7 +18906,7 @@ MonoBehaviour:
     m_Top: 99
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -15222,6 +18969,57 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1 &1821829563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1821829564}
+  - component: {fileID: 1821829565}
+  m_Layer: 0
+  m_Name: Ammo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1821829564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821829563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821829565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821829563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0411\u043E\u0435\u043F\u0440\u0438\u043F\u0430\u0441\u044B:"
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Ammo:'
+    Object: {fileID: 0}
 --- !u!1 &1822714633
 GameObject:
   m_ObjectHideFlags: 0
@@ -15259,7 +19057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -282.8999, y: -108.6001}
+  m_AnchoredPosition: {x: -282.8994, y: -108.6001}
   m_SizeDelta: {x: 510.4, y: 141.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822714635
@@ -15495,6 +19293,7 @@ GameObject:
   - component: {fileID: 1859427403}
   - component: {fileID: 1859427402}
   - component: {fileID: 1859427401}
+  - component: {fileID: 1859427404}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -15572,7 +19371,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u0443\u0440\u043E\u0432\u043D\u044F"
+  m_Text: Upgrade abilities
 --- !u!222 &1859427403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15581,6 +19380,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859427399}
   m_CullTransparentMesh: 0
+--- !u!114 &1859427404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859427399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Shop_LevelUpgrade
+  FallbackText: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u0443\u0440\u043E\u0432\u043D\u044F"
 --- !u!1 &1861651591
 GameObject:
   m_ObjectHideFlags: 0
@@ -15617,7 +19430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 168.6001, y: -67.700195}
+  m_AnchoredPosition: {x: 168.60059, y: -67.700195}
   m_SizeDelta: {x: -943.9, y: -228.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1861651594
@@ -16230,6 +20043,108 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 0
+--- !u!1 &1892533549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892533550}
+  - component: {fileID: 1892533551}
+  m_Layer: 0
+  m_Name: Menu_Resume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1892533550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892533549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892533551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892533549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0412\u043E\u0437\u043E\u0431\u043D\u043E\u0432\u0438\u0442\u044C"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Resume
+    Object: {fileID: 0}
+--- !u!1 &1903429303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903429304}
+  - component: {fileID: 1903429305}
+  m_Layer: 0
+  m_Name: Language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1903429304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903429303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903429305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903429303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u042F\u0437\u044B\u043A"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Language
+    Object: {fileID: 0}
 --- !u!1001 &1904616064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16678,7 +20593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.22021484, y: 195.0498}
+  m_AnchoredPosition: {x: -0.22070312, y: 195.0498}
   m_SizeDelta: {x: -0.4000244, y: 390}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941019530
@@ -16719,7 +20634,7 @@ MonoBehaviour:
     m_Top: 99
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -17493,6 +21408,7 @@ GameObject:
   - component: {fileID: 2005724198}
   - component: {fileID: 2005724200}
   - component: {fileID: 2005724199}
+  - component: {fileID: 2005724201}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -17550,7 +21466,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0443\u0437\u044B\u043A\u0430"
+  m_Text: Music
 --- !u!222 &2005724200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17559,6 +21475,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005724197}
   m_CullTransparentMesh: 0
+--- !u!114 &2005724201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005724197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Music
+  FallbackText: "\u041C\u0443\u0437\u044B\u043A\u0430"
 --- !u!1001 &2006048241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18944,6 +22874,173 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100705866}
   m_CullTransparentMesh: 0
+--- !u!1 &2100888806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100888807}
+  - component: {fileID: 2100888808}
+  m_Layer: 0
+  m_Name: LevelWindow_Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2100888807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100888806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100888808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100888806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u041D\u0430\u0437\u0430\u0434"
+    Object: {fileID: 0}
+  - Language: English
+    Text: Back
+    Object: {fileID: 0}
+--- !u!1 &2115794145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2115794146}
+  - component: {fileID: 2115794147}
+  m_Layer: 0
+  m_Name: Levels_3_Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2115794146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115794145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1275425931}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2115794147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115794145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: Russian
+    Text: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 3\r\n\r1.\u041E\u0442\u0440\u0430\u0436\u0435\u043D\u0438\u0435
+      \u0442\u0430\u043D\u043A\u043E\u0432\u043E\u0439 \u0430\u0442\u0430\u043A\u0438.
+      \u041C\u043B\u0430\u0434\u0448\u0438\u0439\r\n\r\u043B\u0435\u0439\u0442\u0435\u043D\u0430\u043D\u0442
+      \u041F\u0435\u0442\u0440\u043E\u0432.\r\n\r2. \u0422\u0438\u043F \u043A\u0430\u0440\u0442\u044B
+      \u0440\u0443\u0441\u0441\u043A\u043E\u0435 \u043F\u043E\u043B\u0435 \u043B\u0435\u0442\u043E.
+      8 \u0438\u044E\u043B\u044F\r\n\r1942 \u0433\u043E\u0434\u0430\r\n\r3.\u0422\u043E\u0432\u0430\u0440\u0438\u0449
+      \u041F\u0435\u0442\u0440\u043E\u0432. \u041D\u0430\u0448\u0438\u043C \u0447\u0430\u0441\u0442\u044F\u043C\r\n\r\u0443\u0434\u0430\u043B\u043E\u0441\u044C
+      \u043F\u0440\u043E\u0440\u0432\u0430\u0442\u044C \u043A\u043E\u043B\u044C\u0446\u043E
+      \u043E\u043A\u0440\u0443\u0436\u0435\u043D\u0438\u044F,\r\n\r\u043F\u0440\u0438\u043A\u0440\u043E\u0439\u0442\u0435
+      \u043E\u0431\u043E\u0437 \u0441 \u0440\u0430\u043D\u0435\u043D\u044B\u043C\u0438,
+      \u043E\u0442\u0440\u0430\u0437\u0438\u0432\r\n\r\u0442\u0430\u043D\u043A\u043E\u0432\u0443\u044E
+      \u0430\u0442\u0430\u043A\u0443 \u0440\u0443\u043C\u044B\u043D\u0441\u043A\u0438\u0445
+      \u0440\u0435\u0432\u0430\u043D\u0448\u0438\u0441\u0442\u043E\u0432.\r\n\r\u0421\u0438\u043B\u044B\r\n\r2
+      \u041E\u0440\u0443\u0434\u0438\u044F\r\n\r\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+      \u0420\u0443\u043C\u044B\u043D\u044B\r\n\r3 \u0442\u0430\u043D\u043A\u0430
+      R-2 \u043E\u043D \u0436\u0435 LT vz.35\r\n\r4.\u0412 \u0442\u0435\u0447\u0435\u043D\u0438\u0435
+      \u043D\u043E\u0447\u0438 \u043D\u0430 8 \u0438\u044E\u043B\u044F \u043D\u0430\u0448\u0438
+      \u0432\u043E\u0439\u0441\u043A\u0430\r\n\r\u0432\u0435\u043B\u0438 \u0431\u043E\u0438
+      \u0441 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u043C \u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435\r\n\r\u0412\u043E\u0440\u043E\u043D\u0435\u0436\u0430
+      \u0438 \u044E\u0433\u043E-\u0437\u0430\u043F\u0430\u0434\u043D\u0435\u0435
+      \u0421\u0442\u0430\u0440\u044B\u0439 \u041E\u0441\u043A\u043E\u043B.\r\n\r\u041D\u0430
+      \u0434\u0440\u0443\u0433\u0438\u0445 \u0443\u0447\u0430\u0441\u0442\u043A\u0430\u0445
+      \u0444\u0440\u043E\u043D\u0442\u0430\r\n\r\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445
+      \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u0439 \u043D\u0435 \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E."
+    Object: {fileID: 0}
+  - Language: English
+    Text: 'Task 3
+
+      1. Reflection of a tank attack. Junior
+
+      Lieutenant
+      Petrov.
+
+      2. Card type Russian field in the summer. July 8
+
+      1942
+
+      3.
+      Comrade Petrov. Our parts
+
+      managed to break through the encirclement
+      ring,
+
+      cover the convoy with the wounded, repelling
+
+      tank attack
+      of the Romanian revanchists.
+
+      Forces
+
+      2 Guns
+
+      Opponent Of
+      Romania
+
+      3 tanks R-2 aka LT vz.35
+
+      4. during the night of July
+      8, our troops
+
+      we fought with the enemy to the West
+
+      Voronezh and
+      South-West of Stary Oskol.
+
+      On other sections of the front
+
+      there
+      were no significant changes.'
+    Object: {fileID: 0}
 --- !u!1001 &2138198571
 PrefabInstance:
   m_ObjectHideFlags: 0

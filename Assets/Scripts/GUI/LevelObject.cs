@@ -8,7 +8,6 @@ namespace GameStates
     public class LevelObject : ScriptableObject
     {
         [SerializeField] private string _name;
-        [Multiline(40)]
         [SerializeField] private string _description;
         [SerializeField] private Sprite _preview;
         [SerializeField] private int _levelLoadIndex;
