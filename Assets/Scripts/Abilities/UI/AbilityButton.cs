@@ -22,6 +22,7 @@ namespace Abilities.UI
 
         public void SetData(VisualData data)
         {
+            Debug.Log(data.Data.Name);
             if(_nameText)
                 _nameText.text = Lean.Localization.LeanLocalization.GetTranslationText(data.Data.Name);
             if(_countText)

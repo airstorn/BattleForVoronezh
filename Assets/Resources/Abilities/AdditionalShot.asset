@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5a10bfacbed1a41a61366e165e72cd, type: 3}
   m_Name: AdditionalShot
   m_EditorClassIdentifier: 
-  Name: 1
+  Name: Ability_AdditionalShot
   Icon: {fileID: 21300000, guid: 763d1416552bb7e469d37029f2ca51bf, type: 3}
