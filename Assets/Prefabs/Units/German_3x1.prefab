@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 9082386859793295256}
   - component: {fileID: -700817158707676937}
   m_Layer: 8
-  m_Name: Unit_4x1
+  m_Name: German_3x1
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1218500473299816, guid: 482a8f4c3f0316f48b998f5c6765115c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029924873581974, guid: 482a8f4c3f0316f48b998f5c6765115c, type: 3}
       propertyPath: m_LocalPosition.x

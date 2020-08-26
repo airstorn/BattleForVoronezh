@@ -4301,7 +4301,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 422191574}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 508303808}
+        m_MethodName: SetLanguage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: English
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &422191574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13231,8 +13242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultLanguage: 
-  DetectLanguage: 1
+  DefaultLanguage: English
+  DetectLanguage: 0
   SaveLanguage: 1
   languages:
   - name: English
@@ -14278,7 +14289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1343159364
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20839,7 +20850,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1951403409}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 508303808}
+        m_MethodName: SetLanguage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Russian
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1951403409
 MonoBehaviour:
   m_ObjectHideFlags: 0

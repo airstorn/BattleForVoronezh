@@ -5,5 +5,6 @@ namespace GUI.Core
     public interface IItemBehaviour
     {
         void SetItem(IAbilityData data);
+        void Refresh();
     }
 }

@@ -1,4 +1,5 @@
-﻿using Abilities.Core;
+﻿using System;
+using Abilities.Core;
 using Core;
 using GUI.Core;
 using TMPro;
@@ -30,8 +31,6 @@ namespace GUI.Shop
             
             _count.text = _containedData.Visual.Count + "";
             _name.text = Lean.Localization.LeanLocalization.GetTranslationText(_containedData.Visual.Data.Name);
-            Debug.Log(Lean.Localization.LeanLocalization.GetTranslationText(_containedData.Visual.Data.Name));
-            Debug.Log(_containedData.Visual.Data.Name);
             _priceText.text = "<sprite=0> " + _containedData.BuyPrice;
 
             _button = GetComponent<Button>();
@@ -39,6 +38,11 @@ namespace GUI.Shop
             _button.onClick.RemoveAllListeners();
 
             _button.onClick.AddListener(BuyItem);
+        }
+
+        public void Refresh()
+        {
+            _name.text = Lean.Localization.LeanLocalization.GetTranslationText(_containedData.Visual.Data.Name);
         }
 
         private void BuyItem()

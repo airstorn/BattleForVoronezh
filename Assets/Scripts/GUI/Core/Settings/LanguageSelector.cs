@@ -11,8 +11,8 @@ public class LanguageSelector : MonoBehaviour
 
    public enum Lang
    {
-      Ru,
-      Eng
+      Russian,
+      English
    }
    
    private void Awake()
@@ -25,13 +25,13 @@ public class LanguageSelector : MonoBehaviour
          OnLanguageChanged += selectable.SetSelectable;
          selectable.SetButtonMethod(this);
       }
-      
-      OnLanguageChanged?.Invoke(Lang.Ru);
+
+      var parsed =  (Lang)Enum.Parse(typeof(Lang), Lean.Localization.LeanLocalization.CurrentLanguage);
+      OnLanguageChanged?.Invoke(parsed);
    }
 
    public void UpdateLanguage(Lang lang)
    {
-      Debug.Log(lang);
       OnLanguageChanged?.Invoke(lang);
    }
 }

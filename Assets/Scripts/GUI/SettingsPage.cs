@@ -11,6 +11,7 @@ namespace GameStates
     {
         [SerializeField] private Toggle _audio;
         [SerializeField] private Toggle _music;
+        
 
         public override void Show()
         {
@@ -22,6 +23,11 @@ namespace GameStates
         public void SendArgs<T>(T args) where T : struct
         {
             throw new NotImplementedException();
+        }
+
+        public void SetLanguage(string language)
+        {
+            Lean.Localization.LeanLocalization.CurrentLanguage = language;
         }
 
         public void SetAudioStatement(bool state)

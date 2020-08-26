@@ -23,12 +23,23 @@ namespace GameStates
       
       private AbilitiesDirector _director;
 
+      private List<IItemBehaviour> _items = new List<IItemBehaviour>();
+
       private void Start()
       {
          _director = UserData.Instance.AbilitiesDirector;
 
          FillGradables();
          FillConsumables();
+      }
+
+      public override void Show()
+      {
+         base.Show();
+         foreach (var item in _items)
+         {
+            item.Refresh();
+         }
       }
 
       private void FillConsumables()
@@ -79,8 +90,11 @@ namespace GameStates
       private void CreateButton<T>(IAbilityData data, Transform parent, GameObject button) where T : IItemBehaviour
       {
          var obj = Instantiate(button, parent);
-         
-         obj.GetComponent<T>().SetItem(data);
+
+         var behaviour = obj.GetComponent<T>();
+         behaviour.SetItem(data);
+         _items.Add(behaviour);
+
       }
 
       public void SendArgs<T>(T args) where T : struct

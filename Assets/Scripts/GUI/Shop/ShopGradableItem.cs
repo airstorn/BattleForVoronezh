@@ -14,26 +14,32 @@ namespace GUI.Shop
         [SerializeField] private Image _image;
         private Button _button;
         private IDataReceiver<ShopData> _reference;
+        private ShopData _containedData;
 
         public void SetItem(IAbilityData obj)
         {
-            ShopData data = (ShopData) obj;
+            _containedData = (ShopData) obj;
             
             if (_reference == null)
-                _reference = data.Visual.Reference as IDataReceiver<ShopData>;
+                _reference = _containedData.Visual.Reference as IDataReceiver<ShopData>;
             
-            _level.text = GetLevelString(data.Visual.Level);
-            _image.sprite = data.Visual.Data.Icon;
-            _name.text = Lean.Localization.LeanLocalization.GetTranslationText(data.Visual.Data.Name);
-            _priceText.text = "<sprite=0> " + data.GradePrice;
+            _level.text = GetLevelString(_containedData.Visual.Level);
+            _image.sprite = _containedData.Visual.Data.Icon;
+            _name.text = Lean.Localization.LeanLocalization.GetTranslationText(_containedData.Visual.Data.Name);
+            _priceText.text = "<sprite=0> " + _containedData.GradePrice;
 
-            var gradable = data.Visual.Reference as IGradable;
+            var gradable = _containedData.Visual.Reference as IGradable;
             _button = GetComponent<Button>();
             
             _button.onClick.RemoveAllListeners();
 
             _button.onClick.AddListener(gradable.Upgrade);
             _button.onClick.AddListener(RefreshData);
+        }
+
+        public void Refresh()
+        {
+            _name.text = Lean.Localization.LeanLocalization.GetTranslationText(_containedData.Visual.Data.Name);
         }
 
         private void RefreshData()

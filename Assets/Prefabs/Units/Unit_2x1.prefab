@@ -53,8 +53,6 @@ MonoBehaviour:
     _broken: {fileID: 6043818817425174497}
     _hidden: 0
   _size: {x: 1, y: 1}
-  _engagedElements: []
-  _borderElements: []
   _gizmosPoint: {fileID: 4514611712711509921}
 --- !u!65 &3424743646080061186
 BoxCollider:
@@ -380,6 +378,10 @@ PrefabInstance:
     - target: {fileID: 1914222424990736, guid: ddea709db0b3fbe4eb227c58cfa874d2, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914222424990736, guid: ddea709db0b3fbe4eb227c58cfa874d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4681500829981850, guid: ddea709db0b3fbe4eb227c58cfa874d2, type: 3}
       propertyPath: m_LocalPosition.x
