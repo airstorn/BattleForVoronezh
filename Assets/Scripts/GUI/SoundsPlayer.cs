@@ -25,7 +25,7 @@ namespace GameStates
         private Dictionary<SoundType, SoundTypeContainer> _storage = new Dictionary<SoundType, SoundTypeContainer>();
 
         public const string _soundsKey = "soundsVolume";
-        public  const string _musicKey = "musicVolume";
+        public const string _musicKey = "musicVolume";
 
         [Header("AudioGroups")]
         [SerializeField] private AudioMixerGroup _soundsGroup;
