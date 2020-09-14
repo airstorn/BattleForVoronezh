@@ -119,6 +119,10 @@
               <e p="ExtraMovesUI.cs" t="Include" />
             </e>
           </e>
+          <e p="Audio" t="Include">
+            <e p="LevelTheme.cs" t="Include" />
+            <e p="SoundsPlayer.cs" t="Include" />
+          </e>
           <e p="Battle" t="Include">
             <e p="GridObject.cs" t="Include" />
             <e p="GridUnit.cs" t="Include" />
@@ -187,7 +191,6 @@
               <e p="ShopGradableItem.cs" t="Include" />
             </e>
             <e p="ShopPage.cs" t="Include" />
-            <e p="SoundsPlayer.cs" t="Include" />
           </e>
           <e p="InputHandlers" t="Include">
             <e p="LimitedShotsHandler.cs" t="Include" />

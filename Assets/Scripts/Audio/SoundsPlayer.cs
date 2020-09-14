@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Audio;
 using DigitalRuby.SoundManagerNamespace;
 using GUI.Core;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using Utils;
 
 namespace GameStates
@@ -21,6 +23,7 @@ namespace GameStates
         }
         
         [SerializeField] private SoundTypeContainer[] _pulledData;
+        [SerializeField] private AudioSource _musicPlayer;
         
         private Dictionary<SoundType, SoundTypeContainer> _storage = new Dictionary<SoundType, SoundTypeContainer>();
 
@@ -35,6 +38,18 @@ namespace GameStates
         {
             base.Awake();
             PullAudioSources();
+            SceneManager.activeSceneChanged += OnSceneChangedHandler;
+        }
+
+        private void OnSceneChangedHandler(Scene arg0, Scene arg1)
+        {
+            ApplyLevelMusic();
+        }
+
+        private void ApplyLevelMusic()
+        {
+            _musicPlayer.clip = FindObjectOfType<LevelTheme>().Theme;
+            _musicPlayer.Play();
         }
 
         private void Start()

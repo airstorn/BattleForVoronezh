@@ -1433,6 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470212368}
   - component: {fileID: 470212367}
+  - component: {fileID: 470212369}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -1473,6 +1474,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470212369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470212366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec15558f576844be8d295a45bd56eecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _theme: {fileID: 8300000, guid: a30aff28fb7eb7045976fef86b1d68a8, type: 3}
 --- !u!4 &514586656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431334, guid: 512ac21e21ad7ff4494778b36511e83c,
