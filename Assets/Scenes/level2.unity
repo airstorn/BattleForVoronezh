@@ -12118,7 +12118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec15558f576844be8d295a45bd56eecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _theme: {fileID: 8300000, guid: bfa6a105da4661f49b1385d09f6ce7ba, type: 3}
+  _theme: {fileID: 8300000, guid: 24e6728e5d721b246884995108c6d69a, type: 3}
 --- !u!4 &1398006053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4018235550319848, guid: 90220df93a6a8424681002d21b823e20,

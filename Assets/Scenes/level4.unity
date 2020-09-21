@@ -5208,7 +5208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec15558f576844be8d295a45bd56eecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _theme: {fileID: 8300000, guid: bfa6a105da4661f49b1385d09f6ce7ba, type: 3}
+  _theme: {fileID: 8300000, guid: 24e6728e5d721b246884995108c6d69a, type: 3}
 --- !u!1001 &958105044
 PrefabInstance:
   m_ObjectHideFlags: 0
