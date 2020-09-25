@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EnemyUnitsData
   m_EditorClassIdentifier: 
   Data:
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
+  - {fileID: 3919319460645014096, guid: f692cf3188eda3244abd29da774d86bf, type: 3}
+  - {fileID: 3919319460645014096, guid: f692cf3188eda3244abd29da774d86bf, type: 3}
+  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
+  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
+  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
+  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}

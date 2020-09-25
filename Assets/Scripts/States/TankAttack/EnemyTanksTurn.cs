@@ -2,6 +2,7 @@
 using Battle.Interfaces;
 using Core;
 using GameStates;
+using GUI.Core;
 using Interfaces;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -36,7 +37,7 @@ namespace States.TankAttack
                 if (target.Units[i].Health.IsDead == false)
                 {
                     MoveUnit(target.Units[i]);
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(0.75f);
                 }
             }
             yield return _shots.ShotAnimation(EndTurn);
@@ -76,6 +77,8 @@ namespace States.TankAttack
                 unit.PositionId = fromPos;
                 target.PlaceUnit(unit, false);
             }
+            
+            SoundsPlayer.Instance.PlaySound(SoundType.Tank);
         }
 
         private Vector3Int GetDirection(int id)

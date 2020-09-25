@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
   - {fileID: 8615490835265618971, guid: a7d1c57cd534b4745aeca843c2c42dfb, type: 3}
-  - {fileID: 7741858893037503843, guid: 2def6b43681a6864f8343d67511f92ed, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
   - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
   - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
   - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}

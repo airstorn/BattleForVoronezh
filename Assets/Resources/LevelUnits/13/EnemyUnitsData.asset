@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: EnemyUnitsData
   m_EditorClassIdentifier: 
   Data:
+  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
+  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
+  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
   - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
+  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
+  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}

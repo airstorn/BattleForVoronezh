@@ -13,13 +13,7 @@ MonoBehaviour:
   m_Name: EnemyUnitsData
   m_EditorClassIdentifier: 
   Data:
-  - {fileID: 56465376804012377, guid: f26135fc5bd43d64abf00a756e4f0d1c, type: 3}
-  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
-  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
-  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
-  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
-  - {fileID: 2109931187219517196, guid: 7b8ad0e810e652843b8ecb7bf2f88022, type: 3}
-  - {fileID: 4342482098525044780, guid: 64b4d76c141c79440bbbda3098cb95de, type: 3}
-  - {fileID: 4342482098525044780, guid: 64b4d76c141c79440bbbda3098cb95de, type: 3}
-  - {fileID: 26062441254760527, guid: 3a8bc98de2299c24badc1ec80baa491d, type: 3}
-  - {fileID: 26062441254760527, guid: 3a8bc98de2299c24badc1ec80baa491d, type: 3}
+  - {fileID: 8615490835265618971, guid: a7d1c57cd534b4745aeca843c2c42dfb, type: 3}
+  - {fileID: 7872224876263317975, guid: 3378d009a626c7b40951b298141d64b2, type: 3}
+  - {fileID: 5563851654095271698, guid: 34fc772703e580449807a2dcc4d2d198, type: 3}
+  - {fileID: 5563851654095271698, guid: 34fc772703e580449807a2dcc4d2d198, type: 3}

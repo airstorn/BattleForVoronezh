@@ -7,6 +7,7 @@
         HitMissed,
         Hit,
         Win,
-        Lose
+        Lose,
+        Tank
     }
 }

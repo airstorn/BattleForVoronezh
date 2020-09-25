@@ -1784,11 +1784,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pulledData:
-  - Clip: {fileID: 8300000, guid: b373125a6a00448159566b88f44a2639, type: 3}
+  - Clip: {fileID: 8300000, guid: 39c8945e19d8dd54f8bf7fad59d3b152, type: 3}
     Type: 0
     Group: {fileID: 5106873053211133093, guid: f05f8de7a6547f34298f106cade2f596, type: 2}
     Source: {fileID: 0}
-  - Clip: {fileID: 8300000, guid: 2fa1e12f3f13d41d7a1f08545142658f, type: 3}
+  - Clip: {fileID: 8300000, guid: 88965fa2d28c1c14bbee5585a284dafb, type: 3}
     Type: 1
     Group: {fileID: 5106873053211133093, guid: f05f8de7a6547f34298f106cade2f596, type: 2}
     Source: {fileID: 0}
@@ -1806,6 +1806,10 @@ MonoBehaviour:
     Source: {fileID: 0}
   - Clip: {fileID: 8300000, guid: 524751a7b67d948d3a29f6205b974f81, type: 3}
     Type: 5
+    Group: {fileID: 5106873053211133093, guid: f05f8de7a6547f34298f106cade2f596, type: 2}
+    Source: {fileID: 0}
+  - Clip: {fileID: 8300000, guid: 36d441fd8e74c154aa4ca411964c9ec7, type: 3}
+    Type: 6
     Group: {fileID: 5106873053211133093, guid: f05f8de7a6547f34298f106cade2f596, type: 2}
     Source: {fileID: 0}
   _musicPlayer: {fileID: 202045465}
