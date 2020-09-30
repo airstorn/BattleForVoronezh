@@ -16,6 +16,7 @@ namespace States.TankAttack
     {
         [SerializeField] private MultipleTargetsTracker _tracker;
         [SerializeField] private CinemachineVirtualCamera _camera;
+        [SerializeField] private int _shotsCount = 2;
 
         private IInputHandler _inputHandler;
         private IAbilityPresetHandler _abilityHandler;
@@ -25,8 +26,6 @@ namespace States.TankAttack
 
         private void Start()
         {
-     
-            
             _defaultHandler = _tracker.GetComponent<IInputHandler>();
             
             ResetInput();
@@ -62,9 +61,7 @@ namespace States.TankAttack
             
             if (_inputHandler is MultipleTargetsTracker tracker)
             {
-                // var count = LevelData.Instance.EnemyGrid.Units.Count(unit => unit.Health.IsDead == false);
-                var count = 2;
-                tracker.SetShotsCount(count);
+                tracker.SetShotsCount(_shotsCount);
                 tracker.OnInputStoppedHandler += TanksTurn;
             }
         }

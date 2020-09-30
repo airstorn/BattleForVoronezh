@@ -8686,6 +8686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tracker: {fileID: 527406170}
   _camera: {fileID: 688627420}
+  _shotsCount: 1
 --- !u!4 &1984700422
 Transform:
   m_ObjectHideFlags: 0
