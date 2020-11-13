@@ -1311,23 +1311,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1258189135, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_Color.r
@@ -1428,12 +1432,12 @@ PrefabInstance:
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.x
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.y
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -1489,8 +1493,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9, y: 2.220446e-16, z: 9}
+  m_Center: {x: -0.5, y: 0, z: -0.5}
 --- !u!4 &182507191 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4640700834239788, guid: 5f7ca093380764f48b4d6985fb512bd0,
@@ -4510,7 +4514,7 @@ MonoBehaviour:
   _template: {fileID: 1617810734581173152, guid: c7692f76165078e499fdc088b5952bff,
     type: 3}
   _parent: {fileID: 1116509150}
-  _additionalShots: -44
+  _additionalShots: -90
 --- !u!114 &612580795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11970,6 +11974,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 1450187783}
   _enemyGrid: {fileID: 175524103}
   _endWindow: {fileID: 1940548797}
+  _gain: 4000
 --- !u!4 &1753166766
 Transform:
   m_ObjectHideFlags: 0

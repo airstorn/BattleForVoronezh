@@ -1457,6 +1457,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 1151241900}
   _enemyGrid: {fileID: 1032588076}
   _endWindow: {fileID: 446382133}
+  _gain: 2000
 --- !u!4 &470212368
 Transform:
   m_ObjectHideFlags: 0
@@ -2094,6 +2095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tracker: {fileID: 60627946}
   _camera: {fileID: 588975477}
+  _shotsCount: 2
 --- !u!4 &824941928
 Transform:
   m_ObjectHideFlags: 0
@@ -3166,6 +3168,7 @@ MonoBehaviour:
   _ignoreMask:
     serializedVersion: 2
     m_Bits: 256
+  _lookDirection: 2
 --- !u!114 &1220863722
 MonoBehaviour:
   m_ObjectHideFlags: 0

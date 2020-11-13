@@ -306,6 +306,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 1013628036}
   _enemyGrid: {fileID: 1478502189}
   _endWindow: {fileID: 1691726725}
+  _gain: 3000
 --- !u!4 &76396987
 Transform:
   m_ObjectHideFlags: 0
@@ -2935,19 +2936,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2955,7 +2956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.25
+      value: 1.125
       objectReference: {fileID: 0}
     - target: {fileID: 1258189135, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_Color.r
@@ -3052,12 +3053,12 @@ PrefabInstance:
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.x
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.y
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -5797,8 +5798,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9, y: 2.220446e-16, z: 9}
+  m_Center: {x: -0.5, y: 0, z: -0.5}
 --- !u!1001 &1508208269
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ namespace InputHandlers
         [SerializeField] private GameObject _template;
         [SerializeField] private Transform _parent;
         [SerializeField] private int _additionalShots = 0;
+        [SerializeField] private bool _useFixedShots = false;
+        [SerializeField] private int _fixedShots;
 
         public int ShotsCount => _shotsCount;
         
@@ -43,9 +45,17 @@ namespace InputHandlers
             yield return new WaitForEndOfFrame();
 
             var target = LevelData.Instance.EnemyGrid;
-        
-            _shotsCount = target.Units.Sum(unit => unit.Health.Total) * (target.Sheet.GetLength(0) + target.Sheet.GetLength(1)) / 2;
-            _shotsCount += _additionalShots;
+
+            if (_useFixedShots == false)
+            {
+                _shotsCount = target.Units.Sum(unit => unit.Health.Total) * (target.Sheet.GetLength(0) + target.Sheet.GetLength(1)) / 2;
+                _shotsCount += _additionalShots;
+            }
+            else
+            {
+                _shotsCount = _fixedShots;
+            }
+          
             UpdateShotsCount();
         }
     

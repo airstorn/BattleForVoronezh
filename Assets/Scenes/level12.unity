@@ -1420,7 +1420,7 @@ Camera:
   far clip plane: 35
   field of view: 60
   orthographic: 1
-  orthographic size: 4.36
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1536,7 +1536,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399695987}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -6.057305, y: 25.57379, z: -4.028062}
+  m_LocalPosition: {x: -5.1873045, y: 25.57379, z: -3.7780616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 458728048}
@@ -1705,23 +1705,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.875
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6136745122448170548, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -1741,17 +1741,17 @@ PrefabInstance:
     - target: {fileID: 6136745123043659498, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.96
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123043659498, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.61
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123043659499, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 4.36
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432977, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -1816,12 +1816,12 @@ PrefabInstance:
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.x
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.y
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -1965,6 +1965,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 427041229}
   _enemyGrid: {fileID: 1722953691}
   _endWindow: {fileID: 1529344798}
+  _gain: 4000
 --- !u!4 &458728048
 Transform:
   m_ObjectHideFlags: 0
@@ -3259,7 +3260,7 @@ MonoBehaviour:
   _template: {fileID: 1617810734581173152, guid: c7692f76165078e499fdc088b5952bff,
     type: 3}
   _parent: {fileID: 224760042}
-  _additionalShots: 2
+  _additionalShots: 8
 --- !u!1001 &647537626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8311,19 +8312,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8331,7 +8332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.125
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 1258189135, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_Color.r
@@ -8353,7 +8354,7 @@ PrefabInstance:
     - target: {fileID: 6136745122448170548, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.06
+      value: 12.38
       objectReference: {fileID: 0}
     - target: {fileID: 6136745122448170548, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -8363,7 +8364,7 @@ PrefabInstance:
     - target: {fileID: 6136745122448170551, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432977, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -8428,12 +8429,12 @@ PrefabInstance:
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.x
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.y
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -8489,8 +8490,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9, y: 2.220446e-16, z: 9}
-  m_Center: {x: -0.5, y: 0, z: -0.5}
+  m_Size: {x: 7, y: 2.220446e-16, z: 7}
+  m_Center: {x: -1.5, y: 0, z: -1.5}
 --- !u!1001 &1778830575
 PrefabInstance:
   m_ObjectHideFlags: 0

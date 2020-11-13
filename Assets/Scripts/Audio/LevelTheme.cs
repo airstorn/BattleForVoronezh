@@ -1,3 +1,5 @@
+using System;
+using GameStates;
 using UnityEngine;
 
 namespace Audio
@@ -6,5 +8,10 @@ namespace Audio
     {
         public AudioClip Theme => _theme;
         [SerializeField] private AudioClip _theme;
+
+        public void Start()
+        {
+            SoundsPlayer.Instance.PlayTheme(Theme);
+        }
     }
 }

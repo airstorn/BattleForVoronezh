@@ -36,6 +36,7 @@ public class GridUnit : MonoBehaviour
    
     [SerializeField] private Transform _gizmosPoint;
 
+    public int UnitPrice => (_size.x * _size.y) * 100;
     public List<GridElement> Borders => _borderElements;
     public int Rotation => _rotation;
     public UnitVisual Visual => _visual;

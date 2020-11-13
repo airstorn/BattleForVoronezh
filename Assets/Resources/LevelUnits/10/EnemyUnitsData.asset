@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EnemyUnitsData
   m_EditorClassIdentifier: 
   Data:
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
-  - {fileID: 678896780450762887, guid: bbac74b5a9f03614da8c11105a48b208, type: 3}
+  - {fileID: 4342482098525044780, guid: 2975b23085cc0b748ae2a51975be878d, type: 3}
+  - {fileID: 4342482098525044780, guid: 2975b23085cc0b748ae2a51975be878d, type: 3}
+  - {fileID: 26062441254760527, guid: 3a8bc98de2299c24badc1ec80baa491d, type: 3}
+  - {fileID: 26062441254760527, guid: 3a8bc98de2299c24badc1ec80baa491d, type: 3}
+  - {fileID: 26062441254760527, guid: 3a8bc98de2299c24badc1ec80baa491d, type: 3}

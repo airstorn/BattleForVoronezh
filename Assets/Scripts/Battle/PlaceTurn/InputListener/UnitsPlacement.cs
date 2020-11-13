@@ -13,6 +13,7 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
     [SerializeField] private GridObject _interactableGrid;
     [SerializeField] private LayerMask _ignoreMask;
     [SerializeField] private IUnitsData _unitsHolder;
+    [SerializeField] private int _lookDirection = 1;
     
     private GridUnit _currentUnit;
 
@@ -131,7 +132,7 @@ public class UnitsPlacement : MonoBehaviour, IInputHandler
 
         RandomUnitsPlacement randomUnitsPlacement = new RandomUnitsPlacement();
 
-        randomUnitsPlacement.ExecuteUnitsForPlacement(_unitsHolder.GetAllUnits(), _interactableGrid);
+        randomUnitsPlacement.ExecuteUnitsForPlacement(_unitsHolder.GetAllUnits(), _interactableGrid, _lookDirection);
     }
 
     public void TrackInput()

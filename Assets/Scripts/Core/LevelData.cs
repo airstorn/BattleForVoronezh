@@ -33,6 +33,8 @@ namespace Core
         [Header("UI")] 
         [SerializeField] private GameObject _endWindow;
 
+        [Header("Win")] [SerializeField] private int _gain;
+
         public GridObject PlayerGrid => _playerGrid; 
         public GridObject EnemyGrid => _enemyGrid;
 
@@ -63,6 +65,7 @@ namespace Core
             OnPlayerWin += PlayerWin;
                 
             ChangeState(FindObjectOfType<PlaceUnits>());
+            
         
             CameraStatement = Camera.main.GetComponent<ICamMover>();
             _cachedStates = FindObjectsOfType<MonoBehaviour>().OfType<IGameState>().ToArray();
@@ -95,7 +98,7 @@ namespace Core
             
             var data = new PageEndWindow.LevelEndData()
             { 
-                Money = Random.Range(400, 550),
+                Money = _gain + EnemyGrid.Units.Sum(unit => unit.UnitPrice),
                 Win = true
             };
             
@@ -110,7 +113,12 @@ namespace Core
             var page = Menu.Instance.SwitchPage<PageEndWindow>();
             SoundsPlayer.Instance.PlaySound(SoundType.Lose);
 
-            page.SendArgs(new PageEndWindow.LevelEndData(){ Money = 0, Win = false});
+            var killedUnitsSum = EnemyGrid.Units.Where(unit => unit.Health.IsDead == true).Sum(unit => unit.UnitPrice);
+            page.SendArgs(new PageEndWindow.LevelEndData()
+                { 
+                    Money = killedUnitsSum, 
+                    Win = false
+                });
         }
     }
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EnemyUnitsData
   m_EditorClassIdentifier: 
   Data:
+  - {fileID: 7741858893037503843, guid: 2def6b43681a6864f8343d67511f92ed, type: 3}
+  - {fileID: 5563851654095271698, guid: 34fc772703e580449807a2dcc4d2d198, type: 3}
   - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
-  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
-  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
-  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
-  - {fileID: 1517431349508380467, guid: b05a453bfb46eed49a5328d03c62a91e, type: 3}
+  - {fileID: 56465376804012377, guid: f26135fc5bd43d64abf00a756e4f0d1c, type: 3}
+  - {fileID: 4342482098525044780, guid: 2975b23085cc0b748ae2a51975be878d, type: 3}

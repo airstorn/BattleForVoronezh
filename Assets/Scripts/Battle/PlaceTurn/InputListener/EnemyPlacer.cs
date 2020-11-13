@@ -19,6 +19,6 @@ public class EnemyPlacer : MonoBehaviour, IUnitsPlacer
     public void Place(GridUnit unit)
     {
         RandomUnitsPlacement randomUnitsPlacement = new RandomUnitsPlacement();
-        randomUnitsPlacement.ExecuteUnitsForPlacement(_storedUnits.GetAllUnits(), LevelData.Instance.EnemyGrid);
+        randomUnitsPlacement.ExecuteUnitsForPlacement(_storedUnits.GetAllUnits(), LevelData.Instance.EnemyGrid, 3);
     }
 }

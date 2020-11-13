@@ -12092,6 +12092,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 1344067241}
   _enemyGrid: {fileID: 500538026}
   _endWindow: {fileID: 1003102023}
+  _gain: 1000
 --- !u!4 &1390889694
 Transform:
   m_ObjectHideFlags: 0

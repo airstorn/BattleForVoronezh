@@ -12,10 +12,16 @@ public struct PlaceComparerJob
     public GridUnit Unit;
     public GridObject SelectedGrid;
 
-    public void Execute()
+    public void Execute(int rotationIndex)
     {
-        for (int i = 0; i < UnityEngine.Random.Range(0, (int)4); i++)
-            Unit.Rotate(true);
+        if (Unit.Rotation != rotationIndex * 90)
+        {
+            for (int i = 0; i < rotationIndex; i++)
+            {
+                Unit.Rotate(true);
+            }
+        }
+       
 
         int _attempts = 500;
         int _currentAttempts = 0;
@@ -63,7 +69,7 @@ public struct PlaceComparerJob
 
 public class RandomUnitsPlacement 
 {
-    public void ExecuteUnitsForPlacement(List<GridUnit> units, GridObject grid)
+    public void ExecuteUnitsForPlacement(List<GridUnit> units, GridObject grid, int rotationIndex)
     {
         units = units.OrderByDescending(x => x.Size.x * x.Size.y).ToList();
 
@@ -75,7 +81,7 @@ public class RandomUnitsPlacement
                 Unit = units[i]
             };
 
-            PlaceJob.Execute();
+            PlaceJob.Execute(rotationIndex);
         }
     }
 }

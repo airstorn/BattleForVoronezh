@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 2078230864849371688}
   - component: {fileID: 3919319460645014096}
   m_Layer: 8
-  m_Name: "\u043C\u0438\u043D\u043E\u043C\u0435\u0442 1"
+  m_Name: Minomet
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -315,8 +315,6 @@ MonoBehaviour:
     _broken: {fileID: 8354824265824543582}
     _hidden: 0
   _size: {x: 1, y: 1}
-  _engagedElements: []
-  _borderElements: []
   _gizmosPoint: {fileID: 8916859495193113083}
 --- !u!1 &4257569849548648166
 GameObject:
@@ -661,7 +659,7 @@ Transform:
   m_GameObject: {fileID: 8354824265824543582}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.015, z: 0}
-  m_LocalScale: {x: 31.806002, y: 31.806002, z: 31.806002}
+  m_LocalScale: {x: 16.431543, y: 16.431543, z: 16.431543}
   m_Children:
   - {fileID: 2780026066136589359}
   - {fileID: 8219654947376613363}
@@ -748,7 +746,7 @@ Transform:
   m_GameObject: {fileID: 8401254027131962195}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.014999688, z: 0}
-  m_LocalScale: {x: 31.806002, y: 31.806002, z: 31.806002}
+  m_LocalScale: {x: 16.431543, y: 16.431543, z: 16.431543}
   m_Children:
   - {fileID: 3827374953556122477}
   - {fileID: 67309381670488093}

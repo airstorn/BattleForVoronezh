@@ -2692,23 +2692,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258189134, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1258189135, guid: 10aa18502560315429ed92d7ec8d9ba7, type: 3}
       propertyPath: m_Color.r
@@ -2755,7 +2759,7 @@ PrefabInstance:
     - target: {fileID: 6136745123096432977, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.5
+      value: -15.5
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432977, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -2805,12 +2809,12 @@ PrefabInstance:
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.x
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
       propertyPath: _size.y
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6136745123096432989, guid: 10aa18502560315429ed92d7ec8d9ba7,
         type: 3}
@@ -4685,7 +4689,9 @@ MonoBehaviour:
   _template: {fileID: 1617810734581173152, guid: c7692f76165078e499fdc088b5952bff,
     type: 3}
   _parent: {fileID: 621029069}
-  _additionalShots: 4
+  _additionalShots: -18
+  _useFixedShots: 1
+  _fixedShots: 12
 --- !u!4 &1514548279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4513819750380730, guid: 83783d40b06c4d24a93cf52a7b70fc14,
@@ -5005,6 +5011,7 @@ MonoBehaviour:
   _ignoreMask:
     serializedVersion: 2
     m_Bits: 256
+  _lookDirection: 1
 --- !u!4 &1673299188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 498462, guid: d5647639c36df9c4fa6f833ccf7084c2,
@@ -5204,8 +5211,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 2.220446e-16, z: 4}
-  m_Center: {x: -3, y: 0, z: -3}
+  m_Size: {x: 5, y: 2.220446e-16, z: 5}
+  m_Center: {x: -2.5, y: 0, z: -2.5}
 --- !u!4 &1809996665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416924, guid: d295338eb2193c14f9feb82d278c826f,
@@ -5350,6 +5357,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 595264823}
   _enemyGrid: {fileID: 1764487239}
   _endWindow: {fileID: 766743274302389148}
+  _gain: 1000
 --- !u!4 &1829151277
 Transform:
   m_ObjectHideFlags: 0

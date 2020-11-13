@@ -124,8 +124,8 @@ MonoBehaviour:
     type: 3}
   _scoutingTemplate: {fileID: 1223144955453488914, guid: dcff89e6bc31f9143aff874ed2aa3238,
     type: 3}
-  _gradePrice: 600
-  _buyPrice: 100
+  _gradePrice: 10000
+  _buyPrice: 2000
 --- !u!114 &280450588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     type: 3}
   _template: {fileID: 1223144955453488914, guid: dcff89e6bc31f9143aff874ed2aa3238,
     type: 3}
-  _gradePrice: 600
-  _buyPrice: 100
+  _gradePrice: 2000
+  _buyPrice: 400
 --- !u!114 &280450591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   _template: {fileID: 6977151356292016240, guid: 6bb2fdfde1173e347a5558f7ee316999,
     type: 3}
   _movePrice: 50
-  _gradePrice: 500
-  _buyPrice: 80
+  _gradePrice: 2000
+  _buyPrice: 400
 --- !u!114 &1440101342
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Audio;
 using DigitalRuby.SoundManagerNamespace;
@@ -38,19 +39,8 @@ namespace GameStates
         {
             base.Awake();
             PullAudioSources();
-            SceneManager.activeSceneChanged += OnSceneChangedHandler;
         }
 
-        private void OnSceneChangedHandler(Scene arg0, Scene arg1)
-        {
-            ApplyLevelMusic();
-        }
-
-        private void ApplyLevelMusic()
-        {
-            _musicPlayer.clip = FindObjectOfType<LevelTheme>().Theme;
-            _musicPlayer.Play();
-        }
 
         private void Start()
         {
@@ -94,6 +84,12 @@ namespace GameStates
         private void PlayAudio(SoundTypeContainer data)
         {
             data.Source.Play();
+        }
+
+        public void PlayTheme(AudioClip theme)
+        {
+            _musicPlayer.clip = theme;
+            _musicPlayer.Play();
         }
     }
 }
