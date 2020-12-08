@@ -4691,7 +4691,7 @@ MonoBehaviour:
   _parent: {fileID: 621029069}
   _additionalShots: -18
   _useFixedShots: 1
-  _fixedShots: 12
+  _fixedShots: 24
 --- !u!4 &1514548279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4513819750380730, guid: 83783d40b06c4d24a93cf52a7b70fc14,

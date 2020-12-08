@@ -16,6 +16,8 @@ namespace GameStates
         public string Description => _description;
         public int LevelLoadIndex => _levelLoadIndex;
         public Sprite Preview => _preview;
+
+        public string Objective;
         
         public enum LevelType
         {

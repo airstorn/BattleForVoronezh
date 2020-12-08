@@ -17,3 +17,4 @@ MonoBehaviour:
   _preview: {fileID: 21300000, guid: 4cd883f7feccefe4482448820a0f03a7, type: 3}
   _levelLoadIndex: 8
   Type: 0
+  Objective: Levels_8_Obj
